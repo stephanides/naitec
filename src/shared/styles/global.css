@@ -1,0 +1,73 @@
+
+body {
+  line-height: 1;
+  overflow-x: hidden;
+}
+
+html {
+  font-family: 'roboto', sans-serif;
+}
+
+@font-face {
+  font-family: 'paralucent-stencil';
+  src: url('https://use.typekit.net/af/3dee00/00000000000000007735b470/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n9&v=3')
+      format('woff2'),
+    url('https://use.typekit.net/af/3dee00/00000000000000007735b470/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n9&v=3')
+      format('woff'),
+    url('https://use.typekit.net/af/3dee00/00000000000000007735b470/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n9&v=3')
+      format('opentype');
+  font-display: auto;
+  font-style: normal;
+  fontWeight: 900;
+  font-stretch: normal;
+}
+
+@font-face {
+  font-family: 'paralucent-stencil';
+  src: url('https://use.typekit.net/af/67d01f/00000000000000007735b474/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n5&v=3')
+      format('woff2'),
+    url('https://use.typekit.net/af/67d01f/00000000000000007735b474/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n5&v=3')
+      format('woff'),
+    url('https://use.typekit.net/af/67d01f/00000000000000007735b474/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n5&v=3')
+      format('opentype');
+  font-display: auto;
+  font-style: normal;
+  fontWeight: 500;
+  font-stretch: normal;
+}
+
+.custom-bullet-container,
+.swiper-pagination-bullet,
+.swiper-pagination-bullet-active {
+  border-radius: 0;
+  margin-right: 8px;
+  width: 8px;
+  height: 8px;
+  background-color: white;
+  opacity: 1;
+  transition: all 0.3s ease-out;
+  border-radius: 50%;
+}
+.swiper-pagination-bullet {
+  background: #707070;
+}
+.swiper-pagination-bullet-active {
+  background: white;
+  transform: scale(1.2);
+}
+
+.grecaptcha-badge {
+  display: none;
+}
+
+.active-nav-link {
+  color: #1c6bba !important;
+  -webkit-text-stroke: 0.5px #1c6bba;
+}
+
+
+a:hover,
+a:visited,
+a:active {
+  text-decoration: none;
+}
