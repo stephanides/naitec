@@ -38,3 +38,6 @@ export * from './NewTab';
 export * from './Phone';
 export * from './Envelope';
 export * from './Invoice';
+export * from './GlobeSmall';
+export * from './Hamburger';
+export * from './CloseSmall';

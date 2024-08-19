@@ -431,7 +431,7 @@ export const Home = () => {
                 pointerEvents="none"
               >
                 <img
-                  src="/images/lisa/lisa-main.png"
+                  src="/images/lisa/lisa-main-desktop.png"
                   style={{ width: '100%', height: 'auto', maxWidth: 'none' }}
                   alt="Lisa"
                 />
@@ -494,7 +494,7 @@ export const Home = () => {
                 pointerEvents="none"
               >
                 <img
-                  src="/images/fireplace/fireplace-main.png"
+                  src="/images/fireplace/fireplace-main-desktop.png"
                   style={{ width: '100%', height: 'auto', maxWidth: 'none' }}
                   alt="Fireplace diffuser"
                 />

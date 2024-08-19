@@ -14,7 +14,7 @@ import { useRouter } from 'next/router';
 import { LocaleSwitch } from '../LocaleSwitch';
 import Link from 'next/link';
 import { Container } from '../Container';
-import { ChevronDown, LogoDark } from '../../design';
+import { ChevronDown, GlobeSmall, Hamburger, LogoDark } from '../../design';
 import { useTranslation } from 'next-i18next';
 import { NeueHaasGroteskDisplay, NeueHaasGroteskText } from '../Typography';
 import { INTERNAL_ROUTES } from '../../constants';
@@ -30,7 +30,7 @@ type NavigationProps = {
   dark?: boolean;
 };
 
-const NAV_ITEMS_PRODUCTS = {
+export const NAV_ITEMS_PRODUCTS = {
   AIR_CONDITIONING: [
     { name: 'stellair', href: INTERNAL_ROUTES.STELLAIR },
     { name: 'sensitive_pro', href: INTERNAL_ROUTES.SENSITIVE_PRO, new: true },
@@ -255,6 +255,40 @@ export const Navigation = ({ toggleMobile, dark = false }: NavigationProps) => {
             </Flex>
           </Flex>
         </Container>
+      </Box>
+      {/* Mobile navigation */}
+      <Box
+        mt={0}
+        py={scrolled ? rem(10) : rem(20)}
+        position="fixed"
+        top={0}
+        zIndex={99}
+        display={{ base: 'block', lg: 'none' }}
+        width="100%"
+        transition="all .3s ease-out"
+        background={scrolled ? '#f2f2f2' : 'transparent'}
+      >
+        <Flex px={rem(25)} alignItems="center" justifyContent="space-between">
+          <Box>
+            <Link href={INTERNAL_ROUTES.HOME}>
+              <Box width={{ base: rem(116), md: rem(180) }}>
+                <LogoDark />
+              </Box>
+            </Link>
+          </Box>
+          <Flex columnGap={rem(10)}>
+            <LocaleSwitch />
+            <Flex
+              p={rem(10)}
+              alignItems="center"
+              justifyContent="center"
+              cursor="pointer"
+              onClick={toggleMobile}
+            >
+              <Hamburger />
+            </Flex>
+          </Flex>
+        </Flex>
       </Box>
     </>
   );

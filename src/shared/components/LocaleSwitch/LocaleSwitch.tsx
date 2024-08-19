@@ -5,6 +5,7 @@ import {
   Czech,
   English,
   German,
+  GlobeSmall,
   Hungary,
   Japan,
   LocaleSwitchChevron,
@@ -80,19 +81,31 @@ export const LocaleSwitch = () => {
   return (
     <Popover trigger={'hover'} placement={'bottom-end'}>
       <PopoverTrigger>
-        <Flex
-          background="background.dark"
-          borderRadius={rem(55)}
-          py={rem(14)}
-          columnGap={rem(10)}
-          alignItems="center"
-          justifyContent="center"
-          width={rem(76)}
-          cursor="pointer"
-        >
-          <Box width={rem(16)}>{activeLanguage.flag}</Box>
-          <LocaleSwitchChevron />
-        </Flex>
+        <Box>
+          <Flex
+            background="background.dark"
+            borderRadius={rem(55)}
+            py={rem(14)}
+            columnGap={rem(10)}
+            alignItems="center"
+            justifyContent="center"
+            width={rem(76)}
+            cursor="pointer"
+            display={{ base: 'none', lg: 'flex' }}
+          >
+            <Box width={rem(16)}>{activeLanguage.flag}</Box>
+            <LocaleSwitchChevron />
+          </Flex>
+          <Flex
+            p={rem(10)}
+            alignItems="center"
+            justifyContent="center"
+            cursor="pointer"
+            display={{ base: 'flex', lg: 'none' }}
+          >
+            <GlobeSmall />
+          </Flex>
+        </Box>
       </PopoverTrigger>
       <PopoverContent
         boxShadow="0px 0px 15px 0px rgb(0 0 0 / 10%)"
