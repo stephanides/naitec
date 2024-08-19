@@ -1,0 +1,266 @@
+import {
+  AllYouNeed,
+  AllYouNeedModalContent,
+  CleanAir,
+  Container,
+  CoolantR32,
+  DiffuseCooling,
+  EffectiveHeating,
+  Glow,
+  HowCoolingLooksLike,
+  Label,
+  NaitecApplication,
+  NeueHaasGroteskDisplay,
+  ProductHeadingButtons,
+  StellairSensitive,
+} from '@/src/shared/components';
+import { Box, Flex } from '@chakra-ui/react';
+import { rem } from 'polished';
+import { useTranslation } from 'next-i18next';
+import Image from 'next/image';
+import {
+  Bolt,
+  Heating,
+  Info,
+  LINEAR_GRADIENTS,
+  LisaVoice,
+  PlusExpand,
+  Redirect,
+  Verified,
+  Virus,
+} from '@/src/shared/design';
+import { TechnicalParameters } from '@/src/shared/components/TechnicalParameters';
+import { WhyInfoSwiper } from '@/src/shared/components/WhyInfoSwiper';
+import { INTERNAL_ROUTES } from '@/src/shared/constants';
+import { Element } from 'react-scroll';
+
+export const SensitivePro = () => {
+  const { t } = useTranslation(['sensitivepro', 'common']);
+  return (
+    <Box>
+      <Box>
+        <Flex width="100%" justifyContent="center">
+          <Label
+            text={t('heading_label')}
+            color="text.sensitive_pro"
+            borderColor="rgba(134, 148, 156, 0.26)"
+          />
+        </Flex>
+        <Flex
+          width="100%"
+          justifyContent="center"
+          alignItems="center"
+          position="relative"
+          flexDir="column"
+        >
+          <NeueHaasGroteskDisplay
+            background={LINEAR_GRADIENTS.sensitive_pro}
+            fontSize={rem(130)}
+            fontWeight={600}
+            textTransform="uppercase"
+            textAlign="center"
+            backgroundClip="text"
+            color="transparent"
+            position="absolute"
+            top={0}
+          >
+            Sensitive Pro
+          </NeueHaasGroteskDisplay>
+          <Flex
+            position="relative"
+            pt={rem(0)}
+            maxW={rem(1600)}
+            width="100%"
+            minH={rem(480)}
+            justify="center"
+            overflow="hidden"
+          >
+            <img
+              src="/images/sensitive-pro/sensitive-pro-main.png"
+              style={{ width: '130%', height: 'auto', maxWidth: 'none' }}
+              alt="Sensitive"
+            />
+          </Flex>
+        </Flex>
+        <ProductHeadingButtons color="background.sensitive_pro" />
+      </Box>
+      <Flex mt={rem(100)} flexDir="column" alignItems="center">
+        <NeueHaasGroteskDisplay
+          fontSize={rem(36)}
+          color="text.link"
+          fontWeight={600}
+        >
+          {t('heading')}
+        </NeueHaasGroteskDisplay>
+        <NeueHaasGroteskDisplay
+          maxW={rem(925)}
+          fontSize={rem(32)}
+          color="#8F8F8F"
+          textAlign="center"
+          fontWeight={600}
+          mt={rem(12)}
+        >
+          {t('subheading')}
+        </NeueHaasGroteskDisplay>
+      </Flex>
+      <Element id="content" name="content">
+        <Box overflow="hidden" pb={rem(60)} pt={rem(176)} position="relative">
+          <Container>
+            <WhyInfoSwiper
+              title="Sensitive Pro"
+              color={LINEAR_GRADIENTS.sensitive_pro}
+              items={[
+                {
+                  image: '/images/sensitive-pro/sensitive-pro-why-1.jpg',
+                  title: t('why_info_item_1_title'),
+                  description: t('why_info_item_1_description'),
+                },
+                {
+                  image: '/images/sensitive-pro/sensitive-pro-why-2.jpg',
+                  title: t('why_info_item_2_title'),
+                  description: t('why_info_item_2_description'),
+                },
+                {
+                  image: '/images/sensitive-pro/sensitive-pro-why-3.jpg',
+                  title: t('why_info_item_3_title'),
+                  description: t('why_info_item_3_description'),
+                },
+                {
+                  image: '/images/sensitive-pro/sensitive-pro-why-4.jpg',
+                  title: t('why_info_item_4_title'),
+                  description: t('why_info_item_4_description'),
+                },
+                {
+                  image: '/images/sensitive-pro/sensitive-pro-why-5.jpg',
+                  title: t('why_info_item_5_title'),
+                  description: t('why_info_item_5_description'),
+                },
+                {
+                  image: '/images/sensitive-pro/sensitive-pro-why-6.jpg',
+                  title: t('why_info_item_6_title'),
+                  description: t('why_info_item_6_description'),
+                },
+              ]}
+            />
+          </Container>
+        </Box>
+      </Element>
+
+      <HowCoolingLooksLike color={LINEAR_GRADIENTS.sensitive_pro} />
+
+      <Box
+        background="background.primary"
+        pt={rem(144)}
+        pb={rem(165)}
+        position="relative"
+        overflow="hidden"
+      >
+        <Glow />
+        <DiffuseCooling light color={LINEAR_GRADIENTS.sensitive_pro} />
+        <NaitecApplication
+          textColor={LINEAR_GRADIENTS.sensitive_pro}
+          blurOnBottom={true}
+          withoutBlur
+        />
+        <EffectiveHeating
+          color={LINEAR_GRADIENTS.sensitive_pro}
+          image1="/images/sensitive-pro/effective-heating-1.png"
+          image2="/images/sensitive-pro/effective-heating-2.png"
+          blurOnBottom={true}
+        />
+      </Box>
+      <Box mt={rem(165)}>
+        <CleanAir color={LINEAR_GRADIENTS.sensitive_pro} imageOnLeft />
+      </Box>
+      <Box pt={rem(170)}>
+        <AllYouNeed
+          color={LINEAR_GRADIENTS.sensitive_pro}
+          items={[
+            {
+              icon: <Virus />,
+              title: t('all_you_need_item_1_title'),
+              description: t('all_you_need_item_1_description'),
+              interactiveIcon: <PlusExpand />,
+              iconColor: '#D54C4C',
+              expandContent: (
+                <AllYouNeedModalContent
+                  title={t('all_you_need_item_1_title')}
+                  description={t('all_you_need_item_1_long_description')}
+                  icon={<Virus />}
+                  image="/images/common/self-cleaning.jpg"
+                />
+              ),
+            },
+            {
+              icon: <Heating />,
+              title: t('all_you_need_item_2_title'),
+              description: t('all_you_need_item_2_description'),
+            },
+            {
+              icon: <Verified />,
+              title: t('all_you_need_item_3_title'),
+              description: t('all_you_need_item_3_description'),
+              interactiveIcon: <Info />,
+              iconColor: '#D54C4C',
+              expandContent: (
+                <AllYouNeedModalContent
+                  title={t('all_you_need_item_3_title')}
+                  description={t('all_you_need_item_3_description')}
+                  icon={<Verified />}
+                  image="/images/common/warranty.jpg"
+                />
+              ),
+            },
+            {
+              icon: <LisaVoice />,
+              title: t('all_you_need_item_4_title'),
+              description: t('all_you_need_item_4_description'),
+              interactiveIcon: <Redirect />,
+              iconColor: '#D54C4C',
+              link: INTERNAL_ROUTES.LISA,
+            },
+            {
+              icon: <Bolt />,
+              title: t('all_you_need_item_5_title'),
+              description: t('all_you_need_item_5_description'),
+            },
+          ]}
+        />
+      </Box>
+      <Box>
+        <CoolantR32 color={LINEAR_GRADIENTS.sensitive_pro} />
+      </Box>
+
+      <Box>
+        <TechnicalParameters
+          label="Naitec Sensitive Pro"
+          chladiaciVykon="3,5"
+          vykurovaciVykon="4,2"
+          energetickaTrieda="A+++"
+          hlucnostVnutornejJednotky="19"
+          hlucnostVonkajsejJednotky="52"
+          seer="8,7"
+          scop="4,7"
+          hmotnostVnutornejJednotky="8,5"
+          hmotnostVonkajsejJednotky="24,5"
+          rozmeryVnutornejJednotky="827x299x201mm"
+          rozmeryVonkajsejJednotky="705x530x280mm"
+          ionizator={true}
+          nasavanieVzduchuZExterieru={false}
+          wifiModul={true}
+          sterilizacia={true}
+          dierkovanaLamela={true}
+          dlhodobeVykurovanie="do -35°C"
+          aktivneCistenie={true}
+          zaruka={`5 ${t('common:years_rokov')}`}
+          chladivo="R32"
+          color={LINEAR_GRADIENTS.sensitive_pro}
+        />
+      </Box>
+      <StellairSensitive
+        color="background.sensitive_pro_light"
+        gradientColor={LINEAR_GRADIENTS.sensitive_pro}
+      />
+    </Box>
+  );
+};

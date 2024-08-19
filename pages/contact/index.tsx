@@ -1,23 +1,25 @@
 import React, { useEffect } from 'react';
 import { Layout } from '@/src/shared/components/Layout';
 import { Box } from '@chakra-ui/react';
-import { useTranslations } from 'next-intl';
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
+import { useTranslation } from 'next-i18next';
+import { Contact } from '@/src/pages';
 
 const KontaktPage = () => {
-  const t = useTranslations();
   return (
-    <Layout>
-      <Box>{t('navigation.products')}</Box>
+    <Layout withOrnament={true}>
+      <Contact />
     </Layout>
   );
 };
 
-export async function getStaticProps({ locale }: { locale: string }) {
+export const getStaticProps = async ({ locale }: { locale: string }) => {
   return {
     props: {
-      messages: (await import(`../../locale/${locale}.json`)).default,
+      ...(await serverSideTranslations(locale, ['contact', 'common'])),
+      locale,
     },
   };
-}
+};
 
 export default KontaktPage;

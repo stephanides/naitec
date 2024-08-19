@@ -7,7 +7,7 @@ type ContainerProps = {
 };
 
 export const Container = ({ children }: ContainerProps) => (
-  <BaseContainer maxW={{ base: '100%', '2xl': rem(1360), '3xl': rem(1572) }}>
+  <BaseContainer maxW={{ base: '100%', '2xl': rem(1240), '3xl': rem(1572) }}>
     {children}
   </BaseContainer>
 );

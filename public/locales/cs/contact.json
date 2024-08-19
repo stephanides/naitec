@@ -1,0 +1,17 @@
+{
+  "heading_label": "Kontakt",
+  "heading": "Máte <strong>dotazy</strong> nebo potřebujete pomoc?",
+  "contact_sent": "Zpráva byla odeslána. Budeme vás brzy kontaktovat.",
+  "name": "Jméno",
+  "surname": "Příjmení",
+  "email": "E-mail",
+  "phone": "Telefonní číslo*",
+  "message": "S čím vám můžeme pomoci?",
+  "send_error": "Při odesílání zprávy došlo k chybě. Zkuste to prosím později.",
+  "agreements": "Souhlasím se zpracováním osobních údajů*",
+  "agreements_text": "tímto souhlasíte, že společnost ACEA s.r.o. bude zpracovávat osobní údaje výhradně za účelem vyřízení vaší žádosti. Více informací",
+  "privacy_policy": "ochrana osobních údajů",
+  "banner_phone": "Telefonní číslo",
+  "banner_email": "Emailová adresa",
+  "banner_invoice": "Fakturační údaje"
+}

@@ -1,0 +1,17 @@
+{
+  "heading_label": "Kapcsolat",
+  "heading": "Van <strong>kérdése</strong> vagy segítségre van szüksége?",
+  "contact_sent": "Az üzenet el lett küldve. Hamarosan felvesszük Önnel a kapcsolatot.",
+  "name": "Név",
+  "surname": "Vezetéknév",
+  "email": "E-mail",
+  "phone": "Telefonszám*",
+  "message": "Miben segíthetünk Önnek?",
+  "send_error": "Hiba történt az üzenet küldése közben. Kérjük, próbálja meg később.",
+  "agreements": "Elfogadom a személyes adatok kezelését*",
+  "agreements_text": "A fentiek elfogadásával hozzájárul, hogy az ACEA s.r.o. személyes adatait kizárólag az Ön kérésének kezelése céljából dolgozza fel. További információ <a>adatvédelmi tájékoztató</a>.",
+  "privacy_policy": "adatvédelmi tájékoztató",
+  "banner_phone": "Telefonszám",
+  "banner_email": "Email cím",
+  "banner_invoice": "Számlázási adatok"
+}

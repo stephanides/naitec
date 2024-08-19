@@ -1,0 +1,17 @@
+{
+  "heading_label": "Contact",
+  "heading": "Do you have <strong>questions</strong> or need help?",
+  "contact_sent": "The message has been sent. We will contact you soon.",
+  "name": "Name",
+  "surname": "Surname",
+  "email": "E-mail",
+  "phone": "Phone number*",
+  "message": "How can we help you?",
+  "send_error": "An error occurred while sending the message. Please try again later.",
+  "agreements": "I agree to the processing of personal data*",
+  "agreements_text": "by agreeing above, you consent that ACEA s.r.o. will process personal data exclusively for the purpose of handling your request. More information <a>privacy policy</a>.",
+  "privacy_policy": "privacy policy",
+  "banner_phone": "Phone number",
+  "banner_email": "Email address",
+  "banner_invoice": "Billing information"
+}

@@ -1,12 +1,100 @@
-import createMiddleware from 'next-intl/middleware';
-import { locales } from './config'; // Your configured locales
+import { NextRequest, NextResponse } from 'next/server';
 
-export default createMiddleware({
-  locales: locales,
-  defaultLocale: 'en', // Default locale
-  localeDetection: false,
-});
+const PUBLIC_FILE = /\.(.*)$/;
 
-export const config = {
-  matcher: ['/((?!_next|api|.*\\..*).*)'], // Regex to match all routes except Next.js specific paths
+const localePathMap = {
+  en: {
+    contact: '/contact',
+    support: '/support',
+    fireplaceDiffuser: '/fireplace-diffuser',
+  },
+  sk: {
+    contact: '/kontakt',
+    support: '/podpora',
+    fireplaceDiffuser: '/krbovy-difuzor',
+  },
+  cs: {
+    contact: '/kontakt',
+    support: '/podpora',
+    fireplaceDiffuser: '/krbovy-difuzor',
+  },
+  de: {
+    contact: '/kontakt',
+    support: '/support',
+    fireplaceDiffuser: '/kamin-difuzor',
+  },
+  pl: {
+    contact: '/kontakt',
+    support: '/wsparcie',
+    fireplaceDiffuser: '/dyfuzor-kominkowy',
+  },
+  hu: {
+    contact: '/kapcsolat',
+    support: '/rolunk',
+    fireplaceDiffuser: '/kandallo-difuzor',
+  },
+  ja: {
+    contact: '/contact',
+    support: '/support',
+    fireplaceDiffuser: '/fireplace-diffuser',
+  },
 };
+
+export function middleware(request: NextRequest) {
+  const { pathname, locale } = request.nextUrl;
+
+  if (
+    pathname.startsWith('/_next') || // exclude Next.js internals
+    pathname.includes('/api') || // exclude API routes
+    PUBLIC_FILE.test(pathname) // exclude all files in the public folder
+  ) {
+    return NextResponse.next();
+  }
+
+  // Find the default paths for the current locale
+  // @ts-ignore
+  const defaultLocalePaths = localePathMap[locale] || {};
+
+  // Redirect to the appropriate locale-specific path for contact
+  if (pathname === '/contact' && locale !== 'en' && locale !== 'ja') {
+    return NextResponse.redirect(
+      new URL(`/${locale}${defaultLocalePaths.contact}`, request.url)
+    );
+  }
+
+  // Redirect to the appropriate locale-specific path for about-us
+  if (pathname === '/support' && locale !== 'en' && locale !== 'ja') {
+    return NextResponse.redirect(
+      new URL(`/${locale}${defaultLocalePaths.support}`, request.url)
+    );
+  }
+
+  // Redirect to the appropriate locale-specific path for about-us
+  if (
+    pathname === '/fireplace-diffuser' &&
+    locale !== 'en' &&
+    locale !== 'ja'
+  ) {
+    return NextResponse.redirect(
+      new URL(`/${locale}${defaultLocalePaths.fireplaceDiffuser}`, request.url)
+    );
+  }
+
+  // Redirect to the default path if the locale-specific path is accessed
+  for (const [loc, paths] of Object.entries(localePathMap)) {
+    if (locale !== loc) {
+      if (pathname === `/${loc}${paths.contact}`) {
+        return NextResponse.redirect(
+          new URL(defaultLocalePaths.contact, request.url)
+        );
+      }
+      if (pathname === `/${loc}${paths.support}`) {
+        return NextResponse.redirect(
+          new URL(defaultLocalePaths.support, request.url)
+        );
+      }
+    }
+  }
+
+  return NextResponse.next();
+}

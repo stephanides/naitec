@@ -7,6 +7,7 @@ import { rem } from 'polished';
 
 type LayoutProps = {
   children: ReactNode;
+  withOrnament?: boolean;
 };
 
 export const Layout: FC<LayoutProps> = (props) => {
@@ -31,18 +32,24 @@ export const Layout: FC<LayoutProps> = (props) => {
   });
 
   return (
-    <main>
-      <Box style={{ minHeight: '50vh' }}>
-        <Navigation toggleMobile={toggleMobile} />
-        <Box mt={{ base: rem(80), md: rem(92), lg: rem(98) }}>{children}</Box>
-        <Footer />
-        <NavMenuContent
-          isOpen={isMobileMenuOpen}
-          setIsOpen={setIsMobileMenuOpen}
-          toggleMobile={toggleMobile}
-          menuContentRef={menuContentRef}
-        />
-      </Box>
-    </main>
+    <Box
+      minHeight={{ base: rem(1200) }}
+      backgroundImage={
+        props.withOrnament ? 'url(/images/background-ornament.svg)' : 'none'
+      }
+      backgroundPosition="top center"
+      backgroundRepeat="no-repeat"
+      backgroundSize="contain"
+    >
+      <Navigation toggleMobile={toggleMobile} />
+      <Box pt={{ base: rem(80), md: rem(92), lg: rem(138) }}>{children}</Box>
+      <Footer />
+      <NavMenuContent
+        isOpen={isMobileMenuOpen}
+        setIsOpen={setIsMobileMenuOpen}
+        toggleMobile={toggleMobile}
+        menuContentRef={menuContentRef}
+      />
+    </Box>
   );
 };
