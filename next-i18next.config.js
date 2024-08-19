@@ -5,5 +5,17 @@ module.exports = {
     locales: ['sk', 'cs', 'en', 'de', 'pl', 'ja', 'hu'],
     localeDetection: true,
   },
-  // ns: ['common', 'stellair', 'lisa'],
+  ns: [
+    'common',
+    'contact',
+    'fireplace',
+    'homepage',
+    'lisa',
+    'onyx',
+    'sensitive',
+    'sensitive-pro',
+    'smart',
+    'stellair',
+    'support',
+  ],
 };
