@@ -91,7 +91,7 @@ export const LocaleSwitch = () => {
             justifyContent="center"
             width={rem(76)}
             cursor="pointer"
-            display={{ base: 'none', lg: 'flex' }}
+            display={{ base: 'none', md: 'flex' }}
           >
             <Box width={rem(16)}>{activeLanguage.flag}</Box>
             <LocaleSwitchChevron />
@@ -101,7 +101,7 @@ export const LocaleSwitch = () => {
             alignItems="center"
             justifyContent="center"
             cursor="pointer"
-            display={{ base: 'flex', lg: 'none' }}
+            display={{ base: 'flex', md: 'none' }}
           >
             <GlobeSmall />
           </Flex>

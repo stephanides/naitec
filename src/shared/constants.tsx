@@ -13,7 +13,8 @@ const LINEAR_GRADIENTS = {
 export const INTERNAL_ROUTES = {
   HOME: '/',
   SUPPORT: '/support',
-  BUSINESS_PARTNERS: '/business-partners',
+  WHERE_TO_BUY: '/where-to-buy',
+  CONTACT: '/contact',
   STELLAIR: '/stellair',
   SENSITIVE_PRO: '/sensitive-pro',
   SENSITIVE: '/sensitive',

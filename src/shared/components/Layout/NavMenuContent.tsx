@@ -96,7 +96,6 @@ export const NavMenuContent = ({
               borderBottom="1px solid"
               borderColor="text.naitec_blue"
               lineHeight={rem(20)}
-              
             >
               {t('navigation_air_condition')}
             </NeueHaasGroteskText>
@@ -271,10 +270,14 @@ export const NavMenuContent = ({
 
         <Flex mt={rem(60)} columnGap={rem(25)} zIndex={2} position="relative">
           <a href={EXTERNAL_ROUTES.ANDROID} target="_blank" rel="noreferrer">
-            <GooglePlay />
+            <Box width={{ base: rem(135), md: rem(170) }}>
+              <GooglePlay />
+            </Box>
           </a>
           <a href={EXTERNAL_ROUTES.IOS} target="_blank" rel="noreferrer">
-            <AppStore />
+            <Box width={{ base: rem(135), md: rem(170) }}>
+              <AppStore />
+            </Box>
           </a>
         </Flex>
       </Flex>

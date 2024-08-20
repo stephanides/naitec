@@ -19,13 +19,14 @@ export const Home = () => {
   return (
     <Box>
       <Box
-        mx={rem(20)}
-        pb={rem(80)}
+        mx={{ base: rem(12), xs: rem(20) }}
+        pb={{ base: rem(45), xs: rem(80) }}
         border="5px solid"
         borderColor="#FFFFFF"
         borderTop="none"
         borderRadius={rem(20)}
         position="relative"
+        mt={{ base: rem(40), lg: rem(0) }}
       >
         <Box zIndex={2} position="relative">
           <Flex
@@ -34,10 +35,17 @@ export const Home = () => {
             alignItems="center"
             position="relative"
             flexDir="column"
+            overflow="hidden"
           >
             <NeueHaasGroteskDisplay
               background="linear-gradient(to right, #344F5F, #6CA5C5)"
-              fontSize={rem(192)}
+              fontSize={{
+                base: rem(60),
+                xs: rem(72),
+                md: rem(100),
+                lg: rem(140),
+                xl: rem(192),
+              }}
               fontWeight={600}
               textTransform="uppercase"
               textAlign="center"
@@ -50,10 +58,30 @@ export const Home = () => {
             </NeueHaasGroteskDisplay>
             <Flex
               position="relative"
-              pt={rem(60)}
-              maxW={rem(1600)}
-              width="100%"
-              minH={rem(480)}
+              pt={{
+                base: rem(28),
+                xs: rem(20),
+                md: rem(32),
+                lg: rem(60),
+                xl: rem(80),
+                '2xl': rem(60),
+              }}
+              maxW={{
+                base: rem(400),
+                xs: rem(600),
+                md: rem(800),
+                lg: rem(1000),
+                xl: rem(1400),
+                '2xl': rem(1600),
+              }}
+              width={{
+                base: rem(400),
+                xs: rem(600),
+                md: rem(800),
+                lg: rem(1000),
+                xl: rem(1400),
+                '2xl': rem(1600),
+              }}
               justify="center"
               overflow="hidden"
             >
@@ -66,7 +94,7 @@ export const Home = () => {
           </Flex>
           <Box>
             <NeueHaasGroteskDisplay
-              fontSize={rem(48)}
+              fontSize={{ base: rem(24), md: rem(48) }}
               color="text.link"
               fontWeight={600}
               textAlign="center"
@@ -96,19 +124,36 @@ export const Home = () => {
           height={rem(150)}
           background="linear-gradient(180deg, rgba(242, 242, 242, 1) 33%, rgba(255, 255, 255, 0) 100%)"
         />
-        <Box position="absolute" zIndex={1} bottom={0} left={0} right={0}>
+        <Box
+          position="absolute"
+          zIndex={1}
+          bottom={0}
+          left={0}
+          right={0}
+          display={{ base: 'none', md: 'block' }}
+        >
           <HomeShape />
+        </Box>
+        <Box
+          position="absolute"
+          zIndex={1}
+          bottom={0}
+          left={0}
+          right={0}
+          display={{ base: 'block', md: 'none' }}
+        >
+          <HomeShapeMobile />
         </Box>
       </Box>
       <Box
-        mt={rem(20)}
-        mx={rem(20)}
-        pt={rem(80)}
-        pb={rem(80)}
+        mx={{ base: rem(12), xs: rem(20) }}
+        pb={{ base: rem(45), xs: rem(80) }}
+        pt={{ base: rem(20), xs: rem(40), '2xl': rem(80) }}
         border="5px solid"
         borderColor="#FFFFFF"
         borderRadius={rem(20)}
         position="relative"
+        mt={{ base: rem(40), lg: rem(20) }}
       >
         <Box zIndex={2} position="relative">
           <Flex
@@ -120,22 +165,49 @@ export const Home = () => {
           >
             <NeueHaasGroteskDisplay
               background={LINEAR_GRADIENTS.sensitive_pro}
-              fontSize={rem(134)}
+              fontSize={{
+                base: rem(42),
+                xs: rem(60),
+                md: rem(90),
+                lg: rem(110),
+                xl: rem(134),
+              }}
               fontWeight={600}
               textTransform="uppercase"
               textAlign="center"
               backgroundClip="text"
               color="transparent"
               position="absolute"
-              top={0}
+              top={rem(6)}
             >
               Sensitive Pro
             </NeueHaasGroteskDisplay>
             <Flex
               position="relative"
-              maxW={rem(1600)}
-              width="100%"
-              minH={rem(480)}
+              pt={{
+                base: rem(8),
+                xs: rem(4),
+                md: rem(32),
+                lg: rem(32),
+                xl: rem(20),
+                '2xl': rem(0),
+              }}
+              maxW={{
+                base: rem(480),
+                xs: rem(700),
+                md: rem(800),
+                lg: rem(1000),
+                xl: rem(1400),
+                '2xl': rem(1600),
+              }}
+              width={{
+                base: rem(480),
+                xs: rem(700),
+                md: rem(800),
+                lg: rem(1000),
+                xl: rem(1400),
+                '2xl': rem(1600),
+              }}
               justify="center"
               overflow="hidden"
             >
@@ -148,7 +220,7 @@ export const Home = () => {
           </Flex>
           <Box>
             <NeueHaasGroteskDisplay
-              fontSize={rem(48)}
+              fontSize={{ base: rem(24), md: rem(48) }}
               color="text.link"
               fontWeight={600}
               textAlign="center"
@@ -162,19 +234,36 @@ export const Home = () => {
             </Box>
           </Box>
         </Box>
-        <Box position="absolute" zIndex={1} bottom={0} left={0} right={0}>
+        <Box
+          position="absolute"
+          zIndex={1}
+          bottom={0}
+          left={0}
+          right={0}
+          display={{ base: 'none', md: 'block' }}
+        >
           <HomeShape />
+        </Box>
+        <Box
+          position="absolute"
+          zIndex={1}
+          bottom={0}
+          left={0}
+          right={0}
+          display={{ base: 'block', md: 'none' }}
+        >
+          <HomeShapeMobile />
         </Box>
       </Box>
       <Box
-        mt={rem(20)}
-        mx={rem(20)}
-        pt={rem(80)}
-        pb={rem(80)}
+        mx={{ base: rem(12), xs: rem(20) }}
+        pb={{ base: rem(45), xs: rem(80) }}
+        pt={{ base: rem(20), xs: rem(40), '2xl': rem(80) }}
         border="5px solid"
         borderColor="#FFFFFF"
         borderRadius={rem(20)}
         position="relative"
+        mt={{ base: rem(40), lg: rem(20) }}
       >
         <Box zIndex={2} position="relative">
           <Flex
@@ -186,7 +275,13 @@ export const Home = () => {
           >
             <NeueHaasGroteskDisplay
               background={LINEAR_GRADIENTS.sensitive}
-              fontSize={rem(180)}
+              fontSize={{
+                base: rem(52),
+                xs: rem(68),
+                md: rem(94),
+                lg: rem(134),
+                xl: rem(180),
+              }}
               fontWeight={600}
               textTransform="uppercase"
               textAlign="center"
@@ -199,10 +294,30 @@ export const Home = () => {
             </NeueHaasGroteskDisplay>
             <Flex
               position="relative"
-              pt={rem(50)}
-              maxW={rem(1600)}
-              width="100%"
-              minH={rem(480)}
+              pt={{
+                base: rem(28),
+                xs: rem(20),
+                md: rem(32),
+                lg: rem(60),
+                xl: rem(80),
+                '2xl': rem(50),
+              }}
+              maxW={{
+                base: rem(400),
+                xs: rem(600),
+                md: rem(800),
+                lg: rem(1000),
+                xl: rem(1400),
+                '2xl': rem(1600),
+              }}
+              width={{
+                base: rem(400),
+                xs: rem(600),
+                md: rem(800),
+                lg: rem(1000),
+                xl: rem(1400),
+                '2xl': rem(1600),
+              }}
               justify="center"
               overflow="hidden"
             >
@@ -215,7 +330,7 @@ export const Home = () => {
           </Flex>
           <Box>
             <NeueHaasGroteskDisplay
-              fontSize={rem(48)}
+              fontSize={{ base: rem(24), md: rem(48) }}
               color="text.link"
               fontWeight={600}
               textAlign="center"
@@ -229,14 +344,36 @@ export const Home = () => {
             </Box>
           </Box>
         </Box>
-        <Box position="absolute" zIndex={1} bottom={0} left={0} right={0}>
+        <Box
+          position="absolute"
+          zIndex={1}
+          bottom={0}
+          left={0}
+          right={0}
+          display={{ base: 'none', md: 'block' }}
+        >
           <HomeShape />
         </Box>
+        <Box
+          position="absolute"
+          zIndex={1}
+          bottom={0}
+          left={0}
+          right={0}
+          display={{ base: 'block', md: 'none' }}
+        >
+          <HomeShapeMobile />
+        </Box>
       </Box>
-      <Flex my={rem(20)}>
+      <Flex
+        my={{ base: 0, xl: rem(20) }}
+        flexDir={{ base: 'column', xl: 'row' }}
+        mx={{ base: rem(20), xl: 0 }}
+        mb={{ base: rem(20) }}
+      >
         <Box
           mt={rem(20)}
-          mx={rem(20)}
+          mx={{ base: 0, xl: rem(20) }}
           pt={rem(20)}
           pb={rem(80)}
           border="5px solid"
@@ -244,6 +381,7 @@ export const Home = () => {
           borderRadius={rem(20)}
           position="relative"
           overflow="hidden"
+          width={{ base: '100%', xl: '50%' }}
         >
           <Box zIndex={2} position="relative">
             <Flex
@@ -255,7 +393,13 @@ export const Home = () => {
             >
               <NeueHaasGroteskDisplay
                 background={LINEAR_GRADIENTS.onyx}
-                fontSize={rem(180)}
+                fontSize={{
+                  base: rem(52),
+                  xs: rem(68),
+                  md: rem(94),
+                  lg: rem(134),
+                  '2xl': rem(160),
+                }}
                 fontWeight={600}
                 textTransform="uppercase"
                 textAlign="center"
@@ -268,10 +412,30 @@ export const Home = () => {
               </NeueHaasGroteskDisplay>
               <Flex
                 position="relative"
-                pt={rem(100)}
-                maxW={rem(1600)}
-                width="100%"
-                minH={rem(480)}
+                pt={{
+                  base: rem(22),
+                  xs: rem(20),
+                  md: rem(32),
+                  lg: rem(60),
+                  xl: rem(90),
+                  '2xl': rem(110),
+                }}
+                maxW={{
+                  base: rem(400),
+                  xs: rem(600),
+                  md: rem(800),
+                  lg: rem(1000),
+                  xl: rem(700),
+                  '2xl': rem(800),
+                }}
+                width={{
+                  base: rem(400),
+                  xs: rem(600),
+                  md: rem(800),
+                  lg: rem(1000),
+                  xl: rem(700),
+                  '2xl': rem(800),
+                }}
                 justify="center"
                 overflow="hidden"
               >
@@ -284,8 +448,7 @@ export const Home = () => {
             </Flex>
             <Box>
               <NeueHaasGroteskDisplay
-                fontSize={rem(48)}
-                mt={rem(40)}
+                fontSize={{ base: rem(24), md: rem(48) }}
                 color="text.link"
                 fontWeight={600}
                 textAlign="center"
@@ -300,16 +463,27 @@ export const Home = () => {
           <Box
             position="absolute"
             zIndex={1}
-            bottom={rem(-60)}
+            bottom={0}
             left={0}
             right={0}
+            display={{ base: 'none', md: 'block', xl: 'none' }}
+          >
+            <HomeShape />
+          </Box>
+          <Box
+            position="absolute"
+            zIndex={1}
+            bottom={{ base: 0, xl: rem(-60) }}
+            left={0}
+            right={0}
+            display={{ base: 'block', md: 'none', xl: 'block' }}
           >
             <HomeShapeMobile />
           </Box>
         </Box>
         <Box
           mt={rem(20)}
-          mx={rem(20)}
+          mx={{ base: 0, xl: rem(20) }}
           pt={rem(20)}
           pb={rem(80)}
           border="5px solid"
@@ -317,6 +491,7 @@ export const Home = () => {
           borderRadius={rem(20)}
           position="relative"
           overflow="hidden"
+          width={{ base: '100%', xl: '50%' }}
         >
           <Box zIndex={2} position="relative">
             <Flex
@@ -328,7 +503,13 @@ export const Home = () => {
             >
               <NeueHaasGroteskDisplay
                 background={LINEAR_GRADIENTS.smart}
-                fontSize={rem(180)}
+                fontSize={{
+                  base: rem(52),
+                  xs: rem(68),
+                  md: rem(94),
+                  lg: rem(134),
+                  '2xl': rem(160),
+                }}
                 fontWeight={600}
                 textTransform="uppercase"
                 textAlign="center"
@@ -341,10 +522,30 @@ export const Home = () => {
               </NeueHaasGroteskDisplay>
               <Flex
                 position="relative"
-                pt={rem(100)}
-                maxW={rem(1600)}
-                width="100%"
-                minH={rem(480)}
+                pt={{
+                  base: rem(22),
+                  xs: rem(20),
+                  md: rem(32),
+                  lg: rem(60),
+                  xl: rem(90),
+                  '2xl': rem(110),
+                }}
+                maxW={{
+                  base: rem(400),
+                  xs: rem(600),
+                  md: rem(800),
+                  lg: rem(1000),
+                  xl: rem(700),
+                  '2xl': rem(800),
+                }}
+                width={{
+                  base: rem(400),
+                  xs: rem(600),
+                  md: rem(800),
+                  lg: rem(1000),
+                  xl: rem(700),
+                  '2xl': rem(800),
+                }}
                 justify="center"
                 overflow="hidden"
               >
@@ -357,9 +558,8 @@ export const Home = () => {
             </Flex>
             <Box>
               <NeueHaasGroteskDisplay
-                fontSize={rem(48)}
+                fontSize={{ base: rem(24), md: rem(48) }}
                 color="text.link"
-                mt={rem(40)}
                 fontWeight={600}
                 textAlign="center"
               >
@@ -375,25 +575,42 @@ export const Home = () => {
           <Box
             position="absolute"
             zIndex={1}
-            bottom={rem(-60)}
+            bottom={0}
             left={0}
             right={0}
+            display={{ base: 'none', md: 'block', xl: 'none' }}
+          >
+            <HomeShape />
+          </Box>
+          <Box
+            position="absolute"
+            zIndex={1}
+            bottom={{ base: 0, xl: rem(-60) }}
+            left={0}
+            right={0}
+            display={{ base: 'block', md: 'none', xl: 'block' }}
           >
             <HomeShapeMobile />
           </Box>
         </Box>
       </Flex>
       <NaitecApplicationMinimal />
-      <Flex my={rem(20)}>
+      <Flex
+        my={{ base: 0, xl: rem(20) }}
+        flexDir={{ base: 'column', xl: 'row' }}
+        mx={{ base: rem(20), xl: 0 }}
+        mb={{ base: rem(20) }}
+      >
         <Box
           mt={rem(20)}
-          mx={rem(20)}
+          mx={{ base: 0, xl: rem(20) }}
+          pt={rem(20)}
           border="5px solid"
           borderColor="#FFFFFF"
           borderRadius={rem(20)}
           position="relative"
           overflow="hidden"
-          width="50%"
+          width={{ base: '100%', xl: '50%' }}
         >
           <Box zIndex={2} position="relative">
             <Flex
@@ -403,9 +620,9 @@ export const Home = () => {
               position="relative"
               flexDir="column"
             >
-              <Box position="absolute" top={rem(70)}>
+              <Box position="absolute" top={{ base: rem(20), xl: rem(70) }}>
                 <NeueHaasGroteskDisplay
-                  fontSize={rem(48)}
+                  fontSize={{ base: rem(28), xs: rem(32), lg: rem(48) }}
                   fontWeight={600}
                   textTransform="uppercase"
                   textAlign="center"
@@ -423,12 +640,12 @@ export const Home = () => {
               </Box>
               <Flex
                 position="relative"
-                maxW={rem(1600)}
+                maxW={{ base: rem(600), xl: rem(1600) }}
                 width="100%"
-                minH={rem(480)}
                 justify="center"
                 overflow="hidden"
                 pointerEvents="none"
+                pt={{ base: rem(20), '2xl': 0 }}
               >
                 <img
                   src="/images/lisa/lisa-main-desktop.png"
@@ -441,22 +658,34 @@ export const Home = () => {
           <Box
             position="absolute"
             zIndex={1}
-            bottom={rem(-60)}
+            bottom={0}
             left={0}
             right={0}
+            display={{ base: 'none', md: 'block', xl: 'none' }}
+          >
+            <HomeShape />
+          </Box>
+          <Box
+            position="absolute"
+            zIndex={1}
+            bottom={{ base: 0, xl: rem(-60) }}
+            left={0}
+            right={0}
+            display={{ base: 'block', md: 'none', xl: 'block' }}
           >
             <HomeShapeMobile />
           </Box>
         </Box>
         <Box
           mt={rem(20)}
-          mx={rem(20)}
+          mx={{ base: 0, xl: rem(20) }}
+          pt={rem(20)}
           border="5px solid"
           borderColor="#FFFFFF"
           borderRadius={rem(20)}
           position="relative"
           overflow="hidden"
-          width="50%"
+          width={{ base: '100%', xl: '50%' }}
         >
           <Box zIndex={2} position="relative">
             <Flex
@@ -466,9 +695,9 @@ export const Home = () => {
               position="relative"
               flexDir="column"
             >
-              <Box top={rem(70)} position="absolute">
+              <Box position="absolute" top={{ base: rem(20), xl: rem(70) }}>
                 <NeueHaasGroteskDisplay
-                  fontSize={rem(48)}
+                  fontSize={{ base: rem(28), xs: rem(32), lg: rem(48) }}
                   fontWeight={600}
                   textTransform="uppercase"
                   textAlign="center"
@@ -486,12 +715,13 @@ export const Home = () => {
               </Box>
               <Flex
                 position="relative"
-                maxW={rem(1600)}
+                maxW={{ base: rem(600), xl: rem(1600) }}
                 width="100%"
-                minH={rem(480)}
                 justify="center"
                 overflow="hidden"
                 pointerEvents="none"
+                pt={{ base: rem(20), '2xl': 0 }}
+                ml={{ base: 'auto', xl: 0 }}
               >
                 <img
                   src="/images/fireplace/fireplace-main-desktop.png"
@@ -504,9 +734,20 @@ export const Home = () => {
           <Box
             position="absolute"
             zIndex={1}
-            bottom={rem(-60)}
+            bottom={0}
             left={0}
             right={0}
+            display={{ base: 'none', md: 'block', xl: 'none' }}
+          >
+            <HomeShape />
+          </Box>
+          <Box
+            position="absolute"
+            zIndex={1}
+            bottom={{ base: 0, xl: rem(-60) }}
+            left={0}
+            right={0}
+            display={{ base: 'block', md: 'none', xl: 'block' }}
           >
             <HomeShapeMobile />
           </Box>

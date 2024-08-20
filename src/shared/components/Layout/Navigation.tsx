@@ -1,13 +1,11 @@
-import React, { ReactNode, useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
 import {
   Box,
   Flex,
-  Grid,
   Popover,
   PopoverContent,
   PopoverTrigger,
-  Text,
 } from '@chakra-ui/react';
 import { rem } from 'polished';
 import { useRouter } from 'next/router';
@@ -86,7 +84,7 @@ export const Navigation = ({ toggleMobile, dark = false }: NavigationProps) => {
         position="fixed"
         top={0}
         zIndex={99}
-        display={{ base: 'none', lg: 'block' }}
+        display={{ base: 'none', md: 'block' }}
         width="100%"
         transition="all .3s ease-out"
         background={scrolled ? '#f2f2f2' : 'transparent'}
@@ -94,11 +92,11 @@ export const Navigation = ({ toggleMobile, dark = false }: NavigationProps) => {
         <Container>
           <Flex alignItems="center" justifyContent="space-between">
             <Link href={INTERNAL_ROUTES.HOME}>
-              <Box width={rem(190)}>
+              <Box width={{ base: rem(140), lg: rem(190) }}>
                 <LogoDark />
               </Box>
             </Link>
-            <Flex columnGap={rem(40)}>
+            <Flex columnGap={rem(40)} ml={{ base: rem(20), lg: 0 }}>
               <Box position="relative">
                 <Popover trigger={'hover'} placement={'bottom-start'}>
                   <PopoverTrigger>
@@ -234,23 +232,26 @@ export const Navigation = ({ toggleMobile, dark = false }: NavigationProps) => {
                   </PopoverContent>
                 </Popover>
               </Box>
-              <Link href="/where-to-buy">
+              <Link href={INTERNAL_ROUTES.WHERE_TO_BUY}>
                 <NeueHaasGroteskDisplay color="text.link" fontWeight={600}>
                   {t('navigation_where_to_buy')}
                 </NeueHaasGroteskDisplay>
               </Link>
-              <Link href="/support">
+              <Link href={INTERNAL_ROUTES.SUPPORT}>
                 <NeueHaasGroteskDisplay color="text.link" fontWeight={600}>
                   {t('navigation_support')}
                 </NeueHaasGroteskDisplay>
               </Link>
-              <Link href="/contact">
+              <Link href={INTERNAL_ROUTES.CONTACT}>
                 <NeueHaasGroteskDisplay color="text.link" fontWeight={600}>
                   {t('navigation_contact')}
                 </NeueHaasGroteskDisplay>
               </Link>
             </Flex>
-            <Flex width={rem(190)} justifyContent="flex-end">
+            <Flex
+              width={{ base: rem(140), lg: rem(190) }}
+              justifyContent="flex-end"
+            >
               <LocaleSwitch />
             </Flex>
           </Flex>
@@ -263,7 +264,7 @@ export const Navigation = ({ toggleMobile, dark = false }: NavigationProps) => {
         position="fixed"
         top={0}
         zIndex={99}
-        display={{ base: 'block', lg: 'none' }}
+        display={{ base: 'block', md: 'none' }}
         width="100%"
         transition="all .3s ease-out"
         background={scrolled ? '#f2f2f2' : 'transparent'}

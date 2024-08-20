@@ -13,25 +13,33 @@ export const NaitecApplicationMinimal = () => {
   return (
     <Box
       backgroundColor="background.primary"
-      py={rem(152)}
+      pt={{ base: rem(60), md: rem(100), '2xl': rem(152) }}
+      pb={{ base: 0, '2xl': rem(152) }}
       position="relative"
       overflow="hidden"
       borderRadius={rem(20)}
       mx={rem(20)}
     >
-      <Flex columnGap={rem(60)} px={rem(120)}>
-        <Box width="50%">
-          <Label
-            text={t('naitec_app')}
-            color="text.inverted"
-            borderColor="border.white"
-          />
+      <Flex
+        columnGap={rem(60)}
+        px={{ base: rem(40), md: rem(120) }}
+        flexDir={{ base: 'column', '2xl': 'row' }}
+      >
+        <Box width={{ base: '100%', '2xl': '50%' }}>
+          <Flex justifyContent={{ base: 'center', '2xl': 'flex-start' }}>
+            <Label
+              text={t('naitec_app')}
+              color="text.inverted"
+              borderColor="border.white"
+            />
+          </Flex>
           <Box mt={rem(25)}>
             <NeueHaasGroteskDisplay
-              fontSize={rem(64)}
+              fontSize={{ base: rem(30), md: rem(64) }}
               fontWeight={600}
-              lineHeight={rem(72)}
+              lineHeight={{ base: rem(36), md: rem(72) }}
               color="text.inverted"
+              textAlign={{ base: 'center', '2xl': 'start' }}
               sx={{
                 span: {
                   backgroundImage: LINEAR_GRADIENTS.stellair,
@@ -42,27 +50,46 @@ export const NaitecApplicationMinimal = () => {
               dangerouslySetInnerHTML={{ __html: t('naitec_app_title') }}
             />
             <NeueHaasGroteskText
-              fontSize={rem(22)}
+              fontSize={{ base: rem(16), md: rem(22) }}
               fontWeight={600}
               color="text.secondary"
-              mt={rem(40)}
+              mt={{ base: rem(20), md: rem(40) }}
               sx={{ strong: { color: '#EBEBEB' } }}
+              textAlign={{ base: 'center', '2xl': 'start' }}
               dangerouslySetInnerHTML={{
                 __html: t('naitec_app_short_description'),
               }}
             />
           </Box>
-          <Flex mt={rem(60)} columnGap={rem(25)}>
+          <Flex
+            mt={rem(60)}
+            columnGap={rem(25)}
+            display={{ base: 'none', '2xl': 'flex' }}
+          >
             <a href={EXTERNAL_ROUTES.ANDROID} target="_blank" rel="noreferrer">
-              <GooglePlay />
+              <Box width={{ base: rem(135), md: rem(170) }}>
+                <GooglePlay />
+              </Box>
             </a>
             <a href={EXTERNAL_ROUTES.IOS} target="_blank" rel="noreferrer">
-              <AppStore />
+              <Box width={{ base: rem(135), md: rem(170) }}>
+                <AppStore />
+              </Box>
             </a>
           </Flex>
         </Box>
-        <Box width="50%" position="relative">
-          <Box position="absolute" width="100%">
+        <Flex
+          width={{ base: '100%', '2xl': '50%' }}
+          position="relative"
+          height={{ base: rem(300), md: '50vw', '2xl': 'auto' }}
+          justifyContent="center"
+        >
+          <Box
+            position="absolute"
+            width="100%"
+            top={{ base: rem(40), '2xl': rem(-60) }}
+            maxW={rem(800)}
+          >
             <Image
               src="/images/common/iphone-mockup.png"
               width="0"
@@ -72,7 +99,6 @@ export const NaitecApplicationMinimal = () => {
                 width: '100%',
                 height: 'auto',
                 position: 'relative',
-                top: rem(-60),
               }}
               alt="Metalinox"
             />
@@ -87,8 +113,37 @@ export const NaitecApplicationMinimal = () => {
             borderRadius="30%"
             filter="blur(100px)"
           />
-        </Box>
+
+          <Flex
+            mt={rem(60)}
+            columnGap={rem(25)}
+            display={{ base: 'flex', '2xl': 'none' }}
+            position="absolute"
+            bottom={rem(30)}
+          >
+            <a href={EXTERNAL_ROUTES.ANDROID} target="_blank" rel="noreferrer">
+              <Box width={{ base: rem(135), md: rem(170) }}>
+                <GooglePlay />
+              </Box>
+            </a>
+            <a href={EXTERNAL_ROUTES.IOS} target="_blank" rel="noreferrer">
+              <Box width={{ base: rem(135), md: rem(170) }}>
+                <AppStore />
+              </Box>
+            </a>
+          </Flex>
+        </Flex>
       </Flex>
+      <Box
+        position="absolute"
+        bottom={0}
+        right={0}
+        left={0}
+        display={{ base: 'block', '2xl': 'none' }}
+        height={rem(100)}
+        background="linear-gradient(180deg, rgba(255, 255, 255, 0) 33%, rgba(17, 27, 33, 1) 100%)"
+        zIndex={2}
+      />
     </Box>
   );
 };

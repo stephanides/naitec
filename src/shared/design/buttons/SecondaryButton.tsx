@@ -32,15 +32,15 @@ export const SecondaryButton = ({
 }: ButtonProps) => (
   <Button
     fontWeight={700}
-    fontSize={{ base: rem(16), md: rem(20) }}
+    fontSize={{ base: rem(12), xs: rem(20) }}
     color={color}
     borderRadius={rem(60)}
     border="2px solid"
     borderColor={color}
     background="transparent"
-    px={rem(36)}
-    py={rem(18)}
-    height={rem(60)}
+    px={{ base: rem(20), xs: rem(36) }}
+    py={{ base: rem(10), xs: rem(18) }}
+    height={{ base: rem(34), xs: rem(60) }}
     transition="all .3s ease-out"
     _disabled={{
       border: '2px solid',
@@ -66,7 +66,10 @@ export const SecondaryButton = ({
       {startWithIcon && icon && (
         <Box width={{ base: rem(16), md: rem(20) }}>{icon}</Box>
       )}
-      <NeueHaasGroteskDisplay fontSize={rem(18)} lineHeight={rem(22)}>
+      <NeueHaasGroteskDisplay
+        fontSize={{ base: rem(12), xs: rem(18) }}
+        lineHeight={rem(22)}
+      >
         {children}
       </NeueHaasGroteskDisplay>
       {!startWithIcon && icon && (

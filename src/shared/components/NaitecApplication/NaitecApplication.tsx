@@ -68,10 +68,14 @@ export const NaitecApplication = ({
                 target="_blank"
                 rel="noreferrer"
               >
-                <GooglePlay />
+                <Box width={{ base: rem(135), md: rem(170) }}>
+                  <GooglePlay />
+                </Box>
               </a>
               <a href={EXTERNAL_ROUTES.IOS} target="_blank" rel="noreferrer">
-                <AppStore />
+                <Box width={{ base: rem(135), md: rem(170) }}>
+                  <AppStore />
+                </Box>
               </a>
             </Flex>
           </Box>
