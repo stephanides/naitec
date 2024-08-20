@@ -48,6 +48,7 @@ export const NavMenuContent = ({
       pointerEvents="all"
       ref={menuContentRef}
       py={rem(20)}
+      overflow="auto"
     >
       <Flex px={rem(25)} alignItems="center" justifyContent="space-between">
         <Box>
@@ -253,6 +254,7 @@ export const NavMenuContent = ({
           maxW={rem(400)}
           top={0}
           zIndex={1}
+          px={rem(16)}
         >
           <Image
             src="/images/common/iphone-mockup.png"
