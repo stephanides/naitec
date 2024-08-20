@@ -33,20 +33,22 @@ export const WhyInfoSwiperItem = ({
         columnGap={rem(140)}
         opacity={isActive ? 1 : 0}
         transition="opacity 0.5s ease-in-out"
+        flexDir={{ base: 'column', lg: 'row' }}
       >
         <NeueHaasGroteskDisplay
-          fontSize={rem(32)}
+          fontSize={{ base: rem(17), md: rem(32) }}
           fontWeight={600}
           lineHeight="112%"
           color={light ? 'white' : 'text.link'}
-          width={rem(300)}
+          width={{ base: '100%', lg: rem(300) }}
           minW={rem(300)}
+          mb={{ base: rem(20), lg: 0 }}
         >
           {title}
         </NeueHaasGroteskDisplay>
         <NeueHaasGroteskText
           color={light ? 'text.secondary ' : 'text.light'}
-          fontSize={rem(22)}
+          fontSize={{ base: rem(14), md: rem(22) }}
           fontWeight={500}
           lineHeight="130%"
           sx={{ strong: { color: light ? 'white' : 'text.link' } }}

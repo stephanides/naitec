@@ -100,7 +100,7 @@ export const NaitecApplicationMinimal = () => {
                 height: 'auto',
                 position: 'relative',
               }}
-              alt="Metalinox"
+              alt="Iphone"
             />
           </Box>
           <Box
@@ -120,6 +120,7 @@ export const NaitecApplicationMinimal = () => {
             display={{ base: 'flex', '2xl': 'none' }}
             position="absolute"
             bottom={rem(30)}
+            zIndex={3}
           >
             <a href={EXTERNAL_ROUTES.ANDROID} target="_blank" rel="noreferrer">
               <Box width={{ base: rem(135), md: rem(170) }}>

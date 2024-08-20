@@ -25,17 +25,20 @@ export const CleanAir = ({
         <Flex
           alignItems="center"
           columnGap={rem(52)}
-          flexDir={imageOnLeft ? 'row-reverse' : 'row'}
+          flexDir={{
+            base: 'column',
+            lg: imageOnLeft ? 'row-reverse' : 'row',
+          }}
         >
-          <Box width={{ base: '50%' }}>
+          <Box width={{ base: '100%', lg: '50%' }}>
             <Label
               text={t('clean_air_label')}
               color={light ? 'text.inverted' : 'text.link'}
               borderColor={light ? 'text.inverted' : 'text.link'}
             />
             <NeueHaasGroteskDisplay
-              fontSize={rem(64)}
-              lineHeight={rem(64)}
+              fontSize={{ base: rem(30), md: rem(64) }}
+              lineHeight={{ base: rem(30), md: rem(64) }}
               fontWeight={600}
               color={light ? 'text.inverted' : 'text.link'}
               mt={rem(25)}
@@ -49,16 +52,37 @@ export const CleanAir = ({
               dangerouslySetInnerHTML={{ __html: t('clean_air_title') }}
             />
             <NeueHaasGroteskText
+              display={{ base: 'none', lg: 'block' }}
               mt={rem(20)}
               lineHeight="130%"
               fontSize={rem(22)}
               color={light ? 'text.secondary' : 'text.light'}
               fontWeight={500}
               sx={{ strong: { color: light ? 'text.strong' : 'text.link' } }}
-              dangerouslySetInnerHTML={{ __html: t('clean_air_description') }}
+              dangerouslySetInnerHTML={{
+                __html:
+                  t('clean_air_description_1') +
+                  ' ' +
+                  t('clean_air_description_2'),
+              }}
+            />
+            <NeueHaasGroteskText
+              display={{ base: 'block', lg: 'none' }}
+              mt={rem(20)}
+              lineHeight="130%"
+              fontSize={{ base: rem(16), md: rem(22) }}
+              color={light ? 'text.secondary' : 'text.light'}
+              fontWeight={500}
+              sx={{ strong: { color: light ? 'text.strong' : 'text.link' } }}
+              dangerouslySetInnerHTML={{
+                __html: t('clean_air_description_1'),
+              }}
             />
           </Box>
-          <Box width={{ base: '50%' }}>
+          <Box
+            width={{ base: '100%', lg: '50%' }}
+            mt={{ base: rem(30), lg: 0 }}
+          >
             <Image
               src="/images/common/clean-air.jpg"
               width="0"
@@ -68,6 +92,18 @@ export const CleanAir = ({
               alt="Globe"
             />
           </Box>
+          <NeueHaasGroteskText
+            display={{ base: 'block', lg: 'none' }}
+            mt={rem(30)}
+            lineHeight="130%"
+            fontSize={{ base: rem(16), md: rem(22) }}
+            color={light ? 'text.secondary' : 'text.light'}
+            fontWeight={500}
+            sx={{ strong: { color: light ? 'text.strong' : 'text.link' } }}
+            dangerouslySetInnerHTML={{
+              __html: t('clean_air_description_2'),
+            }}
+          />
         </Flex>
       </Container>
     </Box>

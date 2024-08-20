@@ -18,10 +18,13 @@ export const AllYouNeedModalContent = ({
   image,
 }: AllYouNeedModalContentProps) => {
   return (
-    <Box py={rem(80)} px={rem(100)}>
+    <Box
+      py={{ base: rem(36), lg: rem(80) }}
+      px={{ base: rem(16), md: rem(24), xl: rem(100) }}
+    >
       {icon}
       <NeueHaasGroteskDisplay
-        fontSize={rem(48)}
+        fontSize={{ base: rem(22), md: rem(36), lg: rem(48) }}
         fontWeight={600}
         mt={rem(20)}
         color="text.link"
@@ -29,10 +32,10 @@ export const AllYouNeedModalContent = ({
         {title}
       </NeueHaasGroteskDisplay>
       <NeueHaasGroteskDisplay
-        fontSize={rem(24)}
+        fontSize={{ base: rem(14), md: rem(20), lg: rem(24) }}
         fontWeight={600}
-        mt={rem(35)}
-        mb={rem(80)}
+        mt={{ base: rem(15), lg: rem(35) }}
+        mb={{ base: rem(40), lg: rem(80) }}
         maxW={rem(899)}
         color="text.light"
         sx={{ strong: { color: 'text.link' } }}

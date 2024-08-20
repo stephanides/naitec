@@ -11,10 +11,17 @@ type DiffuseCoolingProps = {
   light?: boolean;
 };
 
-export const DiffuseCooling = ({ color, light=false }: DiffuseCoolingProps) => {
+export const DiffuseCooling = ({
+  color,
+  light = false,
+}: DiffuseCoolingProps) => {
   const { t } = useTranslation();
   return (
-    <Box pb={rem(150)} position="relative" overflow="hidden">
+    <Box
+      pb={{ base: rem(75), md: rem(150) }}
+      position="relative"
+      overflow="hidden"
+    >
       <Container>
         <Label
           text={t('diffuse_cooling_label')}
@@ -22,7 +29,7 @@ export const DiffuseCooling = ({ color, light=false }: DiffuseCoolingProps) => {
           borderColor={light ? 'text.inverted' : 'text.link'}
         />
         <NeueHaasGroteskDisplay
-          fontSize={rem(64)}
+          fontSize={{ base: rem(30), xs: rem(48), xl: rem(64) }}
           mt={rem(25)}
           fontWeight={600}
           color={light ? 'text.inverted' : 'text.link'}
@@ -37,7 +44,8 @@ export const DiffuseCooling = ({ color, light=false }: DiffuseCoolingProps) => {
           dangerouslySetInnerHTML={{ __html: t('diffuse_cooling_title') }}
         />
         <NeueHaasGroteskText
-          fontSize={rem(22)}
+          fontSize={{ base: rem(14), md: rem(22) }}
+          display={{ base: 'none', md: 'block' }}
           mt={rem(40)}
           maxW={rem(930)}
           letterSpacing="calc(16px * -0.02)"
@@ -45,19 +53,47 @@ export const DiffuseCooling = ({ color, light=false }: DiffuseCoolingProps) => {
           fontWeight={500}
           sx={{ strong: { color: light ? 'text.strong' : 'text.link' } }}
           dangerouslySetInnerHTML={{
-            __html: t('diffuse_cooling_description'),
+            __html:
+              t('diffuse_cooling_description_1') +
+              ' ' +
+              t('diffuse_cooling_description_2'),
           }}
         />
-        <Flex columnGap={rem(20)} mt={rem(80)}>
+        <NeueHaasGroteskText
+          fontSize={{ base: rem(14), md: rem(22) }}
+          display={{ base: 'block', md: 'none' }}
+          mt={rem(40)}
+          maxW={rem(930)}
+          letterSpacing="calc(16px * -0.02)"
+          color={light ? 'text.secondary' : 'text.light'}
+          fontWeight={500}
+          sx={{ strong: { color: light ? 'text.strong' : 'text.link' } }}
+          dangerouslySetInnerHTML={{
+            __html: t('diffuse_cooling_description_1'),
+          }}
+        />
+        <Flex columnGap={rem(20)} mt={{ base: rem(40), xl: rem(80) }}>
           <Box width="50%" position="relative">
-            <Image
-              src="/images/common/diffuse-cooling-1.png"
-              width="0"
-              height="0"
-              sizes="100vw"
-              style={{ width: '100%', height: 'auto' }}
-              alt="Diffuse cooling 1"
-            />
+            <Box display={{ base: 'none', md: 'block' }}>
+              <Image
+                src="/images/common/diffuse-cooling-1.png"
+                width="0"
+                height="0"
+                sizes="100vw"
+                style={{ width: '100%', height: 'auto' }}
+                alt="Diffuse cooling 1"
+              />
+            </Box>
+            <Box display={{ base: 'block', md: 'none' }}>
+              <Image
+                src="/images/common/diffuse-cooling-1-mobile.png"
+                width="0"
+                height="0"
+                sizes="100vw"
+                style={{ width: '100%', height: 'auto' }}
+                alt="Diffuse cooling 1"
+              />
+            </Box>
             <Flex
               position="absolute"
               left={0}
@@ -68,7 +104,7 @@ export const DiffuseCooling = ({ color, light=false }: DiffuseCoolingProps) => {
               flexDirection="column"
             >
               <NeueHaasGroteskDisplay
-                fontSize={rem(30)}
+                fontSize={{ base: rem(15), xs: rem(22), lg: rem(30) }}
                 mt={rem(25)}
                 fontWeight={600}
                 backgroundImage={color}
@@ -80,7 +116,7 @@ export const DiffuseCooling = ({ color, light=false }: DiffuseCoolingProps) => {
                 }}
               />
               <NeueHaasGroteskDisplay
-                fontSize={rem(22)}
+                fontSize={{ base: rem(12), xs: rem(14), lg: rem(22) }}
                 mt={rem(4)}
                 fontWeight={500}
                 lineHeight="112%"
@@ -91,14 +127,26 @@ export const DiffuseCooling = ({ color, light=false }: DiffuseCoolingProps) => {
             </Flex>
           </Box>
           <Box width="50%" position="relative">
-            <Image
-              src="/images/common/diffuse-cooling-2.png"
-              width="0"
-              height="0"
-              sizes="100vw"
-              style={{ width: '100%', height: 'auto' }}
-              alt="Diffuse cooling 2"
-            />
+            <Box display={{ base: 'none', md: 'block' }}>
+              <Image
+                src="/images/common/diffuse-cooling-2.png"
+                width="0"
+                height="0"
+                sizes="100vw"
+                style={{ width: '100%', height: 'auto' }}
+                alt="Diffuse cooling 2"
+              />
+            </Box>
+            <Box display={{ base: 'block', md: 'none' }}>
+              <Image
+                src="/images/common/diffuse-cooling-2-mobile.png"
+                width="0"
+                height="0"
+                sizes="100vw"
+                style={{ width: '100%', height: 'auto' }}
+                alt="Diffuse cooling 2"
+              />
+            </Box>
             <Flex
               position="absolute"
               left={0}
@@ -109,7 +157,7 @@ export const DiffuseCooling = ({ color, light=false }: DiffuseCoolingProps) => {
               flexDirection="column"
             >
               <NeueHaasGroteskDisplay
-                fontSize={rem(30)}
+                fontSize={{ base: rem(15), xs: rem(22), lg: rem(30) }}
                 mt={rem(25)}
                 fontWeight={600}
                 backgroundImage={color}
@@ -121,7 +169,7 @@ export const DiffuseCooling = ({ color, light=false }: DiffuseCoolingProps) => {
                 }}
               />
               <NeueHaasGroteskDisplay
-                fontSize={rem(22)}
+                fontSize={{ base: rem(12), xs: rem(14), lg: rem(22) }}
                 mt={rem(4)}
                 fontWeight={500}
                 lineHeight="112%"
@@ -132,6 +180,20 @@ export const DiffuseCooling = ({ color, light=false }: DiffuseCoolingProps) => {
             </Flex>
           </Box>
         </Flex>
+        <NeueHaasGroteskText
+          fontSize={{ base: rem(14), md: rem(22) }}
+          display={{ base: 'block', md: 'none' }}
+          mt={rem(40)}
+          maxW={rem(930)}
+          letterSpacing="calc(16px * -0.02)"
+          color={light ? 'text.secondary' : 'text.light'}
+          fontWeight={500}
+          textAlign="center"
+          sx={{ strong: { color: light ? 'text.strong' : 'text.link' } }}
+          dangerouslySetInnerHTML={{
+            __html: t('diffuse_cooling_description_2'),
+          }}
+        />
       </Container>
     </Box>
   );

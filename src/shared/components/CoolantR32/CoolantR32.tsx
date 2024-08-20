@@ -5,7 +5,6 @@ import Image from 'next/image';
 import { Label } from '../Label';
 import { NeueHaasGroteskDisplay, NeueHaasGroteskText } from '../Typography';
 import { rem } from 'polished';
-import { LINEAR_GRADIENTS } from '../../design';
 
 type CoolantR32Props = {
   color: string;
@@ -14,10 +13,10 @@ type CoolantR32Props = {
 export const CoolantR32 = ({ color }: CoolantR32Props) => {
   const { t } = useTranslation();
   return (
-    <Box>
+    <Box mt={rem(40)}>
       <Container>
-        <Flex alignItems="center">
-          <Box width={{ base: '50%' }}>
+        <Flex alignItems="center" flexDir={{ base: 'column', md: 'row' }}>
+          <Box width={{ base: '100%', md: '50%' }}>
             <Image
               src="/images/common/globe.png"
               width="0"
@@ -27,15 +26,20 @@ export const CoolantR32 = ({ color }: CoolantR32Props) => {
               alt="Globe"
             />
           </Box>
-          <Box width={{ base: '50%' }}>
+          <Flex
+            width={{ base: '100%', md: '50%' }}
+            flexDir="column"
+            justifyContent={{ base: 'center', md: 'flex-start' }}
+            alignItems={{ base: 'center', md: 'flex-start' }}
+          >
             <Label
               text={t('coolant_r32_label')}
               color="text.link"
               borderColor="text.link"
             />
             <NeueHaasGroteskDisplay
-              fontSize={rem(64)}
-              lineHeight={rem(64)}
+              fontSize={{ base: rem(30), md: rem(64) }}
+              lineHeight={{ base: rem(30), md: rem(64) }}
               fontWeight={600}
               color="text.link"
               mt={rem(25)}
@@ -51,13 +55,14 @@ export const CoolantR32 = ({ color }: CoolantR32Props) => {
             <NeueHaasGroteskText
               mt={rem(20)}
               lineHeight="130%"
-              fontSize={rem(22)}
+              fontSize={{ base: rem(14), md: rem(22) }}
+              textAlign={{ base: 'center', md: 'left' }}
               color="text.light"
               fontWeight={500}
               sx={{ strong: { color: 'text.link' } }}
               dangerouslySetInnerHTML={{ __html: t('coolant_r32_description') }}
             />
-          </Box>
+          </Flex>
         </Flex>
       </Container>
     </Box>

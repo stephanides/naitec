@@ -45,7 +45,7 @@ export const WhyInfoSwiper = ({
     >
       <Flex justifyContent="space-between" alignItems="center" mb={rem(50)}>
         <NeueHaasGroteskDisplay
-          fontSize={rem(64)}
+          fontSize={{ base: rem(24), xs: rem(28), md: rem(48), '2xl': rem(64) }}
           fontWeight={600}
           color={light ? 'white' : 'text.link'}
           lineHeight="112%"

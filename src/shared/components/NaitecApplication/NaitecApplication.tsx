@@ -24,24 +24,27 @@ export const NaitecApplication = ({
   return (
     <Box
       backgroundColor="background.primary"
-      py={rem(152)}
+      pb={{ base: 0, '2xl': rem(152) }}
       position="relative"
       overflow="hidden"
     >
       <Container>
-        <Flex columnGap={rem(60)}>
-          <Box width="50%">
-            <Label
-              text={t('naitec_app')}
-              color="text.inverted"
-              borderColor="border.white"
-            />
+        <Flex columnGap={rem(60)} flexDir={{ base: 'column', '2xl': 'row' }}>
+          <Box width={{ base: '100%', '2xl': '50%' }}>
+            <Flex justifyContent={{ base: 'center', '2xl': 'flex-start' }}>
+              <Label
+                text={t('naitec_app')}
+                color="text.inverted"
+                borderColor="border.white"
+              />
+            </Flex>
             <Box mt={rem(25)}>
               <NeueHaasGroteskDisplay
-                fontSize={rem(64)}
+                fontSize={{ base: rem(30), md: rem(64) }}
                 fontWeight={600}
-                lineHeight={rem(72)}
+                lineHeight={{ base: rem(36), md: rem(72) }}
                 color="text.inverted"
+                textAlign={{ base: 'center', '2xl': 'start' }}
                 sx={{
                   span: {
                     backgroundImage: textColor,
@@ -52,17 +55,22 @@ export const NaitecApplication = ({
                 dangerouslySetInnerHTML={{ __html: t('naitec_app_title') }}
               />
               <NeueHaasGroteskText
-                fontSize={rem(22)}
+                fontSize={{ base: rem(16), md: rem(22) }}
                 fontWeight={600}
                 color="text.secondary"
-                mt={rem(40)}
+                mt={{ base: rem(20), md: rem(40) }}
                 sx={{ strong: { color: '#EBEBEB' } }}
+                textAlign={{ base: 'center', '2xl': 'start' }}
                 dangerouslySetInnerHTML={{
                   __html: t('naitec_app_description'),
                 }}
               />
             </Box>
-            <Flex mt={rem(60)} columnGap={rem(25)}>
+            <Flex
+              mt={rem(60)}
+              columnGap={rem(25)}
+              display={{ base: 'none', '2xl': 'flex' }}
+            >
               <a
                 href={EXTERNAL_ROUTES.ANDROID}
                 target="_blank"
@@ -79,15 +87,29 @@ export const NaitecApplication = ({
               </a>
             </Flex>
           </Box>
-          <Box width="50%" position="relative">
-            <Image
-              src="/images/common/iphone-mockup.png"
-              width="0"
-              height="0"
-              sizes="100vw"
-              style={{ width: '100%', height: 'auto' }}
-              alt="Metalinox"
-            />
+          <Flex
+            width={{ base: '100%', '2xl': '50%' }}
+            position="relative"
+            height={{ base: rem(300), md: '60vw', xl: '40vw', '2xl': 'auto' }}
+            minH={{ base: rem(300), xs: rem(400), '2xl': 'auto' }}
+            justifyContent="center"
+            mt={{ base: rem(30), '2xl': 0 }}
+          >
+            <Box
+              position="absolute"
+              width="100%"
+              top={{ base: rem(40), '2xl': 0 }}
+              maxW={rem(600)}
+            >
+              <Image
+                src="/images/common/iphone-mockup.png"
+                width="0"
+                height="0"
+                sizes="100vw"
+                style={{ width: '100%', height: 'auto' }}
+                alt="Iphone"
+              />
+            </Box>
             <Box
               position="absolute"
               top="50%"
@@ -98,7 +120,30 @@ export const NaitecApplication = ({
               borderRadius="30%"
               filter="blur(100px)"
             />
-          </Box>
+            <Flex
+              mt={rem(60)}
+              columnGap={rem(25)}
+              display={{ base: 'flex', '2xl': 'none' }}
+              position="absolute"
+              bottom={rem(30)}
+              zIndex={3}
+            >
+              <a
+                href={EXTERNAL_ROUTES.ANDROID}
+                target="_blank"
+                rel="noreferrer"
+              >
+                <Box width={{ base: rem(135), md: rem(170) }}>
+                  <GooglePlay />
+                </Box>
+              </a>
+              <a href={EXTERNAL_ROUTES.IOS} target="_blank" rel="noreferrer">
+                <Box width={{ base: rem(135), md: rem(170) }}>
+                  <AppStore />
+                </Box>
+              </a>
+            </Flex>
+          </Flex>
         </Flex>
       </Container>
       {withoutBlur ? (
@@ -117,6 +162,16 @@ export const NaitecApplication = ({
           filter="blur(100px)"
         />
       )}
+      <Box
+        position="absolute"
+        bottom={0}
+        right={0}
+        left={0}
+        display={{ base: 'block', '2xl': 'none' }}
+        height={rem(100)}
+        background="linear-gradient(180deg, rgba(255, 255, 255, 0) 33%, rgba(17, 27, 33, 1) 100%)"
+        zIndex={2}
+      />
     </Box>
   );
 };

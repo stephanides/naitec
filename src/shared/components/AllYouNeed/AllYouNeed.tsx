@@ -3,22 +3,10 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation } from 'swiper/modules';
 import { SwiperNavigation } from '../SwiperNavigation';
 import { AllYouNeedItem, AllYouNeedItemProps } from './AllYouNeedItem';
-import {
-  Bolt,
-  Heating,
-  Info,
-  LisaVoice,
-  PlusExpand,
-  Redirect,
-  Verified,
-  Virus,
-} from '../../design';
 import { useTranslation } from 'next-i18next';
 import { NeueHaasGroteskDisplay } from '../Typography';
 import { rem } from 'polished';
 import { Container } from '../Container';
-import { INTERNAL_ROUTES } from '../../constants';
-import { AllYouNeedModalContent } from './AllYouNeedModalContent';
 
 type AllYouNeedProps = {
   color: string;
@@ -31,7 +19,7 @@ export const AllYouNeed = ({ color, items }: AllYouNeedProps) => {
     <Box overflowX="hidden">
       <Container>
         <NeueHaasGroteskDisplay
-          fontSize={rem(64)}
+          fontSize={{ base: rem(30), md: rem(64) }}
           fontWeight={600}
           color="text.link"
           lineHeight="112%"
@@ -50,7 +38,7 @@ export const AllYouNeed = ({ color, items }: AllYouNeedProps) => {
             '.swiper': { overflow: 'visible' },
             '.swiper-slide': { height: 'auto' },
           }}
-          mt={rem(45)}
+          mt={{ base: rem(25), md: rem(45) }}
         >
           <Swiper
             className="similar-swiper"
@@ -88,7 +76,11 @@ export const AllYouNeed = ({ color, items }: AllYouNeedProps) => {
             ))}
           </Swiper>
         </Box>
-        <Flex justify="flex-end" my={rem(65)}>
+        <Flex
+          justify="flex-end"
+          my={{ base: rem(25), md: rem(65) }}
+          px={rem(25)}
+        >
           <SwiperNavigation
             prevClassName="swiper-button-prev-all-you-need"
             nextClassName="swiper-button-next-all-you-need"

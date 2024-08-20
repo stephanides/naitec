@@ -39,8 +39,8 @@ export const AllYouNeedItem = ({
     <Box
       background="#E9E9E9"
       borderRadius={rem(20)}
-      p={rem(50)}
-      pb={rem(70)}
+      p={{ base: rem(25), md: rem(50) }}
+      pb={{ base: rem(56), md: rem(70) }}
       role="group"
       position="relative"
       overflow="hidden"
@@ -49,17 +49,17 @@ export const AllYouNeedItem = ({
     >
       <Box>{icon}</Box>
       <NeueHaasGroteskDisplay
-        fontSize={rem(32)}
+        fontSize={{ base: rem(20), md: rem(32) }}
         fontWeight={600}
-        mt={rem(30)}
+        mt={{ base: rem(20), md: rem(30) }}
         color="text.link"
       >
         {title}
       </NeueHaasGroteskDisplay>
       <NeueHaasGroteskText
         color="text.light"
-        mt={rem(20)}
-        fontSize={rem(18)}
+        mt={{ base: rem(15), md: rem(20) }}
+        fontSize={{ base: rem(14), md: rem(18) }}
         fontWeight={500}
         lineHeight="130%"
       >
@@ -69,10 +69,10 @@ export const AllYouNeedItem = ({
         <Link href={link}>
           <Flex
             position="absolute"
-            right={rem(22)}
-            bottom={rem(22)}
-            width={rem(45)}
-            h={rem(45)}
+            right={{ base: rem(8), md: rem(22) }}
+            bottom={{ base: rem(8), md: rem(22) }}
+            width={{ base: rem(40), md: rem(45) }}
+            h={{ base: rem(40), md: rem(45) }}
             alignItems="center"
             justifyContent="center"
             borderRadius="50%"
@@ -92,10 +92,10 @@ export const AllYouNeedItem = ({
           <Flex
             position="absolute"
             onClick={onOpen}
-            right={rem(22)}
-            bottom={rem(22)}
-            width={rem(45)}
-            h={rem(45)}
+            right={{ base: rem(8), md: rem(22) }}
+            bottom={{ base: rem(8), md: rem(22) }}
+            width={{ base: rem(40), md: rem(45) }}
+            h={{ base: rem(40), md: rem(45) }}
             alignItems="center"
             justifyContent="center"
             borderRadius="50%"
@@ -122,8 +122,8 @@ export const AllYouNeedItem = ({
                 onClick={onClose}
                 top={rem(40)}
                 right={rem(40)}
-                width={rem(65)}
-                height={rem(65)}
+                width={{ base: rem(35), lg: rem(65) }}
+                height={{ base: rem(35), lg: rem(65) }}
                 justifyContent="center"
                 alignItems="center"
                 borderRadius="50%"
@@ -134,7 +134,9 @@ export const AllYouNeedItem = ({
                   _hover: { svg: { transform: 'scale(1.2)' } },
                 }}
               >
-                <Close />
+                <Box width={{ base: rem(16), lg: rem(31) }}>
+                  <Close />
+                </Box>
               </Flex>
               {expandContent}
             </ModalContent>

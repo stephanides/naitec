@@ -53,7 +53,13 @@ export const Stellair = () => {
         >
           <NeueHaasGroteskDisplay
             background="linear-gradient(to right, #344F5F, #6CA5C5)"
-            fontSize={rem(192)}
+            fontSize={{
+              base: rem(60),
+              xs: rem(72),
+              md: rem(100),
+              lg: rem(140),
+              xl: rem(192),
+            }}
             fontWeight={600}
             textTransform="uppercase"
             textAlign="center"
@@ -67,10 +73,30 @@ export const Stellair = () => {
 
           <Flex
             position="relative"
-            pt={rem(60)}
-            maxW={rem(1600)}
-            width="100%"
-            minH={rem(480)}
+            pt={{
+              base: rem(24),
+              xs: rem(20),
+              md: rem(32),
+              lg: rem(60),
+              xl: rem(80),
+              '2xl': rem(60),
+            }}
+            maxW={{
+              base: rem(450),
+              xs: rem(600),
+              md: rem(800),
+              lg: rem(1000),
+              xl: rem(1400),
+              '2xl': rem(1600),
+            }}
+            width={{
+              base: rem(450),
+              xs: rem(600),
+              md: rem(800),
+              lg: rem(1000),
+              xl: rem(1400),
+              '2xl': rem(1600),
+            }}
             justify="center"
             overflow="hidden"
           >
@@ -83,9 +109,14 @@ export const Stellair = () => {
         </Flex>
         <ProductHeadingButtons color="text.stellair" />
       </Box>
-      <Flex mt={rem(100)} flexDir="column" alignItems="center" mb={rem(158)}>
+      <Flex
+        mt={{ base: rem(54), md: rem(100) }}
+        flexDir="column"
+        alignItems="center"
+        mb={{ base: rem(55), md: rem(158) }}
+      >
         <NeueHaasGroteskDisplay
-          fontSize={rem(36)}
+          fontSize={{ base: rem(20), md: rem(36) }}
           color="text.link"
           fontWeight={600}
         >
@@ -93,7 +124,7 @@ export const Stellair = () => {
         </NeueHaasGroteskDisplay>
         <NeueHaasGroteskDisplay
           maxW={rem(925)}
-          fontSize={rem(32)}
+          fontSize={{ base: rem(18), md: rem(32) }}
           color="#8F8F8F"
           textAlign="center"
           fontWeight={600}
@@ -105,9 +136,9 @@ export const Stellair = () => {
       <Element id="content" name="content">
         <Box
           overflow="hidden"
-          pb={rem(160)}
+          pb={{ base: rem(60), lg: rem(160) }}
           background="background.primary"
-          pt={rem(176)}
+          pt={{ base: rem(100), lg: rem(176) }}
           position="relative"
         >
           <Container>
@@ -167,7 +198,7 @@ export const Stellair = () => {
       </Box>
       <Box
         background="background.primary"
-        pt={rem(152)}
+        pt={{ base: rem(50), md: rem(80), xl: rem(152) }}
         position="relative"
         overflow="hidden"
         top={rem(1)}
@@ -176,7 +207,7 @@ export const Stellair = () => {
         <DiffuseCooling light color={LINEAR_GRADIENTS.stellair} />
       </Box>
       <NaitecApplication />
-      <Box mt={rem(167)}>
+      <Box mt={{ base: rem(50), md: rem(80), '2xl': rem(167) }}>
         <AllYouNeed
           color={LINEAR_GRADIENTS.stellair}
           items={[
@@ -234,7 +265,7 @@ export const Stellair = () => {
       <Box>
         <CoolantR32 color={LINEAR_GRADIENTS.stellair} />
       </Box>
-      <Box my={rem(152)}>
+      <Box my={{ base: rem(69), md: rem(90), '2xl': rem(152) }}>
         <CleanAir color={LINEAR_GRADIENTS.stellair} />
       </Box>
       <Box>

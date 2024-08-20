@@ -11,11 +11,11 @@ type HowCoolingLooksLikeProps = {
 export const HowCoolingLooksLike = ({ color }: HowCoolingLooksLikeProps) => {
   const { t } = useTranslation('common');
   return (
-    <Box py={rem(143)}>
+    <Box py={{ base: rem(50), md: rem(80), xl: rem(143) }}>
       <Container>
         <Flex justifyContent="center">
           <NeueHaasGroteskDisplay
-            fontSize={rem(64)}
+            fontSize={{ base: rem(30), xs: rem(48), xl: rem(64) }}
             fontWeight={600}
             color="text.link"
             lineHeight="112%"
