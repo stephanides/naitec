@@ -162,6 +162,7 @@ export const Home = () => {
             alignItems="center"
             position="relative"
             flexDir="column"
+            overflow="hidden"
           >
             <NeueHaasGroteskDisplay
               background={LINEAR_GRADIENTS.sensitive_pro}
@@ -272,6 +273,7 @@ export const Home = () => {
             alignItems="center"
             position="relative"
             flexDir="column"
+            overflow="hidden"
           >
             <NeueHaasGroteskDisplay
               background={LINEAR_GRADIENTS.sensitive}
