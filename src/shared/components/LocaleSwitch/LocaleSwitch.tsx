@@ -18,9 +18,11 @@ import {
   Popover,
   PopoverContent,
   PopoverTrigger,
+  useDisclosure,
+  useOutsideClick,
 } from '@chakra-ui/react';
 import { rem } from 'polished';
-import { ReactNode } from 'react';
+import { ReactNode, useRef } from 'react';
 import { NeueHaasGroteskText } from '../Typography';
 import { useTranslation } from 'next-i18next';
 
@@ -74,12 +76,22 @@ const LocaleLink = ({
 
 export const LocaleSwitch = () => {
   const { locale, pathname } = useRouter();
+  const { isOpen, onToggle, onClose } = useDisclosure();
+  const popoverRef = useRef(null);
+  useOutsideClick({
+    ref: popoverRef,
+    handler: () => {
+      if (isOpen) {
+        onClose();
+      }
+    },
+  });
 
   const activeLanguage =
     languages.find((language) => language.code === locale) ?? languages[0];
 
   return (
-    <Popover trigger={'hover'} placement={'bottom-end'}>
+    <Popover placement={'bottom-end'} isOpen={isOpen} onClose={onClose}>
       <PopoverTrigger>
         <Box>
           <Flex
@@ -92,6 +104,7 @@ export const LocaleSwitch = () => {
             width={rem(76)}
             cursor="pointer"
             display={{ base: 'none', md: 'flex' }}
+            onClick={onToggle}
           >
             <Box width={rem(16)}>{activeLanguage.flag}</Box>
             <LocaleSwitchChevron />
@@ -102,6 +115,7 @@ export const LocaleSwitch = () => {
             justifyContent="center"
             cursor="pointer"
             display={{ base: 'flex', md: 'none' }}
+            onClick={onToggle}
           >
             <GlobeSmall />
           </Flex>
@@ -119,15 +133,18 @@ export const LocaleSwitch = () => {
         rowGap={rem(12)}
         maxH={rem(374)}
         overflow="auto"
+        ref={popoverRef}
       >
         {languages.map((language) => (
-          <LocaleLink
-            key={language.code}
-            pathname={pathname}
-            title={language.name}
-            locale={language.code}
-            flag={language.flag}
-          />
+          <Box onClick={onToggle}>
+            <LocaleLink
+              key={language.code}
+              pathname={pathname}
+              title={language.name}
+              locale={language.code}
+              flag={language.flag}
+            />
+          </Box>
         ))}
       </PopoverContent>
     </Popover>
