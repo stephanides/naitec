@@ -38,7 +38,7 @@ export const SecondaryButton = ({
     border="2px solid"
     borderColor={color}
     background="transparent"
-    px={{ base: rem(20), xs: rem(36) }}
+    px={{ base: rem(12), xs: rem(36) }}
     py={{ base: rem(10), xs: rem(18) }}
     height={{ base: rem(34), xs: rem(60) }}
     transition="all .3s ease-out"
@@ -64,7 +64,7 @@ export const SecondaryButton = ({
   >
     <Flex alignItems="center" columnGap={rem(8)} position="relative">
       {startWithIcon && icon && (
-        <Box width={{ base: rem(16), md: rem(20) }}>{icon}</Box>
+        <Box width={{ base: rem(12), md: rem(20) }}>{icon}</Box>
       )}
       <NeueHaasGroteskDisplay
         fontSize={{ base: rem(12), xs: rem(18) }}
@@ -73,7 +73,11 @@ export const SecondaryButton = ({
         {children}
       </NeueHaasGroteskDisplay>
       {!startWithIcon && icon && (
-        <Box className="icon" sx={{ path: { stroke: color } }}>
+        <Box
+          width={{ base: rem(12), md: rem(20) }}
+          className="icon"
+          sx={{ path: { stroke: color } }}
+        >
           {icon}
         </Box>
       )}

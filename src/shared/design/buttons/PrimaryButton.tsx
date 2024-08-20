@@ -40,9 +40,9 @@ export const PrimaryButton = ({
     border="2px solid"
     borderColor={borderColor}
     background={color}
-    px={{ base: rem(20), xs: rem(36) }}
+    px={{ base: rem(12), xs: rem(36) }}
     py={{ base: rem(10), xs: rem(18) }}
-    height={{base: rem(34), xs: rem(60)}}
+    height={{ base: rem(34), xs: rem(60) }}
     transition="all .3s ease-out"
     _disabled={{
       border: '2px solid',
@@ -66,7 +66,7 @@ export const PrimaryButton = ({
   >
     <Flex alignItems="center" columnGap={rem(8)} position="relative">
       {startWithIcon && icon && (
-        <Box width={{ base: rem(16), md: rem(20) }}>{icon}</Box>
+        <Box width={{ base: rem(12), md: rem(20) }}>{icon}</Box>
       )}
       <NeueHaasGroteskDisplay
         fontSize={{ base: rem(12), xs: rem(18) }}
@@ -74,7 +74,11 @@ export const PrimaryButton = ({
       >
         {children}
       </NeueHaasGroteskDisplay>
-      {!startWithIcon && icon && <Box className="icon">{icon}</Box>}
+      {!startWithIcon && icon && (
+        <Box width={{ base: rem(12), md: rem(20) }} className="icon">
+          {icon}
+        </Box>
+      )}
     </Flex>
   </Button>
 );

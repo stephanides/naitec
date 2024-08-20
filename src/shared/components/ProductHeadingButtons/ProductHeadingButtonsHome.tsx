@@ -19,7 +19,7 @@ export const ProductHeadingButtonsHome = ({
   const { t } = useTranslation('common');
   return (
     <Flex width="100%" justifyContent="center" position="relative">
-      <Flex columnGap={rem(20)}>
+      <Flex columnGap={{ base: rem(8), md: rem(20) }}>
         <PrimaryButton
           background="text.link"
           borderColor="text.link"

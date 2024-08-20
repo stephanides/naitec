@@ -53,7 +53,9 @@ export const SwiperNavigation = ({
           justifyContent="center"
           alignItems="center"
         >
-          <ArrowRight color={light ? 'white' : '#393939'} />
+          <Box width={rem(20)}>
+            <ArrowRight color={light ? 'white' : '#393939'} />
+          </Box>
         </Flex>
       </Box>
       <Box className={nextClassName} cursor="pointer">
@@ -66,7 +68,9 @@ export const SwiperNavigation = ({
           justifyContent="center"
           alignItems="center"
         >
-          <ArrowRight color={light ? 'white' : '#393939'} />
+          <Box width={rem(20)}>
+            <ArrowRight color={light ? 'white' : '#393939'} />
+          </Box>
         </Flex>
       </Box>
     </Flex>
