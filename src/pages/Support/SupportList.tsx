@@ -43,10 +43,10 @@ const SupportListItem = ({ title, supportImage, href }: Product) => {
           </Box>
         </Box>
         <NeueHaasGroteskDisplay
-          fontSize={{ base: rem(28), md: rem(40) }}
+          fontSize={{ base: rem(18), xs: rem(28), md: rem(40) }}
           color="text.link"
           fontWeight={600}
-          mt={rem(30)}
+          mt={{ base: rem(16), xs: rem(30) }}
           textAlign="center"
         >
           {title === 'fireplace' ? t('fireplace_diffuser') : title}
@@ -59,7 +59,7 @@ const SupportListItem = ({ title, supportImage, href }: Product) => {
         >
           <NeueHaasGroteskDisplay
             color="text.naitec_blue"
-            fontSize={rem(18)}
+            fontSize={{ base: rem(12), xs: rem(18) }}
             fontWeight={600}
           >
             {t('support:show_manuals')}
@@ -70,6 +70,7 @@ const SupportListItem = ({ title, supportImage, href }: Product) => {
             _groupHover={{ transform: 'translateX(4px)' }}
             position="relative"
             top={rem(2)}
+            width={{ base: rem(6), xs: rem(8) }}
           >
             <ChevronRight />
           </Box>
@@ -97,7 +98,7 @@ const FilterButton = ({
       bg={isActive ? 'background.naitec_blue' : '#BABABA'}
       width={{ base: '25%' }}
       py={rem(14)}
-      minW={rem(220)}
+      minW={{ base: rem(160), lg: rem(220) }}
       transition="all 0.3s ease-in-out"
       sx={{
         '&:hover': {
@@ -106,7 +107,7 @@ const FilterButton = ({
       }}
     >
       <NeueHaasGroteskDisplay
-        fontSize={rem(18)}
+        fontSize={{ base: rem(12), lg: rem(18) }}
         fontWeight={600}
         color="text.inverted"
         textAlign="center"
@@ -161,7 +162,7 @@ export const SupportList = () => {
         />
       </Flex>
       <Grid
-        gridTemplateColumns={{ base: '1fr 1fr', md: '1fr 1fr 1fr' }}
+        gridTemplateColumns={{ base: '1fr 1fr', lg: '1fr 1fr 1fr' }}
         columnGap={rem(20)}
         rowGap={rem(40)}
       >
