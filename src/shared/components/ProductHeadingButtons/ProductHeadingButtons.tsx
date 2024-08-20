@@ -28,7 +28,7 @@ export const ProductHeadingButtons = ({ color }: ProductHeadingButtonProps) => {
   return (
     <Flex width="100%" justifyContent="center" position="relative">
       <Flex columnGap={rem(20)}>
-        <Link href={INTERNAL_ROUTES.BUSINESS_PARTNERS}>
+        <Link href={INTERNAL_ROUTES.WHERE_TO_BUY}>
           <PrimaryButton
             background={color}
             borderColor={color}
