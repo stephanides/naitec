@@ -30,7 +30,7 @@ export const Contact = () => {
           mt={rem(25)}
         >
           <NeueHaasGroteskDisplay
-            maxW={{ base: rem(295), xs: 'auto' }}
+            maxW={{ base: rem(295), xs: '100%' }}
             fontSize={{ base: rem(30), md: rem(48), lg: rem(64) }}
             color="text.link"
             textAlign="center"
