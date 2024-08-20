@@ -87,6 +87,7 @@ export const StellairSensitive = ({
             alignItems="center"
             justifyContent="space-evenly"
             flexWrap="wrap"
+            flexDir={{ base: 'column', lg: 'row' }}
           >
             <NeueHaasGroteskDisplay
               color="text.strong"

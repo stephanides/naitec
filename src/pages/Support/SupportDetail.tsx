@@ -29,7 +29,7 @@ export const SupportDetail = ({ product }: SupportDetailProps) => {
         </Flex>
         <Flex justifyContent="center" mt={rem(25)}>
           <NeueHaasGroteskDisplay
-            fontSize={rem(64)}
+            fontSize={{ base: rem(30), md: rem(48), lg: rem(64) }}
             color="text.link"
             textAlign="center"
             lineHeight="112%"

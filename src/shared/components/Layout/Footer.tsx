@@ -143,7 +143,7 @@ export const Footer = () => {
               </Box>
             </Flex>
           </Flex>
-          <Flex columnGap={rem(60)} display={{ base: 'none', lg: 'flex' }}>
+          <Flex columnGap={rem(60)} display={{ base: 'none', xl: 'flex' }}>
             <Box>
               <Title>{t('footer_navigation')}</Title>
 
@@ -223,7 +223,7 @@ export const Footer = () => {
           </Flex>
           <Flex
             flexWrap="wrap"
-            display={{ base: 'flex', lg: 'none' }}
+            display={{ base: 'flex', xl: 'none' }}
             mt={rem(30)}
             width="100%"
           >

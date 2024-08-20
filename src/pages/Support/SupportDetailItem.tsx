@@ -25,14 +25,14 @@ export const SupportDetailItem = ({ title, items }: SupportDetailItemProps) => {
   return (
     <Box borderRadius={rem(20)} overflow="hidden" mt={rem(50)}>
       <Box
-        px={rem(60)}
-        py={rem(30)}
+        px={{ base: rem(30), lg: rem(60) }}
+        py={{ base: rem(20), lg: rem(30) }}
         backgroundColor="#DDDDDD"
         borderBottom="1px solid"
         borderColor="#D0D0D0"
       >
         <NeueHaasGroteskDisplay
-          fontSize={rem(28)}
+          fontSize={{ base: rem(16), xs: rem(20), lg: rem(28) }}
           fontWeight={600}
           color="#565656"
         >
@@ -41,43 +41,51 @@ export const SupportDetailItem = ({ title, items }: SupportDetailItemProps) => {
       </Box>
       <Box backgroundColor="#EAEAEA" pb={rem(30)}>
         {items.map((item, index) => (
-          <Link href={item.href} key={index}>
-            <Flex
-              justifyContent="space-between"
-              alignItems="center"
-              py={rem(30)}
-              px={rem(60)}
-              _notLast={{ borderBottom: '1px solid #D0D0D0' }}
-            >
-              <Flex columnGap={rem(5)} alignItems="center">
-                <Box>
-                  {item.type === 'document' ? <DocumentIcon /> : <VideoIcon />}
-                </Box>
-                <NeueHaasGroteskText
-                  fontSize={rem(20)}
-                  color="text.link"
-                  fontWeight={500}
-                  textDecor="underline"
-                >
-                  {item.title}
-                </NeueHaasGroteskText>
-                <Box>
-                  <NewTab />
-                </Box>
-              </Flex>
-              <Flex>
-                <NeueHaasGroteskText fontSize={rem(16)} color="#616161">
-                  {item.date}&nbsp;
-                </NeueHaasGroteskText>
-                {item.size && (
-                  <NeueHaasGroteskText fontSize={rem(16)} color="#616161">
-                    {' '}
-                    | {item.size}
+          <Box _notLast={{ borderBottom: '1px solid #D0D0D0' }} key={index}>
+            <Link href={item.href} target="_blank">
+              <Flex
+                justifyContent="space-between"
+                alignItems={{ base: 'flex-start', lg: 'center' }}
+                px={{ base: rem(30), lg: rem(60) }}
+                py={{ base: rem(20), lg: rem(30) }}
+                _notLast={{ borderBottom: '1px solid #D0D0D0' }}
+                flexDir={{ base: 'column', lg: 'row' }}
+                rowGap={rem(8)}
+              >
+                <Flex columnGap={rem(5)} alignItems="center">
+                  <Box>
+                    {item.type === 'document' ? (
+                      <DocumentIcon />
+                    ) : (
+                      <VideoIcon />
+                    )}
+                  </Box>
+                  <NeueHaasGroteskText
+                    fontSize={{ base: rem(16), md: rem(20) }}
+                    color="text.link"
+                    fontWeight={500}
+                    textDecor="underline"
+                  >
+                    {item.title}
                   </NeueHaasGroteskText>
-                )}
+                  <Box>
+                    <NewTab />
+                  </Box>
+                </Flex>
+                <Flex ml={{ base: rem(32), lg: 0 }}>
+                  <NeueHaasGroteskText fontSize={rem(16)} color="#616161">
+                    {item.date}&nbsp;
+                  </NeueHaasGroteskText>
+                  {item.size && (
+                    <NeueHaasGroteskText fontSize={rem(16)} color="#616161">
+                      {' '}
+                      | {item.size}
+                    </NeueHaasGroteskText>
+                  )}
+                </Flex>
               </Flex>
-            </Flex>
-          </Link>
+            </Link>
+          </Box>
         ))}
       </Box>
     </Box>
