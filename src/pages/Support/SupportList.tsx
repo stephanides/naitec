@@ -43,7 +43,7 @@ const SupportListItem = ({ title, supportImage, href }: Product) => {
           </Box>
         </Box>
         <NeueHaasGroteskDisplay
-          fontSize={rem(40)}
+          fontSize={{ base: rem(28), md: rem(40) }}
           color="text.link"
           fontWeight={600}
           mt={rem(30)}
@@ -97,6 +97,7 @@ const FilterButton = ({
       bg={isActive ? 'background.naitec_blue' : '#BABABA'}
       width={{ base: '25%' }}
       py={rem(14)}
+      minW={rem(220)}
       transition="all 0.3s ease-in-out"
       sx={{
         '&:hover': {
@@ -131,7 +132,13 @@ export const SupportList = () => {
   });
   return (
     <Box>
-      <Flex columnGap={rem(20)} mb={rem(30)} mt={rem(50)}>
+      <Flex
+        columnGap={rem(20)}
+        mb={rem(30)}
+        mt={rem(50)}
+        overflowX="auto"
+        pb={rem(20)}
+      >
         <FilterButton
           title={t('navigation_all_products')}
           onClick={() => setActiveCategory(null)}
@@ -154,7 +161,7 @@ export const SupportList = () => {
         />
       </Flex>
       <Grid
-        gridTemplateColumns={{ base: '1fr 1fr 1fr' }}
+        gridTemplateColumns={{ base: '1fr 1fr', md: '1fr 1fr 1fr' }}
         columnGap={rem(20)}
         rowGap={rem(40)}
       >

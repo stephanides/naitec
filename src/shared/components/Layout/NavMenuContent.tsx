@@ -96,7 +96,7 @@ export const NavMenuContent = ({
               borderBottom="1px solid"
               borderColor="text.naitec_blue"
               lineHeight={rem(20)}
-              maxW={rem(400)}
+              
             >
               {t('navigation_air_condition')}
             </NeueHaasGroteskText>
