@@ -45,10 +45,10 @@ const Item = ({
         <Image src={image} alt={title} layout="fill" objectFit="contain" />
       </Box>
       <NeueHaasGroteskDisplay
-        fontSize={rem(48)}
+        fontSize={{ base: rem(32), md: rem(48) }}
         fontWeight={600}
         color="text.inverted"
-        my={rem(40)}
+        my={{ base: rem(20), md: rem(40) }}
         textAlign="center"
       >
         {title}
@@ -77,7 +77,10 @@ export const StellairSensitive = ({
 }: StellairSensitiveProps) => {
   const { t } = useTranslation('common');
   return (
-    <Box backgroundColor="background.primary" py={rem(200)}>
+    <Box
+      backgroundColor="background.primary"
+      py={{ base: rem(60), xs: rem(80), md: rem(120), xl: rem(200) }}
+    >
       <Container>
         <Box>
           <Flex
@@ -87,10 +90,11 @@ export const StellairSensitive = ({
           >
             <NeueHaasGroteskDisplay
               color="text.strong"
-              fontSize={rem(64)}
-              lineHeight={rem(64)}
+              fontSize={{ base: rem(48), md: rem(64) }}
+              lineHeight={{ base: rem(48), md: rem(64) }}
               fontWeight={600}
               textAlign="center"
+              mb={{ base: rem(40), lg: 0 }}
               sx={{
                 strong: {
                   backgroundImage: gradientColor,
@@ -109,8 +113,20 @@ export const StellairSensitive = ({
             </PrimaryButton>
           </Flex>
         </Box>
-        <Flex flexWrap="wrap" justifyContent="space-evenly" mt={rem(80)}>
-          <Box flex="1 1 auto" maxWidth="533px">
+        <Flex
+          flexWrap="wrap"
+          justifyContent="space-evenly"
+          mt={rem(80)}
+          flexDir={{ base: 'column', xl: 'row' }}
+          rowGap={{ base: rem(40), xl: 0 }}
+          width="100%"
+        >
+          <Box
+            flex="1 1 auto"
+            width={{ base: '70%', md: '100%' }}
+            maxWidth="533px"
+            mx={{ base: 'auto', xl: 0 }}
+          >
             <Item
               image="/images/stellair/stellair_minimal.png"
               title="Naitec Stellair"
@@ -120,7 +136,12 @@ export const StellairSensitive = ({
               color={color}
             />
           </Box>
-          <Box flex="1 1 auto" maxWidth="470px">
+          <Box
+            flex="1 1 auto"
+            width={{ base: '70%', md: '100%' }}
+            maxWidth="470px"
+            mx={{ base: 'auto', xl: 0 }}
+          >
             <Item
               image="/images/sensitive/sensitive_minimal.png"
               title="Naitec Sensitive"

@@ -17,8 +17,11 @@ export const Lisa = () => {
   return (
     <Box>
       <Container>
-        <Flex columnGap={{ base: rem(80), '3xl': rem(128) }}>
-          <Box width="60%">
+        <Flex
+          columnGap={{ base: rem(80), '3xl': rem(128) }}
+          flexDir={{ base: 'column', xl: 'row' }}
+        >
+          <Box width={{ base: '100%', xl: '60%' }}>
             <ProductGallery
               images={[
                 {
@@ -40,7 +43,7 @@ export const Lisa = () => {
               ]}
             />
           </Box>
-          <Box width="40%" pt={rem(40)}>
+          <Box width={{ base: '100%', xl: '40%' }} pt={rem(40)}>
             <Box>
               <Label
                 text={t('common:new')}
@@ -48,7 +51,7 @@ export const Lisa = () => {
                 borderColor="text.naitec_blue"
               />
               <NeueHaasGroteskDisplay
-                fontSize={rem(48)}
+                fontSize={{ base: rem(32), xs: rem(48) }}
                 color="text.link"
                 fontWeight={600}
                 my={rem(12)}
@@ -58,13 +61,12 @@ export const Lisa = () => {
               <NeueHaasGroteskText
                 sx={{ strong: { color: 'text.link' } }}
                 color="text.light"
-                fontSize={rem(20)}
-                fontWeight={600}
+                fontSize={{ base: rem(16), xs: rem(20) }}
                 lineHeight="130%"
                 dangerouslySetInnerHTML={{ __html: t('description1') }}
               />
             </Box>
-            <Box mt={rem(72)}>
+            <Box mt={{ base: rem(44), xl: rem(72) }}>
               <CollapsibleItem
                 title={t('common:description')}
                 text={
@@ -115,7 +117,7 @@ export const Lisa = () => {
           </Box>
         </Flex>
       </Container>
-      <Box mt={rem(125)}>
+      <Box mt={{ base: rem(60), xs: rem(125) }}>
         <StellairSensitive />
       </Box>
     </Box>
