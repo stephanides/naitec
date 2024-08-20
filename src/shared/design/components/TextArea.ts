@@ -8,12 +8,13 @@ const custom = defineStyle({
   background: 'background.naitec_blue',
   color: 'white',
   py: rem(18),
-  px: rem(24),
+  px: { base: rem(18), lg: rem(24) },
   fontFamily: '"neue-haas-grotesk-text",sans-serif',
+  fontSize: { base: '10px', xs: '12px', lg: '16px' },
   _placeholder: {
     color: '#C1C1C1',
     opacity: 1,
-    fontSize: rem(18),
+    fontSize: { base: '10px', xs: '12px', lg: '16px' },
   },
   _invalid: {
     borderColor: 'red',
@@ -24,6 +25,7 @@ const custom = defineStyle({
     background: 'white',
     borderRadius: '10px',
     color: 'black',
+    fontSize: { base: '10px', xs: '12px', lg: '16px' },
   },
 });
 

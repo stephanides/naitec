@@ -26,7 +26,7 @@ export const Label = ({
     <RobotoMono
       color={color}
       fontWeight={700}
-      fontSize={rem(fontSize)}
+      fontSize={{ base: rem(9), lg: rem(fontSize) }}
       textTransform="uppercase"
     >
       {text}

@@ -80,7 +80,10 @@ export const Navigation = ({ toggleMobile, dark = false }: NavigationProps) => {
       {/* Desktop navigation */}
       <Box
         mt={0}
-        py={scrolled ? rem(20) : rem(50)}
+        py={{
+          base: scrolled ? rem(20) : rem(30),
+          lg: scrolled ? rem(20) : rem(50),
+        }}
         position="fixed"
         top={0}
         zIndex={99}

@@ -42,7 +42,7 @@ export const Layout: FC<LayoutProps> = (props) => {
       backgroundSize="contain"
     >
       <Navigation toggleMobile={toggleMobile} />
-      <Box pt={{ base: rem(80), md: rem(92), lg: rem(138) }}>{children}</Box>
+      <Box pt={{ base: rem(80), md: rem(110), lg: rem(138) }}>{children}</Box>
       <Footer />
       <NavMenuContent
         isOpen={isMobileMenuOpen}

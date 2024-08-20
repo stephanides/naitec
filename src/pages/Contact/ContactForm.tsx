@@ -102,7 +102,7 @@ export const ContactForm = () => {
   return (
     <Box>
       <form onSubmit={formik.handleSubmit}>
-        <Flex columnGap={rem(20)}>
+        <Flex columnGap={rem(20)} flexDir={{ base: 'column', xs: 'row' }}>
           <FormControl
             mt={rem(18)}
             isInvalid={formik.touched.name && !!formik.errors.name}
@@ -146,7 +146,7 @@ export const ContactForm = () => {
             </FormErrorMessage>
           </FormControl>
         </Flex>
-        <Flex columnGap={rem(20)}>
+        <Flex columnGap={rem(20)} flexDir={{ base: 'column', xs: 'row' }}>
           <FormControl
             mt={rem(18)}
             isInvalid={formik.touched.phone && !!formik.errors.phone}
@@ -216,6 +216,8 @@ export const ContactForm = () => {
           justifyContent="space-between"
           alignItems="flex-start"
           mt={rem(22)}
+          flexDir={{ base: 'column', lg: 'row' }}
+          rowGap={{ base: rem(20), lg: 0 }}
         >
           <Box>
             <Checkbox
@@ -249,6 +251,8 @@ export const ContactForm = () => {
             borderColor="text.inverted"
             isDisabled={!formik.values.agreements || formik.isSubmitting}
             icon={<ArrowRight />}
+            width="100%"
+            height={{ base: '53px', xs: 'auto' }}
           >
             {t('common:send')}
           </PrimaryButton>
