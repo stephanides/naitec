@@ -327,6 +327,8 @@ export const Smart = () => {
       <StellairSensitive
         color="background.smart_light"
         gradientColor={LINEAR_GRADIENTS.smart}
+        onyx
+        sensitive
       />
     </Box>
   );

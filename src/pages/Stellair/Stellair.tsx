@@ -303,6 +303,8 @@ export const Stellair = () => {
       <StellairSensitive
         color="background.stellair"
         gradientColor={LINEAR_GRADIENTS.stellair}
+        sensitive
+        sensitivePro
       />
     </Box>
   );

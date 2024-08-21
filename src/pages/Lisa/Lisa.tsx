@@ -118,7 +118,7 @@ export const Lisa = () => {
         </Flex>
       </Container>
       <Box mt={{ base: rem(60), xs: rem(125) }}>
-        <StellairSensitive />
+        <StellairSensitive stellair sensitivePro />
       </Box>
     </Box>
   );

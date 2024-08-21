@@ -283,6 +283,8 @@ export const Onyx = () => {
       <StellairSensitive
         color="text.onyx_grey"
         gradientColor={LINEAR_GRADIENTS.onyx}
+        smart
+        sensitive
       />
     </Box>
   );

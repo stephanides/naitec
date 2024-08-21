@@ -34,7 +34,12 @@ const Item = ({
   const aspectRatio = originalWidth / originalHeight;
 
   return (
-    <Flex flexDir="column" justifyContent="center" alignItems="center">
+    <Flex
+      flexDir="column"
+      justifyContent="space-between"
+      alignItems="center"
+      height="100%"
+    >
       <Box
         position="relative"
         width="100%"
@@ -44,24 +49,26 @@ const Item = ({
       >
         <Image src={image} alt={title} layout="fill" objectFit="contain" />
       </Box>
-      <NeueHaasGroteskDisplay
-        fontSize={{ base: rem(32), md: rem(48) }}
-        fontWeight={600}
-        color="text.inverted"
-        my={{ base: rem(20), md: rem(40) }}
-        textAlign="center"
-      >
-        {title}
-      </NeueHaasGroteskDisplay>
-      <Link href={href}>
-        <SecondaryButton
-          icon={<ArrowRight />}
-          borderColor={color}
-          color={color}
+      <Flex flexDir="column" justifyContent="center" alignItems="center">
+        <NeueHaasGroteskDisplay
+          fontSize={{ base: rem(32), md: rem(48) }}
+          fontWeight={600}
+          color="text.inverted"
+          my={{ base: rem(20), md: rem(40) }}
+          textAlign="center"
         >
-          {t('button_find_out_more')}
-        </SecondaryButton>
-      </Link>
+          {title}
+        </NeueHaasGroteskDisplay>
+        <Link href={href}>
+          <SecondaryButton
+            icon={<ArrowRight />}
+            borderColor={color}
+            color={color}
+          >
+            {t('button_find_out_more')}
+          </SecondaryButton>
+        </Link>
+      </Flex>
     </Flex>
   );
 };
@@ -69,11 +76,21 @@ const Item = ({
 type StellairSensitiveProps = {
   color?: string;
   gradientColor?: string;
+  stellair?: boolean;
+  sensitive?: boolean;
+  sensitivePro?: boolean;
+  onyx?: boolean;
+  smart?: boolean;
 };
 
 export const StellairSensitive = ({
   color = 'background.naitec_blue',
   gradientColor = LINEAR_GRADIENTS.stellair,
+  stellair,
+  sensitive,
+  sensitivePro,
+  onyx,
+  smart,
 }: StellairSensitiveProps) => {
   const { t } = useTranslation('common');
   return (
@@ -122,36 +139,91 @@ export const StellairSensitive = ({
           rowGap={{ base: rem(40), xl: 0 }}
           width="100%"
         >
-          <Box
-            flex="1 1 auto"
-            width={{ base: '70%', md: '100%' }}
-            maxWidth="533px"
-            mx={{ base: 'auto', xl: 0 }}
-          >
-            <Item
-              image="/images/stellair/stellair_minimal.png"
-              title="Naitec Stellair"
-              href={INTERNAL_ROUTES.STELLAIR}
-              originalWidth={533}
-              originalHeight={149}
-              color={color}
-            />
-          </Box>
-          <Box
-            flex="1 1 auto"
-            width={{ base: '70%', md: '100%' }}
-            maxWidth="470px"
-            mx={{ base: 'auto', xl: 0 }}
-          >
-            <Item
-              image="/images/sensitive/sensitive_minimal.png"
-              title="Naitec Sensitive"
-              href={INTERNAL_ROUTES.SENSITIVE}
-              originalWidth={470}
-              originalHeight={157}
-              color={color}
-            />
-          </Box>
+          {stellair && (
+            <Box
+              flex="1 1 auto"
+              width={{ base: '70%', md: '100%' }}
+              maxWidth="533px"
+              mx={{ base: 'auto', xl: 0 }}
+            >
+              <Item
+                image="/images/stellair/stellair_minimal.png"
+                title="Naitec Stellair"
+                href={INTERNAL_ROUTES.STELLAIR}
+                originalWidth={533}
+                originalHeight={149}
+                color={color}
+              />
+            </Box>
+          )}
+          {sensitive && (
+            <Box
+              flex="1 1 auto"
+              width={{ base: '70%', md: '100%' }}
+              maxWidth="470px"
+              mx={{ base: 'auto', xl: 0 }}
+            >
+              <Item
+                image="/images/sensitive/sensitive_minimal.png"
+                title="Naitec Sensitive"
+                href={INTERNAL_ROUTES.SENSITIVE}
+                originalWidth={470}
+                originalHeight={157}
+                color={color}
+              />
+            </Box>
+          )}
+          {sensitivePro && (
+            <Box
+              flex="1 1 auto"
+              width={{ base: '70%', md: '100%' }}
+              maxWidth="470px"
+              mx={{ base: 'auto', xl: 0 }}
+            >
+              <Item
+                image="/images/sensitive-pro/sensitive-pro-minimal.png"
+                title="Naitec Sensitive Pro"
+                href={INTERNAL_ROUTES.SENSITIVE_PRO}
+                originalWidth={656}
+                originalHeight={236}
+                color={color}
+              />
+            </Box>
+          )}
+          {onyx && (
+            <Box
+              flex="1 1 auto"
+              width={{ base: '70%', md: '100%' }}
+              maxWidth="470px"
+              mx={{ base: 'auto', xl: 0 }}
+            >
+              <Item
+                image="/images/onyx/onyx-minimal.png"
+                title="Naitec Onyx"
+                href={INTERNAL_ROUTES.ONYX}
+                originalWidth={696}
+                originalHeight={246}
+                color={color}
+              />
+            </Box>
+          )}
+          {smart && (
+            <Box
+              flex="1 1 auto"
+              width={{ base: '70%', md: '100%' }}
+              maxWidth="470px"
+              mx={{ base: 'auto', xl: 0 }}
+            >
+              <Item
+                image="/images/smart/smart-minimal.png"
+                title="Naitec Smart"
+                href={INTERNAL_ROUTES.SMART}
+                originalWidth={678}
+                originalHeight={245}
+                color={color}
+              />
+            </Box>
+          )}
         </Flex>
       </Container>
     </Box>

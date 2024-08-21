@@ -34,7 +34,7 @@ export const Support = () => {
         </Box>
       </Container>
       <Box mt={rem(125)}>
-        <StellairSensitive />
+        <StellairSensitive stellair sensitivePro />
       </Box>
     </Box>
   );
