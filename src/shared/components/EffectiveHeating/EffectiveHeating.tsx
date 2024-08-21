@@ -59,7 +59,7 @@ export const EffectiveHeating = ({
             __html: t('effective_heating_description'),
           }}
         />
-        <Flex columnGap={rem(20)} mt={rem(80)}>
+        <Flex columnGap={rem(20)} mt={{ base: rem(40), md: rem(80) }}>
           <Box width="50%">
             <Image
               src={image1}
