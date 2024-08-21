@@ -4,7 +4,15 @@ import { Label } from '../Label';
 import { rem } from 'polished';
 import { NeueHaasGroteskDisplay, NeueHaasGroteskText } from '../Typography';
 import { useTranslation } from 'next-i18next';
-import { ParamCheckmark, ParamClose } from '../../design';
+import { useCollapse } from 'react-collapsed';
+import {
+  Minus,
+  ParamCheckmark,
+  ParamClose,
+  Plus,
+  PrimaryButton,
+} from '../../design';
+import { useState } from 'react';
 
 type TechnicalParametersProps = {
   label: string;
@@ -48,13 +56,16 @@ const Item = ({
       justifyContent="space-between"
       alignItems="center"
       columnGap={rem(20)}
-      borderRight={withBorderRight ? '2px solid #DADADA' : 'none'}
+      borderRight={{
+        base: 'none',
+        xl: withBorderRight ? '2px solid #DADADA' : 'none',
+      }}
       borderBottom={withBorder ? '2px solid #DADADA' : 'none'}
       px={rem(16)}
       py={rem(20)}
     >
       <NeueHaasGroteskDisplay
-        fontSize={rem(18)}
+        fontSize={{ base: rem(12), xs: rem(14), md: rem(18) }}
         color="text.params"
         fontWeight={600}
       >
@@ -62,7 +73,7 @@ const Item = ({
       </NeueHaasGroteskDisplay>
       {typeof value === 'string' && (
         <NeueHaasGroteskDisplay
-          fontSize={rem(18)}
+          fontSize={{ base: rem(12), xs: rem(14), md: rem(18) }}
           color="text.params"
           fontWeight={600}
         >
@@ -101,14 +112,16 @@ export const TechnicalParameters = ({
   chladivo,
 }: TechnicalParametersProps) => {
   const { t } = useTranslation();
+  const [isExpanded, setExpanded] = useState(false);
+  const { getCollapseProps, getToggleProps } = useCollapse({ isExpanded });
   return (
     <Box position="relative" top={rem(1)}>
       <Container>
-        <Box ml={rem(100)}>
+        <Box ml={{ base: 0, md: rem(100) }}>
           <Label text={label} color="text.link" borderColor="text.link" />
           <NeueHaasGroteskDisplay
-            fontSize={rem(64)}
-            lineHeight={rem(64)}
+            fontSize={{ base: rem(30), md: rem(64) }}
+            lineHeight={{ base: rem(30), md: rem(64) }}
             fontWeight={600}
             color="text.link"
             mt={rem(25)}
@@ -124,7 +137,7 @@ export const TechnicalParameters = ({
           <NeueHaasGroteskText
             mt={rem(20)}
             lineHeight="130%"
-            fontSize={rem(22)}
+            fontSize={{ base: rem(16), md: rem(22) }}
             color="text.light"
             fontWeight={500}
             maxW={rem(700)}
@@ -143,6 +156,7 @@ export const TechnicalParameters = ({
               borderRadius={rem(20)}
               gridTemplateColumns="1fr 1fr"
               p={rem(44)}
+              display={{ base: 'none', xl: 'grid' }}
             >
               <Box>
                 <Item
@@ -235,6 +249,121 @@ export const TechnicalParameters = ({
                 />
               </Box>
             </Grid>
+            <Box>
+              <Box
+                display={{ base: 'block', xl: 'none' }}
+                backgroundColor="#EAEAEA"
+                borderRadius={rem(20)}
+                p={{ base: rem(16), md: rem(30) }}
+              >
+                <Box>
+                  <Item
+                    label={t('technical_parameters_cooling_performance')}
+                    value={chladiaciVykon}
+                  />
+                  <Item
+                    label={t('technical_parameters_heating_performance')}
+                    value={vykurovaciVykon}
+                  />
+                  <Item
+                    label={t('technical_parameters_energy_class')}
+                    value={energetickaTrieda}
+                  />
+                  <Item
+                    label={t('technical_parameters_indoor_unit_noise')}
+                    value={hlucnostVnutornejJednotky}
+                  />
+                  <Item
+                    label={t('technical_parameters_outdoor_unit_noise')}
+                    value={hlucnostVonkajsejJednotky}
+                  />
+                  <Item label={t('technical_parameters_seer')} value={seer} />
+                  <Item label={t('technical_parameters_scop')} value={scop} />
+                  <Item
+                    label={t('technical_parameters_indoor_unit_weight')}
+                    value={hmotnostVnutornejJednotky}
+                  />
+                  <Item
+                    label={t('technical_parameters_outdoor_unit_weight')}
+                    value={hmotnostVonkajsejJednotky}
+                  />
+                  <Item
+                    withBorder={false}
+                    label={t('technical_parameters_indoor_unit_dimensions')}
+                    value={rozmeryVnutornejJednotky}
+                  />
+                </Box>
+                <Box {...getCollapseProps()}>
+                  <Item
+                    label={t('technical_parameters_outdoor_unit_dimensions')}
+                    value={rozmeryVonkajsejJednotky}
+                    withBorderRight={false}
+                  />
+                  <Item
+                    label={t('technical_parameters_ionizer')}
+                    value={ionizator}
+                    withBorderRight={false}
+                  />
+                  <Item
+                    label={t('technical_parameters_air_taker_from_the_outside')}
+                    value={nasavanieVzduchuZExterieru}
+                    withBorderRight={false}
+                  />
+                  <Item
+                    label={t('technical_parameters_wifi_module')}
+                    value={wifiModul}
+                    withBorderRight={false}
+                  />
+                  <Item
+                    label={t('technical_parameters_sterilization')}
+                    value={sterilizacia}
+                    withBorderRight={false}
+                  />
+                  <Item
+                    label={t('technical_parameters_perforated_lamella')}
+                    value={dierkovanaLamela}
+                    withBorderRight={false}
+                  />
+                  <Item
+                    label={t('technical_parameters_long_term_heating')}
+                    value={dlhodobeVykurovanie}
+                    withBorderRight={false}
+                  />
+                  <Item
+                    label={t('technical_parameters_active_cleaning')}
+                    value={aktivneCistenie}
+                    withBorderRight={false}
+                  />
+                  <Item
+                    label={t('technical_parameters_warranty')}
+                    value={zaruka}
+                    withBorderRight={false}
+                  />
+                  <Item
+                    withBorder={false}
+                    label={t('technical_parameters_coolant')}
+                    value={chladivo}
+                    withBorderRight={false}
+                  />
+                </Box>
+              </Box>
+              <Flex justifyContent="center" mt={rem(20)}>
+                <PrimaryButton
+                  {...getToggleProps({
+                    onClick: () => setExpanded((prevExpanded) => !prevExpanded),
+                  })}
+                  icon={
+                    isExpanded ? (
+                      <Minus color="white" />
+                    ) : (
+                      <Plus color="white" />
+                    )
+                  }
+                >
+                  {isExpanded ? t('show_less') : t('show_more')}
+                </PrimaryButton>
+              </Flex>
+            </Box>
           </Container>
         </Box>
         <Box

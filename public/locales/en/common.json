@@ -89,5 +89,7 @@
   "year": "year",
   "years_rokov": "years",
   "years_roky": "years",
-  "footer_invoice": "Billing information"
+  "footer_invoice": "Billing information",
+  "show_more": "Show more",
+  "show_less": "Show less"
 }

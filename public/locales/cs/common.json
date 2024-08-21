@@ -89,5 +89,7 @@
   "year": "rok",
   "years_rokov": "roků",
   "years_roky": "roky",
-  "footer_invoice": "Fakturační údaje"
+  "footer_invoice": "Fakturační údaje",
+  "show_more": "Zobrazit více",
+  "show_less": "Zobrazit méně"
 }

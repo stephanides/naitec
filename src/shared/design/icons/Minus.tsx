@@ -1,4 +1,4 @@
-export const Minus = () => (
+export const Minus = ({ color = '#4F9CC2' }: { color?: string }) => (
   <svg
     width="11"
     height="3"
@@ -10,7 +10,7 @@ export const Minus = () => (
       width="1.73674"
       height="10.9994"
       transform="matrix(0 -1 -1 0 11 2.36572)"
-      fill="#4F9CC2"
+      fill={color}
     />
   </svg>
 );

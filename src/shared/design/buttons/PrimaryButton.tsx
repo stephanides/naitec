@@ -75,7 +75,12 @@ export const PrimaryButton = ({
         {children}
       </NeueHaasGroteskDisplay>
       {!startWithIcon && icon && (
-        <Box width={{ base: rem(12), md: rem(20) }} className="icon">
+        <Box
+          width={{ base: rem(12), md: rem(20) }}
+          position="relative"
+          top={rem(2)}
+          className="icon"
+        >
           {icon}
         </Box>
       )}

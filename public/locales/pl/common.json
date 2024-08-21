@@ -89,5 +89,7 @@
   "year": "rok",
   "years_rokov": "lata",
   "years_roky": "lata",
-  "footer_invoice": "Dane do faktury"
+  "footer_invoice": "Dane do faktury",
+  "show_more": "Pokaż więcej",
+  "show_less": "Pokaż mniej"
 }
