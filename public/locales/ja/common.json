@@ -92,5 +92,6 @@
   "footer_invoice": "請求情報",
   "show_more": "もっと見る",
   "show_less": "もっと見えない",
-  "choose_performance": "パフォーマンスを選択"
+  "choose_performance": "パフォーマンスを選択",
+  "up_to": "から"
 }

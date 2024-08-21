@@ -69,6 +69,7 @@ export const AllYouNeed = ({ color, items }: AllYouNeedProps) => {
                   description={item.description}
                   interactiveIcon={item.interactiveIcon}
                   iconColor={item.iconColor}
+                  iconColorHover={item.iconColorHover}
                   expandContent={item.expandContent}
                   link={item.link}
                 />

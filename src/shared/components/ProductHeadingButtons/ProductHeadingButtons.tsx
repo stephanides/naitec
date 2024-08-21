@@ -13,6 +13,7 @@ import { scroller } from 'react-scroll';
 
 type ProductHeadingButtonProps = {
   color: string;
+  hoverColor: string;
 };
 
 export const handleScrollToContent = () => {
@@ -23,7 +24,10 @@ export const handleScrollToContent = () => {
   });
 };
 
-export const ProductHeadingButtons = ({ color }: ProductHeadingButtonProps) => {
+export const ProductHeadingButtons = ({
+  color,
+  hoverColor,
+}: ProductHeadingButtonProps) => {
   const { t } = useTranslation('common');
   return (
     <Flex width="100%" justifyContent="center" position="relative">
@@ -32,6 +36,7 @@ export const ProductHeadingButtons = ({ color }: ProductHeadingButtonProps) => {
           <PrimaryButton
             background={color}
             borderColor={color}
+            hoverColor={hoverColor}
             icon={<ArrowRight />}
             trasnformIcon={{
               initialState: 'translateX(0)',
@@ -44,8 +49,11 @@ export const ProductHeadingButtons = ({ color }: ProductHeadingButtonProps) => {
         <SecondaryButton
           borderColor={color}
           onClick={handleScrollToContent}
+          hoverColor={color}
           color={color}
           icon={<ArrowDown />}
+          iconWidth={14}
+          mobileIconWidth={8}
           trasnformIcon={{
             initialState: 'translateY(0)',
             hoverState: 'translateY(5px)',

@@ -23,6 +23,7 @@ export type AllYouNeedItemProps = {
   link?: string;
   interactiveIcon?: ReactNode;
   iconColor?: string;
+  iconColorHover?: string;
 };
 
 export const AllYouNeedItem = ({
@@ -33,8 +34,10 @@ export const AllYouNeedItem = ({
   link,
   interactiveIcon,
   iconColor,
+  iconColorHover,
 }: AllYouNeedItemProps) => {
   const { isOpen, onOpen, onClose } = useDisclosure();
+  console.log(iconColorHover);
   return (
     <Box
       background="#E9E9E9"
@@ -80,7 +83,10 @@ export const AllYouNeedItem = ({
             transition="all .3s ease-in-out"
             sx={{
               svg: { transition: 'all .3s ease-in-out' },
-              _hover: { svg: { transform: 'scale(1.2)' } },
+              _hover: {
+                svg: { transform: 'scale(1.2)' },
+                backgroundColor: iconColorHover,
+              },
             }}
           >
             {interactiveIcon}
@@ -103,7 +109,10 @@ export const AllYouNeedItem = ({
             transition="all .3s ease-in-out"
             sx={{
               svg: { transition: 'all .3s ease-in-out' },
-              _hover: { svg: { transform: 'scale(1.2)' } },
+              _hover: {
+                svg: { transform: 'scale(1.2)' },
+                backgroundColor: iconColorHover,
+              },
             }}
           >
             {interactiveIcon}

@@ -109,7 +109,10 @@ export const SensitivePro = () => {
             />
           </Flex>
         </Flex>
-        <ProductHeadingButtons color="background.sensitive_pro" />
+        <ProductHeadingButtons
+          hoverColor="background.sensitive_pro_hover"
+          color="background.sensitive_pro"
+        />
       </Box>
       <Flex
         mt={{ base: rem(54), md: rem(100) }}
@@ -219,6 +222,7 @@ export const SensitivePro = () => {
               description: t('all_you_need_item_1_description'),
               interactiveIcon: <PlusExpand />,
               iconColor: '#D54C4C',
+              iconColorHover: 'background.sensitive_pro_hover',
               expandContent: (
                 <AllYouNeedModalContent
                   title={t('all_you_need_item_1_title')}
@@ -239,6 +243,7 @@ export const SensitivePro = () => {
               description: t('all_you_need_item_3_description'),
               interactiveIcon: <Info />,
               iconColor: '#D54C4C',
+              iconColorHover: 'background.sensitive_pro_hover',
               expandContent: (
                 <AllYouNeedModalContent
                   title={t('all_you_need_item_3_title')}
@@ -254,6 +259,7 @@ export const SensitivePro = () => {
               description: t('all_you_need_item_4_description'),
               interactiveIcon: <Redirect />,
               iconColor: '#D54C4C',
+              iconColorHover: 'background.sensitive_pro_hover',
               link: INTERNAL_ROUTES.LISA,
             },
             {
@@ -272,6 +278,7 @@ export const SensitivePro = () => {
         <TechnicalParameters
           label="Naitec Sensitive Pro"
           color={LINEAR_GRADIENTS.sensitive_pro}
+          hoverColor="background.sensitive_pro_hover"
           buttonColor="background.sensitive_pro_light"
           params={[
             {
@@ -291,7 +298,7 @@ export const SensitivePro = () => {
               wifiModul: true,
               sterilizacia: true,
               dierkovanaLamela: true,
-              dlhodobeVykurovanie: 'do -35°C',
+              dlhodobeVykurovanie: '-35°C',
               aktivneCistenie: true,
               zaruka: `5 ${t('common:years_rokov')}`,
               chladivo: 'R32',
@@ -301,6 +308,7 @@ export const SensitivePro = () => {
       </Box>
       <StellairSensitive
         color="background.sensitive_pro_light"
+        hoverColor="background.sensitive_pro_hover"
         gradientColor={LINEAR_GRADIENTS.sensitive_pro}
         stellair
         sensitive

@@ -18,7 +18,7 @@ type TechnicalParametersProps = {
   label: string;
   color: string;
   buttonColor?: string;
-  selectColor?: string;
+  hoverColor?: string;
   params: {
     chladiaciVykon: string;
     vykurovaciVykon: string;
@@ -95,7 +95,7 @@ export const TechnicalParameters = ({
   label,
   color,
   buttonColor = 'text.naitec_blue',
-  selectColor = 'text.smart_dark',
+  hoverColor = 'background.naitec_blue_hover',
   params,
 }: TechnicalParametersProps) => {
   const { t } = useTranslation();
@@ -251,7 +251,9 @@ export const TechnicalParameters = ({
                 />
                 <Item
                   label={t('technical_parameters_long_term_heating')}
-                  value={params[activeParam].dlhodobeVykurovanie}
+                  value={`${t('up_to')} ${
+                    params[activeParam].dlhodobeVykurovanie
+                  }`}
                   withBorderRight={false}
                 />
                 <Item
@@ -355,7 +357,9 @@ export const TechnicalParameters = ({
                   />
                   <Item
                     label={t('technical_parameters_long_term_heating')}
-                    value={params[activeParam].dlhodobeVykurovanie}
+                    value={`${t('up_to')} ${
+                      params[activeParam].dlhodobeVykurovanie
+                    }`}
                     withBorderRight={false}
                   />
                   <Item
@@ -386,6 +390,7 @@ export const TechnicalParameters = ({
                     onClick: () => setExpanded((prevExpanded) => !prevExpanded),
                   })}
                   backgroundColor={buttonColor}
+                  hoverColor={hoverColor}
                   borderColor={buttonColor}
                   icon={
                     isExpanded ? (

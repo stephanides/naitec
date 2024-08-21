@@ -16,6 +16,7 @@ interface ButtonProps extends BaseButtonProps {
   startWithIcon?: boolean;
   color?: string;
   borderColor?: string;
+  hoverColor?: string;
   trasnformIcon?: {
     initialState: string;
     hoverState: string;
@@ -29,6 +30,7 @@ export const PrimaryButton = ({
   startWithIcon = false,
   color = colors.naitec_blue,
   borderColor = colors.naitec_blue,
+  hoverColor = 'background.naitec_blue_hover',
   trasnformIcon,
   ...rest
 }: ButtonProps) => (
@@ -56,6 +58,8 @@ export const PrimaryButton = ({
         '.icon': {
           transform: trasnformIcon ? trasnformIcon.hoverState : 'none',
         },
+        backgroundColor: hoverColor,
+        borderColor: hoverColor,
       },
       '.icon': {
         transform: trasnformIcon ? trasnformIcon.initialState : 'none',

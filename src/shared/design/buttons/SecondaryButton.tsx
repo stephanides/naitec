@@ -15,6 +15,9 @@ interface ButtonProps extends BaseButtonProps {
   icon?: ReactNode;
   startWithIcon?: boolean;
   color?: string;
+  hoverColor?: string;
+  iconWidth?: number;
+  mobileIconWidth?: number;
   trasnformIcon?: {
     initialState: string;
     hoverState: string;
@@ -27,6 +30,9 @@ export const SecondaryButton = ({
   disabled,
   startWithIcon = false,
   color = colors.naitec_blue,
+  hoverColor = 'background.naitec_blue_hover',
+  iconWidth = 20,
+  mobileIconWidth = 12,
   trasnformIcon,
   ...rest
 }: ButtonProps) => (
@@ -53,18 +59,25 @@ export const SecondaryButton = ({
       _hover: {
         '.icon': {
           transform: trasnformIcon ? trasnformIcon.hoverState : 'none',
+          path: { stroke: 'white' },
         },
+        backgroundColor: hoverColor,
+        borderColor: hoverColor,
+        color: 'white',
       },
       '.icon': {
         transform: trasnformIcon ? trasnformIcon.initialState : 'none',
         transition: 'all .3s ease-out',
+        path: { transition: 'all .3s ease-out' },
       },
     }}
     {...rest}
   >
     <Flex alignItems="center" columnGap={rem(8)} position="relative">
       {startWithIcon && icon && (
-        <Box width={{ base: rem(12), md: rem(20) }}>{icon}</Box>
+        <Box width={{ base: rem(mobileIconWidth), md: rem(iconWidth) }}>
+          {icon}
+        </Box>
       )}
       <NeueHaasGroteskDisplay
         fontSize={{ base: rem(12), xs: rem(18) }}
@@ -74,7 +87,7 @@ export const SecondaryButton = ({
       </NeueHaasGroteskDisplay>
       {!startWithIcon && icon && (
         <Box
-          width={{ base: rem(12), md: rem(20) }}
+          width={{ base: rem(mobileIconWidth), md: rem(iconWidth) }}
           className="icon"
           sx={{ path: { stroke: color } }}
         >

@@ -11,6 +11,7 @@ import {
 } from '@/src/shared/design';
 import { Box, Flex } from '@chakra-ui/react';
 import { useTranslation } from 'next-i18next';
+import Link from 'next/link';
 import { rem } from 'polished';
 
 export const Home = () => {
@@ -56,41 +57,43 @@ export const Home = () => {
             >
               Stellair
             </NeueHaasGroteskDisplay>
-            <Flex
-              position="relative"
-              pt={{
-                base: rem(28),
-                xs: rem(20),
-                md: rem(32),
-                lg: rem(60),
-                xl: rem(80),
-                '2xl': rem(60),
-              }}
-              maxW={{
-                base: rem(400),
-                xs: rem(600),
-                md: rem(800),
-                lg: rem(1000),
-                xl: rem(1400),
-                '2xl': rem(1600),
-              }}
-              width={{
-                base: rem(400),
-                xs: rem(600),
-                md: rem(800),
-                lg: rem(1000),
-                xl: rem(1400),
-                '2xl': rem(1600),
-              }}
-              justify="center"
-              overflow="hidden"
-            >
-              <img
-                src="/images/stellair/stellair-main.png"
-                style={{ width: '130%', height: 'auto', maxWidth: 'none' }}
-                alt="Stellair"
-              />
-            </Flex>
+            <Link href={INTERNAL_ROUTES.STELLAIR}>
+              <Flex
+                position="relative"
+                pt={{
+                  base: rem(28),
+                  xs: rem(20),
+                  md: rem(32),
+                  lg: rem(60),
+                  xl: rem(80),
+                  '2xl': rem(60),
+                }}
+                maxW={{
+                  base: rem(400),
+                  xs: rem(600),
+                  md: rem(800),
+                  lg: rem(1000),
+                  xl: rem(1400),
+                  '2xl': rem(1600),
+                }}
+                width={{
+                  base: rem(400),
+                  xs: rem(600),
+                  md: rem(800),
+                  lg: rem(1000),
+                  xl: rem(1400),
+                  '2xl': rem(1600),
+                }}
+                justify="center"
+                overflow="hidden"
+              >
+                <img
+                  src="/images/stellair/stellair-main.png"
+                  style={{ width: '130%', height: 'auto', maxWidth: 'none' }}
+                  alt="Stellair"
+                />
+              </Flex>
+            </Link>
           </Flex>
           <Box>
             <NeueHaasGroteskDisplay
@@ -183,41 +186,43 @@ export const Home = () => {
             >
               Sensitive Pro
             </NeueHaasGroteskDisplay>
-            <Flex
-              position="relative"
-              pt={{
-                base: rem(8),
-                xs: rem(4),
-                md: rem(32),
-                lg: rem(32),
-                xl: rem(20),
-                '2xl': rem(0),
-              }}
-              maxW={{
-                base: rem(480),
-                xs: rem(700),
-                md: rem(800),
-                lg: rem(1000),
-                xl: rem(1400),
-                '2xl': rem(1600),
-              }}
-              width={{
-                base: rem(480),
-                xs: rem(700),
-                md: rem(800),
-                lg: rem(1000),
-                xl: rem(1400),
-                '2xl': rem(1600),
-              }}
-              justify="center"
-              overflow="hidden"
-            >
-              <img
-                src="/images/sensitive-pro/sensitive-pro-main.png"
-                style={{ width: '130%', height: 'auto', maxWidth: 'none' }}
-                alt="Sensitive Pro"
-              />
-            </Flex>
+            <Link href={INTERNAL_ROUTES.SENSITIVE_PRO}>
+              <Flex
+                position="relative"
+                pt={{
+                  base: rem(8),
+                  xs: rem(4),
+                  md: rem(32),
+                  lg: rem(32),
+                  xl: rem(20),
+                  '2xl': rem(0),
+                }}
+                maxW={{
+                  base: rem(480),
+                  xs: rem(700),
+                  md: rem(800),
+                  lg: rem(1000),
+                  xl: rem(1400),
+                  '2xl': rem(1600),
+                }}
+                width={{
+                  base: rem(480),
+                  xs: rem(700),
+                  md: rem(800),
+                  lg: rem(1000),
+                  xl: rem(1400),
+                  '2xl': rem(1600),
+                }}
+                justify="center"
+                overflow="hidden"
+              >
+                <img
+                  src="/images/sensitive-pro/sensitive-pro-main.png"
+                  style={{ width: '130%', height: 'auto', maxWidth: 'none' }}
+                  alt="Sensitive Pro"
+                />
+              </Flex>
+            </Link>
           </Flex>
           <Box>
             <NeueHaasGroteskDisplay
@@ -294,41 +299,43 @@ export const Home = () => {
             >
               Sensitive
             </NeueHaasGroteskDisplay>
-            <Flex
-              position="relative"
-              pt={{
-                base: rem(28),
-                xs: rem(20),
-                md: rem(32),
-                lg: rem(60),
-                xl: rem(80),
-                '2xl': rem(50),
-              }}
-              maxW={{
-                base: rem(400),
-                xs: rem(600),
-                md: rem(800),
-                lg: rem(1000),
-                xl: rem(1400),
-                '2xl': rem(1600),
-              }}
-              width={{
-                base: rem(400),
-                xs: rem(600),
-                md: rem(800),
-                lg: rem(1000),
-                xl: rem(1400),
-                '2xl': rem(1600),
-              }}
-              justify="center"
-              overflow="hidden"
-            >
-              <img
-                src="/images/sensitive/sensitive-main.png"
-                style={{ width: '130%', height: 'auto', maxWidth: 'none' }}
-                alt="Sensitive"
-              />
-            </Flex>
+            <Link href={INTERNAL_ROUTES.SENSITIVE}>
+              <Flex
+                position="relative"
+                pt={{
+                  base: rem(28),
+                  xs: rem(20),
+                  md: rem(32),
+                  lg: rem(60),
+                  xl: rem(80),
+                  '2xl': rem(50),
+                }}
+                maxW={{
+                  base: rem(400),
+                  xs: rem(600),
+                  md: rem(800),
+                  lg: rem(1000),
+                  xl: rem(1400),
+                  '2xl': rem(1600),
+                }}
+                width={{
+                  base: rem(400),
+                  xs: rem(600),
+                  md: rem(800),
+                  lg: rem(1000),
+                  xl: rem(1400),
+                  '2xl': rem(1600),
+                }}
+                justify="center"
+                overflow="hidden"
+              >
+                <img
+                  src="/images/sensitive/sensitive-main.png"
+                  style={{ width: '130%', height: 'auto', maxWidth: 'none' }}
+                  alt="Sensitive"
+                />
+              </Flex>
+            </Link>
           </Flex>
           <Box>
             <NeueHaasGroteskDisplay
@@ -412,41 +419,43 @@ export const Home = () => {
               >
                 Onyx
               </NeueHaasGroteskDisplay>
-              <Flex
-                position="relative"
-                pt={{
-                  base: rem(22),
-                  xs: rem(20),
-                  md: rem(32),
-                  lg: rem(60),
-                  xl: rem(90),
-                  '2xl': rem(110),
-                }}
-                maxW={{
-                  base: rem(400),
-                  xs: rem(600),
-                  md: rem(800),
-                  lg: rem(1000),
-                  xl: rem(700),
-                  '2xl': rem(800),
-                }}
-                width={{
-                  base: rem(400),
-                  xs: rem(600),
-                  md: rem(800),
-                  lg: rem(1000),
-                  xl: rem(700),
-                  '2xl': rem(800),
-                }}
-                justify="center"
-                overflow="hidden"
-              >
-                <img
-                  src="/images/onyx/onyx-main.png"
-                  style={{ width: '130%', height: 'auto', maxWidth: 'none' }}
-                  alt="Onyx"
-                />
-              </Flex>
+              <Link href={INTERNAL_ROUTES.ONYX}>
+                <Flex
+                  position="relative"
+                  pt={{
+                    base: rem(22),
+                    xs: rem(20),
+                    md: rem(32),
+                    lg: rem(60),
+                    xl: rem(90),
+                    '2xl': rem(110),
+                  }}
+                  maxW={{
+                    base: rem(400),
+                    xs: rem(600),
+                    md: rem(800),
+                    lg: rem(1000),
+                    xl: rem(700),
+                    '2xl': rem(800),
+                  }}
+                  width={{
+                    base: rem(400),
+                    xs: rem(600),
+                    md: rem(800),
+                    lg: rem(1000),
+                    xl: rem(700),
+                    '2xl': rem(800),
+                  }}
+                  justify="center"
+                  overflow="hidden"
+                >
+                  <img
+                    src="/images/onyx/onyx-main.png"
+                    style={{ width: '130%', height: 'auto', maxWidth: 'none' }}
+                    alt="Onyx"
+                  />
+                </Flex>
+              </Link>
             </Flex>
             <Box>
               <NeueHaasGroteskDisplay
@@ -522,41 +531,43 @@ export const Home = () => {
               >
                 Smart
               </NeueHaasGroteskDisplay>
-              <Flex
-                position="relative"
-                pt={{
-                  base: rem(22),
-                  xs: rem(20),
-                  md: rem(32),
-                  lg: rem(60),
-                  xl: rem(90),
-                  '2xl': rem(110),
-                }}
-                maxW={{
-                  base: rem(400),
-                  xs: rem(600),
-                  md: rem(800),
-                  lg: rem(1000),
-                  xl: rem(700),
-                  '2xl': rem(800),
-                }}
-                width={{
-                  base: rem(400),
-                  xs: rem(600),
-                  md: rem(800),
-                  lg: rem(1000),
-                  xl: rem(700),
-                  '2xl': rem(800),
-                }}
-                justify="center"
-                overflow="hidden"
-              >
-                <img
-                  src="/images/smart/smart-main.png"
-                  style={{ width: '130%', height: 'auto', maxWidth: 'none' }}
-                  alt="Smart"
-                />
-              </Flex>
+              <Link href={INTERNAL_ROUTES.SMART}>
+                <Flex
+                  position="relative"
+                  pt={{
+                    base: rem(22),
+                    xs: rem(20),
+                    md: rem(32),
+                    lg: rem(60),
+                    xl: rem(90),
+                    '2xl': rem(110),
+                  }}
+                  maxW={{
+                    base: rem(400),
+                    xs: rem(600),
+                    md: rem(800),
+                    lg: rem(1000),
+                    xl: rem(700),
+                    '2xl': rem(800),
+                  }}
+                  width={{
+                    base: rem(400),
+                    xs: rem(600),
+                    md: rem(800),
+                    lg: rem(1000),
+                    xl: rem(700),
+                    '2xl': rem(800),
+                  }}
+                  justify="center"
+                  overflow="hidden"
+                >
+                  <img
+                    src="/images/smart/smart-main.png"
+                    style={{ width: '130%', height: 'auto', maxWidth: 'none' }}
+                    alt="Smart"
+                  />
+                </Flex>
+              </Link>
             </Flex>
             <Box>
               <NeueHaasGroteskDisplay
@@ -598,10 +609,11 @@ export const Home = () => {
       </Flex>
       <NaitecApplicationMinimal />
       <Flex
-        my={{ base: 0, xl: rem(20) }}
         flexDir={{ base: 'column', xl: 'row' }}
-        mx={{ base: rem(20), xl: 0 }}
-        mb={{ base: rem(20) }}
+        px={{ base: rem(20), xl: 0 }}
+        pb={{ base: rem(20) }}
+        position="relative"
+        top={rem(1)}
       >
         <Box
           mt={rem(20)}
@@ -609,10 +621,12 @@ export const Home = () => {
           pt={rem(20)}
           border="5px solid"
           borderColor="#FFFFFF"
+          backgroundColor="#FAFAFA"
           borderRadius={rem(20)}
           position="relative"
           overflow="hidden"
           width={{ base: '100%', xl: '50%' }}
+          zIndex={2}
         >
           <Box zIndex={2} position="relative">
             <Flex
@@ -640,21 +654,23 @@ export const Home = () => {
                   />
                 </Box>
               </Box>
-              <Flex
-                position="relative"
-                maxW={{ base: rem(600), xl: rem(1600) }}
-                width="100%"
-                justify="center"
-                overflow="hidden"
-                pointerEvents="none"
-                pt={{ base: rem(20), '2xl': 0 }}
-              >
-                <img
-                  src="/images/lisa/lisa-main-desktop.png"
-                  style={{ width: '100%', height: 'auto', maxWidth: 'none' }}
-                  alt="Lisa"
-                />
-              </Flex>
+              <Link href={INTERNAL_ROUTES.LISA}>
+                <Flex
+                  position="relative"
+                  maxW={{ base: rem(600), xl: rem(1600) }}
+                  width="100%"
+                  justify="center"
+                  overflow="hidden"
+                  pointerEvents="none"
+                  pt={{ base: rem(20), '2xl': 0 }}
+                >
+                  <img
+                    src="/images/lisa/lisa-main-desktop.png"
+                    style={{ width: '100%', height: 'auto', maxWidth: 'none' }}
+                    alt="Lisa"
+                  />
+                </Flex>
+              </Link>
             </Flex>
           </Box>
           <Box
@@ -680,14 +696,16 @@ export const Home = () => {
         </Box>
         <Box
           mt={rem(20)}
-          mx={{ base: 0, xl: rem(20) }}
+          px={{ base: 0, xl: rem(20) }}
           pt={rem(20)}
           border="5px solid"
           borderColor="#FFFFFF"
+          backgroundColor="#FAFAFA"
           borderRadius={rem(20)}
           position="relative"
           overflow="hidden"
           width={{ base: '100%', xl: '50%' }}
+          zIndex={2}
         >
           <Box zIndex={2} position="relative">
             <Flex
@@ -715,22 +733,24 @@ export const Home = () => {
                   />
                 </Box>
               </Box>
-              <Flex
-                position="relative"
-                maxW={{ base: rem(600), xl: rem(1600) }}
-                width="100%"
-                justify="center"
-                overflow="hidden"
-                pointerEvents="none"
-                pt={{ base: rem(20), '2xl': 0 }}
-                ml={{ base: 'auto', xl: 0 }}
-              >
-                <img
-                  src="/images/fireplace/fireplace-main-desktop.png"
-                  style={{ width: '100%', height: 'auto', maxWidth: 'none' }}
-                  alt="Fireplace diffuser"
-                />
-              </Flex>
+              <Link href={INTERNAL_ROUTES.FIREPLACE_DIFFUSER}>
+                <Flex
+                  position="relative"
+                  maxW={{ base: rem(600), xl: rem(1600) }}
+                  width="100%"
+                  justify="center"
+                  overflow="hidden"
+                  pointerEvents="none"
+                  pt={{ base: rem(20), '2xl': 0 }}
+                  ml={{ base: 'auto', xl: 0 }}
+                >
+                  <img
+                    src="/images/fireplace/fireplace-main-desktop.png"
+                    style={{ width: '100%', height: 'auto', maxWidth: 'none' }}
+                    alt="Fireplace diffuser"
+                  />
+                </Flex>
+              </Link>
             </Flex>
           </Box>
           <Box
@@ -754,6 +774,15 @@ export const Home = () => {
             <HomeShapeMobile />
           </Box>
         </Box>
+        <Box
+          position="absolute"
+          left={0}
+          bottom={0}
+          right={0}
+          height={{ base: '25%', xl: '50%' }}
+          backgroundColor="background.primary"
+          zIndex={1}
+        />
       </Flex>
     </Box>
   );

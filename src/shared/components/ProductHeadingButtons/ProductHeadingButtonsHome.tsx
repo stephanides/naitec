@@ -22,6 +22,7 @@ export const ProductHeadingButtonsHome = ({
       <Flex columnGap={{ base: rem(8), md: rem(20) }}>
         <PrimaryButton
           background="text.link"
+          hoverColor="text.link_hover"
           borderColor="text.link"
           icon={<ArrowRight />}
           trasnformIcon={{
@@ -34,6 +35,7 @@ export const ProductHeadingButtonsHome = ({
         <Link href={productHref}>
           <SecondaryButton
             borderColor="text.link"
+            hoverColor="text.link"
             color="text.link"
             icon={<PlusBig />}
             trasnformIcon={{

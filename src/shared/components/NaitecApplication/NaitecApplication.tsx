@@ -101,6 +101,7 @@ export const NaitecApplication = ({
               width="100%"
               top={{ base: rem(40), '2xl': 0 }}
               maxW={rem(600)}
+              zIndex={3}
             >
               <Image
                 src="/images/common/iphone-mockup.png"

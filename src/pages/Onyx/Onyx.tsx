@@ -106,7 +106,10 @@ export const Onyx = () => {
             />
           </Flex>
         </Flex>
-        <ProductHeadingButtons color="text.onyx" />
+        <ProductHeadingButtons
+          color="text.onyx"
+          hoverColor="background.onyx_hover"
+        />
       </Box>
       <Flex
         mt={{ base: rem(54), md: rem(100) }}
@@ -198,6 +201,7 @@ export const Onyx = () => {
               description: t('all_you_need_item_1_description'),
               interactiveIcon: <PlusExpand />,
               iconColor: '#5A5A5A',
+              iconColorHover: 'background.onyx_hover',
               expandContent: (
                 <AllYouNeedModalContent
                   title={t('all_you_need_item_1_title')}
@@ -218,6 +222,7 @@ export const Onyx = () => {
               description: t('all_you_need_item_3_description'),
               interactiveIcon: <Info />,
               iconColor: '#5A5A5A',
+              iconColorHover: 'background.onyx_hover',
               expandContent: (
                 <AllYouNeedModalContent
                   title={t('all_you_need_item_3_title')}
@@ -233,6 +238,7 @@ export const Onyx = () => {
               description: t('all_you_need_item_4_description'),
               interactiveIcon: <Redirect />,
               iconColor: '#5A5A5A',
+              iconColorHover: 'background.onyx_hover',
               link: INTERNAL_ROUTES.LISA,
             },
             {
@@ -253,6 +259,7 @@ export const Onyx = () => {
         <TechnicalParameters
           label="Naitec Onyx"
           color={LINEAR_GRADIENTS.onyx}
+          hoverColor="background.onyx_hover"
           buttonColor="text.onyx_grey"
           params={[
             {
@@ -272,7 +279,7 @@ export const Onyx = () => {
               wifiModul: true,
               sterilizacia: true,
               dierkovanaLamela: false,
-              dlhodobeVykurovanie: 'do -25°C',
+              dlhodobeVykurovanie: '-25°C',
               aktivneCistenie: true,
               zaruka: `3 ${t('common:years_roky')}`,
               chladivo: 'R32',
@@ -282,6 +289,7 @@ export const Onyx = () => {
       </Box>
       <StellairSensitive
         color="text.onyx_grey"
+        hoverColor="background.onyx_hover"
         gradientColor={LINEAR_GRADIENTS.onyx}
         smart
         sensitive

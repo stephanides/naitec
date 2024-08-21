@@ -108,7 +108,10 @@ export const Stellair = () => {
             />
           </Flex>
         </Flex>
-        <ProductHeadingButtons color="text.stellair" />
+        <ProductHeadingButtons
+          hoverColor="background.stellair_hover"
+          color="text.stellair"
+        />
       </Box>
       <Flex
         mt={{ base: rem(54), md: rem(100) }}
@@ -219,6 +222,7 @@ export const Stellair = () => {
               description: t('all_you_need_item_1_description'),
               interactiveIcon: <PlusExpand />,
               iconColor: '#6093AF',
+              iconColorHover: 'background.stellair_hover',
               expandContent: (
                 <AllYouNeedModalContent
                   title={t('all_you_need_item_1_title')}
@@ -239,6 +243,7 @@ export const Stellair = () => {
               description: t('all_you_need_item_3_description'),
               interactiveIcon: <Info />,
               iconColor: '#6093AF',
+              iconColorHover: 'background.stellair_hover',
               expandContent: (
                 <AllYouNeedModalContent
                   title={t('all_you_need_item_3_title')}
@@ -254,6 +259,7 @@ export const Stellair = () => {
               description: t('all_you_need_item_4_description'),
               interactiveIcon: <Redirect />,
               iconColor: '#6093AF',
+              iconColorHover: 'background.stellair_hover',
               link: INTERNAL_ROUTES.LISA,
             },
             {
@@ -291,7 +297,7 @@ export const Stellair = () => {
               wifiModul: true,
               sterilizacia: true,
               dierkovanaLamela: true,
-              dlhodobeVykurovanie: 'do -15°C',
+              dlhodobeVykurovanie: '-15°C',
               aktivneCistenie: true,
               zaruka: `5 ${t('common:years_rokov')}`,
               chladivo: 'R32',
@@ -301,6 +307,7 @@ export const Stellair = () => {
         />
       </Box>
       <StellairSensitive
+        hoverColor="background.stellair_hover"
         color="background.stellair"
         gradientColor={LINEAR_GRADIENTS.stellair}
         sensitive

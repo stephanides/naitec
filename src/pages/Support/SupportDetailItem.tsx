@@ -63,7 +63,6 @@ export const SupportDetailItem = ({ title, items }: SupportDetailItemProps) => {
                   <NeueHaasGroteskText
                     fontSize={{ base: rem(16), md: rem(20) }}
                     color="text.link"
-                    fontWeight={500}
                     textDecor="underline"
                   >
                     {item.title}

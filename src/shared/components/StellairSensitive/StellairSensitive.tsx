@@ -63,6 +63,7 @@ const Item = ({
           <SecondaryButton
             icon={<ArrowRight />}
             borderColor={color}
+            hoverColor={color}
             color={color}
           >
             {t('button_find_out_more')}
@@ -75,6 +76,7 @@ const Item = ({
 
 type StellairSensitiveProps = {
   color?: string;
+  hoverColor?: string;
   gradientColor?: string;
   stellair?: boolean;
   sensitive?: boolean;
@@ -85,6 +87,7 @@ type StellairSensitiveProps = {
 
 export const StellairSensitive = ({
   color = 'background.naitec_blue',
+  hoverColor = 'background.naitec_blue_hover',
   gradientColor = LINEAR_GRADIENTS.stellair,
   stellair,
   sensitive,
@@ -125,6 +128,7 @@ export const StellairSensitive = ({
             <PrimaryButton
               borderColor={color}
               backgroundColor={color}
+              hoverColor={hoverColor}
               icon={<ArrowRight />}
             >
               {t('button_explore_all')}

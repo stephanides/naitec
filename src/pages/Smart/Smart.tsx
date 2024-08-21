@@ -106,7 +106,10 @@ export const Smart = () => {
             />
           </Flex>
         </Flex>
-        <ProductHeadingButtons color="background.smart" />
+        <ProductHeadingButtons
+          hoverColor="background.smart_hover"
+          color="background.smart"
+        />
       </Box>
       <Flex
         mt={{ base: rem(54), md: rem(100) }}
@@ -198,6 +201,7 @@ export const Smart = () => {
               description: t('all_you_need_item_1_description'),
               interactiveIcon: <PlusExpand />,
               iconColor: '#84AC5E',
+              iconColorHover: 'background.smart_hover',
               expandContent: (
                 <AllYouNeedModalContent
                   title={t('all_you_need_item_1_title')}
@@ -218,6 +222,7 @@ export const Smart = () => {
               description: t('all_you_need_item_3_description'),
               interactiveIcon: <Info />,
               iconColor: '#84AC5E',
+              iconColorHover: 'background.smart_hover',
               expandContent: (
                 <AllYouNeedModalContent
                   title={t('all_you_need_item_3_title')}
@@ -233,6 +238,7 @@ export const Smart = () => {
               description: t('all_you_need_item_4_description'),
               interactiveIcon: <Redirect />,
               iconColor: '#84AC5E',
+              iconColorHover: 'background.smart_hover',
               link: INTERNAL_ROUTES.LISA,
             },
             {
@@ -253,6 +259,7 @@ export const Smart = () => {
         <TechnicalParameters
           label="Naitec Smart"
           color={LINEAR_GRADIENTS.smart}
+          hoverColor="background.smart_hover"
           buttonColor="background.smart_light"
           params={[
             {
@@ -272,7 +279,7 @@ export const Smart = () => {
               wifiModul: true,
               sterilizacia: true,
               dierkovanaLamela: false,
-              dlhodobeVykurovanie: 'do -25°C',
+              dlhodobeVykurovanie: '-25°C',
               aktivneCistenie: true,
               zaruka: `3 ${t('common:years_roky')}`,
               chladivo: 'R32',
@@ -294,7 +301,7 @@ export const Smart = () => {
               wifiModul: true,
               sterilizacia: true,
               dierkovanaLamela: false,
-              dlhodobeVykurovanie: 'do -25°C',
+              dlhodobeVykurovanie: '-25°C',
               aktivneCistenie: true,
               zaruka: `3 ${t('common:years_roky')}`,
               chladivo: 'R32',
@@ -316,7 +323,7 @@ export const Smart = () => {
               wifiModul: true,
               sterilizacia: true,
               dierkovanaLamela: false,
-              dlhodobeVykurovanie: 'do -25°C',
+              dlhodobeVykurovanie: '-25°C',
               aktivneCistenie: true,
               zaruka: `3 ${t('common:years_roky')}`,
               chladivo: 'R32',
@@ -325,6 +332,7 @@ export const Smart = () => {
         />
       </Box>
       <StellairSensitive
+        hoverColor="background.smart_hover"
         color="background.smart_light"
         gradientColor={LINEAR_GRADIENTS.smart}
         onyx
