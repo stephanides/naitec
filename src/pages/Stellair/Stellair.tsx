@@ -50,6 +50,7 @@ export const Stellair = () => {
           alignItems="center"
           position="relative"
           flexDir="column"
+          overflow="hidden"
         >
           <NeueHaasGroteskDisplay
             background="linear-gradient(to right, #344F5F, #6CA5C5)"
