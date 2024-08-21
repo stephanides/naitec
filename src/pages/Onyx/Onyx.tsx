@@ -252,28 +252,32 @@ export const Onyx = () => {
       <Box>
         <TechnicalParameters
           label="Naitec Onyx"
-          chladiaciVykon="3,5"
-          vykurovaciVykon="3,8"
-          energetickaTrieda="A++"
-          hlucnostVnutornejJednotky="22"
-          hlucnostVonkajsejJednotky="52"
-          seer="6,19"
-          scop="4,03"
-          hmotnostVnutornejJednotky="8,5"
-          hmotnostVonkajsejJednotky="22,5"
-          rozmeryVnutornejJednotky="792x292x201"
-          rozmeryVonkajsejJednotky="705x530x280"
-          ionizator={true}
-          nasavanieVzduchuZExterieru={false}
-          wifiModul={true}
-          sterilizacia={true}
-          dierkovanaLamela={false}
-          dlhodobeVykurovanie="do -25°C"
-          aktivneCistenie={true}
-          zaruka={`3 ${t('common:years_roky')}`}
-          chladivo="R32"
           color={LINEAR_GRADIENTS.onyx}
           buttonColor="text.onyx_grey"
+          params={[
+            {
+              chladiaciVykon: '3,5',
+              vykurovaciVykon: '3,8',
+              energetickaTrieda: 'A++',
+              hlucnostVnutornejJednotky: '22',
+              hlucnostVonkajsejJednotky: '52',
+              seer: '6,19',
+              scop: '4,03',
+              hmotnostVnutornejJednotky: '8,5',
+              hmotnostVonkajsejJednotky: '22,5',
+              rozmeryVnutornejJednotky: '792x292x201',
+              rozmeryVonkajsejJednotky: '705x530x280',
+              ionizator: true,
+              nasavanieVzduchuZExterieru: false,
+              wifiModul: true,
+              sterilizacia: true,
+              dierkovanaLamela: false,
+              dlhodobeVykurovanie: 'do -25°C',
+              aktivneCistenie: true,
+              zaruka: `3 ${t('common:years_roky')}`,
+              chladivo: 'R32',
+            },
+          ]}
         />
       </Box>
       <StellairSensitive

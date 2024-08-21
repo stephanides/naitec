@@ -1,8 +1,9 @@
-import { extendTheme } from '@chakra-ui/react';
+import { Select, extendTheme } from '@chakra-ui/react';
 import {
   alertTheme,
   checkboxTheme,
   inputTheme,
+  selectTheme,
   textareaTheme,
 } from './components';
 
@@ -26,6 +27,7 @@ export const theme = extendTheme({
       naitec_blue: '#4F9CC2',
       smart: '#527731',
       smart_light: '#84AC5E',
+      smart_dark: '#527731',
       sensitive: '#7C3FA2',
       sensitive_light: '#8E5EAC',
       dark: '#313131',
@@ -47,6 +49,7 @@ export const theme = extendTheme({
       naitec_blue: '#4F9CC2',
       params: '#747474',
       sensitive_pro: '#8A2828',
+      smart_dark: '#527731',
     },
     label: {
       yellow: '#FFCE2E',
@@ -65,6 +68,7 @@ export const theme = extendTheme({
     Input: inputTheme,
     Checkbox: checkboxTheme,
     Alert: alertTheme,
+    Select: selectTheme,
   },
   breakpoints,
 });

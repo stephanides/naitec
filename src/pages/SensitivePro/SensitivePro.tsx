@@ -271,28 +271,32 @@ export const SensitivePro = () => {
       <Box mt={{ base: rem(60), md: rem(80), lg: rem(100) }}>
         <TechnicalParameters
           label="Naitec Sensitive Pro"
-          chladiaciVykon="3,5"
-          vykurovaciVykon="4,2"
-          energetickaTrieda="A+++"
-          hlucnostVnutornejJednotky="19"
-          hlucnostVonkajsejJednotky="52"
-          seer="8,7"
-          scop="4,7"
-          hmotnostVnutornejJednotky="8,5"
-          hmotnostVonkajsejJednotky="24,5"
-          rozmeryVnutornejJednotky="827x299x201mm"
-          rozmeryVonkajsejJednotky="705x530x280mm"
-          ionizator={true}
-          nasavanieVzduchuZExterieru={false}
-          wifiModul={true}
-          sterilizacia={true}
-          dierkovanaLamela={true}
-          dlhodobeVykurovanie="do -35°C"
-          aktivneCistenie={true}
-          zaruka={`5 ${t('common:years_rokov')}`}
-          chladivo="R32"
           color={LINEAR_GRADIENTS.sensitive_pro}
-          buttonColor='"background.sensitive_pro_light"'
+          buttonColor="background.sensitive_pro_light"
+          params={[
+            {
+              chladiaciVykon: '3,5',
+              vykurovaciVykon: '4,2',
+              energetickaTrieda: 'A+++',
+              hlucnostVnutornejJednotky: '19',
+              hlucnostVonkajsejJednotky: '52',
+              seer: '8,7',
+              scop: '4,7',
+              hmotnostVnutornejJednotky: '8,5',
+              hmotnostVonkajsejJednotky: '24,5',
+              rozmeryVnutornejJednotky: '827x299x201mm',
+              rozmeryVonkajsejJednotky: '705x530x280mm',
+              ionizator: true,
+              nasavanieVzduchuZExterieru: false,
+              wifiModul: true,
+              sterilizacia: true,
+              dierkovanaLamela: true,
+              dlhodobeVykurovanie: 'do -35°C',
+              aktivneCistenie: true,
+              zaruka: `5 ${t('common:years_rokov')}`,
+              chladivo: 'R32',
+            },
+          ]}
         />
       </Box>
       <StellairSensitive

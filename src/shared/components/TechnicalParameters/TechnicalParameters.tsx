@@ -1,4 +1,4 @@
-import { Box, Flex, Grid } from '@chakra-ui/react';
+import { Box, Flex, Grid, Select } from '@chakra-ui/react';
 import { Container } from '../Container';
 import { Label } from '../Label';
 import { rem } from 'polished';
@@ -18,26 +18,29 @@ type TechnicalParametersProps = {
   label: string;
   color: string;
   buttonColor?: string;
-  chladiaciVykon: string;
-  vykurovaciVykon: string;
-  energetickaTrieda: string;
-  hlucnostVnutornejJednotky: string;
-  hlucnostVonkajsejJednotky: string;
-  seer: string;
-  scop: string;
-  hmotnostVnutornejJednotky: string;
-  hmotnostVonkajsejJednotky: string;
-  rozmeryVnutornejJednotky: string;
-  rozmeryVonkajsejJednotky: string;
-  ionizator: boolean;
-  nasavanieVzduchuZExterieru: boolean;
-  wifiModul: boolean;
-  sterilizacia: boolean;
-  dierkovanaLamela: boolean;
-  dlhodobeVykurovanie: string;
-  aktivneCistenie: boolean;
-  zaruka: string;
-  chladivo: string;
+  selectColor?: string;
+  params: {
+    chladiaciVykon: string;
+    vykurovaciVykon: string;
+    energetickaTrieda: string;
+    hlucnostVnutornejJednotky: string;
+    hlucnostVonkajsejJednotky: string;
+    seer: string;
+    scop: string;
+    hmotnostVnutornejJednotky: string;
+    hmotnostVonkajsejJednotky: string;
+    rozmeryVnutornejJednotky: string;
+    rozmeryVonkajsejJednotky: string;
+    ionizator: boolean;
+    nasavanieVzduchuZExterieru: boolean;
+    wifiModul: boolean;
+    sterilizacia: boolean;
+    dierkovanaLamela: boolean;
+    dlhodobeVykurovanie: string;
+    aktivneCistenie: boolean;
+    zaruka: string;
+    chladivo: string;
+  }[];
 };
 
 const Item = ({
@@ -92,63 +95,75 @@ export const TechnicalParameters = ({
   label,
   color,
   buttonColor = 'text.naitec_blue',
-  chladiaciVykon,
-  vykurovaciVykon,
-  energetickaTrieda,
-  hlucnostVnutornejJednotky,
-  hlucnostVonkajsejJednotky,
-  seer,
-  scop,
-  hmotnostVnutornejJednotky,
-  hmotnostVonkajsejJednotky,
-  rozmeryVnutornejJednotky,
-  rozmeryVonkajsejJednotky,
-  ionizator,
-  nasavanieVzduchuZExterieru,
-  wifiModul,
-  sterilizacia,
-  dierkovanaLamela,
-  dlhodobeVykurovanie,
-  aktivneCistenie,
-  zaruka,
-  chladivo,
+  selectColor = 'text.smart_dark',
+  params,
 }: TechnicalParametersProps) => {
   const { t } = useTranslation();
   const [isExpanded, setExpanded] = useState(false);
   const { getCollapseProps, getToggleProps } = useCollapse({ isExpanded });
+  const [activeParam, setActiveParam] = useState(0);
   return (
     <Box position="relative" top={rem(1)}>
       <Container>
-        <Box ml={{ base: 0, md: rem(100) }}>
-          <Label text={label} color="text.link" borderColor="text.link" />
-          <NeueHaasGroteskDisplay
-            fontSize={{ base: rem(30), md: rem(64) }}
-            lineHeight={{ base: rem(30), md: rem(64) }}
-            fontWeight={600}
-            color="text.link"
-            mt={rem(25)}
-            sx={{
-              strong: {
-                backgroundImage: color,
-                backgroundClip: 'text',
-                color: 'transparent',
-              },
-            }}
-            dangerouslySetInnerHTML={{ __html: t('techinal_parameters_title') }}
-          />
-          <NeueHaasGroteskText
-            mt={rem(20)}
-            lineHeight="130%"
-            fontSize={{ base: rem(16), md: rem(22) }}
-            color="text.light"
-            fontWeight={500}
-            maxW={rem(700)}
-            sx={{ strong: { color: 'text.link' } }}
-            dangerouslySetInnerHTML={{
-              __html: t('techinal_parameters_description'),
-            }}
-          />
-        </Box>
+        <Flex
+          justifyContent="space-between"
+          alignItems={{ base: 'flex-start', md: 'center' }}
+          flexDir={{ base: 'column', xl: 'row' }}
+        >
+          <Box ml={{ base: 0, md: rem(100) }}>
+            <Label text={label} color="text.link" borderColor="text.link" />
+            <NeueHaasGroteskDisplay
+              fontSize={{ base: rem(30), md: rem(64) }}
+              lineHeight={{ base: rem(30), md: rem(64) }}
+              fontWeight={600}
+              color="text.link"
+              mt={rem(25)}
+              sx={{
+                strong: {
+                  backgroundImage: color,
+                  backgroundClip: 'text',
+                  color: 'transparent',
+                },
+              }}
+              dangerouslySetInnerHTML={{
+                __html: t('techinal_parameters_title'),
+              }}
+            />
+            <NeueHaasGroteskText
+              mt={rem(20)}
+              lineHeight="130%"
+              fontSize={{ base: rem(16), md: rem(22) }}
+              color="text.light"
+              fontWeight={500}
+              maxW={rem(700)}
+              sx={{ strong: { color: 'text.link' } }}
+              dangerouslySetInnerHTML={{
+                __html: t('techinal_parameters_description'),
+              }}
+            />
+          </Box>
+          {params.length > 1 && (
+            <Box>
+              <Select
+                // placeholder={`${t('choose_performance')} (${
+                //   params[activeParam].chladiaciVykon
+                // }kw)`}
+                width="100%"
+                mt={rem(18)}
+                variant="smart"
+                name="service"
+                onChange={(event) => setActiveParam(Number(event.target.value))}
+                value={activeParam}
+              >
+                {params.map((param, index) => (
+                  <option value={index}>{`${t('choose_performance')} (${
+                    param.chladiaciVykon
+                  }kw)`}</option>
+                ))}
+              </Select>
+            </Box>
+          )}
+        </Flex>
       </Container>
       <Box width="100%" mt={rem(40)} position="relative">
         <Box zIndex={2} pos="relative">
@@ -163,90 +178,96 @@ export const TechnicalParameters = ({
               <Box>
                 <Item
                   label={t('technical_parameters_cooling_performance')}
-                  value={chladiaciVykon}
+                  value={params[activeParam].chladiaciVykon}
                 />
                 <Item
                   label={t('technical_parameters_heating_performance')}
-                  value={vykurovaciVykon}
+                  value={params[activeParam].vykurovaciVykon}
                 />
                 <Item
                   label={t('technical_parameters_energy_class')}
-                  value={energetickaTrieda}
+                  value={params[activeParam].energetickaTrieda}
                 />
                 <Item
                   label={t('technical_parameters_indoor_unit_noise')}
-                  value={hlucnostVnutornejJednotky}
+                  value={params[activeParam].hlucnostVnutornejJednotky}
                 />
                 <Item
                   label={t('technical_parameters_outdoor_unit_noise')}
-                  value={hlucnostVonkajsejJednotky}
+                  value={params[activeParam].hlucnostVonkajsejJednotky}
                 />
-                <Item label={t('technical_parameters_seer')} value={seer} />
-                <Item label={t('technical_parameters_scop')} value={scop} />
+                <Item
+                  label={t('technical_parameters_seer')}
+                  value={params[activeParam].seer}
+                />
+                <Item
+                  label={t('technical_parameters_scop')}
+                  value={params[activeParam].scop}
+                />
                 <Item
                   label={t('technical_parameters_indoor_unit_weight')}
-                  value={hmotnostVnutornejJednotky}
+                  value={params[activeParam].hmotnostVnutornejJednotky}
                 />
                 <Item
                   label={t('technical_parameters_outdoor_unit_weight')}
-                  value={hmotnostVonkajsejJednotky}
+                  value={params[activeParam].hmotnostVonkajsejJednotky}
                 />
                 <Item
                   withBorder={false}
                   label={t('technical_parameters_indoor_unit_dimensions')}
-                  value={rozmeryVnutornejJednotky}
+                  value={params[activeParam].rozmeryVnutornejJednotky}
                 />
               </Box>
               <Box>
                 <Item
                   label={t('technical_parameters_outdoor_unit_dimensions')}
-                  value={rozmeryVonkajsejJednotky}
+                  value={params[activeParam].rozmeryVonkajsejJednotky}
                   withBorderRight={false}
                 />
                 <Item
                   label={t('technical_parameters_ionizer')}
-                  value={ionizator}
+                  value={params[activeParam].ionizator}
                   withBorderRight={false}
                 />
                 <Item
                   label={t('technical_parameters_air_taker_from_the_outside')}
-                  value={nasavanieVzduchuZExterieru}
+                  value={params[activeParam].nasavanieVzduchuZExterieru}
                   withBorderRight={false}
                 />
                 <Item
                   label={t('technical_parameters_wifi_module')}
-                  value={wifiModul}
+                  value={params[activeParam].wifiModul}
                   withBorderRight={false}
                 />
                 <Item
                   label={t('technical_parameters_sterilization')}
-                  value={sterilizacia}
+                  value={params[activeParam].sterilizacia}
                   withBorderRight={false}
                 />
                 <Item
                   label={t('technical_parameters_perforated_lamella')}
-                  value={dierkovanaLamela}
+                  value={params[activeParam].dierkovanaLamela}
                   withBorderRight={false}
                 />
                 <Item
                   label={t('technical_parameters_long_term_heating')}
-                  value={dlhodobeVykurovanie}
+                  value={params[activeParam].dlhodobeVykurovanie}
                   withBorderRight={false}
                 />
                 <Item
                   label={t('technical_parameters_active_cleaning')}
-                  value={aktivneCistenie}
+                  value={params[activeParam].aktivneCistenie}
                   withBorderRight={false}
                 />
                 <Item
                   label={t('technical_parameters_warranty')}
-                  value={zaruka}
+                  value={params[activeParam].zaruka}
                   withBorderRight={false}
                 />
                 <Item
                   withBorder={false}
                   label={t('technical_parameters_coolant')}
-                  value={chladivo}
+                  value={params[activeParam].chladivo}
                   withBorderRight={false}
                 />
               </Box>
@@ -261,95 +282,105 @@ export const TechnicalParameters = ({
                 <Box>
                   <Item
                     label={t('technical_parameters_cooling_performance')}
-                    value={chladiaciVykon}
+                    value={params[activeParam].chladiaciVykon}
                   />
                   <Item
                     label={t('technical_parameters_heating_performance')}
-                    value={vykurovaciVykon}
+                    value={params[activeParam].vykurovaciVykon}
                   />
                   <Item
                     label={t('technical_parameters_energy_class')}
-                    value={energetickaTrieda}
+                    value={params[activeParam].energetickaTrieda}
                   />
                   <Item
                     label={t('technical_parameters_indoor_unit_noise')}
-                    value={hlucnostVnutornejJednotky}
+                    value={params[activeParam].hlucnostVnutornejJednotky}
                   />
                   <Item
                     label={t('technical_parameters_outdoor_unit_noise')}
-                    value={hlucnostVonkajsejJednotky}
+                    value={params[activeParam].hlucnostVonkajsejJednotky}
                   />
-                  <Item label={t('technical_parameters_seer')} value={seer} />
-                  <Item label={t('technical_parameters_scop')} value={scop} />
+                  <Item
+                    label={t('technical_parameters_seer')}
+                    value={params[activeParam].seer}
+                  />
+                  <Item
+                    label={t('technical_parameters_scop')}
+                    value={params[activeParam].scop}
+                  />
                   <Item
                     label={t('technical_parameters_indoor_unit_weight')}
-                    value={hmotnostVnutornejJednotky}
+                    value={params[activeParam].hmotnostVnutornejJednotky}
                   />
                   <Item
                     label={t('technical_parameters_outdoor_unit_weight')}
-                    value={hmotnostVonkajsejJednotky}
+                    value={params[activeParam].hmotnostVonkajsejJednotky}
                   />
                   <Item
                     withBorder={false}
                     label={t('technical_parameters_indoor_unit_dimensions')}
-                    value={rozmeryVnutornejJednotky}
+                    value={params[activeParam].rozmeryVnutornejJednotky}
                   />
                 </Box>
                 <Box {...getCollapseProps()}>
                   <Item
                     label={t('technical_parameters_outdoor_unit_dimensions')}
-                    value={rozmeryVonkajsejJednotky}
+                    value={params[activeParam].rozmeryVonkajsejJednotky}
                     withBorderRight={false}
                   />
                   <Item
                     label={t('technical_parameters_ionizer')}
-                    value={ionizator}
+                    value={params[activeParam].ionizator}
                     withBorderRight={false}
                   />
                   <Item
                     label={t('technical_parameters_air_taker_from_the_outside')}
-                    value={nasavanieVzduchuZExterieru}
+                    value={params[activeParam].nasavanieVzduchuZExterieru}
                     withBorderRight={false}
                   />
                   <Item
                     label={t('technical_parameters_wifi_module')}
-                    value={wifiModul}
+                    value={params[activeParam].wifiModul}
                     withBorderRight={false}
                   />
                   <Item
                     label={t('technical_parameters_sterilization')}
-                    value={sterilizacia}
+                    value={params[activeParam].sterilizacia}
                     withBorderRight={false}
                   />
                   <Item
                     label={t('technical_parameters_perforated_lamella')}
-                    value={dierkovanaLamela}
+                    value={params[activeParam].dierkovanaLamela}
                     withBorderRight={false}
                   />
                   <Item
                     label={t('technical_parameters_long_term_heating')}
-                    value={dlhodobeVykurovanie}
+                    value={params[activeParam].dlhodobeVykurovanie}
                     withBorderRight={false}
                   />
                   <Item
                     label={t('technical_parameters_active_cleaning')}
-                    value={aktivneCistenie}
+                    value={params[activeParam].aktivneCistenie}
                     withBorderRight={false}
                   />
                   <Item
                     label={t('technical_parameters_warranty')}
-                    value={zaruka}
+                    value={params[activeParam].zaruka}
                     withBorderRight={false}
                   />
                   <Item
                     withBorder={false}
                     label={t('technical_parameters_coolant')}
-                    value={chladivo}
+                    value={params[activeParam].chladivo}
                     withBorderRight={false}
                   />
                 </Box>
               </Box>
-              <Flex justifyContent="center" mt={rem(20)}>
+              <Flex
+                justifyContent="center"
+                mt={rem(20)}
+                display={{ base: 'flex', xl: 'none' }}
+              >
                 <PrimaryButton
                   {...getToggleProps({
                     onClick: () => setExpanded((prevExpanded) => !prevExpanded),

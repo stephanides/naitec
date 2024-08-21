@@ -273,26 +273,30 @@ export const Stellair = () => {
       <Box>
         <TechnicalParameters
           label="Naitec Stellair"
-          chladiaciVykon="3,7"
-          vykurovaciVykon="3,8"
-          energetickaTrieda="A++"
-          hlucnostVnutornejJednotky="18"
-          hlucnostVonkajsejJednotky="52"
-          seer="6,2"
-          scop="4"
-          hmotnostVnutornejJednotky="11,5"
-          hmotnostVonkajsejJednotky="22,5"
-          rozmeryVnutornejJednotky="960x305x219mm"
-          rozmeryVonkajsejJednotky="705x530x280mm"
-          ionizator={true}
-          nasavanieVzduchuZExterieru={true}
-          wifiModul={true}
-          sterilizacia={true}
-          dierkovanaLamela={true}
-          dlhodobeVykurovanie="do -15°C"
-          aktivneCistenie={true}
-          zaruka={`5 ${t('common:years_rokov')}`}
-          chladivo="R32"
+          params={[
+            {
+              chladiaciVykon: '3,7',
+              vykurovaciVykon: '3,8',
+              energetickaTrieda: 'A++',
+              hlucnostVnutornejJednotky: '18',
+              hlucnostVonkajsejJednotky: '52',
+              seer: '6,2',
+              scop: '4',
+              hmotnostVnutornejJednotky: '11,5',
+              hmotnostVonkajsejJednotky: '22,5',
+              rozmeryVnutornejJednotky: '960x305x219mm',
+              rozmeryVonkajsejJednotky: '705x530x280mm',
+              ionizator: true,
+              nasavanieVzduchuZExterieru: true,
+              wifiModul: true,
+              sterilizacia: true,
+              dierkovanaLamela: true,
+              dlhodobeVykurovanie: 'do -15°C',
+              aktivneCistenie: true,
+              zaruka: `5 ${t('common:years_rokov')}`,
+              chladivo: 'R32',
+            },
+          ]}
           color={LINEAR_GRADIENTS.stellair}
         />
       </Box>

@@ -252,28 +252,76 @@ export const Smart = () => {
       <Box>
         <TechnicalParameters
           label="Naitec Smart"
-          chladiaciVykon="3,5"
-          vykurovaciVykon="3,8"
-          energetickaTrieda="A++"
-          hlucnostVnutornejJednotky="22"
-          hlucnostVonkajsejJednotky="52"
-          seer="6,19"
-          scop="4,03"
-          hmotnostVnutornejJednotky="8,5"
-          hmotnostVonkajsejJednotky="22,5"
-          rozmeryVnutornejJednotky="792x292x201"
-          rozmeryVonkajsejJednotky="705x530x280"
-          ionizator={true}
-          nasavanieVzduchuZExterieru={false}
-          wifiModul={true}
-          sterilizacia={true}
-          dierkovanaLamela={false}
-          dlhodobeVykurovanie="do -25°C"
-          aktivneCistenie={true}
-          zaruka={`3 ${t('common:years_roky')}`}
-          chladivo="R32"
           color={LINEAR_GRADIENTS.smart}
           buttonColor="background.smart_light"
+          params={[
+            {
+              chladiaciVykon: '3,5',
+              vykurovaciVykon: '3,8',
+              energetickaTrieda: 'A++',
+              hlucnostVnutornejJednotky: '22',
+              hlucnostVonkajsejJednotky: '52',
+              seer: '6,19',
+              scop: '4,03',
+              hmotnostVnutornejJednotky: '8,5',
+              hmotnostVonkajsejJednotky: '22,5',
+              rozmeryVnutornejJednotky: '792x292x201',
+              rozmeryVonkajsejJednotky: '705x530x280',
+              ionizator: true,
+              nasavanieVzduchuZExterieru: false,
+              wifiModul: true,
+              sterilizacia: true,
+              dierkovanaLamela: false,
+              dlhodobeVykurovanie: 'do -25°C',
+              aktivneCistenie: true,
+              zaruka: `3 ${t('common:years_roky')}`,
+              chladivo: 'R32',
+            },
+            {
+              chladiaciVykon: '5',
+              vykurovaciVykon: '5,6',
+              energetickaTrieda: 'A++',
+              hlucnostVnutornejJednotky: '24',
+              hlucnostVonkajsejJednotky: '56',
+              seer: '7',
+              scop: '4,19',
+              hmotnostVnutornejJednotky: '11,5',
+              hmotnostVonkajsejJednotky: '28',
+              rozmeryVnutornejJednotky: '940x316x224mm',
+              rozmeryVonkajsejJednotky: '785x300x555mm',
+              ionizator: true,
+              nasavanieVzduchuZExterieru: false,
+              wifiModul: true,
+              sterilizacia: true,
+              dierkovanaLamela: false,
+              dlhodobeVykurovanie: 'do -25°C',
+              aktivneCistenie: true,
+              zaruka: `3 ${t('common:years_roky')}`,
+              chladivo: 'R32',
+            },
+            {
+              chladiaciVykon: '7',
+              vykurovaciVykon: '7,2',
+              energetickaTrieda: 'A++',
+              hlucnostVnutornejJednotky: '27',
+              hlucnostVonkajsejJednotky: '58',
+              seer: '6.53',
+              scop: '4,09',
+              hmotnostVnutornejJednotky: '14',
+              hmotnostVonkajsejJednotky: '39',
+              rozmeryVnutornejJednotky: '1132x330x232mm',
+              rozmeryVonkajsejJednotky: '900x700x350mm',
+              ionizator: true,
+              nasavanieVzduchuZExterieru: false,
+              wifiModul: true,
+              sterilizacia: true,
+              dierkovanaLamela: false,
+              dlhodobeVykurovanie: 'do -25°C',
+              aktivneCistenie: true,
+              zaruka: `3 ${t('common:years_roky')}`,
+              chladivo: 'R32',
+            },
+          ]}
         />
       </Box>
       <StellairSensitive
