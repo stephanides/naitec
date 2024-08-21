@@ -17,6 +17,7 @@ import { useState } from 'react';
 type TechnicalParametersProps = {
   label: string;
   color: string;
+  buttonColor?: string;
   chladiaciVykon: string;
   vykurovaciVykon: string;
   energetickaTrieda: string;
@@ -90,6 +91,7 @@ const Item = ({
 export const TechnicalParameters = ({
   label,
   color,
+  buttonColor = 'text.naitec_blue',
   chladiaciVykon,
   vykurovaciVykon,
   energetickaTrieda,
@@ -352,6 +354,8 @@ export const TechnicalParameters = ({
                   {...getToggleProps({
                     onClick: () => setExpanded((prevExpanded) => !prevExpanded),
                   })}
+                  backgroundColor={buttonColor}
+                  borderColor={buttonColor}
                   icon={
                     isExpanded ? (
                       <Minus color="white" />

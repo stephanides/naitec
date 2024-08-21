@@ -115,6 +115,7 @@ export const Stellair = () => {
         flexDir="column"
         alignItems="center"
         mb={{ base: rem(55), md: rem(158) }}
+        px={{ base: rem(16), xl: 0 }}
       >
         <NeueHaasGroteskDisplay
           fontSize={{ base: rem(20), md: rem(36) }}

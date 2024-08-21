@@ -76,7 +76,7 @@ export const SensitivePro = () => {
           <Flex
             position="relative"
             pt={{
-              base: rem(8),
+              base: rem(4),
               xs: rem(4),
               md: rem(32),
               lg: rem(32),
@@ -111,7 +111,12 @@ export const SensitivePro = () => {
         </Flex>
         <ProductHeadingButtons color="background.sensitive_pro" />
       </Box>
-      <Flex mt={rem(100)} flexDir="column" alignItems="center">
+      <Flex
+        mt={{ base: rem(54), md: rem(100) }}
+        flexDir="column"
+        alignItems="center"
+        px={{ base: rem(16), xl: 0 }}
+      >
         <NeueHaasGroteskDisplay
           fontSize={{ base: rem(20), md: rem(36) }}
           color="text.link"
@@ -287,6 +292,7 @@ export const SensitivePro = () => {
           zaruka={`5 ${t('common:years_rokov')}`}
           chladivo="R32"
           color={LINEAR_GRADIENTS.sensitive_pro}
+          buttonColor='"background.sensitive_pro_light"'
         />
       </Box>
       <StellairSensitive

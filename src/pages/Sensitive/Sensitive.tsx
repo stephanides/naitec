@@ -50,10 +50,17 @@ export const Sensitive = () => {
           alignItems="center"
           position="relative"
           flexDir="column"
+          overflow="hidden"
         >
           <NeueHaasGroteskDisplay
             background={LINEAR_GRADIENTS.sensitive}
-            fontSize={rem(192)}
+            fontSize={{
+              base: rem(52),
+              xs: rem(68),
+              md: rem(94),
+              lg: rem(134),
+              xl: rem(180),
+            }}
             fontWeight={600}
             textTransform="uppercase"
             textAlign="center"
@@ -66,10 +73,30 @@ export const Sensitive = () => {
           </NeueHaasGroteskDisplay>
           <Flex
             position="relative"
-            pt={rem(60)}
-            maxW={rem(1600)}
-            width="100%"
-            minH={rem(480)}
+            pt={{
+              base: rem(28),
+              xs: rem(20),
+              md: rem(32),
+              lg: rem(60),
+              xl: rem(80),
+              '2xl': rem(50),
+            }}
+            maxW={{
+              base: rem(400),
+              xs: rem(600),
+              md: rem(800),
+              lg: rem(1000),
+              xl: rem(1400),
+              '2xl': rem(1600),
+            }}
+            width={{
+              base: rem(400),
+              xs: rem(600),
+              md: rem(800),
+              lg: rem(1000),
+              xl: rem(1400),
+              '2xl': rem(1600),
+            }}
             justify="center"
             overflow="hidden"
           >
@@ -82,9 +109,15 @@ export const Sensitive = () => {
         </Flex>
         <ProductHeadingButtons color="background.sensitive" />
       </Box>
-      <Flex mt={rem(100)} flexDir="column" alignItems="center" mb={rem(158)}>
+      <Flex
+        mt={{ base: rem(54), md: rem(100) }}
+        flexDir="column"
+        alignItems="center"
+        mb={{ base: rem(55), md: rem(158) }}
+        px={{ base: rem(16), xl: 0 }}
+      >
         <NeueHaasGroteskDisplay
-          fontSize={rem(36)}
+          fontSize={{ base: rem(20), md: rem(36) }}
           color="text.link"
           fontWeight={600}
         >
@@ -92,7 +125,7 @@ export const Sensitive = () => {
         </NeueHaasGroteskDisplay>
         <NeueHaasGroteskDisplay
           maxW={rem(925)}
-          fontSize={rem(32)}
+          fontSize={{ base: rem(18), md: rem(32) }}
           color="#8F8F8F"
           textAlign="center"
           fontWeight={600}
@@ -104,9 +137,9 @@ export const Sensitive = () => {
       <Element id="content" name="content">
         <Box
           overflow="hidden"
-          pb={rem(160)}
+          pb={{ base: rem(60), lg: rem(160) }}
           background="background.primary"
-          pt={rem(176)}
+          pt={{ base: rem(100), lg: rem(176) }}
           position="relative"
         >
           <Container>
@@ -158,9 +191,12 @@ export const Sensitive = () => {
       </Element>
       <HowCoolingLooksLike color={LINEAR_GRADIENTS.sensitive} />
       <DiffuseCooling color={LINEAR_GRADIENTS.sensitive} />
-      <NaitecApplication blurOnBottom={false} />
+      <Box>
+        <NaitecApplication blurOnBottom={false} />
+      </Box>
       <Box
         pb={rem(180)}
+        pt={{ base: rem(60), md: rem(80), xl: rem(168) }}
         top={rem(-1)}
         backgroundColor="background.primary"
         position="relative"
@@ -179,7 +215,7 @@ export const Sensitive = () => {
           filter="blur(100px)"
         />
       </Box>
-      <Box pt={rem(170)}>
+      <Box pt={{ base: rem(60), md: rem(80), xl: rem(168) }}>
         <AllYouNeed
           color={LINEAR_GRADIENTS.sensitive}
           items={[
@@ -238,7 +274,7 @@ export const Sensitive = () => {
         <CoolantR32 color={LINEAR_GRADIENTS.sensitive} />
       </Box>
 
-      <Box>
+      <Box pt={{ base: rem(60), md: rem(80), xl: rem(168) }}>
         <TechnicalParameters
           label="Naitec Sensitive"
           chladiaciVykon="3,5"
@@ -262,6 +298,7 @@ export const Sensitive = () => {
           zaruka={`3 ${t('common:years_roky')}`}
           chladivo="R32"
           color={LINEAR_GRADIENTS.sensitive}
+          buttonColor="background.sensitive_light"
         />
       </Box>
       <StellairSensitive

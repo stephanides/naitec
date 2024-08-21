@@ -24,6 +24,7 @@ export const NaitecApplication = ({
   return (
     <Box
       backgroundColor="background.primary"
+      pt={{ base: rem(60), md: rem(80), xl: rem(168) }}
       pb={{ base: 0, '2xl': rem(152) }}
       position="relative"
       overflow="hidden"

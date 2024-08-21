@@ -78,7 +78,7 @@ export const PrimaryButton = ({
         <Box
           width={{ base: rem(12), md: rem(20) }}
           position="relative"
-          top={rem(2)}
+          top={rem(1)}
           className="icon"
         >
           {icon}
