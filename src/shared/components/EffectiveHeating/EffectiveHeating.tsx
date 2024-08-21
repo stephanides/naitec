@@ -24,7 +24,7 @@ export const EffectiveHeating = ({
     <Box
       position="relative"
       overflow="hidden"
-      pt={{ base: rem(80), lg: rem(100) }}
+      pt={{ base: rem(40), md: rem(80), lg: rem(100) }}
     >
       <Container>
         <Label
@@ -33,7 +33,7 @@ export const EffectiveHeating = ({
           borderColor="white"
         />
         <NeueHaasGroteskDisplay
-          fontSize={rem(64)}
+          fontSize={{ base: rem(30), md: rem(64) }}
           mt={rem(25)}
           fontWeight={600}
           color="text.inverted"
@@ -49,8 +49,8 @@ export const EffectiveHeating = ({
         />
         <NeueHaasGroteskText
           fontWeight={500}
-          fontSize={rem(22)}
-          mt={rem(40)}
+          fontSize={{ base: rem(16), md: rem(22) }}
+          mt={{ base: rem(20), md: rem(40) }}
           maxW={rem(930)}
           letterSpacing="calc(16px * -0.02)"
           color="text.secondary"
