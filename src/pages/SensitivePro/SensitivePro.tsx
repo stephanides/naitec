@@ -52,10 +52,17 @@ export const SensitivePro = () => {
           alignItems="center"
           position="relative"
           flexDir="column"
+          overflow="hidden"
         >
           <NeueHaasGroteskDisplay
             background={LINEAR_GRADIENTS.sensitive_pro}
-            fontSize={rem(130)}
+            fontSize={{
+              base: rem(42),
+              xs: rem(60),
+              md: rem(90),
+              lg: rem(110),
+              xl: rem(134),
+            }}
             fontWeight={600}
             textTransform="uppercase"
             textAlign="center"
@@ -68,10 +75,30 @@ export const SensitivePro = () => {
           </NeueHaasGroteskDisplay>
           <Flex
             position="relative"
-            pt={rem(0)}
-            maxW={rem(1600)}
-            width="100%"
-            minH={rem(480)}
+            pt={{
+              base: rem(8),
+              xs: rem(4),
+              md: rem(32),
+              lg: rem(32),
+              xl: rem(20),
+              '2xl': rem(0),
+            }}
+            maxW={{
+              base: rem(480),
+              xs: rem(700),
+              md: rem(800),
+              lg: rem(1000),
+              xl: rem(1400),
+              '2xl': rem(1600),
+            }}
+            width={{
+              base: rem(480),
+              xs: rem(700),
+              md: rem(800),
+              lg: rem(1000),
+              xl: rem(1400),
+              '2xl': rem(1600),
+            }}
             justify="center"
             overflow="hidden"
           >
@@ -86,7 +113,7 @@ export const SensitivePro = () => {
       </Box>
       <Flex mt={rem(100)} flexDir="column" alignItems="center">
         <NeueHaasGroteskDisplay
-          fontSize={rem(36)}
+          fontSize={{ base: rem(20), md: rem(36) }}
           color="text.link"
           fontWeight={600}
         >
@@ -94,7 +121,7 @@ export const SensitivePro = () => {
         </NeueHaasGroteskDisplay>
         <NeueHaasGroteskDisplay
           maxW={rem(925)}
-          fontSize={rem(32)}
+          fontSize={{ base: rem(18), md: rem(32) }}
           color="#8F8F8F"
           textAlign="center"
           fontWeight={600}
@@ -104,7 +131,12 @@ export const SensitivePro = () => {
         </NeueHaasGroteskDisplay>
       </Flex>
       <Element id="content" name="content">
-        <Box overflow="hidden" pb={rem(60)} pt={rem(176)} position="relative">
+        <Box
+          overflow="hidden"
+          pb={rem(60)}
+          pt={{ base: rem(100), lg: rem(176) }}
+          position="relative"
+        >
           <Container>
             <WhyInfoSwiper
               title="Sensitive Pro"
@@ -150,8 +182,8 @@ export const SensitivePro = () => {
 
       <Box
         background="background.primary"
-        pt={rem(144)}
-        pb={rem(165)}
+        pt={{ base: rem(60), lg: rem(144) }}
+        pb={{ base: rem(60), lg: rem(165) }}
         position="relative"
         overflow="hidden"
       >
@@ -169,10 +201,10 @@ export const SensitivePro = () => {
           blurOnBottom={true}
         />
       </Box>
-      <Box mt={rem(165)}>
+      <Box mt={{ base: rem(60), md: rem(80), lg: rem(165) }}>
         <CleanAir color={LINEAR_GRADIENTS.sensitive_pro} imageOnLeft />
       </Box>
-      <Box pt={rem(170)}>
+      <Box pt={{ base: rem(60), md: rem(80), lg: rem(170) }}>
         <AllYouNeed
           color={LINEAR_GRADIENTS.sensitive_pro}
           items={[
@@ -231,7 +263,7 @@ export const SensitivePro = () => {
         <CoolantR32 color={LINEAR_GRADIENTS.sensitive_pro} />
       </Box>
 
-      <Box>
+      <Box mt={{ base: rem(60), md: rem(80), lg: rem(100) }}>
         <TechnicalParameters
           label="Naitec Sensitive Pro"
           chladiaciVykon="3,5"

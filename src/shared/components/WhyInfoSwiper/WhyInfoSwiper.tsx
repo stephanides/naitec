@@ -33,8 +33,6 @@ export const WhyInfoSwiper = ({
   const [activeIndex, setActiveIndex] = useState(0);
   const [totalItems, setTotalItems] = useState(0);
 
-  const a = t('why_info_title');
-
   return (
     <Box
       width="100%"
@@ -54,6 +52,7 @@ export const WhyInfoSwiper = ({
               backgroundImage: color,
               backgroundClip: 'text',
               color: 'transparent',
+              whiteSpace: 'nowrap',
             },
           }}
           dangerouslySetInnerHTML={{

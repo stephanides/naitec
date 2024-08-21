@@ -32,8 +32,8 @@ export const SwiperNavigation = ({
           sx={{ strong: { color: light ? 'white' : 'text.link' } }}
           userSelect="none"
           minW={rem(40)}
-          fontSize={rem(24)}
-          mr={rem(20)}
+          fontSize={{ base: rem(16), md: rem(24) }}
+          mr={{ base: rem(8), md: rem(20) }}
         >
           <NeueHaasGroteskDisplay
             color={light ? 'rgba(255,255,255,.5)' : 'rgba(57,57,57,.5)'}
@@ -45,15 +45,15 @@ export const SwiperNavigation = ({
       <Box className={prevClassName} cursor="pointer">
         <Flex
           borderRadius="50%"
-          w={rem(50)}
-          height={rem(50)}
+          w={{ base: rem(32), md: rem(50) }}
+          height={{ base: rem(32), md: rem(50) }}
           borderColor={light ? 'white !important' : 'text.link !important'}
           transform="rotate(180deg)"
           border="2px solid"
           justifyContent="center"
           alignItems="center"
         >
-          <Box width={rem(20)}>
+          <Box width={{ base: rem(14), md: rem(20) }}>
             <ArrowRight color={light ? 'white' : '#393939'} />
           </Box>
         </Flex>
@@ -61,14 +61,14 @@ export const SwiperNavigation = ({
       <Box className={nextClassName} cursor="pointer">
         <Flex
           borderRadius="50%"
-          w={rem(50)}
-          height={rem(50)}
+          w={{ base: rem(32), md: rem(50) }}
+          height={{ base: rem(32), md: rem(50) }}
           borderColor={light ? 'white !important' : 'text.link !important'}
           border="2px solid"
           justifyContent="center"
           alignItems="center"
         >
-          <Box width={rem(20)}>
+          <Box width={{ base: rem(14), md: rem(20) }}>
             <ArrowRight color={light ? 'white' : '#393939'} />
           </Box>
         </Flex>

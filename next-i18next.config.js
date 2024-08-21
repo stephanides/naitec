@@ -15,7 +15,7 @@ module.exports = {
     'lisa',
     'onyx',
     'sensitive',
-    'sensitive-pro',
+    'sensitivepro',
     'smart',
     'stellair',
     'support',

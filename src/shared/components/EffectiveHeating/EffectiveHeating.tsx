@@ -21,7 +21,11 @@ export const EffectiveHeating = ({
 }: EffectiveHeatingProps) => {
   const { t } = useTranslation();
   return (
-    <Box position="relative" overflow="hidden">
+    <Box
+      position="relative"
+      overflow="hidden"
+      pt={{ base: rem(80), lg: rem(100) }}
+    >
       <Container>
         <Label
           text={t('effective_heating_label')}
