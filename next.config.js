@@ -11,33 +11,48 @@ module.exports = {
       {
         source: '/kontakt',
         destination: '/contact',
+        locale: false,
       },
       {
         source: '/kapcsolat',
         destination: '/contact',
+        locale: false,
       },
       {
         source: '/podpora',
         destination: '/support',
+        locale: false,
       },
       {
         source: '/wsparcie',
         destination: '/support',
+        locale: false,
       },
       {
         source: '/rolunk',
         destination: '/support',
+        locale: false,
       },
       {
         source: '/krbovy-difuzor',
         destination: '/fireplace-diffuser',
+        locale: false,
       },
       {
         source: '/kamin-difuzor',
         destination: '/fireplace-diffuser',
+        locale: false,
       },
-      { source: '/dyfuzor-kominkowy', destination: '/fireplace-diffuser' },
-      { source: '/kandallo-difuzor', destination: '/fireplace-diffuser' },
+      {
+        source: '/dyfuzor-kominkowy',
+        destination: '/fireplace-diffuser',
+        locale: false,
+      },
+      {
+        source: '/kandallo-difuzor',
+        destination: '/fireplace-diffuser',
+        locale: false,
+      },
     ];
   },
 };
