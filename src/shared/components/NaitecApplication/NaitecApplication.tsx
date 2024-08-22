@@ -121,6 +121,7 @@ export const NaitecApplication = ({
               background="radial-gradient(circle, rgba(41,171,226,0.20) 13%, rgba(17,27,33,0.17) 100%)"
               borderRadius="30%"
               filter="blur(100px)"
+              pointerEvents="none"
             />
             <Flex
               mt={rem(60)}
@@ -162,6 +163,7 @@ export const NaitecApplication = ({
           background="radial-gradient(circle, rgba(41,171,226,0.20) 13%, rgba(17,27,33,0.17) 100%)"
           borderRadius="30%"
           filter="blur(100px)"
+          pointerEvents="none"
         />
       )}
       <Box

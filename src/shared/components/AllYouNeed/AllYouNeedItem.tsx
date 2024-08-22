@@ -37,7 +37,7 @@ export const AllYouNeedItem = ({
   iconColorHover,
 }: AllYouNeedItemProps) => {
   const { isOpen, onOpen, onClose } = useDisclosure();
-  console.log(iconColorHover);
+
   return (
     <Box
       background="#E9E9E9"

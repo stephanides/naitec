@@ -89,6 +89,7 @@ export const NaitecApplicationMinimal = () => {
             width="100%"
             top={{ base: rem(40), '2xl': rem(-60) }}
             maxW={rem(800)}
+            zIndex={3}
           >
             <Image
               src="/images/common/iphone-mockup.png"
@@ -112,6 +113,8 @@ export const NaitecApplicationMinimal = () => {
             background="radial-gradient(circle, rgba(41,171,226,0.20) 13%, rgba(17,27,33,0.17) 100%)"
             borderRadius="30%"
             filter="blur(100px)"
+            pointerEvents="none"
+            zIndex={2}
           />
 
           <Flex

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Head from 'next/head';
 import { ChakraProvider } from '@chakra-ui/react';
 import { appWithTranslation } from 'next-i18next';
@@ -10,14 +10,15 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/swiper-bundle.css';
 import 'swiper/css/effect-creative';
-import "yet-another-react-lightbox/styles.css";
+import 'yet-another-react-lightbox/styles.css';
 import { AppProps } from 'next/app';
 import { theme } from '@/src/shared/design/Theme';
 import { useRouter } from 'next/router';
+import { Hydrate, QueryClient, QueryClientProvider } from 'react-query';
+
+const queryClient = new QueryClient();
 
 function App({ Component, pageProps }: AppProps) {
-  const router = useRouter();
-
   return (
     <>
       <Head>
@@ -28,6 +29,7 @@ function App({ Component, pageProps }: AppProps) {
         />
         <style>@import url("https://use.typekit.net/niv7nnt.css");</style>
       </Head>
+
       {/* Global Site Tag (gtag.js) - Google Analytics */}
       {/* TODO: add GTM number */}
       {/* <Script
@@ -48,9 +50,13 @@ function App({ Component, pageProps }: AppProps) {
         }}
       /> */}
       <main>
-        <ChakraProvider theme={theme}>
-          <Component {...pageProps} />
-        </ChakraProvider>
+        <QueryClientProvider client={queryClient}>
+          <Hydrate state={pageProps.dehydratedState}>
+            <ChakraProvider theme={theme}>
+              <Component {...pageProps} />
+            </ChakraProvider>
+          </Hydrate>
+        </QueryClientProvider>
       </main>
     </>
   );

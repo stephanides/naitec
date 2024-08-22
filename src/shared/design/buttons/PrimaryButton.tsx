@@ -17,6 +17,7 @@ interface ButtonProps extends BaseButtonProps {
   color?: string;
   borderColor?: string;
   hoverColor?: string;
+  small?: boolean;
   trasnformIcon?: {
     initialState: string;
     hoverState: string;
@@ -32,11 +33,12 @@ export const PrimaryButton = ({
   borderColor = colors.naitec_blue,
   hoverColor = 'background.naitec_blue_hover',
   trasnformIcon,
+  small = false,
   ...rest
 }: ButtonProps) => (
   <Button
     fontWeight={700}
-    fontSize={{ base: rem(12), xs: rem(20) }}
+    fontSize={{ base: rem(12), xs: small ? rem(15) : rem(20) }}
     color="text.inverted"
     borderRadius={rem(60)}
     border="2px solid"
@@ -44,7 +46,7 @@ export const PrimaryButton = ({
     background={color}
     px={{ base: rem(12), xs: rem(36) }}
     py={{ base: rem(10), xs: rem(18) }}
-    height={{ base: rem(34), xs: rem(60) }}
+    height={{ base: rem(34), xs: small ? rem(28) : rem(60) }}
     transition="all .3s ease-out"
     _disabled={{
       border: '2px solid',
@@ -70,10 +72,12 @@ export const PrimaryButton = ({
   >
     <Flex alignItems="center" columnGap={rem(8)} position="relative">
       {startWithIcon && icon && (
-        <Box width={{ base: rem(12), md: rem(20) }}>{icon}</Box>
+        <Box width={{ base: rem(12), md: small ? rem(16) : rem(20) }}>
+          {icon}
+        </Box>
       )}
       <NeueHaasGroteskDisplay
-        fontSize={{ base: rem(12), xs: rem(18) }}
+        fontSize={{ base: rem(12), xs: small ? rem(15) : rem(18) }}
         lineHeight={rem(22)}
       >
         {children}

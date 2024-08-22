@@ -72,8 +72,11 @@ export const DiffuseCooling = ({
             __html: t('diffuse_cooling_description_1'),
           }}
         />
-        <Flex columnGap={rem(20)} mt={{ base: rem(40), xl: rem(80) }}>
-          <Box width="50%" position="relative">
+        <Flex
+          columnGap={{ base: rem(10), md: rem(20) }}
+          mt={{ base: rem(40), xl: rem(80) }}
+        >
+          <Box width="50%" position="relative" height="100%">
             <Box display={{ base: 'none', md: 'block' }}>
               <Image
                 src="/images/common/diffuse-cooling-1.png"
@@ -98,7 +101,8 @@ export const DiffuseCooling = ({
               position="absolute"
               left={0}
               right={0}
-              bottom={rem(20)}
+              bottom={{ base: 'unser', md: rem(50) }}
+              top={{ base: '50%', xs: '60%', md: 'unset' }}
               justifyContent="center"
               alignItems="center"
               flexDirection="column"
@@ -118,6 +122,7 @@ export const DiffuseCooling = ({
               <NeueHaasGroteskDisplay
                 fontSize={{ base: rem(12), xs: rem(14), lg: rem(22) }}
                 mt={rem(4)}
+                textAlign="center"
                 fontWeight={500}
                 lineHeight="112%"
                 color="rgba(17,27,33,.6)"
@@ -126,7 +131,7 @@ export const DiffuseCooling = ({
               </NeueHaasGroteskDisplay>
             </Flex>
           </Box>
-          <Box width="50%" position="relative">
+          <Box width="50%" position="relative" height="100%">
             <Box display={{ base: 'none', md: 'block' }}>
               <Image
                 src="/images/common/diffuse-cooling-2.png"
@@ -151,7 +156,8 @@ export const DiffuseCooling = ({
               position="absolute"
               left={0}
               right={0}
-              bottom={rem(20)}
+              bottom={{ base: 'unser', md: rem(50) }}
+              top={{ base: '50%', xs: '60%', md: 'unset' }}
               justifyContent="center"
               alignItems="center"
               flexDirection="column"
@@ -172,6 +178,7 @@ export const DiffuseCooling = ({
                 fontSize={{ base: rem(12), xs: rem(14), lg: rem(22) }}
                 mt={rem(4)}
                 fontWeight={500}
+                textAlign="center"
                 lineHeight="112%"
                 color="rgba(17,27,33,.6)"
               >

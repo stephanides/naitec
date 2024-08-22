@@ -41,3 +41,8 @@ export * from './Invoice';
 export * from './GlobeSmall';
 export * from './Hamburger';
 export * from './CloseSmall';
+export * from './StoreChevron';
+export * from './StoreEnvelope';
+export * from './StoreMobile';
+export * from './Website';
+export * from './Search';

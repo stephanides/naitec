@@ -11,7 +11,7 @@ const SupportPage = () => {
   const parts = path.split('/');
   const productId = parts[2];
   const item = PRODUCTS.find((product) => product.id === productId);
-  console.log(item);
+
   if (!item) {
     return <Layout>Not found</Layout>;
   }

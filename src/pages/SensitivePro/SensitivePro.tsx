@@ -81,7 +81,7 @@ export const SensitivePro = () => {
               md: rem(32),
               lg: rem(32),
               xl: rem(20),
-              '2xl': rem(0),
+              '2xl': rem(4),
             }}
             maxW={{
               base: rem(480),

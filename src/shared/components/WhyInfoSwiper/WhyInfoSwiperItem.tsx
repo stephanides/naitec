@@ -46,10 +46,10 @@ export const WhyInfoSwiperItem = ({
         >
           {title}
         </NeueHaasGroteskDisplay>
-        <NeueHaasGroteskText
+        <NeueHaasGroteskDisplay
           color={light ? 'text.secondary ' : 'text.light'}
           fontSize={{ base: rem(14), md: rem(22) }}
-          fontWeight={500}
+          fontWeight={600}
           lineHeight="130%"
           sx={{ strong: { color: light ? 'white' : 'text.link' } }}
           dangerouslySetInnerHTML={{ __html: description }}

@@ -7,6 +7,7 @@
   "email": "E-Mail",
   "phone": "Telefonnummer*",
   "message": "Wie können wir Ihnen helfen?",
+  "message_2": "Für welches Produkt interessieren Sie sich?",
   "send_error": "Beim Senden der Nachricht ist ein Fehler aufgetreten. Bitte versuchen Sie es später erneut.",
   "agreements": "Ich stimme der Verarbeitung personenbezogener Daten zu*",
   "agreements_text": "Indem Sie zustimmen, erklären Sie sich damit einverstanden, dass ACEA s.r.o. Ihre personenbezogenen Daten ausschließlich zum Zweck der Bearbeitung Ihrer Anfrage verarbeitet. Weitere Informationen",

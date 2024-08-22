@@ -28,6 +28,7 @@ export const Home = () => {
         borderRadius={rem(20)}
         position="relative"
         mt={{ base: rem(40), lg: rem(0) }}
+        overflow="hidden"
       >
         <Box zIndex={2} position="relative">
           <Flex
@@ -76,16 +77,8 @@ export const Home = () => {
                   xl: rem(1400),
                   '2xl': rem(1600),
                 }}
-                width={{
-                  base: rem(400),
-                  xs: rem(600),
-                  md: rem(800),
-                  lg: rem(1000),
-                  xl: rem(1400),
-                  '2xl': rem(1600),
-                }}
+                width="100%"
                 justify="center"
-                overflow="hidden"
               >
                 <img
                   src="/images/stellair/stellair-main.png"
@@ -130,7 +123,7 @@ export const Home = () => {
         <Box
           position="absolute"
           zIndex={1}
-          bottom={0}
+          bottom={rem(-20)}
           left={0}
           right={0}
           display={{ base: 'none', md: 'block' }}
@@ -190,12 +183,12 @@ export const Home = () => {
               <Flex
                 position="relative"
                 pt={{
-                  base: rem(8),
+                  base: rem(12),
                   xs: rem(4),
                   md: rem(32),
                   lg: rem(32),
                   xl: rem(20),
-                  '2xl': rem(0),
+                  '2xl': rem(10),
                 }}
                 maxW={{
                   base: rem(480),
@@ -205,16 +198,8 @@ export const Home = () => {
                   xl: rem(1400),
                   '2xl': rem(1600),
                 }}
-                width={{
-                  base: rem(480),
-                  xs: rem(700),
-                  md: rem(800),
-                  lg: rem(1000),
-                  xl: rem(1400),
-                  '2xl': rem(1600),
-                }}
+                width="100%"
                 justify="center"
-                overflow="hidden"
               >
                 <img
                   src="/images/sensitive-pro/sensitive-pro-main.png"
@@ -318,16 +303,8 @@ export const Home = () => {
                   xl: rem(1400),
                   '2xl': rem(1600),
                 }}
-                width={{
-                  base: rem(400),
-                  xs: rem(600),
-                  md: rem(800),
-                  lg: rem(1000),
-                  xl: rem(1400),
-                  '2xl': rem(1600),
-                }}
+                width="100%"
                 justify="center"
-                overflow="hidden"
               >
                 <img
                   src="/images/sensitive/sensitive-main.png"
@@ -430,24 +407,9 @@ export const Home = () => {
                     xl: rem(90),
                     '2xl': rem(110),
                   }}
-                  maxW={{
-                    base: rem(400),
-                    xs: rem(600),
-                    md: rem(800),
-                    lg: rem(1000),
-                    xl: rem(700),
-                    '2xl': rem(800),
-                  }}
-                  width={{
-                    base: rem(400),
-                    xs: rem(600),
-                    md: rem(800),
-                    lg: rem(1000),
-                    xl: rem(700),
-                    '2xl': rem(800),
-                  }}
+                  maxW="100%"
+                  width="100%"
                   justify="center"
-                  overflow="hidden"
                 >
                   <img
                     src="/images/onyx/onyx-main.png"
@@ -550,16 +512,8 @@ export const Home = () => {
                     xl: rem(700),
                     '2xl': rem(800),
                   }}
-                  width={{
-                    base: rem(400),
-                    xs: rem(600),
-                    md: rem(800),
-                    lg: rem(1000),
-                    xl: rem(700),
-                    '2xl': rem(800),
-                  }}
+                  width="100%"
                   justify="center"
-                  overflow="hidden"
                 >
                   <img
                     src="/images/smart/smart-main.png"

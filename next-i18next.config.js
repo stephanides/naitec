@@ -19,5 +19,6 @@ module.exports = {
     'smart',
     'stellair',
     'support',
+    'wheretobuy',
   ],
 };

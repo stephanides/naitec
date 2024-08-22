@@ -8,3 +8,4 @@ export * from './Sensitive';
 export * from './SensitivePro';
 export * from './Home';
 export * from './Support';
+export * from './WhereToBuy';

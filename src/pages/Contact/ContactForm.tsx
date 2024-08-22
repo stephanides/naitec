@@ -251,7 +251,7 @@ export const ContactForm = () => {
             borderColor="text.inverted"
             isDisabled={!formik.values.agreements || formik.isSubmitting}
             icon={<ArrowRight />}
-            width="100%"
+            width={{ base: '100%', xl: 'auto' }}
             height={{ base: '53px', xs: 'auto' }}
           >
             {t('common:send')}

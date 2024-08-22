@@ -43,7 +43,7 @@ const SupportListItem = ({ title, supportImage, href }: Product) => {
           </Box>
         </Box>
         <NeueHaasGroteskDisplay
-          fontSize={{ base: rem(18), xs: rem(28), md: rem(40) }}
+          fontSize={{ base: rem(22), xs: rem(28), md: rem(40) }}
           color="text.link"
           fontWeight={600}
           mt={{ base: rem(16), xs: rem(30) }}
@@ -59,7 +59,7 @@ const SupportListItem = ({ title, supportImage, href }: Product) => {
         >
           <NeueHaasGroteskDisplay
             color="text.naitec_blue"
-            fontSize={{ base: rem(12), xs: rem(18) }}
+            fontSize={{ base: rem(16), xs: rem(18) }}
             fontWeight={600}
           >
             {t('support:show_manuals')}
@@ -134,11 +134,20 @@ export const SupportList = () => {
   return (
     <Box>
       <Flex
-        columnGap={rem(20)}
-        mb={rem(30)}
-        mt={rem(50)}
+        columnGap={{ base: rem(10), xl: rem(20) }}
+        mb={{ base: rem(20), xl: rem(30) }}
+        mt={{ base: rem(32), xl: rem(50) }}
         overflowX="auto"
         pb={rem(20)}
+        sx={{
+          /* For Webkit-based browsers */
+          '&::-webkit-scrollbar': {
+            width: '0px',
+            height: '0px',
+          },
+          /* For Firefox */
+          scrollbarWidth: 'none',
+        }}
       >
         <FilterButton
           title={t('navigation_all_products')}

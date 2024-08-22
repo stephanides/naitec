@@ -34,43 +34,69 @@ const Item = ({
   const aspectRatio = originalWidth / originalHeight;
 
   return (
-    <Flex
-      flexDir="column"
-      justifyContent="space-between"
-      alignItems="center"
-      height="100%"
-    >
-      <Box
-        position="relative"
-        width="100%"
-        maxWidth={`${originalWidth}px`} // Use original width as max-width
-        paddingTop={`calc(100% / ${aspectRatio})`} // Maintains aspect ratio
-        overflow="hidden"
+    <Link href={href}>
+      <Flex
+        flexDir="column"
+        justifyContent="space-between"
+        alignItems="center"
+        height="100%"
+        role="group"
       >
-        <Image src={image} alt={title} layout="fill" objectFit="contain" />
-      </Box>
-      <Flex flexDir="column" justifyContent="center" alignItems="center">
-        <NeueHaasGroteskDisplay
-          fontSize={{ base: rem(32), md: rem(48) }}
-          fontWeight={600}
-          color="text.inverted"
-          my={{ base: rem(20), md: rem(40) }}
-          textAlign="center"
+        <Box
+          position="relative"
+          width="100%"
+          maxWidth={`${originalWidth}px`} // Use original width as max-width
+          paddingTop={`calc(100% / ${aspectRatio})`} // Maintains aspect ratio
+          _groupHover={{
+            '.image': {
+              transform: 'translateY(-10px)',
+            },
+          }}
         >
-          {title}
-        </NeueHaasGroteskDisplay>
-        <Link href={href}>
+          <Image
+            src={image}
+            alt={title}
+            layout="fill"
+            objectFit="contain"
+            style={{ transition: 'all .3s ease-out' }}
+            className="image"
+          />
+        </Box>
+        <Flex flexDir="column" justifyContent="center" alignItems="center">
+          <NeueHaasGroteskDisplay
+            fontSize={{ base: rem(32), md: rem(48) }}
+            fontWeight={600}
+            color="text.inverted"
+            my={{ base: rem(20), md: rem(40) }}
+            textAlign="center"
+          >
+            {title}
+          </NeueHaasGroteskDisplay>
+
           <SecondaryButton
             icon={<ArrowRight />}
             borderColor={color}
+            trasnformIcon={{
+              initialState: 'translateX(0)',
+              hoverState: 'translateX(10px)',
+            }}
+            _groupHover={{
+              '.icon': {
+                transform: 'translateX(10px)',
+                path: { stroke: 'white' },
+              },
+              backgroundColor: color,
+              borderColor: color,
+              color: 'white',
+            }}
             hoverColor={color}
             color={color}
           >
             {t('button_find_out_more')}
           </SecondaryButton>
-        </Link>
+        </Flex>
       </Flex>
-    </Flex>
+    </Link>
   );
 };
 
@@ -125,14 +151,16 @@ export const StellairSensitive = ({
               }}
               dangerouslySetInnerHTML={{ __html: t('naitec_airconditioning') }}
             />
-            <PrimaryButton
-              borderColor={color}
-              backgroundColor={color}
-              hoverColor={hoverColor}
-              icon={<ArrowRight />}
-            >
-              {t('button_explore_all')}
-            </PrimaryButton>
+            <Link href={INTERNAL_ROUTES.HOME}>
+              <PrimaryButton
+                borderColor={color}
+                backgroundColor={color}
+                hoverColor={hoverColor}
+                icon={<ArrowRight />}
+              >
+                {t('button_explore_all')}
+              </PrimaryButton>
+            </Link>
           </Flex>
         </Box>
         <Flex
