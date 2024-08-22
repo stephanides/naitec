@@ -245,11 +245,11 @@ export const Navigation = ({ toggleMobile, dark = false }: NavigationProps) => {
                   {t('navigation_support')}
                 </NeueHaasGroteskDisplay>
               </Link>
-              <Link href={INTERNAL_ROUTES.CONTACT}>
+              <a href={INTERNAL_ROUTES.CONTACT}>
                 <NeueHaasGroteskDisplay color="text.link" fontWeight={600}>
                   {t('navigation_contact')}
                 </NeueHaasGroteskDisplay>
-              </Link>
+              </a>
             </Flex>
             <Flex
               width={{ base: rem(140), lg: rem(190) }}
