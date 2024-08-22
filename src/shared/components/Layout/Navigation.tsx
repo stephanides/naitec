@@ -47,7 +47,6 @@ export const NAV_ITEMS_PRODUCTS = {
 };
 
 export const Navigation = ({ toggleMobile, dark = false }: NavigationProps) => {
-  const { locale } = useRouter();
   const [scrolled, setScrolled] = useState(false);
   const { t } = useTranslation(['common']);
 
@@ -235,17 +234,17 @@ export const Navigation = ({ toggleMobile, dark = false }: NavigationProps) => {
                   </PopoverContent>
                 </Popover>
               </Box>
-              <Link locale={locale} href={INTERNAL_ROUTES.WHERE_TO_BUY}>
+              <Link href={INTERNAL_ROUTES.WHERE_TO_BUY}>
                 <NeueHaasGroteskDisplay color="text.link" fontWeight={600}>
                   {t('navigation_where_to_buy')}
                 </NeueHaasGroteskDisplay>
               </Link>
-              <Link locale={locale} href={INTERNAL_ROUTES.SUPPORT}>
+              <Link href={INTERNAL_ROUTES.SUPPORT}>
                 <NeueHaasGroteskDisplay color="text.link" fontWeight={600}>
                   {t('navigation_support')}
                 </NeueHaasGroteskDisplay>
               </Link>
-              <Link locale={locale} href={INTERNAL_ROUTES.CONTACT}>
+              <Link href={INTERNAL_ROUTES.CONTACT}>
                 <NeueHaasGroteskDisplay color="text.link" fontWeight={600}>
                   {t('navigation_contact')}
                 </NeueHaasGroteskDisplay>
