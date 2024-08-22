@@ -393,6 +393,7 @@ export const Home = () => {
           borderColor="#FFFFFF"
           borderRadius={rem(20)}
           position="relative"
+          overflow="hidden"
           width={{ base: '100%', xl: '50%' }}
         >
           <Box zIndex={2} position="relative">
