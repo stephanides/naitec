@@ -60,16 +60,6 @@ export function middleware(request: NextRequest) {
   // @ts-ignore
   const defaultLocalePaths = localePathMap[locale] || {};
 
-  // Redirect to the appropriate locale-specific path for contact
-  if (pathname === '/contact' && locale !== 'en' && locale !== 'ja') {
-    const a = new URL(`/${locale}${defaultLocalePaths.contact}`, request.url);
-    console.log(a);
-    return NextResponse.redirect(
-      new URL(`/${locale}${defaultLocalePaths.contact}`, request.url)
-    );
-  }
-
-  // Redirect to the appropriate locale-specific path for about-us
   if (
     pathname === '/support' &&
     locale !== 'en' &&
@@ -82,6 +72,17 @@ export function middleware(request: NextRequest) {
       new URL(`/${locale}${defaultLocalePaths.support}`, request.url)
     );
   }
+
+  // Redirect to the appropriate locale-specific path for contact
+  if (pathname === '/contact' && locale !== 'en' && locale !== 'ja') {
+    const a = new URL(`/${locale}${defaultLocalePaths.contact}`, request.url);
+    console.log(a);
+    return NextResponse.redirect(
+      new URL(`/${locale}${defaultLocalePaths.contact}`, request.url)
+    );
+  }
+
+  // Redirect to the appropriate locale-specific path for about-us
 
   // Redirect to the appropriate locale-specific path for about-us
   if (
