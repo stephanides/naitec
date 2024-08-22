@@ -47,7 +47,7 @@ export const WhereToBuy = () => {
           mt={rem(25)}
         >
           <NeueHaasGroteskDisplay
-            maxW={{ base: rem(295), xs: rem(554) }}
+            maxW={{ base: rem(295), xs: rem(660) }}
             fontSize={{ base: rem(30), md: rem(48), lg: rem(64) }}
             color="text.link"
             textAlign="center"

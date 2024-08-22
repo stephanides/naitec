@@ -100,7 +100,13 @@ export const StoreLocator = ({ stores }: { stores: Store[] }) => {
 
   const onIdle = useCallback(() => {
     updateVisibleStores(); // Update visible stores when the map stops moving
-  }, [updateVisibleStores, stores]);
+  }, [updateVisibleStores]);
+
+  useEffect(() => {
+    if (stores.length > 0) {
+      updateVisibleStores();
+    }
+  }, [stores, updateVisibleStores]);
 
   useEffect(() => {
     if (navigator.geolocation) {
