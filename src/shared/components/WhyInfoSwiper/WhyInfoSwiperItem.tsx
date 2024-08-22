@@ -24,6 +24,7 @@ export const WhyInfoSwiperItem = ({
           opacity: isActive ? 1 : 0.5,
           transition: 'opacity 0.3s ease-in-out',
           borderRadius: rem(20),
+          userSelect: 'none',
         }}
         alt={title}
       />

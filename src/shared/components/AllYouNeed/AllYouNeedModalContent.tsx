@@ -19,7 +19,8 @@ export const AllYouNeedModalContent = ({
 }: AllYouNeedModalContentProps) => {
   return (
     <Box
-      py={{ base: rem(36), lg: rem(80) }}
+      pt={{ base: rem(36), lg: rem(80) }}
+      pb={{ base: rem(16), lg: rem(80) }}
       px={{ base: rem(16), md: rem(24), xl: rem(100) }}
     >
       {icon}

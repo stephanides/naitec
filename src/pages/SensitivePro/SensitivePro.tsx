@@ -202,12 +202,29 @@ export const SensitivePro = () => {
           blurOnBottom={true}
           withoutBlur
         />
-        <EffectiveHeating
-          color={LINEAR_GRADIENTS.sensitive_pro}
-          image1="/images/sensitive-pro/effective-heating-1.png"
-          image2="/images/sensitive-pro/effective-heating-2.png"
-          blurOnBottom={true}
-        />
+        <Box position="relative">
+          <Box position={'relative'} zIndex={2}>
+            <EffectiveHeating
+              color={LINEAR_GRADIENTS.sensitive_pro}
+              image1="/images/sensitive-pro/effective-heating-1.png"
+              image2="/images/sensitive-pro/effective-heating-2.png"
+              blurOnBottom={true}
+            />
+          </Box>
+          <Box
+            position="absolute"
+            bottom={0}
+            left={0}
+            width="100%"
+            transform="translateY(50%)"
+            aspectRatio="1566/660"
+            background="radial-gradient(circle, rgba(41,171,226,0.20) 13%, rgba(17,27,33,0.17) 100%)"
+            borderRadius="30%"
+            filter="blur(100px)"
+            pointerEvents="none"
+            zIndex={1}
+          />
+        </Box>
       </Box>
       <Box mt={{ base: rem(60), md: rem(80), lg: rem(165) }}>
         <CleanAir color={LINEAR_GRADIENTS.sensitive_pro} imageOnLeft />

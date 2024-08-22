@@ -65,7 +65,6 @@ export const StoreDetail = ({ store }: { store: Store }) => {
       </Flex>
       <Box {...getCollapseProps()}>
         <Flex
-          columnGap={rem(10)}
           flexWrap="wrap"
           mb={rem(12)}
           justifyContent="space-between"
@@ -73,36 +72,40 @@ export const StoreDetail = ({ store }: { store: Store }) => {
           rowGap={rem(10)}
         >
           {store?.attributes?.email && (
-            <a href={`mailto:${store.attributes.email}`}>
-              <PrimaryButton
-                startWithIcon
-                width={{ base: '100%', lg: 'auto' }}
-                color="text.link"
-                borderColor="text.link"
-                hoverColor="#555555"
-                px={rem(16)}
-                icon={<StoreEnvelope />}
-                small
-              >
-                {store.attributes.email}
-              </PrimaryButton>
-            </a>
+            <Box minW={{ base: '100%', lg: 'calc(50% - 6px)' }}>
+              <a href={`mailto:${store.attributes.email}`}>
+                <PrimaryButton
+                  startWithIcon
+                  width={{ base: '100%', lg: '100%' }}
+                  color="text.link"
+                  borderColor="text.link"
+                  hoverColor="#555555"
+                  px={rem(16)}
+                  icon={<StoreEnvelope />}
+                  small
+                >
+                  {store.attributes.email}
+                </PrimaryButton>
+              </a>
+            </Box>
           )}
           {store?.attributes?.phone && (
-            <a href={`tel:${store.attributes.phone}`}>
-              <PrimaryButton
-                startWithIcon
-                width={{ base: '100%', lg: 'auto' }}
-                borderColor="text.link"
-                hoverColor="#555555"
-                color="text.link"
-                px={rem(16)}
-                icon={<StoreMobile />}
-                small
-              >
-                {store.attributes.phone}
-              </PrimaryButton>
-            </a>
+            <Box minW={{ base: '100%', lg: 'calc(50% - 6px)' }}>
+              <a href={`tel:${store.attributes.phone}`}>
+                <PrimaryButton
+                  startWithIcon
+                  width={{ base: '100%', lg: '100%' }}
+                  borderColor="text.link"
+                  hoverColor="#555555"
+                  color="text.link"
+                  px={rem(16)}
+                  icon={<StoreMobile />}
+                  small
+                >
+                  {store.attributes.phone}
+                </PrimaryButton>
+              </a>
+            </Box>
           )}
         </Flex>
         {store?.attributes?.website && (

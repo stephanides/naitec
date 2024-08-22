@@ -77,7 +77,10 @@ export const DiffuseCooling = ({
           mt={{ base: rem(40), xl: rem(80) }}
         >
           <Box width="50%" position="relative" height="100%">
-            <Box display={{ base: 'none', md: 'block' }}>
+            <Box
+              display={{ base: 'none', md: 'block' }}
+              boxShadow={light ? 'none' : '0px 0px 50px 0px rgba(0,0,0,0.05)'}
+            >
               <Image
                 src="/images/common/diffuse-cooling-1.png"
                 width="0"
@@ -87,7 +90,10 @@ export const DiffuseCooling = ({
                 alt="Diffuse cooling 1"
               />
             </Box>
-            <Box display={{ base: 'block', md: 'none' }}>
+            <Box
+              display={{ base: 'block', md: 'none' }}
+              boxShadow={light ? 'none' : '0px 0px 50px 0px rgba(0,0,0,0.05)'}
+            >
               <Image
                 src="/images/common/diffuse-cooling-1-mobile.png"
                 width="0"
@@ -132,7 +138,10 @@ export const DiffuseCooling = ({
             </Flex>
           </Box>
           <Box width="50%" position="relative" height="100%">
-            <Box display={{ base: 'none', md: 'block' }}>
+            <Box
+              display={{ base: 'none', md: 'block' }}
+              boxShadow={light ? 'none' : '0px 0px 50px 0px rgba(0,0,0,0.05)'}
+            >
               <Image
                 src="/images/common/diffuse-cooling-2.png"
                 width="0"
@@ -142,7 +151,10 @@ export const DiffuseCooling = ({
                 alt="Diffuse cooling 2"
               />
             </Box>
-            <Box display={{ base: 'block', md: 'none' }}>
+            <Box
+              display={{ base: 'block', md: 'none' }}
+              boxShadow={light ? 'none' : '0px 0px 50px 0px rgba(0,0,0,0.05)'}
+            >
               <Image
                 src="/images/common/diffuse-cooling-2-mobile.png"
                 width="0"

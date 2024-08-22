@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 
-const PUBLIC_FILE = /\.(.*)$/;
+const PUBLIC_FILE =
+  /\.(png|jpg|jpeg|svg|css|js|json|html|txt|woff|woff2|ttf|eot)$/i;
 
 const localePathMap = {
   en: {
@@ -51,19 +52,31 @@ export function middleware(request: NextRequest) {
     return NextResponse.next();
   }
 
+  console.log(pathname);
+  console.log(locale);
+
   // Find the default paths for the current locale
   // @ts-ignore
   const defaultLocalePaths = localePathMap[locale] || {};
 
   // Redirect to the appropriate locale-specific path for contact
   if (pathname === '/contact' && locale !== 'en' && locale !== 'ja') {
+    const a = new URL(`/${locale}${defaultLocalePaths.contact}`, request.url);
+    console.log(a);
     return NextResponse.redirect(
       new URL(`/${locale}${defaultLocalePaths.contact}`, request.url)
     );
   }
 
   // Redirect to the appropriate locale-specific path for about-us
-  if (pathname === '/support' && locale !== 'en' && locale !== 'ja') {
+  if (
+    pathname === '/support' &&
+    locale !== 'en' &&
+    locale !== 'ja' &&
+    locale !== 'de'
+  ) {
+    const a = new URL(`/${locale}${defaultLocalePaths.support}`, request.url);
+    console.log(a);
     return NextResponse.redirect(
       new URL(`/${locale}${defaultLocalePaths.support}`, request.url)
     );

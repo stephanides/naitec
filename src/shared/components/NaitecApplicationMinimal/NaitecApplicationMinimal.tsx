@@ -49,7 +49,7 @@ export const NaitecApplicationMinimal = () => {
               }}
               dangerouslySetInnerHTML={{ __html: t('naitec_app_title') }}
             />
-            <NeueHaasGroteskText
+            <NeueHaasGroteskDisplay
               fontSize={{ base: rem(16), md: rem(22) }}
               fontWeight={600}
               color="text.secondary"

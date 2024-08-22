@@ -39,7 +39,7 @@ export const Onyx = () => {
         <Flex width="100%" justifyContent="center">
           <Label
             text={t('heading_label')}
-            color="text.stellair"
+            color="text.onyx"
             borderColor="rgba(134, 148, 156, 0.26)"
           />
         </Flex>

@@ -40,7 +40,7 @@ export const Sensitive = () => {
         <Flex width="100%" justifyContent="center">
           <Label
             text={t('heading_label')}
-            color="text.stellair"
+            color="background.sensitive"
             borderColor="rgba(134, 148, 156, 0.26)"
           />
         </Flex>
@@ -206,7 +206,9 @@ export const Sensitive = () => {
         position="relative"
         overflow="hidden"
       >
-        <CleanAir color={LINEAR_GRADIENTS.sensitive} imageOnLeft light />
+        <Box position="relative" zIndex={2}>
+          <CleanAir color={LINEAR_GRADIENTS.sensitive} imageOnLeft light />
+        </Box>
         <Box
           position="absolute"
           bottom={0}
@@ -218,6 +220,7 @@ export const Sensitive = () => {
           borderRadius="30%"
           filter="blur(100px)"
           pointerEvents="none"
+          zIndex={1}
         />
       </Box>
       <Box pt={{ base: rem(60), md: rem(80), xl: rem(168) }}>

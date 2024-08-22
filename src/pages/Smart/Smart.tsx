@@ -40,7 +40,7 @@ export const Smart = () => {
         <Flex width="100%" justifyContent="center">
           <Label
             text={t('heading_label')}
-            color="text.stellair"
+            color="background.smart"
             borderColor="rgba(134, 148, 156, 0.26)"
           />
         </Flex>
@@ -72,6 +72,7 @@ export const Smart = () => {
             Smart
           </NeueHaasGroteskDisplay>
           <Flex
+            position="relative"
             pt={{
               base: rem(24),
               xs: rem(20),

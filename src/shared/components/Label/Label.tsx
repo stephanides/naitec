@@ -22,6 +22,7 @@ export const Label = ({
     py={rem(7)}
     px={rem(14)}
     display="inline-block"
+    userSelect="none"
   >
     <RobotoMono
       color={color}

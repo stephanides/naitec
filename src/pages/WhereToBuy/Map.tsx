@@ -13,6 +13,10 @@ import { rem } from 'polished';
 import { useTranslation } from 'react-i18next';
 import { StoreDetail } from './StoreDetail';
 import { Search } from '@/src/shared/design';
+import {
+  NeueHaasGroteskDisplay,
+  NeueHaasGroteskText,
+} from '@/src/shared/components';
 
 const mapContainerStyle = {
   width: '100%',
@@ -96,7 +100,7 @@ export const StoreLocator = ({ stores }: { stores: Store[] }) => {
 
   const onIdle = useCallback(() => {
     updateVisibleStores(); // Update visible stores when the map stops moving
-  }, [updateVisibleStores]);
+  }, [updateVisibleStores, stores]);
 
   useEffect(() => {
     if (navigator.geolocation) {
@@ -147,7 +151,8 @@ export const StoreLocator = ({ stores }: { stores: Store[] }) => {
         width={{ base: '100%', lg: rem(400), xl: rem(500) }}
         minW={{ base: '100%', lg: rem(400), xl: rem(500) }}
         background="white"
-        borderRadius={rem(20)}
+        borderTopLeftRadius={rem(20)}
+        borderBottomLeftRadius={rem(20)}
         height="100%"
         overflowY="auto"
         position="relative"
@@ -193,10 +198,16 @@ export const StoreLocator = ({ stores }: { stores: Store[] }) => {
         </Box>
       </Box>
       {/* Google Map with markers */}
-      <Box width="100%" height={{ base: '60vh', lg: '100%' }}>
+      <Box
+        width="100%"
+        height={{ base: '60vh', lg: '100%' }}
+        borderTopRightRadius={rem(20)}
+        borderBottomRightRadius={rem(20)}
+        overflow="hidden"
+      >
         <GoogleMap
           mapContainerStyle={mapContainerStyle}
-          zoom={8}
+          zoom={6}
           center={center}
           onLoad={onLoad} // Correctly handle the map instance
           onIdle={onIdle} // Update visible stores when map stops moving
@@ -235,8 +246,35 @@ export const StoreLocator = ({ stores }: { stores: Store[] }) => {
                         }}
                       >
                         <div>
-                          <h3>{store.attributes.title}</h3>
-                          <p>{store.attributes.street}</p>{' '}
+                          <NeueHaasGroteskDisplay
+                            fontSize={rem(16)}
+                            fontWeight={600}
+                          >
+                            {store.attributes.title}
+                          </NeueHaasGroteskDisplay>
+                          <NeueHaasGroteskText fontSize={rem(12)}>
+                            {store.attributes.street}
+                          </NeueHaasGroteskText>
+                          <a href={`mailto:${store.attributes.email}`}>
+                            <NeueHaasGroteskText
+                              color="text.naitec_blue"
+                              textDecor="underline"
+                              fontSize={rem(12)}
+                              mt={rem(8)}
+                            >
+                              {store.attributes.email}
+                            </NeueHaasGroteskText>
+                          </a>
+                          <a href={`tel:${store.attributes.phone}`}>
+                            <NeueHaasGroteskText
+                              color="text.naitec_blue"
+                              textDecor="underline"
+                              fontSize={rem(12)}
+                              mt={rem(8)}
+                            >
+                              {store.attributes.phone}
+                            </NeueHaasGroteskText>
+                          </a>
                           {/* Display additional store details */}
                         </div>
                       </InfoWindow>
