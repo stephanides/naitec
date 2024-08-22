@@ -62,7 +62,7 @@ export const Home = () => {
               <Link href={INTERNAL_ROUTES.STELLAIR}>
                 <Flex
                   position="relative"
-                  pt={{
+                  mt={{
                     base: rem(28),
                     xs: rem(20),
                     md: rem(32),
@@ -71,26 +71,26 @@ export const Home = () => {
                     '2xl': rem(60),
                   }}
                   maxW={{
-                    base: rem(420),
-                    xs: rem(600),
-                    md: rem(800),
-                    lg: rem(1000),
-                    xl: rem(1400),
-                    '2xl': rem(1600),
+                    base: rem(546),
+                    xs: rem(780),
+                    md: rem(1040),
+                    lg: rem(1300),
+                    xl: rem(1820),
+                    '2xl': rem(2080),
                   }}
                   width={{
-                    base: rem(420),
-                    xs: rem(600),
-                    md: rem(800),
-                    lg: rem(1000),
-                    xl: rem(1400),
-                    '2xl': rem(1600),
+                    base: rem(546),
+                    xs: rem(780),
+                    md: rem(1040),
+                    lg: rem(1300),
+                    xl: rem(1820),
+                    '2xl': rem(2080),
                   }}
                   justify="center"
                 >
                   <img
                     src="/images/stellair/stellair-main.png"
-                    style={{ width: '130%', height: 'auto', maxWidth: 'none' }}
+                    style={{ width: '100%', height: 'auto', maxWidth: 'none' }}
                     alt="Stellair"
                   />
                 </Flex>
@@ -202,26 +202,26 @@ export const Home = () => {
                   '2xl': rem(10),
                 }}
                 maxW={{
-                  base: rem(480),
-                  xs: rem(700),
-                  md: rem(800),
-                  lg: rem(1000),
-                  xl: rem(1400),
-                  '2xl': rem(1600),
+                  base: rem(546),
+                  xs: rem(780),
+                  md: rem(1040),
+                  lg: rem(1300),
+                  xl: rem(1820),
+                  '2xl': rem(2080),
                 }}
                 width={{
-                  base: rem(480),
-                  xs: rem(700),
-                  md: rem(800),
-                  lg: rem(1000),
-                  xl: rem(1400),
-                  '2xl': rem(1600),
+                  base: rem(546),
+                  xs: rem(780),
+                  md: rem(1040),
+                  lg: rem(1300),
+                  xl: rem(1820),
+                  '2xl': rem(2080),
                 }}
                 justify="center"
               >
                 <img
                   src="/images/sensitive-pro/sensitive-pro-main.png"
-                  style={{ width: '130%', height: 'auto', maxWidth: 'none' }}
+                  style={{ width: '100%', height: 'auto', maxWidth: 'none' }}
                   alt="Sensitive Pro"
                 />
               </Flex>
@@ -315,26 +315,26 @@ export const Home = () => {
                   '2xl': rem(50),
                 }}
                 maxW={{
-                  base: rem(400),
-                  xs: rem(600),
-                  md: rem(800),
-                  lg: rem(1000),
-                  xl: rem(1400),
-                  '2xl': rem(1600),
+                  base: rem(546),
+                  xs: rem(780),
+                  md: rem(1040),
+                  lg: rem(1300),
+                  xl: rem(1820),
+                  '2xl': rem(2080),
                 }}
                 width={{
-                  base: rem(400),
-                  xs: rem(600),
-                  md: rem(800),
-                  lg: rem(1000),
-                  xl: rem(1400),
-                  '2xl': rem(1600),
+                  base: rem(546),
+                  xs: rem(780),
+                  md: rem(1040),
+                  lg: rem(1300),
+                  xl: rem(1820),
+                  '2xl': rem(2080),
                 }}
                 justify="center"
               >
                 <img
                   src="/images/sensitive/sensitive-main.png"
-                  style={{ width: '130%', height: 'auto', maxWidth: 'none' }}
+                  style={{ width: '100%', height: 'auto', maxWidth: 'none' }}
                   alt="Sensitive"
                 />
               </Flex>
@@ -435,26 +435,26 @@ export const Home = () => {
                     '2xl': rem(110),
                   }}
                   maxW={{
-                    base: rem(400),
-                    xs: rem(600),
-                    md: rem(800),
-                    lg: rem(1000),
-                    xl: rem(700),
-                    '2xl': rem(800),
+                    base: rem(520),
+                    xs: rem(780),
+                    md: rem(1040),
+                    lg: rem(1300),
+                    xl: rem(910),
+                    '2xl': rem(1040),
                   }}
                   width={{
-                    base: rem(400),
-                    xs: rem(600),
-                    md: rem(800),
-                    lg: rem(1000),
-                    xl: rem(700),
-                    '2xl': rem(800),
+                    base: rem(520),
+                    xs: rem(780),
+                    md: rem(1040),
+                    lg: rem(1300),
+                    xl: rem(910),
+                    '2xl': rem(1040),
                   }}
                   justify="center"
                 >
                   <img
                     src="/images/onyx/onyx-main.png"
-                    style={{ width: '130%', height: 'auto', maxWidth: 'none' }}
+                    style={{ width: '100%', height: 'auto', maxWidth: 'none' }}
                     alt="Onyx"
                   />
                 </Flex>
@@ -547,26 +547,26 @@ export const Home = () => {
                     '2xl': rem(110),
                   }}
                   maxW={{
-                    base: rem(400),
-                    xs: rem(600),
-                    md: rem(800),
-                    lg: rem(1000),
-                    xl: rem(700),
-                    '2xl': rem(800),
+                    base: rem(520),
+                    xs: rem(780),
+                    md: rem(1040),
+                    lg: rem(1300),
+                    xl: rem(910),
+                    '2xl': rem(1040),
                   }}
                   width={{
-                    base: rem(400),
-                    xs: rem(600),
-                    md: rem(800),
-                    lg: rem(1000),
-                    xl: rem(700),
-                    '2xl': rem(800),
+                    base: rem(520),
+                    xs: rem(780),
+                    md: rem(1040),
+                    lg: rem(1300),
+                    xl: rem(910),
+                    '2xl': rem(1040),
                   }}
                   justify="center"
                 >
                   <img
                     src="/images/smart/smart-main.png"
-                    style={{ width: '130%', height: 'auto', maxWidth: 'none' }}
+                    style={{ width: '100%', height: 'auto', maxWidth: 'none' }}
                     alt="Smart"
                   />
                 </Flex>

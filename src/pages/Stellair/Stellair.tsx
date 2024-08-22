@@ -83,27 +83,27 @@ export const Stellair = () => {
               '2xl': rem(60),
             }}
             maxW={{
-              base: rem(450),
-              xs: rem(600),
-              md: rem(800),
-              lg: rem(1000),
-              xl: rem(1400),
-              '2xl': rem(1600),
+              base: rem(546),
+              xs: rem(780),
+              md: rem(1040),
+              lg: rem(1300),
+              xl: rem(1820),
+              '2xl': rem(2080),
             }}
             width={{
-              base: rem(450),
-              xs: rem(600),
-              md: rem(800),
-              lg: rem(1000),
-              xl: rem(1400),
-              '2xl': rem(1600),
+              base: rem(546),
+              xs: rem(780),
+              md: rem(1040),
+              lg: rem(1300),
+              xl: rem(1820),
+              '2xl': rem(2080),
             }}
             justify="center"
             overflow="hidden"
           >
             <img
               src="/images/stellair/stellair-main.png"
-              style={{ width: '130%', height: 'auto', maxWidth: 'none' }}
+              style={{ width: '100%', height: 'auto', maxWidth: 'none' }}
               alt="Stellair"
             />
           </Flex>
