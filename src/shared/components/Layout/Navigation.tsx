@@ -48,6 +48,7 @@ export const NAV_ITEMS_PRODUCTS = {
 
 export const Navigation = ({ toggleMobile, dark = false }: NavigationProps) => {
   const router = useRouter();
+  const { locale } = useRouter();
   const [scrolled, setScrolled] = useState(false);
   const { t } = useTranslation(['common']);
 
@@ -245,11 +246,11 @@ export const Navigation = ({ toggleMobile, dark = false }: NavigationProps) => {
                   {t('navigation_support')}
                 </NeueHaasGroteskDisplay>
               </Link>
-              <a href={INTERNAL_ROUTES.CONTACT}>
+              <Link locale={locale} href={INTERNAL_ROUTES.CONTACT}>
                 <NeueHaasGroteskDisplay color="text.link" fontWeight={600}>
                   {t('navigation_contact')}
                 </NeueHaasGroteskDisplay>
-              </a>
+              </Link>
             </Flex>
             <Flex
               width={{ base: rem(140), lg: rem(190) }}
