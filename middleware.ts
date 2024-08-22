@@ -46,6 +46,7 @@ export function middleware(request: NextRequest) {
 
   if (
     pathname.startsWith('/_next') || // exclude Next.js internals
+    pathname.includes('.json') ||
     pathname.includes('/api') || // exclude API routes
     PUBLIC_FILE.test(pathname) // exclude all files in the public folder
   ) {
