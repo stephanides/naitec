@@ -19,95 +19,125 @@ export const Home = () => {
 
   return (
     <Box>
-      <Box
-        mx={{ base: rem(12), xs: rem(20) }}
-        pb={{ base: rem(45), xs: rem(80) }}
-        border="5px solid"
-        borderColor="#FFFFFF"
-        borderTop="none"
-        borderRadius={rem(20)}
-        position="relative"
-        mt={{ base: rem(40), lg: rem(0) }}
-        overflow="hidden"
-      >
-        <Box zIndex={2} position="relative">
-          <Flex
-            width="100%"
-            justifyContent="center"
-            alignItems="center"
-            position="relative"
-            flexDir="column"
-            overflow="hidden"
-          >
-            <NeueHaasGroteskDisplay
-              background="linear-gradient(to right, #344F5F, #6CA5C5)"
-              fontSize={{
-                base: rem(60),
-                xs: rem(72),
-                md: rem(100),
-                lg: rem(140),
-                xl: rem(192),
-              }}
-              fontWeight={600}
-              textTransform="uppercase"
-              textAlign="center"
-              backgroundClip="text"
-              color="transparent"
-              position="absolute"
-              top={0}
+      <Box position="relative">
+        <Box
+          mx={{ base: rem(12), xs: rem(20) }}
+          pb={{ base: rem(45), xs: rem(80) }}
+          border="5px solid"
+          borderColor="#FFFFFF"
+          borderTop="none"
+          borderRadius={rem(20)}
+          position="relative"
+          mt={{ base: rem(40), lg: rem(0) }}
+          overflow="hidden"
+        >
+          <Box zIndex={2} position="relative">
+            <Flex
+              width="100%"
+              justifyContent="center"
+              alignItems="center"
+              position="relative"
+              flexDir="column"
+              overflow="hidden"
             >
-              Stellair
-            </NeueHaasGroteskDisplay>
-            <Link href={INTERNAL_ROUTES.STELLAIR}>
-              <Flex
-                position="relative"
-                pt={{
-                  base: rem(28),
-                  xs: rem(20),
-                  md: rem(32),
-                  lg: rem(60),
-                  xl: rem(80),
-                  '2xl': rem(60),
+              <NeueHaasGroteskDisplay
+                background="linear-gradient(to right, #344F5F, #6CA5C5)"
+                fontSize={{
+                  base: rem(60),
+                  xs: rem(72),
+                  md: rem(100),
+                  lg: rem(140),
+                  xl: rem(192),
                 }}
-                maxW={{
-                  base: rem(400),
-                  xs: rem(600),
-                  md: rem(800),
-                  lg: rem(1000),
-                  xl: rem(1400),
-                  '2xl': rem(1600),
-                }}
-                width="100%"
-                justify="center"
+                fontWeight={600}
+                textTransform="uppercase"
+                textAlign="center"
+                backgroundClip="text"
+                color="transparent"
+                position="absolute"
+                top={0}
               >
-                <img
-                  src="/images/stellair/stellair-main.png"
-                  style={{ width: '130%', height: 'auto', maxWidth: 'none' }}
-                  alt="Stellair"
+                Stellair
+              </NeueHaasGroteskDisplay>
+              <Link href={INTERNAL_ROUTES.STELLAIR}>
+                <Flex
+                  position="relative"
+                  pt={{
+                    base: rem(28),
+                    xs: rem(20),
+                    md: rem(32),
+                    lg: rem(60),
+                    xl: rem(80),
+                    '2xl': rem(60),
+                  }}
+                  maxW={{
+                    base: rem(420),
+                    xs: rem(600),
+                    md: rem(800),
+                    lg: rem(1000),
+                    xl: rem(1400),
+                    '2xl': rem(1600),
+                  }}
+                  width={{
+                    base: rem(420),
+                    xs: rem(600),
+                    md: rem(800),
+                    lg: rem(1000),
+                    xl: rem(1400),
+                    '2xl': rem(1600),
+                  }}
+                  justify="center"
+                >
+                  <img
+                    src="/images/stellair/stellair-main.png"
+                    style={{ width: '130%', height: 'auto', maxWidth: 'none' }}
+                    alt="Stellair"
+                  />
+                </Flex>
+              </Link>
+            </Flex>
+            <Box>
+              <NeueHaasGroteskDisplay
+                fontSize={{ base: rem(24), md: rem(48) }}
+                color="text.link"
+                fontWeight={600}
+                textAlign="center"
+              >
+                {t('stellair_text')}
+              </NeueHaasGroteskDisplay>
+              <Box mt={rem(20)}>
+                <ProductHeadingButtonsHome
+                  productHref={INTERNAL_ROUTES.STELLAIR}
                 />
-              </Flex>
-            </Link>
-          </Flex>
-          <Box>
-            <NeueHaasGroteskDisplay
-              fontSize={{ base: rem(24), md: rem(48) }}
-              color="text.link"
-              fontWeight={600}
-              textAlign="center"
-            >
-              {t('stellair_text')}
-            </NeueHaasGroteskDisplay>
-            <Box mt={rem(20)}>
-              <ProductHeadingButtonsHome
-                productHref={INTERNAL_ROUTES.STELLAIR}
-              />
+              </Box>
             </Box>
+          </Box>
+
+          <Box
+            position="absolute"
+            zIndex={1}
+            bottom={rem(-20)}
+            left={0}
+            right={0}
+            display={{ base: 'none', md: 'block' }}
+          >
+            <HomeShape />
+          </Box>
+          <Box
+            position="absolute"
+            zIndex={1}
+            bottom={0}
+            left={0}
+            right={0}
+            display={{ base: 'block', md: 'none' }}
+          >
+            <HomeShapeMobile />
           </Box>
         </Box>
         <Box
           position="absolute"
           top={0}
-          right={rem(-20)}
+          right={rem(10)}
           width={rem(40)}
           height={rem(150)}
           background="linear-gradient(180deg, rgba(242, 242, 242, 1) 33%, rgba(255, 255, 255, 0) 100%)"
@@ -115,31 +145,11 @@ export const Home = () => {
         <Box
           position="absolute"
           top={0}
-          left={rem(-20)}
+          left={rem(10)}
           width={rem(40)}
           height={rem(150)}
           background="linear-gradient(180deg, rgba(242, 242, 242, 1) 33%, rgba(255, 255, 255, 0) 100%)"
         />
-        <Box
-          position="absolute"
-          zIndex={1}
-          bottom={rem(-20)}
-          left={0}
-          right={0}
-          display={{ base: 'none', md: 'block' }}
-        >
-          <HomeShape />
-        </Box>
-        <Box
-          position="absolute"
-          zIndex={1}
-          bottom={0}
-          left={0}
-          right={0}
-          display={{ base: 'block', md: 'none' }}
-        >
-          <HomeShapeMobile />
-        </Box>
       </Box>
       <Box
         mx={{ base: rem(12), xs: rem(20) }}
@@ -150,6 +160,7 @@ export const Home = () => {
         borderRadius={rem(20)}
         position="relative"
         mt={{ base: rem(40), lg: rem(20) }}
+        overflow="hidden"
       >
         <Box zIndex={2} position="relative">
           <Flex
@@ -198,7 +209,14 @@ export const Home = () => {
                   xl: rem(1400),
                   '2xl': rem(1600),
                 }}
-                width="100%"
+                width={{
+                  base: rem(480),
+                  xs: rem(700),
+                  md: rem(800),
+                  lg: rem(1000),
+                  xl: rem(1400),
+                  '2xl': rem(1600),
+                }}
                 justify="center"
               >
                 <img
@@ -228,7 +246,7 @@ export const Home = () => {
         <Box
           position="absolute"
           zIndex={1}
-          bottom={0}
+          bottom={rem(-20)}
           left={0}
           right={0}
           display={{ base: 'none', md: 'block' }}
@@ -255,6 +273,7 @@ export const Home = () => {
         borderRadius={rem(20)}
         position="relative"
         mt={{ base: rem(40), lg: rem(20) }}
+        overflow="hidden"
       >
         <Box zIndex={2} position="relative">
           <Flex
@@ -303,7 +322,14 @@ export const Home = () => {
                   xl: rem(1400),
                   '2xl': rem(1600),
                 }}
-                width="100%"
+                width={{
+                  base: rem(400),
+                  xs: rem(600),
+                  md: rem(800),
+                  lg: rem(1000),
+                  xl: rem(1400),
+                  '2xl': rem(1600),
+                }}
                 justify="center"
               >
                 <img
@@ -333,7 +359,7 @@ export const Home = () => {
         <Box
           position="absolute"
           zIndex={1}
-          bottom={0}
+          bottom={rem(-20)}
           left={0}
           right={0}
           display={{ base: 'none', md: 'block' }}
@@ -358,15 +384,15 @@ export const Home = () => {
         mb={{ base: rem(20) }}
       >
         <Box
-          mt={rem(20)}
-          mx={{ base: 0, xl: rem(20) }}
+          mt={{ base: rem(20), xl: 0 }}
+          ml={{ base: 0, xl: rem(20) }}
+          mr={{ base: 0, xl: rem(10) }}
           pt={rem(20)}
           pb={rem(80)}
           border="5px solid"
           borderColor="#FFFFFF"
           borderRadius={rem(20)}
           position="relative"
-          overflow="hidden"
           width={{ base: '100%', xl: '50%' }}
         >
           <Box zIndex={2} position="relative">
@@ -407,8 +433,22 @@ export const Home = () => {
                     xl: rem(90),
                     '2xl': rem(110),
                   }}
-                  maxW="100%"
-                  width="100%"
+                  maxW={{
+                    base: rem(400),
+                    xs: rem(600),
+                    md: rem(800),
+                    lg: rem(1000),
+                    xl: rem(700),
+                    '2xl': rem(800),
+                  }}
+                  width={{
+                    base: rem(400),
+                    xs: rem(600),
+                    md: rem(800),
+                    lg: rem(1000),
+                    xl: rem(700),
+                    '2xl': rem(800),
+                  }}
                   justify="center"
                 >
                   <img
@@ -455,8 +495,9 @@ export const Home = () => {
           </Box>
         </Box>
         <Box
-          mt={rem(20)}
-          mx={{ base: 0, xl: rem(20) }}
+          mt={{ base: rem(20), xl: 0 }}
+          mr={{ base: 0, xl: rem(20) }}
+          ml={{ base: 0, xl: rem(10) }}
           pt={rem(20)}
           pb={rem(80)}
           border="5px solid"
@@ -512,7 +553,14 @@ export const Home = () => {
                     xl: rem(700),
                     '2xl': rem(800),
                   }}
-                  width="100%"
+                  width={{
+                    base: rem(400),
+                    xs: rem(600),
+                    md: rem(800),
+                    lg: rem(1000),
+                    xl: rem(700),
+                    '2xl': rem(800),
+                  }}
                   justify="center"
                 >
                   <img
@@ -571,7 +619,8 @@ export const Home = () => {
       >
         <Box
           mt={rem(20)}
-          mx={{ base: 0, xl: rem(20) }}
+          ml={{ base: 0, xl: rem(20) }}
+          mr={{ base: 0, xl: rem(10) }}
           pt={rem(20)}
           border="5px solid"
           borderColor="#FFFFFF"
@@ -650,7 +699,8 @@ export const Home = () => {
         </Box>
         <Box
           mt={rem(20)}
-          px={{ base: 0, xl: rem(20) }}
+          mr={{ base: 0, xl: rem(20) }}
+          ml={{ base: 0, xl: rem(10) }}
           pt={rem(20)}
           border="5px solid"
           borderColor="#FFFFFF"

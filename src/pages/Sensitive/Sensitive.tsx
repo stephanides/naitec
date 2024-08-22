@@ -98,7 +98,6 @@ export const Sensitive = () => {
               '2xl': rem(1600),
             }}
             justify="center"
-            overflow="hidden"
           >
             <img
               src="/images/sensitive/sensitive-main.png"
