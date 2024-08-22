@@ -92,22 +92,22 @@ export function middleware(request: NextRequest) {
       new URL(`/${locale}${defaultLocalePaths.fireplaceDiffuser}`, request.url)
     );
   }
-
+  console.log('here');
   // Redirect to the default path if the locale-specific path is accessed
-  for (const [loc, paths] of Object.entries(localePathMap)) {
-    if (locale !== loc) {
-      if (pathname === `/${loc}${paths.contact}`) {
-        return NextResponse.redirect(
-          new URL(defaultLocalePaths.contact, request.url)
-        );
-      }
-      if (pathname === `/${loc}${paths.support}`) {
-        return NextResponse.redirect(
-          new URL(defaultLocalePaths.support, request.url)
-        );
-      }
-    }
-  }
+  // for (const [loc, paths] of Object.entries(localePathMap)) {
+  //   if (locale !== loc) {
+  //     if (pathname === `/${loc}${paths.contact}`) {
+  //       return NextResponse.redirect(
+  //         new URL(defaultLocalePaths.contact, request.url)
+  //       );
+  //     }
+  //     if (pathname === `/${loc}${paths.support}`) {
+  //       return NextResponse.redirect(
+  //         new URL(defaultLocalePaths.support, request.url)
+  //       );
+  //     }
+  //   }
+  // }
 
   return NextResponse.next();
 }
