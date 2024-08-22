@@ -8,6 +8,7 @@ import {
 import { rem } from 'polished';
 import { useTranslation } from 'next-i18next';
 import Link from 'next/link';
+import { INTERNAL_ROUTES } from '../../constants';
 
 type ProductHeadingButtonProps = {
   productHref: string;
@@ -20,18 +21,20 @@ export const ProductHeadingButtonsHome = ({
   return (
     <Flex width="100%" justifyContent="center" position="relative">
       <Flex columnGap={{ base: rem(8), md: rem(20) }}>
-        <PrimaryButton
-          background="text.link"
-          hoverColor="text.link_hover"
-          borderColor="text.link"
-          icon={<ArrowRight />}
-          trasnformIcon={{
-            initialState: 'translateX(0)',
-            hoverState: 'translateX(10px)',
-          }}
-        >
-          {t('common:button_search_at_partner')}
-        </PrimaryButton>
+        <Link href={INTERNAL_ROUTES.WHERE_TO_BUY}>
+          <PrimaryButton
+            background="text.link"
+            hoverColor="text.link_hover"
+            borderColor="text.link"
+            icon={<ArrowRight />}
+            trasnformIcon={{
+              initialState: 'translateX(0)',
+              hoverState: 'translateX(10px)',
+            }}
+          >
+            {t('common:button_search_at_partner')}
+          </PrimaryButton>
+        </Link>
         <Link href={productHref}>
           <SecondaryButton
             borderColor="text.link"
