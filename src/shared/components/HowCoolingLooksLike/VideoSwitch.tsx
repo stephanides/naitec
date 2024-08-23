@@ -91,6 +91,8 @@ export const VideoSwitcher = ({
                   videoRefs.current[index] = el;
                 }}
                 src={video.url}
+                playsInline // This is important for iOS
+                webkit-playsinline="true"
                 muted
                 controls={false}
                 sx={{
