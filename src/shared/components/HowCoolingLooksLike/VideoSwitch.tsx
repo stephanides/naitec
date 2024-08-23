@@ -92,6 +92,7 @@ export const VideoSwitcher = ({
                 }}
                 src={video.url}
                 muted
+                controls={false}
                 sx={{
                   position: 'absolute',
                   top: 0,
@@ -102,6 +103,7 @@ export const VideoSwitcher = ({
                   opacity: index === activeVideoIndex ? 1 : 0,
                   transition: 'opacity .3s ease-in-out',
                   zIndex: index === activeVideoIndex ? 2 : 1,
+                  userSelect: 'none',
                 }}
               />
             ))}
