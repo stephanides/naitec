@@ -15,6 +15,7 @@ import { AppProps } from 'next/app';
 import { theme } from '@/src/shared/design/Theme';
 import { useRouter } from 'next/router';
 import { Hydrate, QueryClient, QueryClientProvider } from 'react-query';
+import { SpeedInsights } from '@vercel/speed-insights/next';
 
 const queryClient = new QueryClient();
 
@@ -54,6 +55,7 @@ function App({ Component, pageProps }: AppProps) {
           <Hydrate state={pageProps.dehydratedState}>
             <ChakraProvider theme={theme}>
               <Component {...pageProps} />
+              <SpeedInsights />
             </ChakraProvider>
           </Hydrate>
         </QueryClientProvider>

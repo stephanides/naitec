@@ -17,6 +17,7 @@
     "@react-email/html": "^0.0.8",
     "@react-email/render": "^0.0.15",
     "@react-google-maps/api": "^2.19.3",
+    "@vercel/speed-insights": "^1.0.12",
     "aos": "^2.3.4",
     "dotenv": "^16.4.5",
     "formik": "^2.4.5",
