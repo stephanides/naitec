@@ -186,7 +186,10 @@ export const SensitivePro = () => {
         </Box>
       </Element>
 
-      <HowCoolingLooksLike color={LINEAR_GRADIENTS.sensitive_pro} />
+      <HowCoolingLooksLike
+        color={LINEAR_GRADIENTS.sensitive_pro}
+        buttonColor="background.sensitive_pro_light"
+      />
 
       <Box
         background="background.primary"

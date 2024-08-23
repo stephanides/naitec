@@ -192,7 +192,10 @@ export const Sensitive = () => {
           />
         </Box>
       </Element>
-      <HowCoolingLooksLike color={LINEAR_GRADIENTS.sensitive} />
+      <HowCoolingLooksLike
+        color={LINEAR_GRADIENTS.sensitive}
+        buttonColor="background.sensitive_light"
+      />
       <DiffuseCooling color={LINEAR_GRADIENTS.sensitive} />
       <Box>
         <NaitecApplication blurOnBottom={false} />

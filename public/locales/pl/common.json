@@ -93,5 +93,8 @@
   "show_more": "Pokaż więcej",
   "show_less": "Pokaż mniej",
   "choose_performance": "Wybierz wydajność",
-  "up_to": "do"
+  "up_to": "do",
+  "fast_cooling": "Szybkie chłodzenie",
+  "diffuse_cooling": "Rozproszone chłodzenie",
+  "heating": "Ogrzewanie"
 }

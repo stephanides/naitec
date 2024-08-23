@@ -19,6 +19,15 @@ img {
   border: 0;
 }
 
+@keyframes progress {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 100%;
+  }
+}
+
 .custom-bullet-container,
 .swiper-pagination-bullet,
 .swiper-pagination-bullet-active {

@@ -93,5 +93,8 @@
   "show_more": "Mutasd többet",
   "show_less": "Mutasd kevesebb",
   "choose_performance": "Válassz teljesítményt",
-  "up_to": "eddig"
+  "up_to": "eddig",
+  "fast_cooling": "Gyors hűtés",
+  "diffuse_cooling": "Diffúz hűtés",
+  "heating": "Fűtés"
 }

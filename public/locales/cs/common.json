@@ -93,5 +93,8 @@
   "show_more": "Zobrazit více",
   "show_less": "Zobrazit méně",
   "choose_performance": "Vybrat výkon",
-  "up_to": "do"
+  "up_to": "do",
+  "fast_cooling": "Rychlé chlazení",
+  "diffuse_cooling": "Difuzní chlazení",
+  "heating": "Vytápění"
 }

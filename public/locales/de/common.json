@@ -93,5 +93,8 @@
   "show_more": "Mehr anzeigen",
   "show_less": "Weniger anzeigen",
   "choose_performance": "Wähle Leistung",
-  "up_to": "bis"
+  "up_to": "bis",
+  "fast_cooling": "Schnelles Kühlen",
+  "diffuse_cooling": "Diffuses Kühlen",
+  "heating": "Heizung"
 }

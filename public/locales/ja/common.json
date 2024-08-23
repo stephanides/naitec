@@ -93,5 +93,8 @@
   "show_more": "もっと見る",
   "show_less": "もっと見えない",
   "choose_performance": "パフォーマンスを選択",
-  "up_to": "から"
+  "up_to": "から",
+  "fast_cooling": "高速冷却",
+  "diffuse_cooling": "拡散冷却",
+  "heating": "加熱"
 }

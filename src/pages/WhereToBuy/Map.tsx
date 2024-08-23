@@ -132,6 +132,7 @@ export const StoreLocator = ({ stores }: { stores: Store[] }) => {
     if (autocomplete !== null) {
       const place = autocomplete.getPlace();
       const location = place.geometry?.location;
+      mapRef.current?.setZoom(12);
       if (location) {
         setCenter({
           lat: location.lat(),
@@ -159,10 +160,13 @@ export const StoreLocator = ({ stores }: { stores: Store[] }) => {
         background="white"
         borderTopLeftRadius={rem(20)}
         borderBottomLeftRadius={rem(20)}
+        borderTopRightRadius={{ base: rem(20), xl: 0 }}
+        borderBottomRightRadius={{ base: rem(20), xl: 0 }}
         height="100%"
         overflowY="auto"
         position="relative"
         top={{ base: rem(-14), lg: 0 }}
+        maxHeight={{ base: rem(720), xl: '100%' }}
       >
         <Box
           position="sticky"
@@ -209,6 +213,8 @@ export const StoreLocator = ({ stores }: { stores: Store[] }) => {
         height={{ base: '60vh', lg: '100%' }}
         borderTopRightRadius={rem(20)}
         borderBottomRightRadius={rem(20)}
+        borderTopLeftRadius={{ base: rem(20), xl: 0 }}
+        borderBottomLeftRadius={{ base: rem(20), xl: 0 }}
         overflow="hidden"
       >
         <GoogleMap

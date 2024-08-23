@@ -93,5 +93,8 @@
   "show_more": "Show more",
   "show_less": "Show less",
   "choose_performance": "Choose performance",
-  "up_to": "up to"
+  "up_to": "up to",
+  "fast_cooling": "Fast Cooling",
+  "diffuse_cooling": "Diffuse Cooling",
+  "heating": "Heating"
 }

@@ -200,7 +200,10 @@ export const Stellair = () => {
         </Box>
       </Element>
       <Box>
-        <HowCoolingLooksLike color={LINEAR_GRADIENTS.stellair} />
+        <HowCoolingLooksLike
+          color={LINEAR_GRADIENTS.stellair}
+          buttonColor="background.stellair"
+        />
       </Box>
       <Box
         background="background.primary"
