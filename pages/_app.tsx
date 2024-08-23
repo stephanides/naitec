@@ -28,7 +28,6 @@ function App({ Component, pageProps }: AppProps) {
           name="viewport"
           content="minimum-scale=1, initial-scale=1, width=device-width, shrink-to-fit=no"
         />
-        <style>@import url("https://use.typekit.net/niv7nnt.css");</style>
       </Head>
 
       {/* Global Site Tag (gtag.js) - Google Analytics */}
