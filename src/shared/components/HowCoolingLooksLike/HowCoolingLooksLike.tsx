@@ -17,12 +17,16 @@ export const HowCoolingLooksLike = ({
   const { t } = useTranslation('common');
   return (
     <Box>
-      <Box position="relative">
+      <Box
+        position="relative"
+        pt={{ base: rem(50), md: 0 }}
+        pb={{ base: rem(70), xs: 0 }}
+      >
         <Flex
           justifyContent="center"
           position="absolute"
           zIndex={2}
-          top={{ base: rem(50), md: rem(80), xl: rem(143) }}
+          top={{ base: rem(40), '2xl': rem(100), '3xl': rem(143) }}
           left={0}
           right={0}
         >
@@ -32,6 +36,7 @@ export const HowCoolingLooksLike = ({
             color="text.link"
             lineHeight="112%"
             textAlign="center"
+            px={rem(20)}
             maxW={rem(523)}
             sx={{
               strong: {

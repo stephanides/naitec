@@ -1,7 +1,8 @@
 import { useState, useRef, useEffect } from 'react';
-import { Box, Flex, VStack, Text } from '@chakra-ui/react';
+import { Box, Flex, VStack } from '@chakra-ui/react';
 import { useTranslation } from 'next-i18next';
 import { rem } from 'polished';
+import { NeueHaasGroteskDisplay } from '../Typography';
 
 type VideoData = {
   url: string;
@@ -55,39 +56,79 @@ export const VideoSwitcher = ({
   return (
     <VStack spacing={4} align="center" position="relative">
       {/* Video Container */}
-      <Box position="relative" width="100%" aspectRatio="16 / 9" zIndex={1}>
-        {videos.map((video, index) => (
-          <Box
-            as="video"
-            key={index}
-            ref={(el: HTMLVideoElement) => {
-              videoRefs.current[index] = el;
+      <Box overflow="hidden" width="100%">
+        <Flex width="100%" justifyContent="center">
+          <Flex
+            overflow="hidden"
+            width={{
+              base: rem(500),
+              xs: rem(700),
+              md: rem(900),
+              lg: rem(1000),
+              xl: rem(1200),
+              '2xl': rem(1460),
+              '3xl': rem(1920),
             }}
-            src={video.url}
-            muted
-            sx={{
-              position: 'absolute',
-              top: 0,
-              left: 0,
-              width: '100%',
-              height: 'auto',
-              opacity: index === activeVideoIndex ? 1 : 0,
-              transition: 'opacity .3s ease-in-out',
-              zIndex: index === activeVideoIndex ? 2 : 1,
+            minW={{
+              base: rem(500),
+              xs: rem(700),
+              md: rem(900),
+              lg: rem(1000),
+              xl: rem(1200),
+              '2xl': rem(1460),
+              '3xl': rem(1920),
             }}
-          />
-        ))}
+            justifyContent="center"
+            zIndex={1}
+            aspectRatio="16 / 9"
+            position="relative"
+          >
+            {videos.map((video, index) => (
+              <Box
+                as="video"
+                key={index}
+                ref={(el: HTMLVideoElement) => {
+                  videoRefs.current[index] = el;
+                }}
+                src={video.url}
+                muted
+                sx={{
+                  position: 'absolute',
+                  top: 0,
+                  maxWidth: 'none',
+                  left: 0,
+                  width: '100%',
+                  height: 'auto',
+                  opacity: index === activeVideoIndex ? 1 : 0,
+                  transition: 'opacity .3s ease-in-out',
+                  zIndex: index === activeVideoIndex ? 2 : 1,
+                }}
+              />
+            ))}
+          </Flex>
+        </Flex>
       </Box>
 
       {/* Controls */}
       <Flex
-        columnGap={rem(18)}
+        columnGap={{ base: rem(12), xs: rem(18) }}
         position="absolute"
-        bottom={rem(250)}
+        bottom={{
+          base: rem(-40),
+          xs: rem(20),
+          md: rem(60),
+          lg: rem(92),
+          xl: rem(120),
+          '2xl': rem(160),
+          '3xl': rem(200),
+        }}
+        px={{ base: rem(40), xs: 0 }}
         left={0}
         width="100%"
         justifyContent="center"
         zIndex={2}
+        rowGap={{ base: rem(12), xs: rem(18) }}
+        flexWrap={{ base: 'wrap', md: 'nowrap' }}
       >
         {BUTTONS.map((label, index) => (
           <Box
@@ -95,21 +136,23 @@ export const VideoSwitcher = ({
             key={index}
             cursor="pointer"
             backgroundColor="#C2C2C2"
-            py={rem(14)}
-            px={rem(34)}
+            py={{ base: rem(8), md: rem(14) }}
+            px={{ base: rem(12), md: rem(34) }}
             borderRadius={rem(60)}
             overflow="hidden"
+            transition="all .3s ease-in-out"
+            _hover={{ backgroundColor: color }}
           >
-            <Text
+            <NeueHaasGroteskDisplay
               onClick={() => handleVideoChange(index)}
               color="text.inverted"
-              fontSize={rem(18)}
+              fontSize={{ base: rem(12), md: rem(18) }}
               fontWeight={600}
               position="relative"
               zIndex={2}
             >
               {t(label)}
-            </Text>
+            </NeueHaasGroteskDisplay>
             {index === activeVideoIndex && (
               <Box
                 position="absolute"
