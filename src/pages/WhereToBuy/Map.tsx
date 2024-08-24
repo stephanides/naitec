@@ -7,7 +7,7 @@ import {
   MarkerClusterer,
   InfoWindow,
 } from '@react-google-maps/api';
-import { Box, Flex } from '@chakra-ui/react';
+import { Box, Checkbox, Flex } from '@chakra-ui/react';
 import { Store } from '@/src/shared/types';
 import { rem } from 'polished';
 import { useTranslation } from 'react-i18next';
@@ -26,6 +26,40 @@ const mapContainerStyle = {
 const defaultCenter = {
   lat: 48.810513,
   lng: 19.276645,
+};
+
+const FILTER = [
+  { label: 'filter_air_condition', value: 'air_conditioners' },
+  { label: 'filter_accessories', value: 'accessories' },
+  { label: 'filter_household', value: 'household' },
+];
+
+const sortStoresByAttributes = (stores: Store[]): Store[] => {
+  // Helper function to calculate the points for each store
+  const calculatePoints = (store: Store): number => {
+    const attributes = store.attributes;
+    let points = 0;
+
+    // Add points based on the attributes
+    if (attributes.email) points += 1;
+    if (attributes.phone) points += 1;
+    if (attributes.website) points += 1;
+    if (attributes.air_conditioner) points += 1;
+    if (attributes.accessories) points += 1;
+    if (attributes.household) points += 1;
+    if (attributes.content) points += 1;
+
+    return points;
+  };
+
+  // Sort the stores by their calculated points in descending order
+  return stores.sort((storeA, storeB) => {
+    const pointsA = calculatePoints(storeA);
+    const pointsB = calculatePoints(storeB);
+
+    // Sort in descending order (higher points first)
+    return pointsB - pointsA;
+  });
 };
 
 // const customMarkerIcon = {
@@ -68,7 +102,7 @@ export const StoreLocator = ({ stores }: { stores: Store[] }) => {
     googleMapsApiKey: process.env.NEXT_PUBLIC_MAP_API_KEY as string,
     libraries: ['places'], // Load the places library for Autocomplete
   });
-
+  const [selectedFilter, setSelectedFilter] = useState<string[]>([]);
   const [center, setCenter] = useState(defaultCenter);
   const [selectedStore, setSelectedStore] = useState<Store | null>(null);
   const [visibleStores, setVisibleStores] = useState<any[]>(stores); // Stores visible in the current map view
@@ -86,17 +120,42 @@ export const StoreLocator = ({ stores }: { stores: Store[] }) => {
     if (mapRef.current) {
       const bounds = mapRef.current.getBounds(); // Get current map bounds
       if (bounds) {
-        const newVisibleStores = stores.filter((store) => {
+        const filteredStores = stores.filter((store) => {
+          // Filter based on selected filters
+
+          const matchesFilter =
+            selectedFilter.length > 0
+              ? selectedFilter.every(
+                  // @ts-ignore
+                  (filter) => store.attributes[filter]
+                )
+              : true;
+
           const storeLocation = new google.maps.LatLng(
             Number(store.attributes.lat),
             Number(store.attributes.lng)
           );
-          return bounds.contains(storeLocation); // Check if the store is within the map bounds
+
+          // Check if the store is within the map bounds and matches the filters
+          return bounds.contains(storeLocation) && matchesFilter;
         });
-        setVisibleStores(newVisibleStores); // Update visible stores
+        const sortedStores = sortStoresByAttributes(filteredStores);
+        setVisibleStores(sortedStores); // Update visible stores
       }
     }
-  }, [stores]);
+  }, [stores, selectedFilter]);
+
+  // Handle checkbox changes
+  const handleFilterChange = (value: string) => {
+    setSelectedFilter((prevSelected) => {
+      // If the filter is already selected, remove it
+      if (prevSelected.includes(value)) {
+        return prevSelected.filter((filter) => filter !== value);
+      }
+      // If the filter is not selected, add it
+      return [...prevSelected, value];
+    });
+  };
 
   const onIdle = useCallback(() => {
     updateVisibleStores(); // Update visible stores when the map stops moving
@@ -173,6 +232,7 @@ export const StoreLocator = ({ stores }: { stores: Store[] }) => {
           top={0}
           background="white"
           p={rem(20)}
+          pb={rem(5)}
           zIndex={2}
         >
           <Autocomplete
@@ -198,6 +258,18 @@ export const StoreLocator = ({ stores }: { stores: Store[] }) => {
           >
             <Search />
           </Box>
+          <Flex py={rem(16)} flexWrap="wrap" rowGap={rem(16)}>
+            {FILTER.map((filter) => (
+              <Box key={filter.value} mr={rem(10)}>
+                <Checkbox
+                  isChecked={selectedFilter.includes(filter.value)}
+                  onChange={() => handleFilterChange(filter.value)}
+                >
+                  {t(`common:${filter.label}`)}
+                </Checkbox>
+              </Box>
+            ))}
+          </Flex>
         </Box>
 
         {/* Display visible stores in the list */}

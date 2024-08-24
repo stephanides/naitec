@@ -96,5 +96,8 @@
   "up_to": "から",
   "fast_cooling": "高速冷却",
   "diffuse_cooling": "拡散冷却",
-  "heating": "加熱"
+  "heating": "加熱",
+  "filter_air_condition": "エアコン",
+  "filter_accessories": "アクセサリー",
+  "filter_household": "家庭用品"
 }

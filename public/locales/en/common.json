@@ -96,5 +96,8 @@
   "up_to": "up to",
   "fast_cooling": "Fast Cooling",
   "diffuse_cooling": "Diffuse Cooling",
-  "heating": "Heating"
+  "heating": "Heating",
+  "filter_air_condition": "Air conditioning",
+  "filter_accessories": "Accessories",
+  "filter_household": "Household"
 }

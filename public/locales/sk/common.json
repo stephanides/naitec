@@ -96,5 +96,8 @@
   "up_to": "do",
   "fast_cooling": "Rýchle chladenie",
   "diffuse_cooling": "Difúzne chladenie",
-  "heating": "Vykurovanie"
+  "heating": "Vykurovanie",
+  "filter_air_condition": "Klimatizácie",
+  "filter_accessories": "Príslušenstvo",
+  "filter_household": "Domácnosť"
 }

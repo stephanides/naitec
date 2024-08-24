@@ -96,5 +96,8 @@
   "up_to": "do",
   "fast_cooling": "Szybkie chłodzenie",
   "diffuse_cooling": "Rozproszone chłodzenie",
-  "heating": "Ogrzewanie"
+  "heating": "Ogrzewanie",
+  "filter_air_condition": "Klimatyzacja",
+  "filter_accessories": "Akcesoria",
+  "filter_household": "Gospodarstwo domowe"
 }

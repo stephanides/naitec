@@ -96,5 +96,8 @@
   "up_to": "eddig",
   "fast_cooling": "Gyors hűtés",
   "diffuse_cooling": "Diffúz hűtés",
-  "heating": "Fűtés"
+  "heating": "Fűtés",
+  "filter_air_condition": "Klímaberendezések",
+  "filter_accessories": "Kiegészítők",
+  "filter_household": "Háztartás"
 }

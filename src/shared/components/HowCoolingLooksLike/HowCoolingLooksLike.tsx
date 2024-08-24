@@ -37,7 +37,7 @@ export const HowCoolingLooksLike = ({
             lineHeight="112%"
             textAlign="center"
             px={rem(20)}
-            maxW={rem(523)}
+            maxW={rem(750)}
             sx={{
               strong: {
                 backgroundImage: color,

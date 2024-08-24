@@ -96,5 +96,8 @@
   "up_to": "bis",
   "fast_cooling": "Schnelles Kühlen",
   "diffuse_cooling": "Diffuses Kühlen",
-  "heating": "Heizung"
+  "heating": "Heizung",
+  "filter_air_condition": "Klimaanlagen",
+  "filter_accessories": "Zubehör",
+  "filter_household": "Haushalt"
 }
