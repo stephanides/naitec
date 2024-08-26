@@ -26,7 +26,7 @@ export const HowCoolingLooksLike = ({
           justifyContent="center"
           position="absolute"
           zIndex={2}
-          top={{ base: rem(40), '2xl': rem(100), '3xl': rem(143) }}
+          top={{ base: rem(40), '2xl': rem(60), '3xl': rem(120) }}
           left={0}
           right={0}
         >

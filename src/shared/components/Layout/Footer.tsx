@@ -150,9 +150,6 @@ export const Footer = () => {
               <Item href={INTERNAL_ROUTES.WHERE_TO_BUY}>
                 {t('navigation_where_to_buy')}
               </Item>
-              <Item href={INTERNAL_ROUTES.WHERE_TO_BUY}>
-                {t('footer_navigation_business_partners')}
-              </Item>
               <Item href={INTERNAL_ROUTES.SUPPORT}>
                 {t('footer_navigation_support')}
               </Item>
@@ -233,9 +230,7 @@ export const Footer = () => {
               <Item href={INTERNAL_ROUTES.WHERE_TO_BUY}>
                 {t('navigation_where_to_buy')}
               </Item>
-              <Item href={INTERNAL_ROUTES.WHERE_TO_BUY}>
-                {t('footer_navigation_business_partners')}
-              </Item>
+
               <Item href={INTERNAL_ROUTES.SUPPORT}>
                 {t('footer_navigation_support')}
               </Item>

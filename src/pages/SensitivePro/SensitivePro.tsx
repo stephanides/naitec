@@ -102,10 +102,15 @@ export const SensitivePro = () => {
             justify="center"
             overflow="hidden"
           >
-            <img
+            <Image
               src="/images/sensitive-pro/sensitive-pro-main.png"
+              width="0"
+              height="0"
+              sizes="100vw"
               style={{ width: '100%', height: 'auto', maxWidth: 'none' }}
               alt="Sensitive"
+              placeholder="blur"
+              blurDataURL="/images/sensitive-pro/sensitive-pro-main-placeholder.png"
             />
           </Flex>
         </Flex>
@@ -209,8 +214,8 @@ export const SensitivePro = () => {
           <Box position={'relative'} zIndex={2}>
             <EffectiveHeating
               color={LINEAR_GRADIENTS.sensitive_pro}
-              image1="/images/sensitive-pro/effective-heating-1.png"
-              image2="/images/sensitive-pro/effective-heating-2.png"
+              image1="/images/sensitive-pro/effective-heating-1.jpg"
+              image2="/images/sensitive-pro/effective-heating-2.jpg"
               blurOnBottom={true}
             />
           </Box>

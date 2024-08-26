@@ -2,7 +2,6 @@ import { Box, Flex } from '@chakra-ui/react';
 import { Label } from '../Label';
 import { useTranslation } from 'next-i18next';
 import { rem } from 'polished';
-import { Container } from '../Container';
 import { NeueHaasGroteskDisplay, NeueHaasGroteskText } from '../Typography';
 import { AppStore, GooglePlay, LINEAR_GRADIENTS } from '../../design';
 import Image from 'next/image';
@@ -18,7 +17,7 @@ export const NaitecApplicationMinimal = () => {
       position="relative"
       overflow="hidden"
       borderRadius={rem(20)}
-      mx={rem(20)}
+      mx={{ base: rem(12), xl: rem(20) }}
     >
       <Flex
         columnGap={rem(60)}
@@ -49,9 +48,9 @@ export const NaitecApplicationMinimal = () => {
               }}
               dangerouslySetInnerHTML={{ __html: t('naitec_app_title') }}
             />
-            <NeueHaasGroteskDisplay
+            <NeueHaasGroteskText
               fontSize={{ base: rem(16), md: rem(22) }}
-              fontWeight={600}
+              fontWeight={500}
               color="text.secondary"
               mt={{ base: rem(20), md: rem(40) }}
               sx={{ strong: { color: '#EBEBEB' } }}

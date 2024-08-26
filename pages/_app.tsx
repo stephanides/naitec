@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import Head from 'next/head';
 import { ChakraProvider } from '@chakra-ui/react';
 import { appWithTranslation } from 'next-i18next';
@@ -13,7 +13,6 @@ import 'swiper/css/effect-creative';
 import 'yet-another-react-lightbox/styles.css';
 import { AppProps } from 'next/app';
 import { theme } from '@/src/shared/design/Theme';
-import { useRouter } from 'next/router';
 import { Hydrate, QueryClient, QueryClientProvider } from 'react-query';
 import { SpeedInsights } from '@vercel/speed-insights/next';
 

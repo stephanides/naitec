@@ -126,7 +126,7 @@ export const Home = () => {
           <Box
             position="absolute"
             zIndex={1}
-            bottom={0}
+            bottom={{ base: rem(-30), xs: rem(-60), md: rem(-100) }}
             left={0}
             right={0}
             display={{ base: 'block', md: 'none' }}
@@ -159,7 +159,7 @@ export const Home = () => {
         borderColor="#FFFFFF"
         borderRadius={rem(20)}
         position="relative"
-        mt={{ base: rem(40), lg: rem(20) }}
+        mt={{ base: rem(20), lg: rem(20) }}
         overflow="hidden"
       >
         <Box zIndex={2} position="relative">
@@ -195,7 +195,7 @@ export const Home = () => {
                 position="relative"
                 pt={{
                   base: rem(12),
-                  xs: rem(4),
+                  xs: rem(20),
                   md: rem(32),
                   lg: rem(32),
                   xl: rem(20),
@@ -256,7 +256,7 @@ export const Home = () => {
         <Box
           position="absolute"
           zIndex={1}
-          bottom={0}
+          bottom={{ base: rem(-30), xs: rem(-60), md: rem(-100) }}
           left={0}
           right={0}
           display={{ base: 'block', md: 'none' }}
@@ -272,7 +272,7 @@ export const Home = () => {
         borderColor="#FFFFFF"
         borderRadius={rem(20)}
         position="relative"
-        mt={{ base: rem(40), lg: rem(20) }}
+        mt={{ base: rem(20), lg: rem(20) }}
         overflow="hidden"
       >
         <Box zIndex={2} position="relative">
@@ -369,7 +369,7 @@ export const Home = () => {
         <Box
           position="absolute"
           zIndex={1}
-          bottom={0}
+          bottom={{ base: rem(-30), xs: rem(-60), md: rem(-100) }}
           left={0}
           right={0}
           display={{ base: 'block', md: 'none' }}
@@ -380,7 +380,7 @@ export const Home = () => {
       <Flex
         my={{ base: 0, xl: rem(20) }}
         flexDir={{ base: 'column', xl: 'row' }}
-        mx={{ base: rem(20), xl: 0 }}
+        mx={{ base: rem(12), xs: rem(20), xl: 0 }}
         mb={{ base: rem(20) }}
       >
         <Box
@@ -487,7 +487,7 @@ export const Home = () => {
           <Box
             position="absolute"
             zIndex={1}
-            bottom={{ base: 0, xl: rem(-60) }}
+            bottom={{ base: rem(-20), xl: rem(-60) }}
             left={0}
             right={0}
             display={{ base: 'block', md: 'none', xl: 'block' }}
@@ -601,7 +601,7 @@ export const Home = () => {
           <Box
             position="absolute"
             zIndex={1}
-            bottom={{ base: 0, xl: rem(-60) }}
+            bottom={{ base: rem(-20), xl: rem(-60) }}
             left={0}
             right={0}
             display={{ base: 'block', md: 'none', xl: 'block' }}
@@ -613,7 +613,7 @@ export const Home = () => {
       <NaitecApplicationMinimal />
       <Flex
         flexDir={{ base: 'column', xl: 'row' }}
-        px={{ base: rem(20), xl: 0 }}
+        px={{ base: rem(12), xs: rem(20), xl: 0 }}
         pb={{ base: rem(20) }}
         position="relative"
         top={rem(1)}

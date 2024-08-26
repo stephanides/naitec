@@ -103,7 +103,7 @@ export const VideoSwitcher = ({
                   width: '100%',
                   height: 'auto',
                   opacity: index === activeVideoIndex ? 1 : 0,
-                  transition: 'opacity .3s ease-in-out',
+                  transition: 'opacity 1s ease-in-out',
                   zIndex: index === activeVideoIndex ? 2 : 1,
                   userSelect: 'none',
                 }}
@@ -122,9 +122,9 @@ export const VideoSwitcher = ({
           xs: rem(20),
           md: rem(60),
           lg: rem(92),
-          xl: rem(120),
-          '2xl': rem(160),
-          '3xl': rem(200),
+          xl: rem(100),
+          '2xl': rem(100),
+          '3xl': rem(130),
         }}
         px={{ base: rem(40), xs: 0 }}
         left={0}
@@ -145,7 +145,7 @@ export const VideoSwitcher = ({
             borderRadius={rem(60)}
             overflow="hidden"
             transition="all .3s ease-in-out"
-            _hover={{ backgroundColor: color }}
+            _hover={{ lg: { backgroundColor: color } }}
           >
             <NeueHaasGroteskDisplay
               onClick={() => handleVideoChange(index)}

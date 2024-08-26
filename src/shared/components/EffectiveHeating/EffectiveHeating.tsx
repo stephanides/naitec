@@ -60,7 +60,7 @@ export const EffectiveHeating = ({
           }}
         />
         <Flex columnGap={rem(20)} mt={{ base: rem(40), md: rem(80) }}>
-          <Box width="50%">
+          <Box width="50%" borderRadius={rem(20)} overflow="hidden">
             <Image
               src={image1}
               width="0"
@@ -70,7 +70,7 @@ export const EffectiveHeating = ({
               alt="Effective heating"
             />
           </Box>
-          <Box width="50%">
+          <Box width="50%" borderRadius={rem(20)} overflow="hidden">
             <Image
               src={image2}
               width="0"
