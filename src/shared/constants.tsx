@@ -843,4 +843,24 @@ export const SEO_CONTENT = {
       ja: '革新的な空調システムと高度なNaitec技術の世界を発見し、快適さと効率性をあなたの家に届けます。',
     },
   },
+  stellair: {
+    title: {
+      sk: 'Klimatizácia Naitec Stellair | Naitec New AI Technology',
+      cz: 'Klimatizace Naitec Stellair | Naitec Nová AI Technologie',
+      en: 'Naitec Stellair Air Conditioning | Naitec New AI Technology',
+      hu: 'Naitec Stellair Klíma | Naitec Új AI Technológia',
+      pl: 'Klimatyzacja Naitec Stellair | Naitec Nowa Technologia AI',
+      de: 'Naitec Stellair Klimaanlage | Naitec Neue KI-Technologie',
+      ja: 'Naitec Stellair 空調 | Naitec 新しいAI技術',
+    },
+    description: {
+      sk: 'Vstupte do ríše dokonalej klímy. Hviezdny zážitok čerstvého vzduchu z vonku, očisteného od mikronečistôt a alergénov, príjemne vychladeného na mieru vašim túžbam.',
+      cz: 'Vstupte do říše dokonalé klímy. Hvězdný zážitek čerstvého vzduchu zvenku, očištěného od mikronečistot a alergenů, příjemně ochlazeného na míru vašim touhám.',
+      en: 'Enter the realm of perfect climate. A stellar experience of fresh outdoor air, purified from micro-impurities and allergens, pleasantly cooled to your desires.',
+      hu: 'Lépjen be a tökéletes klíma birodalmába. Csillagfényes élmény a külső friss levegővel, megtisztítva a mikroszennyeződésektől és allergénektől, kellemesen hűtve az Ön igényeihez.',
+      pl: 'Wejdź do królestwa idealnego klimatu. Gwiazdorskie doświadczenie świeżego powietrza z zewnątrz, oczyszczonego z mikro zanieczyszczeń i alergenów, przyjemnie schłodzonego do Twoich pragnień.',
+      de: 'Treten Sie in das Reich des perfekten Klimas ein. Ein himmlisches Erlebnis von frischer Außenluft, gereinigt von Mikroverunreinigungen und Allergenen, angenehm nach Ihren Wünschen gekühlt.',
+      ja: '完璧な気候の領域へようこそ。微細な不純物やアレルゲンが取り除かれた新鮮な外気を、あなたの望みに応じて心地よく冷却します。',
+    },
+  },
 };
