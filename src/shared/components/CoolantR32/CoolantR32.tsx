@@ -59,7 +59,7 @@ export const CoolantR32 = ({ color }: CoolantR32Props) => {
               textAlign={{ base: 'center', md: 'left' }}
               color="text.light"
               fontWeight={500}
-              sx={{ strong: { color: 'text.link' } }}
+              sx={{ strong: { color: 'text.link', fontWeight: 500 } }}
               dangerouslySetInnerHTML={{ __html: t('coolant_r32_description') }}
             />
           </Flex>

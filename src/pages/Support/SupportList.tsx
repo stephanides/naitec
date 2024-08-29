@@ -3,7 +3,7 @@ import { PRODUCTS, PRODUCT_TYPE, Product } from '@/src/shared/constants';
 import { ChevronRight, SupportItemShape } from '@/src/shared/design';
 import { Box, Flex, Grid } from '@chakra-ui/react';
 import Image from 'next/image';
-import Link from 'next/link';
+import Link from 'next-translate-routes/link';
 import { rem } from 'polished';
 import { useTranslation } from 'next-i18next';
 import { useState } from 'react';

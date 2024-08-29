@@ -6,7 +6,7 @@ import { Container } from '../Container';
 import { AppStore, GooglePlay, LogoLight } from '../../design';
 import { NeueHaasGroteskDisplay, NeueHaasGroteskText } from '../Typography';
 import { useTranslation } from 'next-i18next';
-import Link from 'next/link';
+import Link from 'next-translate-routes/link';
 import {
   EMAILS,
   EXTERNAL_ROUTES,

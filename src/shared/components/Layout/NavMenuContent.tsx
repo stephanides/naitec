@@ -1,7 +1,7 @@
 import { rem } from 'polished';
 import { Box, Flex, Text } from '@chakra-ui/react';
 import { useRouter } from 'next/router';
-import Link from 'next/link';
+import Link from 'next-translate-routes/link';
 import { useState } from 'react';
 import { useCollapse } from 'react-collapsed';
 import {

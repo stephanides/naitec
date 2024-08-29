@@ -1,5 +1,5 @@
 // components/LocaleSwitcher.tsx
-import Link from 'next/link';
+import Link from 'next-translate-routes/link';
 import { useRouter } from 'next/router';
 import {
   Czech,

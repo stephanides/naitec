@@ -54,7 +54,7 @@ export const EffectiveHeating = ({
           maxW={rem(930)}
           letterSpacing="calc(16px * -0.02)"
           color="text.secondary"
-          sx={{ strong: { color: 'text.inverted' } }}
+          sx={{ strong: { color: 'text.inverted', fontWeight: 500 } }}
           dangerouslySetInnerHTML={{
             __html: t('effective_heating_description'),
           }}

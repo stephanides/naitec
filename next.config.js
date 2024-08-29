@@ -1,6 +1,7 @@
 const { i18n } = require('./next-i18next.config');
+const withTranslateRoutes = require('next-translate-routes/plugin');
 
-module.exports = {
+module.exports = withTranslateRoutes({
   i18n,
   env: {
     NEXT_PUBLIC_MAP_API_KEY: process.env.MAP_API_KEY,
@@ -61,4 +62,4 @@ module.exports = {
   //     },
   //   ];
   // },
-};
+});

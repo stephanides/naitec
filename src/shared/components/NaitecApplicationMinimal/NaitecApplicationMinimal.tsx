@@ -53,7 +53,7 @@ export const NaitecApplicationMinimal = () => {
               fontWeight={500}
               color="text.secondary"
               mt={{ base: rem(20), md: rem(40) }}
-              sx={{ strong: { color: '#EBEBEB' } }}
+              sx={{ strong: { color: '#EBEBEB', fontWeight: 500 } }}
               textAlign={{ base: 'center', '2xl': 'start' }}
               dangerouslySetInnerHTML={{
                 __html: t('naitec_app_short_description'),

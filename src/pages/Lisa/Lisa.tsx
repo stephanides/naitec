@@ -59,7 +59,8 @@ export const Lisa = () => {
                 Lisa Voice Control
               </NeueHaasGroteskDisplay>
               <NeueHaasGroteskText
-                sx={{ strong: { color: 'text.link' } }}
+                sx={{ strong: { color: 'text.link', fontWeight: 500 } }}
+                fontWeight={500}
                 color="text.light"
                 fontSize={{ base: rem(16), xs: rem(20) }}
                 lineHeight="130%"
@@ -95,18 +96,10 @@ export const Lisa = () => {
                 title={t('common:details')}
                 text={
                   <Box>
-                    <NeueHaasGroteskText
-                      fontSize={rem(17)}
-                      color="text.light"
-                      sx={{ strong: { fontWeight: 600 } }}
-                    >
+                    <NeueHaasGroteskText fontSize={rem(17)} color="text.light">
                       <strong>{t('common:dimensions')}:</strong> 68x68x25mm
                     </NeueHaasGroteskText>
-                    <NeueHaasGroteskText
-                      fontSize={rem(17)}
-                      color="text.light"
-                      sx={{ strong: { fontWeight: 600 } }}
-                    >
+                    <NeueHaasGroteskText fontSize={rem(17)} color="text.light">
                       <strong>{t('common:language')}:</strong>{' '}
                       {t('common:english')}
                     </NeueHaasGroteskText>

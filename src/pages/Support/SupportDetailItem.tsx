@@ -6,7 +6,7 @@ import { DOCUMENT_TYPE } from '@/src/shared/constants';
 import { DocumentIcon, NewTab, VideoIcon } from '@/src/shared/design';
 import { Box, Flex } from '@chakra-ui/react';
 import { useTranslation } from 'next-i18next';
-import Link from 'next/link';
+import Link from 'next-translate-routes/link';
 import { rem } from 'polished';
 
 type SupportDetailItemProps = {

@@ -9,7 +9,7 @@ import {
 } from '@/src/shared/design';
 import { Store } from '@/src/shared/types';
 import { Box, Flex } from '@chakra-ui/react';
-import Link from 'next/link';
+import Link from 'next-translate-routes/link';
 import Markdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import { rem } from 'polished';

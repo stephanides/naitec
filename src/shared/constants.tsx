@@ -20,7 +20,7 @@ export const INTERNAL_ROUTES = {
   SENSITIVE: '/sensitive',
   ONYX: '/onyx',
   SMART: '/smart',
-  LISA: '/lisa-voice-control',
+  LISA: '/lisa',
   FIREPLACE_DIFFUSER: '/fireplace-diffuser',
   STELLAIR_SUPPORT: '/support/stellair',
   SENSITIVE_PRO_SUPPORT: '/support/sensitive-pro',
@@ -819,3 +819,28 @@ export const PRODUCTS = [
     ],
   },
 ];
+
+export const BASE_URL = 'https://naitec.ai';
+
+export const SEO_CONTENT = {
+  home: {
+    title: {
+      sk: 'Naitec - Vytvorené pre budúcnosť, dostupné už dnes | Naitec',
+      cz: 'Naitec - Vytvořeno pro budoucnost, dostupné již dnes | Naitec',
+      en: 'Naitec - Created for the Future, Available Today | Naitec',
+      hu: 'Naitec - A jövőre készítve, már ma elérhető | Naitec',
+      pl: 'Naitec - Stworzony na przyszłość, dostępny już dziś | Naitec',
+      de: 'Naitec - Für die Zukunft geschaffen, schon heute verfügbar | Naitec',
+      ja: 'Naitec - 未来のために作られた、今日利用可能 | Naitec',
+    },
+    description: {
+      sk: 'Objavte svet inovatívnych klimatizácií a pokročilých technológií Naitec, ktoré prinášajú komfort a efektivitu do vášho domova.',
+      cz: 'Objevte svět inovativních klimatizací a pokročilých technologií Naitec, které přinášejí komfort a efektivitu do vašeho domova.',
+      en: 'Discover the world of innovative air conditioning and advanced Naitec technologies that bring comfort and efficiency to your home.',
+      hu: 'Fedezze fel az innovatív Naitec klímaberendezések és fejlett technológiák világát, amelyek kényelmet és hatékonyságot hoznak otthonába.',
+      pl: 'Odkryj świat innowacyjnych klimatyzatorów i zaawansowanych technologii Naitec, które zapewniają komfort i efektywność w Twoim domu.',
+      de: 'Entdecken Sie die Welt der innovativen Klimaanlagen und fortschrittlichen Naitec-Technologien, die Komfort und Effizienz in Ihr Zuhause bringen.',
+      ja: '革新的な空調システムと高度なNaitec技術の世界を発見し、快適さと効率性をあなたの家に届けます。',
+    },
+  },
+};

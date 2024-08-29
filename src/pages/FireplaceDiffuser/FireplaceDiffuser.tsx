@@ -63,10 +63,10 @@ export const FireplaceDifusser = () => {
                 {t('title')}
               </NeueHaasGroteskDisplay>
               <NeueHaasGroteskText
-                sx={{ strong: { color: 'text.link' } }}
+                sx={{ strong: { color: 'text.link', fontWeight: 500 } }}
                 color="text.light"
+                fontWeight={500}
                 fontSize={{ base: rem(16), xs: rem(20) }}
-                fontWeight={600}
                 lineHeight="130%"
                 dangerouslySetInnerHTML={{ __html: t('description1') }}
               />
@@ -100,18 +100,10 @@ export const FireplaceDifusser = () => {
                 title={t('common:details')}
                 text={
                   <Box>
-                    <NeueHaasGroteskText
-                      fontSize={rem(17)}
-                      color="text.light"
-                      sx={{ strong: { fontWeight: 600 } }}
-                    >
+                    <NeueHaasGroteskText fontSize={rem(17)} color="text.light">
                       <strong>{t('common:dimensions')}:</strong> 1000x236x215mm
                     </NeueHaasGroteskText>
-                    <NeueHaasGroteskText
-                      fontSize={rem(17)}
-                      color="text.light"
-                      sx={{ strong: { fontWeight: 600 } }}
-                    >
+                    <NeueHaasGroteskText fontSize={rem(17)} color="text.light">
                       <strong>{t('common:tank_volume')}:</strong> 4.04l
                     </NeueHaasGroteskText>
                     <NeueHaasGroteskText

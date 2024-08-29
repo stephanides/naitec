@@ -8,11 +8,10 @@ import {
   PopoverTrigger,
 } from '@chakra-ui/react';
 import { rem } from 'polished';
-import { useRouter } from 'next/router';
 import { LocaleSwitch } from '../LocaleSwitch';
-import Link from 'next/link';
+import Link from 'next-translate-routes/link';
 import { Container } from '../Container';
-import { ChevronDown, GlobeSmall, Hamburger, LogoDark } from '../../design';
+import { ChevronDown, Hamburger, LogoDark } from '../../design';
 import { useTranslation } from 'next-i18next';
 import { NeueHaasGroteskDisplay, NeueHaasGroteskText } from '../Typography';
 import { INTERNAL_ROUTES } from '../../constants';

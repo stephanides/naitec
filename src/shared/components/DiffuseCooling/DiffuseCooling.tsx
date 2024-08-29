@@ -51,7 +51,12 @@ export const DiffuseCooling = ({
           letterSpacing="calc(16px * -0.02)"
           color={light ? 'text.secondary' : 'text.light'}
           fontWeight={500}
-          sx={{ strong: { color: light ? 'text.strong' : 'text.link' } }}
+          sx={{
+            strong: {
+              color: light ? 'text.strong' : 'text.link',
+              fontWeight: 500,
+            },
+          }}
           dangerouslySetInnerHTML={{
             __html:
               t('diffuse_cooling_description_1') +
@@ -67,7 +72,12 @@ export const DiffuseCooling = ({
           letterSpacing="calc(16px * -0.02)"
           color={light ? 'text.secondary' : 'text.light'}
           fontWeight={500}
-          sx={{ strong: { color: light ? 'text.strong' : 'text.link' } }}
+          sx={{
+            strong: {
+              color: light ? 'text.strong' : 'text.link',
+              fontWeight: 500,
+            },
+          }}
           dangerouslySetInnerHTML={{
             __html: t('diffuse_cooling_description_1'),
           }}
@@ -208,7 +218,12 @@ export const DiffuseCooling = ({
           color={light ? 'text.secondary' : 'text.light'}
           fontWeight={500}
           textAlign="center"
-          sx={{ strong: { color: light ? 'text.strong' : 'text.link' } }}
+          sx={{
+            strong: {
+              color: light ? 'text.strong' : 'text.link',
+              fontWeight: 500,
+            },
+          }}
           dangerouslySetInnerHTML={{
             __html: t('diffuse_cooling_description_2'),
           }}

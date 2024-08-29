@@ -136,7 +136,7 @@ export const TechnicalParameters = ({
               color="text.light"
               fontWeight={500}
               maxW={rem(700)}
-              sx={{ strong: { color: 'text.link' } }}
+              sx={{ strong: { color: 'text.link', fontWeight: 500 } }}
               dangerouslySetInnerHTML={{
                 __html: t('techinal_parameters_description'),
               }}

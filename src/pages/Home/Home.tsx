@@ -11,7 +11,7 @@ import {
 } from '@/src/shared/design';
 import { Box, Flex } from '@chakra-ui/react';
 import { useTranslation } from 'next-i18next';
-import Link from 'next/link';
+import Link from 'next-translate-routes/link';
 import { rem } from 'polished';
 
 export const Home = () => {

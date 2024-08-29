@@ -15,6 +15,7 @@ import { AppProps } from 'next/app';
 import { theme } from '@/src/shared/design/Theme';
 import { Hydrate, QueryClient, QueryClientProvider } from 'react-query';
 import { SpeedInsights } from '@vercel/speed-insights/next';
+import { withTranslateRoutes } from 'next-translate-routes';
 
 const queryClient = new QueryClient();
 
@@ -62,4 +63,4 @@ function App({ Component, pageProps }: AppProps) {
   );
 }
 
-export default appWithTranslation(App);
+export default withTranslateRoutes(appWithTranslation(App));

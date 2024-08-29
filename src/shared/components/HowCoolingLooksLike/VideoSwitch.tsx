@@ -28,7 +28,9 @@ export const VideoSwitcher = ({
       if (video) {
         if (index === activeVideoIndex) {
           video.currentTime = 0; // Reset time when switching videos
-          video.play();
+          setInterval(() => {
+            video.play();
+          }, 500);
         } else {
           video.pause();
           video.currentTime = 0; // Reset time when paused
@@ -84,30 +86,32 @@ export const VideoSwitcher = ({
             position="relative"
           >
             {videos.map((video, index) => (
-              <Box
-                as="video"
-                key={index}
-                ref={(el: HTMLVideoElement) => {
-                  videoRefs.current[index] = el;
-                }}
-                src={video.url}
-                playsInline // This is important for iOS
-                webkit-playsinline="true"
-                muted
-                controls={false}
-                sx={{
-                  position: 'absolute',
-                  top: 0,
-                  maxWidth: 'none',
-                  left: 0,
-                  width: '100%',
-                  height: 'auto',
-                  opacity: index === activeVideoIndex ? 1 : 0,
-                  transition: 'opacity 1s ease-in-out',
-                  zIndex: index === activeVideoIndex ? 2 : 1,
-                  userSelect: 'none',
-                }}
-              />
+              <Box>
+                <Box
+                  as="video"
+                  key={index}
+                  ref={(el: HTMLVideoElement) => {
+                    videoRefs.current[index] = el;
+                  }}
+                  src={video.url}
+                  playsInline // This is important for iOS
+                  webkit-playsinline="true"
+                  muted
+                  controls={false}
+                  sx={{
+                    position: 'absolute',
+                    top: 0,
+                    maxWidth: 'none',
+                    left: 0,
+                    width: '100%',
+                    height: 'auto',
+                    opacity: index === activeVideoIndex ? 1 : 0,
+                    transition: 'opacity 10s ease-in-out',
+                    zIndex: index === activeVideoIndex ? 2 : 1,
+                    userSelect: 'none',
+                  }}
+                />
+              </Box>
             ))}
           </Flex>
         </Flex>

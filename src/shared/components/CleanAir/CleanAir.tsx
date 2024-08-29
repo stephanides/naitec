@@ -58,7 +58,12 @@ export const CleanAir = ({
               fontSize={rem(22)}
               color={light ? 'text.secondary' : 'text.light'}
               fontWeight={500}
-              sx={{ strong: { color: light ? 'text.strong' : 'text.link' } }}
+              sx={{
+                strong: {
+                  color: light ? 'text.strong' : 'text.link',
+                  fontWeight: 500,
+                },
+              }}
               dangerouslySetInnerHTML={{
                 __html:
                   t('clean_air_description_1') +
@@ -73,7 +78,12 @@ export const CleanAir = ({
               fontSize={{ base: rem(16), md: rem(22) }}
               color={light ? 'text.secondary' : 'text.light'}
               fontWeight={500}
-              sx={{ strong: { color: light ? 'text.strong' : 'text.link' } }}
+              sx={{
+                strong: {
+                  color: light ? 'text.strong' : 'text.link',
+                  fontWeight: 500,
+                },
+              }}
               dangerouslySetInnerHTML={{
                 __html: t('clean_air_description_1'),
               }}
@@ -99,7 +109,12 @@ export const CleanAir = ({
             fontSize={{ base: rem(16), md: rem(22) }}
             color={light ? 'text.secondary' : 'text.light'}
             fontWeight={500}
-            sx={{ strong: { color: light ? 'text.strong' : 'text.link' } }}
+            sx={{
+              strong: {
+                color: light ? 'text.strong' : 'text.link',
+                fontWeight: 500,
+              },
+            }}
             dangerouslySetInnerHTML={{
               __html: t('clean_air_description_2'),
             }}

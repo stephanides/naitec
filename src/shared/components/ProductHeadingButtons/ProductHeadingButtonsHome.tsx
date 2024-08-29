@@ -7,7 +7,7 @@ import {
 } from '../../design';
 import { rem } from 'polished';
 import { useTranslation } from 'next-i18next';
-import Link from 'next/link';
+import Link from 'next-translate-routes/link';
 import { INTERNAL_ROUTES } from '../../constants';
 
 type ProductHeadingButtonProps = {

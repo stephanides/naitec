@@ -27,6 +27,7 @@ export const NeueHaasGroteskText = ({
   <Text
     fontFamily="'neue-haas-grotesk-text',sans-serif"
     className={className}
+    sx={{ strong: { fontWeight: 500 } }}
     {...rest}
   >
     {children && children}

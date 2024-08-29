@@ -12,7 +12,7 @@ import {
 import { rem } from 'polished';
 import { ReactNode } from 'react';
 import { NeueHaasGroteskDisplay, NeueHaasGroteskText } from '../Typography';
-import Link from 'next/link';
+import Link from 'next-translate-routes/link';
 import { Close } from '../../design';
 
 export type AllYouNeedItemProps = {

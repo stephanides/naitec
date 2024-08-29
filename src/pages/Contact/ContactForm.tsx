@@ -14,7 +14,7 @@ import { rem } from 'polished';
 import { FormikHelpers, useFormik } from 'formik';
 import { ArrowRight, PrimaryButton } from '@/src/shared/design';
 import { CheckMark } from '@/src/shared/design';
-import Link from 'next/link';
+import Link from 'next-translate-routes/link';
 import { useTranslation } from 'next-i18next';
 
 export type ContactFormValues = {
