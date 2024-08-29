@@ -33,7 +33,7 @@ const HomePage = () => {
           images: [
             {
               url: 'https://naitec.b-cdn.net/naitec-logo.jpg',
-              width: 1200,
+              width: 800,
               height: 630,
               alt: 'Naitec',
               type: 'image/jpeg',
