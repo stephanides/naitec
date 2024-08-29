@@ -19,15 +19,15 @@ const StellairPage = () => {
         canonical={`${BASE_URL}/stellair/${locale !== 'en' ? locale : ''}`}
         languageAlternates={[
           { hrefLang: 'en', href: `${BASE_URL}/stellair` },
-          { hrefLang: 'sk', href: `${BASE_URL}/stellair/sk/` },
-          { hrefLang: 'cs', href: `${BASE_URL}/stellair/cs/` },
-          { hrefLang: 'hu', href: `${BASE_URL}/stellair/hu/` },
-          { hrefLang: 'pl', href: `${BASE_URL}/stellair/pl/` },
-          { hrefLang: 'de', href: `${BASE_URL}/stellair/de/` },
-          { hrefLang: 'ja', href: `${BASE_URL}/stellair/ja/` },
+          { hrefLang: 'sk', href: `${BASE_URL}/sk/stellair/` },
+          { hrefLang: 'cs', href: `${BASE_URL}/cs/stellair/` },
+          { hrefLang: 'hu', href: `${BASE_URL}/hu/stellair/` },
+          { hrefLang: 'pl', href: `${BASE_URL}/pl/stellair/` },
+          { hrefLang: 'de', href: `${BASE_URL}/de/stellair/` },
+          { hrefLang: 'ja', href: `${BASE_URL}/ja/stellair/` },
         ]}
         openGraph={{
-          url: `${BASE_URL}/${locale !== 'en' ? locale : ''}`,
+          url: `${BASE_URL}/${locale !== 'en' ? locale : ''}/stellair/`,
           title: title,
           description: description,
           images: [

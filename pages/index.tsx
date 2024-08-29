@@ -32,8 +32,8 @@ const HomePage = () => {
           description: description,
           images: [
             {
-              url: 'https://naitec.b-cdn.net/naitec-logo.jpg',
-              width: 800,
+              url: 'https://naitec.b-cdn.net/naitec-og-logo.jpg',
+              width: 1200,
               height: 630,
               alt: 'Naitec',
               type: 'image/jpeg',

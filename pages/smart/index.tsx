@@ -1,13 +1,51 @@
 import React from 'react';
+import { useRouter } from 'next/router';
 import { Layout } from '@/src/shared/components/Layout';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import { Smart } from '@/src/pages';
+import { getSeoDescription, getSeoTitle } from '@/src/shared/helpers';
+import { NextSeo } from 'next-seo';
+import { BASE_URL } from '@/src/shared/constants';
 
 const SmartPage = () => {
+  const { locale } = useRouter();
+  const title = getSeoTitle('smart', locale || 'en');
+  const description = getSeoDescription('smart', locale || 'en');
   return (
-    <Layout withOrnament>
-      <Smart />
-    </Layout>
+    <>
+      <NextSeo
+        title={title}
+        description={description}
+        canonical={`${BASE_URL}/${locale !== 'en' ? locale : ''}/smart/`}
+        languageAlternates={[
+          { hrefLang: 'en', href: `${BASE_URL}/smart` },
+          { hrefLang: 'sk', href: `${BASE_URL}/sk/smart/` },
+          { hrefLang: 'cs', href: `${BASE_URL}/cs/smart/` },
+          { hrefLang: 'hu', href: `${BASE_URL}/hu/smart/` },
+          { hrefLang: 'pl', href: `${BASE_URL}/pl/smart/` },
+          { hrefLang: 'de', href: `${BASE_URL}/de/smart/` },
+          { hrefLang: 'ja', href: `${BASE_URL}/ja/smart/` },
+        ]}
+        openGraph={{
+          url: `${BASE_URL}/${locale !== 'en' ? locale : ''}/smart/`,
+          title: title,
+          description: description,
+          images: [
+            {
+              url: 'https://naitec.b-cdn.net/smart-support.png',
+              width: 1200,
+              height: 630,
+              alt: 'Naitec',
+              type: 'image/png',
+            },
+          ],
+          siteName: 'Naitec',
+        }}
+      />
+      <Layout withOrnament>
+        <Smart />
+      </Layout>
+    </>
   );
 };
 
