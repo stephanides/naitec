@@ -22,6 +22,7 @@ export const FreshAirSwiperItem = ({
         width="0"
         height="0"
         sizes="100vw"
+        unoptimized
         style={{
           width: '100%',
           height: 'auto',
@@ -35,19 +36,19 @@ export const FreshAirSwiperItem = ({
       <Flex
         mt={rem(50)}
         justifyContent="space-between"
-        columnGap={rem(140)}
+        columnGap={rem(40)}
         opacity={isActive ? 1 : 0}
         transition="opacity 0.5s ease-in-out"
-        flexDir={{ base: 'column', lg: 'row' }}
+        flexDir={{ base: 'column', '2xl': 'row' }}
       >
         <NeueHaasGroteskDisplay
           fontSize={{ base: rem(17), md: rem(32) }}
           fontWeight={600}
           lineHeight="112%"
           color="text.link"
-          width={{ base: '100%', lg: rem(300) }}
+          width={{ base: '100%', '2xl': rem(300) }}
           minW={rem(300)}
-          mb={{ base: rem(20), lg: 0 }}
+          mb={{ base: rem(20), '2xl': 0 }}
         >
           {title}
         </NeueHaasGroteskDisplay>

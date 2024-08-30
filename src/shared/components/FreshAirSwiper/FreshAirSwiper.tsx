@@ -36,9 +36,40 @@ export const FreshAirSwiper = ({
   return (
     <Box
       width="100%"
+      position="relative"
       sx={{
-        '.swiper': { overflow: 'visible' },
-        '.swiper-slide': { height: 'auto' },
+        '.swiper': {
+          overflow: 'visible',
+          img: {
+            transition: 'all .3s ease-out',
+          },
+        },
+        '.swiper-slide-active': {
+          img: {
+            transform: 'scale(1.05)',
+          },
+        },
+        '@media (min-width: 768px)': {
+          '.swiper-slide-active': {
+            img: {
+              transform: 'scale(1.05)', // Slightly smaller scale for larger screens
+            },
+          },
+        },
+        '@media (min-width: 1920px)': {
+          '.swiper-slide-active': {
+            img: {
+              transform: 'scale(1.03)', // Slightly smaller scale for larger screens
+            },
+          },
+        },
+        '@media (min-width: 3200px)': {
+          '.swiper-slide-active': {
+            img: {
+              transform: 'scale(1.03)', // Even smaller scale for very large screens
+            },
+          },
+        },
       }}
     >
       <Flex
@@ -46,7 +77,7 @@ export const FreshAirSwiper = ({
         justifyContent="center"
         alignItems="center"
         flexDir="column"
-        mb={rem(50)}
+        mb={rem(80)}
       >
         <Label text={label} color="text.stellair" borderColor="text.stellair" />
         <Flex
@@ -80,29 +111,26 @@ export const FreshAirSwiper = ({
         </Flex>
       </Flex>
       <Swiper
-        className="similar-swiper"
-        spaceBetween={60}
-        slidesPerView={1.5}
-        onSwiper={(swiperInstance) => {
-          setTotalItems(swiperInstance.slides.length);
-        }}
-        onSlideChange={(swiperInstance) => {
-          setActiveIndex(swiperInstance.snapIndex);
-        }}
+        spaceBetween={40}
+        slidesPerView={1.4}
+        modules={[Navigation]}
+        loop
+        centeredSlides
+        onSlideChange={(swiper) => setActiveIndex(swiper.realIndex)}
+        onSwiper={(swiper) => console.log(swiper)}
+        slidesOffsetAfter={0}
+        freeMode={true}
         navigation={{
           prevEl: `.swiper-button-prev-fresh-air`,
           nextEl: `.swiper-button-next-fresh-air`,
         }}
-        modules={[Navigation]}
         breakpoints={{
-          992: {
-            slidesPerView: 1.2,
-          },
-          1200: {
-            slidesPerView: 1.5,
+          768: {
+            spaceBetween: 60,
           },
           1440: {
-            slidesPerView: 1.7,
+            slidesPerView: 1.6,
+            spaceBetween: 80,
           },
         }}
       >
@@ -117,12 +145,20 @@ export const FreshAirSwiper = ({
           </SwiperSlide>
         ))}
       </Swiper>
-      <Flex justify="flex-end" my={{ base: rem(25), md: rem(65) }} px={rem(25)}>
+      {/* <Flex
+        justify="flex-end"
+        my={{ base: rem(25), md: rem(65) }}
+        px={rem(25)}
+        position="absolute"
+        bottom={rem(20)}
+        right={0}
+        zIndex={4}
+      >
         <SwiperNavigation
           prevClassName="swiper-button-prev-fresh-air"
           nextClassName="swiper-button-next-fresh-air"
         />
-      </Flex>
+      </Flex> */}
     </Box>
   );
 };

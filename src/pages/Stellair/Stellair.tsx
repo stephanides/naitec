@@ -206,7 +206,7 @@ export const Stellair = () => {
           buttonColor="background.stellair"
         />
       </Box>
-      {/* <Box pb={{ base: rem(60), lg: rem(160) }}>
+      <Box pb={{ base: rem(60), lg: rem(160) }}>
         <Container>
           <FreshAirSwiper
             color={LINEAR_GRADIENTS.stellair}
@@ -228,10 +228,25 @@ export const Stellair = () => {
                 title: t('fresh_air_item_3_title'),
                 description: t('fresh_air_item_3_description'),
               },
+              {
+                image: '/images/stellair/fresh_air_1.jpg',
+                title: t('fresh_air_item_1_title'),
+                description: t('fresh_air_item_1_description'),
+              },
+              {
+                image: '/images/stellair/fresh_air_2.jpg',
+                title: t('fresh_air_item_2_title'),
+                description: t('fresh_air_item_2_description'),
+              },
+              {
+                image: '/images/stellair/fresh_air_3.jpg',
+                title: t('fresh_air_item_3_title'),
+                description: t('fresh_air_item_3_description'),
+              },
             ]}
           />
         </Container>
-      </Box> */}
+      </Box>
       <Box
         background="background.primary"
         pt={{ base: rem(50), md: rem(80), xl: rem(152) }}
