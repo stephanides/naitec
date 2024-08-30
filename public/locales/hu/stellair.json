@@ -25,5 +25,13 @@
   "all_you_need_item_4_title": "Lisa Hangvezérlő",
   "all_you_need_item_4_description": "Vásárolja meg a Lisa hangvezérlőt a légkondicionáló egyszerű és kényelmes vezérléséhez hangutasításokkal.",
   "all_you_need_item_5_title": "Teljesítménykorlátok",
-  "all_you_need_item_5_description": "Az alkalmazásban beállíthatja a kívánt teljesítménykorlátot a légkondicionálóhoz, lehetővé téve akár 70% energia megtakarítást."
+  "all_you_need_item_5_description": "Az alkalmazásban beállíthatja a kívánt teljesítménykorlátot a légkondicionálóhoz, lehetővé téve akár 70% energia megtakarítást.",
+  "fresh_air_title": "Friss <strong>levegő</strong> nyitott ablakok nélkül.",
+  "fresh_air_label": "LEVEGŐBEVEZETÉS",
+  "fresh_air_item_1_title": "Vessen véget az allergiás küzdelemnek.",
+  "fresh_air_item_1_description": "Ez a rendszer <strong>HEPA szűrővel</strong> van felszerelve, ami különösen fontos az allergiások számára. Megfogja a <strong>port, polleneket, baktériumokat és allergéneket,</strong> így tisztább és egészségesebb környezetet teremt.",
+  "fresh_air_item_2_title": "Egészségesebb környezet.",
+  "fresh_air_item_2_description": "A külső levegő bevezetése <strong>javítja az alvást és növeli a teljesítményt,</strong> mivel csökkenti a <strong>benti CO2 szintet.</strong> Az allergiások számára megkönnyebbülést nyújt azáltal, hogy csökkenti a <strong>benti allergéneket,</strong> például a port és a polleneket.",
+  "fresh_air_item_3_title": "Szabaduljon meg a fáradtság érzésétől.",
+  "fresh_air_item_3_description": "Sok háztartásban gyakran előfordulnak <strong>magas CO2 koncentrációk,</strong> amelyek fáradtságot és fejfájást okozhatnak. A külső levegő bevezetése segít ezeknek a problémáknak a megszüntetésében, <strong>védi az egészségét</strong> és javítja az alvás minőségét."
 }

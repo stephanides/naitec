@@ -25,5 +25,13 @@
   "all_you_need_item_4_title": "Sterownik głosowy Lisa",
   "all_you_need_item_4_description": "Zakup sterownika głosowego Lisa, aby łatwo i wygodnie sterować klimatyzatorem za pomocą poleceń głosowych.",
   "all_you_need_item_5_title": "Ograniczenia wydajności",
-  "all_you_need_item_5_description": "W aplikacji możesz ustawić pożądany limit wydajności klimatyzatora, co pozwala zaoszczędzić do 70% energii."
+  "all_you_need_item_5_description": "W aplikacji możesz ustawić pożądany limit wydajności klimatyzatora, co pozwala zaoszczędzić do 70% energii.",
+  "fresh_air_title": "Świeże <strong>powietrze</strong> bez otwierania okien.",
+  "fresh_air_label": "DOPŁYW POWIETRZA",
+  "fresh_air_item_1_title": "Zatrzymaj walkę z alergią.",
+  "fresh_air_item_1_description": "Ten system jest <strong>wyposażony w filtr HEPA,</strong> co jest szczególnie istotne dla alergików. Filtruje <strong>kurz, pyłki, bakterie i alergeny,</strong> tworząc czystsze i zdrowsze środowisko.",
+  "fresh_air_item_2_title": "Zdrowsze środowisko.",
+  "fresh_air_item_2_description": "Dopływ powietrza z zewnątrz <strong>poprawia sen i zwiększa wydajność,</strong> zmniejszając <strong>poziom CO2</strong> wewnątrz pomieszczeń. Dla alergików przynosi ulgę, redukując <strong>wewnętrzne alergeny</strong> takie jak kurz i pyłki.",
+  "fresh_air_item_3_title": "Zatrzymaj uczucie zmęczenia.",
+  "fresh_air_item_3_description": "W wielu domach często występują <strong>wysokie stężenia CO2,</strong> co może powodować zmęczenie i ból głowy. Dopływ powietrza z zewnątrz pomaga eliminować te problemy, <strong>chroni twoje zdrowie</strong> i poprawia jakość snu."
 }

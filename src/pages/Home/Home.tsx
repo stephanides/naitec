@@ -47,7 +47,8 @@ export const Home = () => {
                   xs: rem(72),
                   md: rem(100),
                   lg: rem(140),
-                  xl: rem(192),
+                  xl: rem(160),
+                  '3xl': rem(192),
                 }}
                 fontWeight={600}
                 textTransform="uppercase"
@@ -67,24 +68,24 @@ export const Home = () => {
                     xs: rem(20),
                     md: rem(32),
                     lg: rem(60),
-                    xl: rem(80),
-                    '2xl': rem(60),
+                    xl: rem(58),
+                    '3xl': rem(60),
                   }}
                   maxW={{
                     base: rem(546),
                     xs: rem(780),
                     md: rem(1040),
                     lg: rem(1300),
-                    xl: rem(1820),
-                    '2xl': rem(2080),
+                    xl: rem(1600),
+                    '3xl': rem(2080),
                   }}
                   width={{
                     base: rem(546),
                     xs: rem(780),
                     md: rem(1040),
                     lg: rem(1300),
-                    xl: rem(1820),
-                    '2xl': rem(2080),
+                    xl: rem(1600),
+                    '3xl': rem(2080),
                   }}
                   justify="center"
                 >
@@ -116,7 +117,7 @@ export const Home = () => {
           <Box
             position="absolute"
             zIndex={1}
-            bottom={rem(-20)}
+            bottom="-20vw"
             left={0}
             right={0}
             display={{ base: 'none', md: 'block' }}

@@ -25,5 +25,13 @@
   "all_you_need_item_4_title": "音声コントローラーリサ",
   "all_you_need_item_4_description": "音声コマンドを使ってエアコンを簡単に便利に操作するために、リサ音声コントローラーを購入してください。",
   "all_you_need_item_5_title": "パフォーマンス制限",
-  "all_you_need_item_5_description": "アプリでエアコンの希望するパフォーマンス制限を設定でき、最大で70%のエネルギーを節約できます。"
+  "all_you_need_item_5_description": "アプリでエアコンの希望するパフォーマンス制限を設定でき、最大で70%のエネルギーを節約できます。",
+  "fresh_air_title": "窓を開けずに新鮮な空気を取り込む。",
+  "fresh_air_label": "空気吸入",
+  "fresh_air_item_1_title": "アレルギーとの戦いを終わらせる。",
+  "fresh_air_item_1_description": "このシステムは<strong>HEPAフィルター</strong>を搭載しており、特にアレルギー患者にとって重要です。<strong>ほこり、花粉、細菌、アレルゲン</strong>を捕らえ、より清潔で健康的な環境を作ります。",
+  "fresh_air_item_2_title": "健康的な環境。",
+  "fresh_air_item_2_description": "外からの空気吸入は、室内の<strong>CO2濃度を低下</strong>させることで<strong>睡眠の質を向上させ、パフォーマンスを向上</strong>させます。アレルギー患者にとっては、<strong>ほこりや花粉</strong>などの室内アレルゲンが減少するため、安心です。",
+  "fresh_air_item_3_title": "疲労感を止める。",
+  "fresh_air_item_3_description": "多くの家庭では<strong>高濃度のCO2</strong>がしばしば発生し、疲労や頭痛を引き起こすことがあります。外からの空気吸入は、これらの問題を解消し、<strong>健康を守り</strong>、睡眠の質を向上させます。"
 }

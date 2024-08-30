@@ -18,3 +18,4 @@ export * from './DiffuseCooling';
 export * from './ProductHeadingButtons';
 export * from './Glow';
 export * from './NaitecApplicationMinimal';
+export * from './FreshAirSwiper';
