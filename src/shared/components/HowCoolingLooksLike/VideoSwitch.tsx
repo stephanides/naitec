@@ -18,45 +18,94 @@ export const VideoSwitcher = ({
   videos: VideoData[];
   color: string;
 }) => {
-  const [activeVideoIndex, setActiveVideoIndex] = useState(0);
+  const [activeVideoIndex, setActiveVideoIndex] = useState<number | null>(null);
   const videoRefs = useRef<(HTMLVideoElement | null)[]>([]);
+  const containerRef = useRef<HTMLDivElement | null>(null);
   const { t } = useTranslation('common');
 
   useEffect(() => {
-    // Play the active video and reset the others
-    videoRefs.current.forEach((video, index) => {
-      if (video) {
-        if (index === activeVideoIndex) {
-          video.currentTime = 0; // Reset time when switching videos
-          setInterval(() => {
-            video.play();
-          }, 500);
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          // Start playing the first video when the component is in view
+          if (activeVideoIndex === null) {
+            setActiveVideoIndex(0);
+          }
         } else {
-          video.pause();
-          video.currentTime = 0; // Reset time when paused
+          // Pause all videos when the component is out of view
+          setActiveVideoIndex(null);
         }
+      },
+      {
+        threshold: 0.5, // Adjust based on how much of the component should be visible before triggering
       }
-    });
+    );
 
-    // Animate the background color based on video duration
-    const duration = videos[activeVideoIndex].duration * 1000; // Convert seconds to milliseconds
-    const timeoutId = setTimeout(() => {
-      // Automatically switch to the next video after the current one finishes
-      setActiveVideoIndex(
-        (prevIndex) => (prevIndex < videos.length - 1 ? prevIndex + 1 : 0) // Loop back to the first video
-      );
-    }, duration);
+    if (containerRef.current) {
+      observer.observe(containerRef.current);
+    }
 
-    // Clear the timeout when the component is unmounted or activeVideoIndex changes
-    return () => clearTimeout(timeoutId);
+    return () => {
+      if (containerRef.current) {
+        observer.unobserve(containerRef.current);
+      }
+    };
+  }, [activeVideoIndex]);
+
+  useEffect(() => {
+    let lastActiveIndex = activeVideoIndex;
+
+    if (activeVideoIndex !== null) {
+      // Play the active video and reset the others
+      videoRefs.current.forEach((video, index) => {
+        if (video) {
+          if (index === activeVideoIndex) {
+            setTimeout(() => {
+              video.currentTime = 0; // Reset time when switching videos
+              video.play();
+            }, 1000); // 1-second delay for fade-in
+          } else {
+            video.pause();
+            video.currentTime = 0; // Reset time when paused
+          }
+        }
+      });
+
+      // Set up automatic transition to the next video after the current one finishes
+      const duration = videos[activeVideoIndex].duration * 1000; // Convert seconds to milliseconds
+
+      const timeoutId = setTimeout(() => {
+        // Step 1: Fade out the current video by setting activeVideoIndex to null
+        setActiveVideoIndex(null);
+
+        // Step 2: After 1 second delay, fade in the next video
+        setTimeout(() => {
+          setActiveVideoIndex(
+            lastActiveIndex !== null ? (lastActiveIndex + 1) % videos.length : 0
+          );
+        }, 500); // 1-second delay for fade-in
+      }, duration);
+
+      return () => clearTimeout(timeoutId);
+    } else {
+      videoRefs.current.forEach((video) => {
+        if (video) {
+          video.pause();
+          video.currentTime = 0;
+        }
+      });
+    }
   }, [activeVideoIndex, videos]);
 
   const handleVideoChange = (index: number) => {
-    setActiveVideoIndex(index);
+    setActiveVideoIndex(null);
+    setTimeout(() => {
+      setActiveVideoIndex(index);
+    }, 500); // 1-second delay for fade-in
   };
 
   return (
-    <VStack spacing={4} align="center" position="relative">
+    <VStack ref={containerRef} spacing={4} align="center" position="relative">
       {/* Video Container */}
       <Box overflow="hidden" width="100%">
         <Flex width="100%" justifyContent="center">
@@ -86,10 +135,9 @@ export const VideoSwitcher = ({
             position="relative"
           >
             {videos.map((video, index) => (
-              <Box>
+              <Box key={index}>
                 <Box
                   as="video"
-                  key={index}
                   ref={(el: HTMLVideoElement) => {
                     videoRefs.current[index] = el;
                   }}
@@ -106,7 +154,7 @@ export const VideoSwitcher = ({
                     width: '100%',
                     height: 'auto',
                     opacity: index === activeVideoIndex ? 1 : 0,
-                    transition: 'opacity 10s ease-in-out',
+                    transition: 'opacity 0.5s ease-in-out',
                     zIndex: index === activeVideoIndex ? 2 : 1,
                     userSelect: 'none',
                   }}
