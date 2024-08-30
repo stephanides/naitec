@@ -6,6 +6,10 @@ module.exports = withTranslateRoutes({
   env: {
     NEXT_PUBLIC_MAP_API_KEY: process.env.MAP_API_KEY,
     NEXT_PUBLIC_API_TOKEN: process.env.API_TOKEN,
+    NEXT_PUBLIC_EMAIL_HOST: process.env.EMAIL_HOST,
+    NEXT_PUBLIC_EMAIL_LOGIN: process.env.EMAIL_LOGIN,
+    NEXT_PUBLIC_EMAIL_PASS: process.env.EMAIL_PASS,
+    NEXT_PUBLIC_CONTACT_EMAIL_RECIPIENT: process.env.CONTACT_EMAIL_RECIPIENT,
   },
   // async rewrites() {
   //   return [

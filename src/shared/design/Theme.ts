@@ -40,6 +40,7 @@ export const theme = extendTheme({
       sensitive_pro_light: '#D54C4C',
       sensitive_pro_hover: '#521919',
       onyx_hover: '#2C2C2C',
+      green: '#59B95D',
     },
     text: {
       primary: '#333333',

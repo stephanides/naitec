@@ -83,7 +83,7 @@ export const ContactForm = () => {
           status: 'success',
           duration: 4000,
           isClosable: true,
-          position: 'bottom-right',
+          position: 'top-right',
           variant: 'customSuccess',
         });
         // formik.resetForm();
