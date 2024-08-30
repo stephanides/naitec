@@ -16,9 +16,9 @@ const FireplaceDifusserPage = () => {
       <NextSeo
         title={title}
         description={description}
-        canonical={`${BASE_URL}/fireplace-diffuser/${
+        canonical={`${BASE_URL}/${
           locale !== 'en' ? locale : ''
-        }`}
+        }/fireplace-diffuser/`}
         languageAlternates={[
           { hrefLang: 'en', href: `${BASE_URL}/fireplace-diffuser` },
           { hrefLang: 'sk', href: `${BASE_URL}/sk/krbovy-difuzor/` },
@@ -29,7 +29,9 @@ const FireplaceDifusserPage = () => {
           { hrefLang: 'ja', href: `${BASE_URL}/ja/fireplace-diffuser/` },
         ]}
         openGraph={{
-          url: `${BASE_URL}/${locale !== 'en' ? locale : ''}fireplace-diffuser/`,
+          url: `${BASE_URL}/${
+            locale !== 'en' ? locale : ''
+          }fireplace-diffuser/`,
           title: title,
           description: description,
           images: [

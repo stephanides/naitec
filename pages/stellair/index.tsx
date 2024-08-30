@@ -16,7 +16,7 @@ const StellairPage = () => {
       <NextSeo
         title={title}
         description={description}
-        canonical={`${BASE_URL}/stellair/${locale !== 'en' ? locale : ''}`}
+        canonical={`${BASE_URL}/${locale !== 'en' ? locale : ''}/stellair/`}
         languageAlternates={[
           { hrefLang: 'en', href: `${BASE_URL}/stellair` },
           { hrefLang: 'sk', href: `${BASE_URL}/sk/stellair/` },
