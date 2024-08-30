@@ -47,7 +47,7 @@ export const Home = () => {
                   xs: rem(72),
                   md: rem(100),
                   lg: rem(140),
-                  xl: rem(160),
+                  xl: rem(150),
                   '3xl': rem(192),
                 }}
                 fontWeight={600}
@@ -68,7 +68,7 @@ export const Home = () => {
                     xs: rem(20),
                     md: rem(32),
                     lg: rem(60),
-                    xl: rem(58),
+                    xl: rem(54),
                     '3xl': rem(60),
                   }}
                   maxW={{
@@ -76,7 +76,7 @@ export const Home = () => {
                     xs: rem(780),
                     md: rem(1040),
                     lg: rem(1300),
-                    xl: rem(1600),
+                    xl: rem(1500),
                     '3xl': rem(2080),
                   }}
                   width={{
@@ -84,7 +84,7 @@ export const Home = () => {
                     xs: rem(780),
                     md: rem(1040),
                     lg: rem(1300),
-                    xl: rem(1600),
+                    xl: rem(1500),
                     '3xl': rem(2080),
                   }}
                   justify="center"
@@ -113,11 +113,10 @@ export const Home = () => {
               </Box>
             </Box>
           </Box>
-
           <Box
             position="absolute"
             zIndex={1}
-            bottom="-20vw"
+            bottom={rem(-20)}
             left={0}
             right={0}
             display={{ base: 'none', md: 'block' }}
@@ -179,7 +178,8 @@ export const Home = () => {
                 xs: rem(60),
                 md: rem(90),
                 lg: rem(110),
-                xl: rem(134),
+                xl: rem(110),
+                '3xl': rem(134),
               }}
               fontWeight={600}
               textTransform="uppercase"
@@ -199,24 +199,24 @@ export const Home = () => {
                   xs: rem(20),
                   md: rem(32),
                   lg: rem(32),
-                  xl: rem(20),
-                  '2xl': rem(10),
+                  xl: rem(24),
+                  '3xl': rem(10),
                 }}
                 maxW={{
                   base: rem(546),
                   xs: rem(780),
                   md: rem(1040),
                   lg: rem(1300),
-                  xl: rem(1820),
-                  '2xl': rem(2080),
+                  xl: rem(1500),
+                  '3xl': rem(2080),
                 }}
                 width={{
                   base: rem(546),
                   xs: rem(780),
                   md: rem(1040),
                   lg: rem(1300),
-                  xl: rem(1820),
-                  '2xl': rem(2080),
+                  xl: rem(1500),
+                  '3xl': rem(2080),
                 }}
                 justify="center"
               >
@@ -292,7 +292,8 @@ export const Home = () => {
                 xs: rem(68),
                 md: rem(94),
                 lg: rem(134),
-                xl: rem(180),
+                xl: rem(140),
+                '3xl': rem(180),
               }}
               fontWeight={600}
               textTransform="uppercase"
@@ -312,24 +313,24 @@ export const Home = () => {
                   xs: rem(20),
                   md: rem(32),
                   lg: rem(60),
-                  xl: rem(80),
-                  '2xl': rem(50),
+                  xl: rem(54),
+                  '3xl': rem(50),
                 }}
                 maxW={{
                   base: rem(546),
                   xs: rem(780),
                   md: rem(1040),
                   lg: rem(1300),
-                  xl: rem(1820),
-                  '2xl': rem(2080),
+                  xl: rem(1500),
+                  '3xl': rem(2080),
                 }}
                 width={{
                   base: rem(546),
                   xs: rem(780),
                   md: rem(1040),
                   lg: rem(1300),
-                  xl: rem(1820),
-                  '2xl': rem(2080),
+                  xl: rem(1500),
+                  '3xl': rem(2080),
                 }}
                 justify="center"
               >

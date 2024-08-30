@@ -61,7 +61,8 @@ export const SensitivePro = () => {
               xs: rem(60),
               md: rem(90),
               lg: rem(110),
-              xl: rem(134),
+              xl: rem(110),
+              '3xl': rem(134),
             }}
             fontWeight={600}
             textTransform="uppercase"
@@ -76,28 +77,28 @@ export const SensitivePro = () => {
           <Flex
             position="relative"
             pt={{
-              base: rem(4),
-              xs: rem(4),
+              base: rem(12),
+              xs: rem(20),
               md: rem(32),
               lg: rem(32),
-              xl: rem(20),
-              '2xl': rem(4),
+              xl: rem(24),
+              '3xl': rem(10),
             }}
             maxW={{
               base: rem(546),
               xs: rem(780),
               md: rem(1040),
               lg: rem(1300),
-              xl: rem(1820),
-              '2xl': rem(2080),
+              xl: rem(1500),
+              '3xl': rem(2080),
             }}
             width={{
               base: rem(546),
               xs: rem(780),
               md: rem(1040),
               lg: rem(1300),
-              xl: rem(1820),
-              '2xl': rem(2080),
+              xl: rem(1500),
+              '3xl': rem(2080),
             }}
             justify="center"
             overflow="hidden"

@@ -58,7 +58,8 @@ export const Onyx = () => {
               xs: rem(72),
               md: rem(100),
               lg: rem(140),
-              xl: rem(192),
+              xl: rem(150),
+              '3xl': rem(192),
             }}
             fontWeight={600}
             textTransform="uppercase"
@@ -72,29 +73,29 @@ export const Onyx = () => {
           </NeueHaasGroteskDisplay>
           <Flex
             position="relative"
-            pt={{
-              base: rem(24),
+            mt={{
+              base: rem(28),
               xs: rem(20),
               md: rem(32),
               lg: rem(60),
-              xl: rem(80),
-              '2xl': rem(60),
+              xl: rem(54),
+              '3xl': rem(60),
             }}
             maxW={{
               base: rem(546),
               xs: rem(780),
               md: rem(1040),
               lg: rem(1300),
-              xl: rem(1820),
-              '2xl': rem(2080),
+              xl: rem(1500),
+              '3xl': rem(2080),
             }}
             width={{
               base: rem(546),
               xs: rem(780),
               md: rem(1040),
               lg: rem(1300),
-              xl: rem(1820),
-              '2xl': rem(2080),
+              xl: rem(1500),
+              '3xl': rem(2080),
             }}
             justify="center"
             overflow="hidden"

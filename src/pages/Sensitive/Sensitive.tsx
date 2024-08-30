@@ -59,7 +59,8 @@ export const Sensitive = () => {
               xs: rem(68),
               md: rem(94),
               lg: rem(134),
-              xl: rem(180),
+              xl: rem(140),
+              '3xl': rem(180),
             }}
             fontWeight={600}
             textTransform="uppercase"
@@ -78,24 +79,24 @@ export const Sensitive = () => {
               xs: rem(20),
               md: rem(32),
               lg: rem(60),
-              xl: rem(80),
-              '2xl': rem(50),
+              xl: rem(54),
+              '3xl': rem(50),
             }}
             maxW={{
               base: rem(546),
               xs: rem(780),
               md: rem(1040),
               lg: rem(1300),
-              xl: rem(1820),
-              '2xl': rem(2080),
+              xl: rem(1500),
+              '3xl': rem(2080),
             }}
             width={{
               base: rem(546),
               xs: rem(780),
               md: rem(1040),
               lg: rem(1300),
-              xl: rem(1820),
-              '2xl': rem(2080),
+              xl: rem(1500),
+              '3xl': rem(2080),
             }}
             justify="center"
           >

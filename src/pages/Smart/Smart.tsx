@@ -15,7 +15,6 @@ import {
 import { Box, Flex } from '@chakra-ui/react';
 import { rem } from 'polished';
 import { useTranslation } from 'next-i18next';
-import Image from 'next/image';
 import {
   Bolt,
   Heating,
@@ -31,6 +30,7 @@ import { TechnicalParameters } from '@/src/shared/components/TechnicalParameters
 import { WhyInfoSwiper } from '@/src/shared/components/WhyInfoSwiper';
 import { INTERNAL_ROUTES } from '@/src/shared/constants';
 import { Element } from 'react-scroll';
+import Image from 'next/image';
 
 export const Smart = () => {
   const { t } = useTranslation(['smart', 'common']);
@@ -59,7 +59,8 @@ export const Smart = () => {
               xs: rem(72),
               md: rem(100),
               lg: rem(140),
-              xl: rem(192),
+              xl: rem(150),
+              '3xl': rem(192),
             }}
             fontWeight={600}
             textTransform="uppercase"
@@ -73,37 +74,42 @@ export const Smart = () => {
           </NeueHaasGroteskDisplay>
           <Flex
             position="relative"
-            pt={{
-              base: rem(24),
+            mt={{
+              base: rem(28),
               xs: rem(20),
               md: rem(32),
               lg: rem(60),
-              xl: rem(80),
-              '2xl': rem(60),
+              xl: rem(60),
+              '3xl': rem(60),
             }}
             maxW={{
               base: rem(546),
               xs: rem(780),
               md: rem(1040),
               lg: rem(1300),
-              xl: rem(1820),
-              '2xl': rem(2080),
+              xl: rem(1500),
+              '3xl': rem(2080),
             }}
             width={{
               base: rem(546),
               xs: rem(780),
               md: rem(1040),
               lg: rem(1300),
-              xl: rem(1820),
-              '2xl': rem(2080),
+              xl: rem(1500),
+              '3xl': rem(2080),
             }}
             justify="center"
             overflow="hidden"
           >
-            <img
+            <Image
               src="/images/smart/smart-main.png"
+              width="0"
+              height="0"
+              sizes="100vw"
               style={{ width: '100%', height: 'auto', maxWidth: 'none' }}
               alt="Smart"
+              placeholder="blur"
+              blurDataURL="/images/sensitive-pro/sensitive-pro-main-placeholder.png"
             />
           </Flex>
         </Flex>
