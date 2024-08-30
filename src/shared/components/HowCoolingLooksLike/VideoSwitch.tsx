@@ -18,7 +18,8 @@ export const VideoSwitcher = ({
   videos: VideoData[];
   color: string;
 }) => {
-  const [activeVideoIndex, setActiveVideoIndex] = useState<number | null>(null);
+  const [activeVideoIndex, setActiveVideoIndex] = useState<number | null>(0);
+  const [fadeOutIndex, setFadeOutIndex] = useState<number | null>(null);
   const videoRefs = useRef<(HTMLVideoElement | null)[]>([]);
   const containerRef = useRef<HTMLDivElement | null>(null);
   const { t } = useTranslation('common');
@@ -53,17 +54,13 @@ export const VideoSwitcher = ({
   }, [activeVideoIndex]);
 
   useEffect(() => {
-    let lastActiveIndex = activeVideoIndex;
-
     if (activeVideoIndex !== null) {
       // Play the active video and reset the others
       videoRefs.current.forEach((video, index) => {
         if (video) {
           if (index === activeVideoIndex) {
-            setTimeout(() => {
-              video.currentTime = 0; // Reset time when switching videos
-              video.play();
-            }, 1000); // 1-second delay for fade-in
+            video.currentTime = 0; // Reset time when switching videos
+            video.play();
           } else {
             video.pause();
             video.currentTime = 0; // Reset time when paused
@@ -74,17 +71,19 @@ export const VideoSwitcher = ({
       // Set up automatic transition to the next video after the current one finishes
       const duration = videos[activeVideoIndex].duration * 1000; // Convert seconds to milliseconds
 
+      // Transition logic
       const timeoutId = setTimeout(() => {
-        // Step 1: Fade out the current video by setting activeVideoIndex to null
-        setActiveVideoIndex(null);
+        // Start fading out the current video
+        setFadeOutIndex(activeVideoIndex);
 
-        // Step 2: After 1 second delay, fade in the next video
+        // After fade-out completes, move to the next video
         setTimeout(() => {
-          setActiveVideoIndex(
-            lastActiveIndex !== null ? (lastActiveIndex + 1) % videos.length : 0
+          setFadeOutIndex(null);
+          setActiveVideoIndex((prevIndex) =>
+            prevIndex !== null ? (prevIndex + 1) % videos.length : 0
           );
-        }, 500); // 1-second delay for fade-in
-      }, duration);
+        }, 500); // Delay to match fade-out duration
+      }, duration - 500); // Start fade-out before the end of the video
 
       return () => clearTimeout(timeoutId);
     } else {
@@ -98,10 +97,13 @@ export const VideoSwitcher = ({
   }, [activeVideoIndex, videos]);
 
   const handleVideoChange = (index: number) => {
-    setActiveVideoIndex(null);
-    setTimeout(() => {
-      setActiveVideoIndex(index);
-    }, 500); // 1-second delay for fade-in
+    if (index !== activeVideoIndex) {
+      setFadeOutIndex(activeVideoIndex);
+      setTimeout(() => {
+        setFadeOutIndex(null);
+        setActiveVideoIndex(index);
+      }, 500); // Delay to match fade-out duration
+    }
   };
 
   return (
@@ -142,7 +144,7 @@ export const VideoSwitcher = ({
                     videoRefs.current[index] = el;
                   }}
                   src={video.url}
-                  playsInline // This is important for iOS
+                  playsInline
                   webkit-playsinline="true"
                   muted
                   controls={false}
@@ -153,7 +155,12 @@ export const VideoSwitcher = ({
                     left: 0,
                     width: '100%',
                     height: 'auto',
-                    opacity: index === activeVideoIndex ? 1 : 0,
+                    opacity:
+                      index === activeVideoIndex && fadeOutIndex === null
+                        ? 1
+                        : index === fadeOutIndex
+                        ? 0
+                        : 0,
                     transition: 'opacity 0.5s ease-in-out',
                     zIndex: index === activeVideoIndex ? 2 : 1,
                     userSelect: 'none',

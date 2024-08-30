@@ -195,6 +195,11 @@ export const SensitivePro = () => {
       <HowCoolingLooksLike
         color={LINEAR_GRADIENTS.sensitive_pro}
         buttonColor="background.sensitive_pro_light"
+        videos={[
+          { url: '/videos/sensitive-pro/1.mp4', duration: 12 },
+          { url: '/videos/sensitive-pro/2.mp4', duration: 11 },
+          { url: '/videos/sensitive-pro/3.mp4', duration: 12 },
+        ]}
       />
 
       <Box

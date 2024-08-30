@@ -8,11 +8,13 @@ import { VideoSwitcher } from './VideoSwitch';
 type HowCoolingLooksLikeProps = {
   color: string;
   buttonColor: string;
+  videos: { url: string; duration: number }[];
 };
 
 export const HowCoolingLooksLike = ({
   color,
   buttonColor,
+  videos,
 }: HowCoolingLooksLikeProps) => {
   const { t } = useTranslation('common');
   return (
@@ -50,14 +52,7 @@ export const HowCoolingLooksLike = ({
             }}
           />
         </Flex>
-        <VideoSwitcher
-          color={buttonColor}
-          videos={[
-            { url: '/videos/stellair/1.mp4', duration: 12 },
-            { url: '/videos/stellair/2.mp4', duration: 16 },
-            { url: '/videos/stellair/3.mp4', duration: 12 },
-          ]}
-        />
+        <VideoSwitcher color={buttonColor} videos={videos} />
       </Box>
     </Box>
   );
