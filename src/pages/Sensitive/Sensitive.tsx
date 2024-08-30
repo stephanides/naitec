@@ -54,6 +54,8 @@ export const Sensitive = () => {
         >
           <NeueHaasGroteskDisplay
             background={LINEAR_GRADIENTS.sensitive}
+            backgroundPosition="left center"
+            backgroundSize="600% 200%"
             fontSize={{
               base: rem(52),
               xs: rem(68),
@@ -69,6 +71,21 @@ export const Sensitive = () => {
             color="transparent"
             position="absolute"
             top={0}
+            transition="all .3s ease-out"
+            animation="backgroundAnimation 4s linear infinite"
+            sx={{
+              '@keyframes backgroundAnimation': {
+                '0%': {
+                  backgroundPosition: 'left center',
+                },
+                '50%': {
+                  backgroundPosition: 'right center',
+                },
+                '100%': {
+                  backgroundPosition: 'left center',
+                },
+              },
+            }}
           >
             Sensitive
           </NeueHaasGroteskDisplay>

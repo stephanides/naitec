@@ -55,6 +55,8 @@ export const Stellair = () => {
         >
           <NeueHaasGroteskDisplay
             background="linear-gradient(to right, #344F5F, #6CA5C5)"
+            backgroundPosition="left center"
+            backgroundSize="200% 200%"
             fontSize={{
               base: rem(60),
               xs: rem(72),
@@ -70,6 +72,21 @@ export const Stellair = () => {
             color="transparent"
             position="absolute"
             top={0}
+            transition="all .3s ease-out"
+            animation="backgroundAnimation 2s linear infinite"
+            sx={{
+              '@keyframes backgroundAnimation': {
+                '0%': {
+                  backgroundPosition: 'left center',
+                },
+                '50%': {
+                  backgroundPosition: 'right center',
+                },
+                '100%': {
+                  backgroundPosition: 'left center',
+                },
+              },
+            }}
           >
             Stellair
           </NeueHaasGroteskDisplay>
