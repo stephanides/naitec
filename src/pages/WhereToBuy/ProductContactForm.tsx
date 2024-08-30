@@ -86,7 +86,6 @@ export const ProductContactForm = () => {
           position: 'top-right',
           variant: 'customSuccess',
         });
-        // formik.resetForm();
       } catch (err) {
         toast({
           title: t('send_error'),
