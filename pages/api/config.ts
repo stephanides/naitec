@@ -5,7 +5,7 @@ export const apiHeaders = {
   'Content-Type': 'application/json',
 };
 
-export const apiBaseURL = 'https://admin.naitec.kravestudio.sk/api';
+export const apiBaseURL = 'https://admin.naitec.ai/api';
 
 export const transporter = nodemailer.createTransport({
   host: process.env.NEXT_PUBLIC_EMAIL_HOST,
