@@ -46,3 +46,4 @@ export * from './StoreEnvelope';
 export * from './StoreMobile';
 export * from './Website';
 export * from './Search';
+export * from './HomeShape4k';

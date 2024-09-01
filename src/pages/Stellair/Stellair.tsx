@@ -55,7 +55,8 @@ export const Stellair = () => {
         >
           <NeueHaasGroteskDisplay
             background="linear-gradient(to right, #344F5F, #6CA5C5)"
-            backgroundSize="200% auto"
+            backgroundPosition="left center"
+            backgroundSize="600% 200%"
             fontSize={{
               base: rem(60),
               xs: rem(72),
@@ -72,11 +73,17 @@ export const Stellair = () => {
             position="absolute"
             top={0}
             transition="all .3s ease-out"
-            animation="backgroundAnimation 5s ease-in-out infinite"
+            animation="backgroundAnimation 4s linear infinite"
             sx={{
               '@keyframes backgroundAnimation': {
-                'from': {
-                  backgroundPosition: '200% center'
+                '0%': {
+                  backgroundPosition: 'left center',
+                },
+                '50%': {
+                  backgroundPosition: 'right center',
+                },
+                '100%': {
+                  backgroundPosition: 'left center',
                 },
               },
             }}
@@ -230,14 +237,14 @@ export const Stellair = () => {
             label={t('fresh_air_label')}
             items={[
               {
-                image: '/images/stellair/fresh_air_1.jpg',
-                title: t('fresh_air_item_1_title'),
-                description: t('fresh_air_item_1_description'),
-              },
-              {
                 image: '/images/stellair/fresh_air_2.jpg',
                 title: t('fresh_air_item_2_title'),
                 description: t('fresh_air_item_2_description'),
+              },
+              {
+                image: '/images/stellair/fresh_air_1.jpg',
+                title: t('fresh_air_item_1_title'),
+                description: t('fresh_air_item_1_description'),
               },
               {
                 image: '/images/stellair/fresh_air_3.jpg',
@@ -245,14 +252,14 @@ export const Stellair = () => {
                 description: t('fresh_air_item_3_description'),
               },
               {
-                image: '/images/stellair/fresh_air_1.jpg',
-                title: t('fresh_air_item_1_title'),
-                description: t('fresh_air_item_1_description'),
-              },
-              {
                 image: '/images/stellair/fresh_air_2.jpg',
                 title: t('fresh_air_item_2_title'),
                 description: t('fresh_air_item_2_description'),
+              },
+              {
+                image: '/images/stellair/fresh_air_1.jpg',
+                title: t('fresh_air_item_1_title'),
+                description: t('fresh_air_item_1_description'),
               },
               {
                 image: '/images/stellair/fresh_air_3.jpg',

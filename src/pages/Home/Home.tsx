@@ -6,6 +6,7 @@ import {
 import { INTERNAL_ROUTES } from '@/src/shared/constants';
 import {
   HomeShape,
+  HomeShape4k,
   HomeShapeMobile,
   LINEAR_GRADIENTS,
 } from '@/src/shared/design';
@@ -42,6 +43,8 @@ export const Home = () => {
             >
               <NeueHaasGroteskDisplay
                 background="linear-gradient(to right, #344F5F, #6CA5C5)"
+                backgroundPosition="left center"
+                backgroundSize="600% 200%"
                 fontSize={{
                   base: rem(60),
                   xs: rem(72),
@@ -57,6 +60,21 @@ export const Home = () => {
                 color="transparent"
                 position="absolute"
                 top={0}
+                transition="all .3s ease-out"
+                animation="backgroundAnimation 4s linear infinite"
+                sx={{
+                  '@keyframes backgroundAnimation': {
+                    '0%': {
+                      backgroundPosition: 'left center',
+                    },
+                    '50%': {
+                      backgroundPosition: 'right center',
+                    },
+                    '100%': {
+                      backgroundPosition: 'left center',
+                    },
+                  },
+                }}
               >
                 Stellair
               </NeueHaasGroteskDisplay>
@@ -119,7 +137,7 @@ export const Home = () => {
             bottom={rem(-20)}
             left={0}
             right={0}
-            display={{ base: 'none', md: 'block' }}
+            display={{ base: 'none', md: 'block', '3xl': 'none' }}
           >
             <HomeShape />
           </Box>
@@ -132,6 +150,16 @@ export const Home = () => {
             display={{ base: 'block', md: 'none' }}
           >
             <HomeShapeMobile />
+          </Box>
+          <Box
+            position="absolute"
+            zIndex={1}
+            bottom={{ base: rem(-30), xs: rem(-60), md: rem(-100) }}
+            left={0}
+            right={0}
+            display={{ base: 'none', '3xl': 'block' }}
+          >
+            <HomeShape4k />
           </Box>
         </Box>
         <Box
@@ -173,6 +201,8 @@ export const Home = () => {
           >
             <NeueHaasGroteskDisplay
               background={LINEAR_GRADIENTS.sensitive_pro}
+              backgroundPosition="left center"
+              backgroundSize="600% 200%"
               fontSize={{
                 base: rem(42),
                 xs: rem(60),
@@ -188,6 +218,21 @@ export const Home = () => {
               color="transparent"
               position="absolute"
               top={rem(6)}
+              transition="all .3s ease-out"
+              animation="backgroundAnimation 4s linear infinite"
+              sx={{
+                '@keyframes backgroundAnimation': {
+                  '0%': {
+                    backgroundPosition: 'left center',
+                  },
+                  '50%': {
+                    backgroundPosition: 'right center',
+                  },
+                  '100%': {
+                    backgroundPosition: 'left center',
+                  },
+                },
+              }}
             >
               Sensitive Pro
             </NeueHaasGroteskDisplay>
@@ -250,7 +295,7 @@ export const Home = () => {
           bottom={rem(-20)}
           left={0}
           right={0}
-          display={{ base: 'none', md: 'block' }}
+          display={{ base: 'none', md: 'block', '3xl': 'none' }}
         >
           <HomeShape />
         </Box>
@@ -263,6 +308,16 @@ export const Home = () => {
           display={{ base: 'block', md: 'none' }}
         >
           <HomeShapeMobile />
+        </Box>
+        <Box
+          position="absolute"
+          zIndex={1}
+          bottom={{ base: rem(-30), xs: rem(-60), md: rem(-100) }}
+          left={0}
+          right={0}
+          display={{ base: 'none', '3xl': 'block' }}
+        >
+          <HomeShape4k />
         </Box>
       </Box>
       <Box
@@ -287,6 +342,8 @@ export const Home = () => {
           >
             <NeueHaasGroteskDisplay
               background={LINEAR_GRADIENTS.sensitive}
+              backgroundPosition="left center"
+              backgroundSize="600% 200%"
               fontSize={{
                 base: rem(52),
                 xs: rem(68),
@@ -302,6 +359,21 @@ export const Home = () => {
               color="transparent"
               position="absolute"
               top={0}
+              transition="all .3s ease-out"
+              animation="backgroundAnimation 4s linear infinite"
+              sx={{
+                '@keyframes backgroundAnimation': {
+                  '0%': {
+                    backgroundPosition: 'left center',
+                  },
+                  '50%': {
+                    backgroundPosition: 'right center',
+                  },
+                  '100%': {
+                    backgroundPosition: 'left center',
+                  },
+                },
+              }}
             >
               Sensitive
             </NeueHaasGroteskDisplay>
@@ -364,7 +436,7 @@ export const Home = () => {
           bottom={rem(-20)}
           left={0}
           right={0}
-          display={{ base: 'none', md: 'block' }}
+          display={{ base: 'none', md: 'block', '3xl': 'none' }}
         >
           <HomeShape />
         </Box>
@@ -377,6 +449,16 @@ export const Home = () => {
           display={{ base: 'block', md: 'none' }}
         >
           <HomeShapeMobile />
+        </Box>
+        <Box
+          position="absolute"
+          zIndex={1}
+          bottom={{ base: rem(-30), xs: rem(-60), md: rem(-100) }}
+          left={0}
+          right={0}
+          display={{ base: 'none', '3xl': 'block' }}
+        >
+          <HomeShape4k />
         </Box>
       </Box>
       <Flex
@@ -408,6 +490,8 @@ export const Home = () => {
             >
               <NeueHaasGroteskDisplay
                 background={LINEAR_GRADIENTS.onyx}
+                backgroundPosition="left center"
+                backgroundSize="600% 200%"
                 fontSize={{
                   base: rem(52),
                   xs: rem(68),
@@ -422,6 +506,21 @@ export const Home = () => {
                 color="transparent"
                 position="absolute"
                 top={0}
+                transition="all .3s ease-out"
+                animation="backgroundAnimation 4s linear infinite"
+                sx={{
+                  '@keyframes backgroundAnimation': {
+                    '0%': {
+                      backgroundPosition: 'left center',
+                    },
+                    '50%': {
+                      backgroundPosition: 'right center',
+                    },
+                    '100%': {
+                      backgroundPosition: 'left center',
+                    },
+                  },
+                }}
               >
                 Onyx
               </NeueHaasGroteskDisplay>
@@ -492,9 +591,19 @@ export const Home = () => {
             bottom={{ base: rem(-20), xl: rem(-60) }}
             left={0}
             right={0}
-            display={{ base: 'block', md: 'none', xl: 'block' }}
+            display={{ base: 'block', md: 'none', xl: 'block', '3xl': 'none' }}
           >
             <HomeShapeMobile />
+          </Box>
+          <Box
+            position="absolute"
+            zIndex={1}
+            bottom={0}
+            left={0}
+            right={0}
+            display={{ base: 'none', '3xl': 'block' }}
+          >
+            <HomeShape4k />
           </Box>
         </Box>
         <Box
@@ -520,6 +629,8 @@ export const Home = () => {
             >
               <NeueHaasGroteskDisplay
                 background={LINEAR_GRADIENTS.smart}
+                backgroundPosition="left center"
+                backgroundSize="600% 200%"
                 fontSize={{
                   base: rem(52),
                   xs: rem(68),
@@ -534,6 +645,21 @@ export const Home = () => {
                 color="transparent"
                 position="absolute"
                 top={0}
+                transition="all .3s ease-out"
+                animation="backgroundAnimation 4s linear infinite"
+                sx={{
+                  '@keyframes backgroundAnimation': {
+                    '0%': {
+                      backgroundPosition: 'left center',
+                    },
+                    '50%': {
+                      backgroundPosition: 'right center',
+                    },
+                    '100%': {
+                      backgroundPosition: 'left center',
+                    },
+                  },
+                }}
               >
                 Smart
               </NeueHaasGroteskDisplay>
@@ -606,9 +732,19 @@ export const Home = () => {
             bottom={{ base: rem(-20), xl: rem(-60) }}
             left={0}
             right={0}
-            display={{ base: 'block', md: 'none', xl: 'block' }}
+            display={{ base: 'block', md: 'none', xl: 'block', '3xl': 'none' }}
           >
             <HomeShapeMobile />
+          </Box>
+          <Box
+            position="absolute"
+            zIndex={1}
+            bottom={0}
+            left={0}
+            right={0}
+            display={{ base: 'none', '3xl': 'block' }}
+          >
+            <HomeShape4k />
           </Box>
         </Box>
       </Flex>
@@ -695,9 +831,19 @@ export const Home = () => {
             bottom={{ base: 0, xl: rem(-60) }}
             left={0}
             right={0}
-            display={{ base: 'block', md: 'none', xl: 'block' }}
+            display={{ base: 'block', md: 'none', xl: 'block', '3xl': 'none' }}
           >
             <HomeShapeMobile />
+          </Box>
+          <Box
+            position="absolute"
+            zIndex={1}
+            bottom={0}
+            left={0}
+            right={0}
+            display={{ base: 'none', '3xl': 'block' }}
+          >
+            <HomeShape4k />
           </Box>
         </Box>
         <Box
@@ -740,12 +886,15 @@ export const Home = () => {
                   />
                 </Box>
               </Box>
-              <Link href={INTERNAL_ROUTES.FIREPLACE_DIFFUSER}>
+              <Link
+                href={INTERNAL_ROUTES.FIREPLACE_DIFFUSER}
+                style={{ marginLeft: 'auto' }}
+              >
                 <Flex
                   position="relative"
                   maxW={{ base: rem(600), xl: rem(1600) }}
                   width="100%"
-                  justify="center"
+                  justifyContent="flex-end"
                   overflow="hidden"
                   pointerEvents="none"
                   pt={{ base: rem(20), '2xl': 0 }}
@@ -776,9 +925,19 @@ export const Home = () => {
             bottom={{ base: 0, xl: rem(-60) }}
             left={0}
             right={0}
-            display={{ base: 'block', md: 'none', xl: 'block' }}
+            display={{ base: 'block', md: 'none', xl: 'block', '3xl': 'none' }}
           >
             <HomeShapeMobile />
+          </Box>
+          <Box
+            position="absolute"
+            zIndex={1}
+            bottom={0}
+            left={0}
+            right={0}
+            display={{ base: 'none', '3xl': 'block' }}
+          >
+            <HomeShape4k />
           </Box>
         </Box>
         <Box

@@ -52,7 +52,6 @@ const KontaktPage = () => {
 };
 
 export const getStaticProps = async ({ locale }: { locale: string }) => {
-  console.log('fuuuck', locale);
   return {
     props: {
       ...(await serverSideTranslations(locale, ['contact', 'common'])),

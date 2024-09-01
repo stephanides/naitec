@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://www.naitec.ai
+
+# Sitemaps
+Sitemap: https://www.naitec.ai/sitemap.xml

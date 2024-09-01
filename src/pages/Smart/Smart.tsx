@@ -54,6 +54,8 @@ export const Smart = () => {
         >
           <NeueHaasGroteskDisplay
             background={LINEAR_GRADIENTS.smart}
+            backgroundPosition="left center"
+            backgroundSize="600% 200%"
             fontSize={{
               base: rem(60),
               xs: rem(72),
@@ -69,6 +71,21 @@ export const Smart = () => {
             color="transparent"
             position="absolute"
             top={0}
+            transition="all .3s ease-out"
+            animation="backgroundAnimation 4s linear infinite"
+            sx={{
+              '@keyframes backgroundAnimation': {
+                '0%': {
+                  backgroundPosition: 'left center',
+                },
+                '50%': {
+                  backgroundPosition: 'right center',
+                },
+                '100%': {
+                  backgroundPosition: 'left center',
+                },
+              },
+            }}
           >
             Smart
           </NeueHaasGroteskDisplay>
