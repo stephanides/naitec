@@ -82,6 +82,7 @@ export const Navigation = ({ toggleMobile, dark = false }: NavigationProps) => {
           base: scrolled ? rem(20) : rem(30),
           lg: scrolled ? rem(20) : rem(50),
         }}
+        as="nav"
         position="fixed"
         top={0}
         zIndex={99}
@@ -264,6 +265,7 @@ export const Navigation = ({ toggleMobile, dark = false }: NavigationProps) => {
         py={scrolled ? rem(10) : rem(20)}
         position="fixed"
         top={0}
+        as="nav"
         zIndex={99}
         display={{ base: 'block', md: 'none' }}
         width="100%"
