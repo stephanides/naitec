@@ -229,7 +229,7 @@ export const Stellair = () => {
           ]}
         />
       </Box>
-      <Box pb={{ base: rem(60), lg: rem(160) }}>
+      <Box pb={{ base: rem(60), lg: rem(160) }} overflow="hidden">
         <Container>
           <FreshAirSwiper
             color={LINEAR_GRADIENTS.stellair}
