@@ -205,6 +205,9 @@ export const Onyx = () => {
           color={LINEAR_GRADIENTS.onyx}
           image1="/images/onyx/effective-heating-1.png"
           image2="/images/onyx/effective-heating-2.png"
+          label={t('effective_heating_label')}
+          title={t('effective_heating_title')}
+          description={t('effective_heating_description')}
         />
         <Glow />
       </Box>
@@ -219,13 +222,13 @@ export const Onyx = () => {
               description: t('all_you_need_item_1_description'),
               interactiveIcon: <PlusExpand />,
               iconColor: '#5A5A5A',
-              iconColorHover: 'background.onyx_hover',
+              iconColorHover: 'background.smart_hover',
               expandContent: (
                 <AllYouNeedModalContent
                   title={t('all_you_need_item_1_title')}
-                  description={t('all_you_need_item_1_description')}
+                  description={t('all_you_need_item_1_long_description')}
                   icon={<Virus />}
-                  image="/images/common/virus.png"
+                  image="/images/common/self-cleaning.jpg"
                 />
               ),
             },
@@ -244,9 +247,9 @@ export const Onyx = () => {
               expandContent: (
                 <AllYouNeedModalContent
                   title={t('all_you_need_item_3_title')}
-                  description={t('all_you_need_item_3_description')}
+                  description={t('all_you_need_item_3_long_description')}
                   icon={<Virus />}
-                  image="/images/common/virus.png"
+                  image="/images/common/warranty.jpg"
                 />
               ),
             },

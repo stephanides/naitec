@@ -16,12 +16,15 @@
   "all_you_need_item_1_description": "この技術は内部の蒸発器を自動的に清掃し、空気の質を向上させ、より健康的な環境を保証します。",
   "all_you_need_item_1_long_description": "「滅菌」機能が起動すると、内部ユニットの蒸発器が<strong>まず凍結し、その後57°Cに加熱され、</strong>UVCランプとイオン化装置と組み合わせることで、内部ユニットの清掃と<strong>病原菌の排除</strong>が確実に行われます。この技術により、家庭に爽やかな感覚がもたらされ、<strong>不要な悪影響なしで健康的な雰囲気を提供します。</strong>",
   "all_you_need_item_2_title": "-25°Cまでの暖房",
-  "all_you_need_item_2_description": "効果的に-15°Cまで暖房できる能力により、寒い冬の日でも快適で心地よい環境が確保されます。",
+  "all_you_need_item_2_description": "効果的に-25°Cまで暖房できる能力により、寒い冬の日でも快適で心地よい環境が確保されます。",
   "all_you_need_item_3_title": "3年保証",
   "all_you_need_item_3_description": "品質に自信を持っているため、長期的な信頼性を保証するために3年間の保証を提供します。",
   "all_you_need_item_3_long_description": "延長保証は、エアコンを購入した供給者による<strong>年に最低1回の定期的なメンテナンス</strong>が行われている場合にのみ有効です。",
   "all_you_need_item_4_title": "リサ音声コントローラー",
   "all_you_need_item_4_description": "音声コマンドを使ってエアコンを簡単に便利に操作するために、リサ音声コントローラーを購入してください。",
   "all_you_need_item_5_title": "パフォーマンス制限",
-  "all_you_need_item_5_description": "アプリでエアコンの希望するパフォーマンス制限を設定でき、最大で70%のエネルギーを節約できます。"
+  "all_you_need_item_5_description": "アプリでエアコンの希望するパフォーマンス制限を設定でき、最大で70%のエネルギーを節約できます。",
+  "effective_heating_label": "効果的な暖房",
+  "effective_heating_title": "<strong>最も寒い</strong>日でも。",
+  "effective_heating_description": "最大-25度まで加熱する能力があり、非常に寒い日でも信頼できる温熱快適性を保証します。エアコンは< strong>効率的でコスト効果の高い長期的な暖房</strong>のソースとして優れた選択です。<strong>最小限のエネルギーコストで効果的な暖房。</strong>"
 }

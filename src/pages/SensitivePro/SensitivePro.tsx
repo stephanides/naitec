@@ -240,6 +240,9 @@ export const SensitivePro = () => {
               image1="/images/sensitive-pro/effective-heating-1.jpg"
               image2="/images/sensitive-pro/effective-heating-2.jpg"
               blurOnBottom={true}
+              label={t('effective_heating_label')}
+              title={t('effective_heating_title')}
+              description={t('effective_heating_description')}
             />
           </Box>
           <Box
@@ -295,7 +298,7 @@ export const SensitivePro = () => {
               expandContent: (
                 <AllYouNeedModalContent
                   title={t('all_you_need_item_3_title')}
-                  description={t('all_you_need_item_3_description')}
+                  description={t('all_you_need_item_3_long_description')}
                   icon={<Verified />}
                   image="/images/common/warranty.jpg"
                 />

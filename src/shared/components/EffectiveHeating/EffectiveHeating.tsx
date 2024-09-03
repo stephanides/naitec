@@ -11,6 +11,9 @@ type EffectiveHeatingProps = {
   image1: string;
   image2: string;
   blurOnBottom?: boolean;
+  title: string;
+  description: string;
+  label: string;
 };
 
 export const EffectiveHeating = ({
@@ -18,6 +21,9 @@ export const EffectiveHeating = ({
   image1,
   image2,
   blurOnBottom = false,
+  label,
+  title,
+  description,
 }: EffectiveHeatingProps) => {
   const { t } = useTranslation();
   return (
@@ -27,11 +33,7 @@ export const EffectiveHeating = ({
       pt={{ base: rem(40), md: rem(80), lg: rem(100) }}
     >
       <Container>
-        <Label
-          text={t('effective_heating_label')}
-          color="white"
-          borderColor="white"
-        />
+        <Label text={label} color="white" borderColor="white" />
         <NeueHaasGroteskDisplay
           fontSize={{ base: rem(30), md: rem(64) }}
           mt={rem(25)}
@@ -45,7 +47,7 @@ export const EffectiveHeating = ({
               color: 'transparent',
             },
           }}
-          dangerouslySetInnerHTML={{ __html: t('effective_heating_title') }}
+          dangerouslySetInnerHTML={{ __html: title }}
         />
         <NeueHaasGroteskText
           fontWeight={500}
@@ -56,7 +58,7 @@ export const EffectiveHeating = ({
           color="text.secondary"
           sx={{ strong: { color: 'text.inverted', fontWeight: 500 } }}
           dangerouslySetInnerHTML={{
-            __html: t('effective_heating_description'),
+            __html: description,
           }}
         />
         <Flex columnGap={rem(20)} mt={{ base: rem(40), md: rem(80) }}>

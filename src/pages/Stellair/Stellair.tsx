@@ -316,7 +316,7 @@ export const Stellair = () => {
               expandContent: (
                 <AllYouNeedModalContent
                   title={t('all_you_need_item_3_title')}
-                  description={t('all_you_need_item_3_description')}
+                  description={t('all_you_need_item_3_long_description')}
                   icon={<Verified />}
                   image="/images/common/warranty.jpg"
                 />

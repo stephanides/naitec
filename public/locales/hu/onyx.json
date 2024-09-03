@@ -16,12 +16,15 @@
   "all_you_need_item_1_description": "Ez a technológia automatikusan tisztítja a belső párologtatót, javítva a levegő minőségét és biztosítva az egészségesebb környezetet.",
   "all_you_need_item_1_long_description": "A „sterilizálás” funkció aktiválásakor a belső egység párologtatója <strong>először lefagy, majd 57°C-ra melegszik fel,</strong> ami az UVC lámpával és az ionizátorral együtt biztosítja a belső egység tisztítását és a <strong>kórokozó baktériumok</strong> eltávolítását. Ez a technológia kellemes frissességet ad az otthonának, és egészséges légkört biztosít <strong>felesleges negatív hatások nélkül.</strong>",
   "all_you_need_item_2_title": "Fűtés -25°C-ig",
-  "all_you_need_item_2_description": "A -15°C-ig terjedő hatékony fűtés biztosítja a kényelmes és kellemes környezetet még a hidegebb téli napokon is.",
-  "all_you_need_item_3_title": "5 év garancia",
-  "all_you_need_item_3_description": "A minőségre büszkék vagyunk, ezért 5 év garanciát kínálunk, amely biztosítja a hosszú távú megbízhatóságot.",
+  "all_you_need_item_2_description": "A -25°C-ig terjedő hatékony fűtés biztosítja a kényelmes és kellemes környezetet még a hidegebb téli napokon is.",
+  "all_you_need_item_3_title": "3 év garancia",
+  "all_you_need_item_3_description": "A minőségre büszkék vagyunk, ezért 3 év garanciát kínálunk, amely biztosítja a hosszú távú megbízhatóságot.",
   "all_you_need_item_3_long_description": "A meghosszabbított garancia csak akkor érvényes, ha a légkondicionáló vásárlásának helyén <strong>évente legalább egyszer</strong> rendszeres karbantartást végeznek.",
   "all_you_need_item_4_title": "Lisa hangvezérlő",
   "all_you_need_item_4_description": "Vásárolja meg a Lisa hangvezérlőt a légkondicionáló könnyű és kényelmes vezérléséhez hangutasításokkal.",
   "all_you_need_item_5_title": "Teljesítménykorlátok",
-  "all_you_need_item_5_description": "Az alkalmazásban beállíthatja a kívánt teljesítménykorlátot a légkondicionálóhoz, ami akár 70% energiát is megtakaríthat."
+  "all_you_need_item_5_description": "Az alkalmazásban beállíthatja a kívánt teljesítménykorlátot a légkondicionálóhoz, ami akár 70% energiát is megtakaríthat.",
+  "effective_heating_label": "HATÉKONY FŰTÉS",
+  "effective_heating_title": "Még a <strong>legnagyobb</strong> hidegben is.",
+  "effective_heating_description": "A -25 Celsius fokig terjedő fűtési képesség megbízható hőkomfortot biztosít még nagyon hideg napokon is. A klímaberendezés kiváló választás <strong>hatékony és költséghatékony hosszú távú fűtéshez</strong> a hideg hónapokban. Hatékony fűtés <strong>minimalizált energiaköltséggel.</strong>"
 }

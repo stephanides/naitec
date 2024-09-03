@@ -211,6 +211,9 @@ export const Smart = () => {
           color={LINEAR_GRADIENTS.smart}
           image1="/images/smart/effective-heating-1.png"
           image2="/images/smart/effective-heating-2.png"
+          label={t('effective_heating_label')}
+          title={t('effective_heating_title')}
+          description={t('effective_heating_description')}
         />
         <Glow />
       </Box>
@@ -250,7 +253,7 @@ export const Smart = () => {
               expandContent: (
                 <AllYouNeedModalContent
                   title={t('all_you_need_item_3_title')}
-                  description={t('all_you_need_item_3_description')}
+                  description={t('all_you_need_item_3_long_description')}
                   icon={<Verified />}
                   image="/images/common/warranty.jpg"
                 />

@@ -53,7 +53,7 @@ export const FreshAirSwiperItem = ({
           {title}
         </NeueHaasGroteskDisplay>
         <NeueHaasGroteskText
-          color="text.link"
+          color="text.light"
           fontSize={{ base: rem(14), md: rem(22) }}
           fontWeight={500}
           lineHeight="130%"

@@ -283,7 +283,7 @@ export const Sensitive = () => {
               expandContent: (
                 <AllYouNeedModalContent
                   title={t('all_you_need_item_3_title')}
-                  description={t('all_you_need_item_3_description')}
+                  description={t('all_you_need_item_3_long_description')}
                   icon={<Verified />}
                   image="/images/common/warranty.jpg"
                 />
@@ -334,9 +334,9 @@ export const Sensitive = () => {
               wifiModul: true,
               sterilizacia: true,
               dierkovanaLamela: false,
-              dlhodobeVykurovanie: '-25°C',
+              dlhodobeVykurovanie: '-15°C',
               aktivneCistenie: true,
-              zaruka: `3 ${t('common:years_roky')}`,
+              zaruka: `5 ${t('common:years_rokov')}`,
               chladivo: 'R32',
             },
           ]}
