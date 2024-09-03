@@ -96,5 +96,7 @@
   "heating": "Heizung",
   "filter_air_condition": "Klimaanlagen",
   "filter_accessories": "Zubehör",
-  "filter_household": "Haushalt"
+  "filter_household": "Haushalt",
+  "page_not_found": "Seite nicht gefunden",
+  "page_not_found_cta": "Startseite"
 }

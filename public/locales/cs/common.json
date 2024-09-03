@@ -96,5 +96,7 @@
   "heating": "Vytápění",
   "filter_air_condition": "Klimatizace",
   "filter_accessories": "Příslušenství",
-  "filter_household": "Domácnost"
+  "filter_household": "Domácnost",
+  "page_not_found": "Stránka nebyla nalezena",
+  "page_not_found_cta": "Domů"
 }

@@ -96,5 +96,7 @@
   "heating": "Vykurovanie",
   "filter_air_condition": "Klimatizácie",
   "filter_accessories": "Príslušenstvo",
-  "filter_household": "Domácnosť"
+  "filter_household": "Domácnosť",
+  "page_not_found": "Stránka nebola nájdená",
+  "page_not_found_cta": "Domov"
 }

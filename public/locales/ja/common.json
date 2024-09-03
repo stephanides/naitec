@@ -96,5 +96,7 @@
   "heating": "加熱",
   "filter_air_condition": "エアコン",
   "filter_accessories": "アクセサリー",
-  "filter_household": "家庭用品"
+  "filter_household": "家庭用品",
+  "page_not_found": "ページが見つかりません",
+  "page_not_found_cta": "ホーム"
 }

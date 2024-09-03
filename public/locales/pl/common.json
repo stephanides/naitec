@@ -96,5 +96,7 @@
   "heating": "Ogrzewanie",
   "filter_air_condition": "Klimatyzacja",
   "filter_accessories": "Akcesoria",
-  "filter_household": "Gospodarstwo domowe"
+  "filter_household": "Gospodarstwo domowe",
+  "page_not_found": "Strona nie została znaleziona",
+  "page_not_found_cta": "Strona główna"
 }

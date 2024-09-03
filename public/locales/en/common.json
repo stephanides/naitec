@@ -96,5 +96,7 @@
   "heating": "Heating",
   "filter_air_condition": "Air conditioning",
   "filter_accessories": "Accessories",
-  "filter_household": "Household"
+  "filter_household": "Household",
+  "page_not_found": "Page not found",
+  "page_not_found_cta": "Home"
 }

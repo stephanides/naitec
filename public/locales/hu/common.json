@@ -96,5 +96,7 @@
   "heating": "Fűtés",
   "filter_air_condition": "Klímaberendezések",
   "filter_accessories": "Kiegészítők",
-  "filter_household": "Háztartás"
+  "filter_household": "Háztartás",
+  "page_not_found": "Az oldal nem található",
+  "page_not_found_cta": "Kezdőlap"
 }
