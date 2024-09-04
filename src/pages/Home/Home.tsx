@@ -41,43 +41,61 @@ export const Home = () => {
               flexDir="column"
               overflow="hidden"
             >
-              <NeueHaasGroteskDisplay
-                background="linear-gradient(to right, #344F5F, #6CA5C5)"
-                backgroundPosition="left center"
-                backgroundSize="600% 200%"
-                fontSize={{
-                  base: rem(60),
-                  xs: rem(72),
-                  md: rem(100),
-                  lg: rem(140),
-                  xl: rem(150),
-                  '3xl': rem(192),
-                }}
-                fontWeight={600}
-                textTransform="uppercase"
-                textAlign="center"
-                backgroundClip="text"
-                color="transparent"
-                position="absolute"
-                top={0}
-                transition="all .3s ease-out"
-                animation="backgroundAnimation 4s linear infinite"
+              <Flex
+                width="100%"
+                justifyContent="center"
+                animation={'fadeDown 1s cubic-bezier(0.25, 0.8, 0.25, 1)'}
                 sx={{
-                  '@keyframes backgroundAnimation': {
+                  '@keyframes fadeDown': {
                     '0%': {
-                      backgroundPosition: 'left center',
-                    },
-                    '50%': {
-                      backgroundPosition: 'right center',
+                      opacity: 0,
+                      transform: 'translateY(-60px)',
                     },
                     '100%': {
-                      backgroundPosition: 'left center',
+                      opacity: 1,
+                      transform: 'translateY(0)',
                     },
                   },
                 }}
               >
-                Stellair
-              </NeueHaasGroteskDisplay>
+                <NeueHaasGroteskDisplay
+                  background="linear-gradient(to right, #344F5F, #6CA5C5)"
+                  backgroundPosition="left center"
+                  backgroundSize="600% 200%"
+                  fontSize={{
+                    base: rem(60),
+                    xs: rem(72),
+                    md: rem(100),
+                    lg: rem(140),
+                    xl: rem(150),
+                    '3xl': rem(192),
+                  }}
+                  fontWeight={600}
+                  textTransform="uppercase"
+                  textAlign="center"
+                  backgroundClip="text"
+                  color="transparent"
+                  position="absolute"
+                  top={0}
+                  transition="all .3s ease-out"
+                  animation="backgroundAnimation 4s linear infinite"
+                  sx={{
+                    '@keyframes backgroundAnimation': {
+                      '0%': {
+                        backgroundPosition: 'left center',
+                      },
+                      '50%': {
+                        backgroundPosition: 'right center',
+                      },
+                      '100%': {
+                        backgroundPosition: 'left center',
+                      },
+                    },
+                  }}
+                >
+                  Stellair
+                </NeueHaasGroteskDisplay>
+              </Flex>
               <Link href={INTERNAL_ROUTES.STELLAIR}>
                 <Flex
                   position="relative"
@@ -106,7 +124,7 @@ export const Home = () => {
                     '3xl': rem(2080),
                   }}
                   justify="center"
-                  animation={'fadeUp 1s ease-in-out'}
+                  animation={'fadeUp 1s cubic-bezier(0.25, 0.8, 0.25, 1)'}
                   sx={{
                     '@keyframes fadeUp': {
                       '0%': {
