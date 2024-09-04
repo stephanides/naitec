@@ -106,6 +106,19 @@ export const Home = () => {
                     '3xl': rem(2080),
                   }}
                   justify="center"
+                  animation={'fadeUp 1s ease-in-out'}
+                  sx={{
+                    '@keyframes fadeUp': {
+                      '0%': {
+                        opacity: 0,
+                        transform: 'translateY(60px)',
+                      },
+                      '100%': {
+                        opacity: 1,
+                        transform: 'translateY(0)',
+                      },
+                    },
+                  }}
                 >
                   <img
                     src="/images/stellair/stellair-main.png"
@@ -238,6 +251,7 @@ export const Home = () => {
             </NeueHaasGroteskDisplay>
             <Link href={INTERNAL_ROUTES.SENSITIVE_PRO}>
               <Flex
+                data-aos="fade-up"
                 position="relative"
                 pt={{
                   base: rem(12),
@@ -380,6 +394,7 @@ export const Home = () => {
             <Link href={INTERNAL_ROUTES.SENSITIVE}>
               <Flex
                 position="relative"
+                data-aos="fade-up"
                 pt={{
                   base: rem(28),
                   xs: rem(20),
@@ -526,6 +541,7 @@ export const Home = () => {
               </NeueHaasGroteskDisplay>
               <Link href={INTERNAL_ROUTES.ONYX}>
                 <Flex
+                  data-aos="fade-up"
                   position="relative"
                   pt={{
                     base: rem(22),
@@ -665,6 +681,7 @@ export const Home = () => {
               </NeueHaasGroteskDisplay>
               <Link href={INTERNAL_ROUTES.SMART}>
                 <Flex
+                  data-aos="fade-up"
                   position="relative"
                   pt={{
                     base: rem(22),
@@ -805,6 +822,7 @@ export const Home = () => {
                   overflow="hidden"
                   pointerEvents="none"
                   pt={{ base: rem(20), '2xl': 0 }}
+                  data-aos="fade-up"
                 >
                   <img
                     src="/images/lisa/lisa-main-desktop.png"
@@ -899,6 +917,7 @@ export const Home = () => {
                   pointerEvents="none"
                   pt={{ base: rem(20), '2xl': 0 }}
                   ml={{ base: 'auto', xl: 0 }}
+                  data-aos="fade-up"
                 >
                   <img
                     src="/images/fireplace/fireplace-main-desktop.png"
