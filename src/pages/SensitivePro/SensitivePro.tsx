@@ -131,6 +131,7 @@ export const SensitivePro = () => {
               '3xl': rem(2080),
             }}
             justify="center"
+            aspectRatio="75 / 23"
             overflow="hidden"
           >
             <Image

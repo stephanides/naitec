@@ -129,6 +129,7 @@ export const Sensitive = () => {
               '3xl': rem(2080),
             }}
             justify="center"
+            aspectRatio="75 / 23"
           >
             <img
               src="/images/sensitive/sensitive-main.png"

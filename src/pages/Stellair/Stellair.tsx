@@ -130,6 +130,7 @@ export const Stellair = () => {
               xl: rem(1500),
               '3xl': rem(2080),
             }}
+            aspectRatio="75 / 23"
             justify="center"
             overflow="hidden"
           >
