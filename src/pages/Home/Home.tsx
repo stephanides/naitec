@@ -124,6 +124,7 @@ export const Home = () => {
                     '3xl': rem(2080),
                   }}
                   justify="center"
+                  aspectRatio="75 / 23"
                   animation={'fadeUp 1s cubic-bezier(0.25, 0.8, 0.25, 1)'}
                   sx={{
                     '@keyframes fadeUp': {
