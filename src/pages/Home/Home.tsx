@@ -3,7 +3,7 @@ import {
   NeueHaasGroteskDisplay,
   ProductHeadingButtonsHome,
 } from '@/src/shared/components';
-import { INTERNAL_ROUTES } from '@/src/shared/constants';
+import { BUNNY_CDN_URL, INTERNAL_ROUTES } from '@/src/shared/constants';
 import {
   HomeShape,
   HomeShape4k,
@@ -140,7 +140,7 @@ export const Home = () => {
                   }}
                 >
                   <img
-                    src="/images/stellair/stellair-main.png"
+                    src={`${BUNNY_CDN_URL}/stellair/stellair-main.png`}
                     style={{ width: '100%', height: 'auto', maxWidth: 'none' }}
                     alt="Stellair"
                   />
@@ -300,7 +300,7 @@ export const Home = () => {
                 justify="center"
               >
                 <img
-                  src="/images/sensitive-pro/sensitive-pro-main.png"
+                  src={`${BUNNY_CDN_URL}/sensitive-pro/sensitive-pro-main.png`}
                   style={{ width: '100%', height: 'auto', maxWidth: 'none' }}
                   alt="Sensitive Pro"
                 />
@@ -443,7 +443,7 @@ export const Home = () => {
                 justify="center"
               >
                 <img
-                  src="/images/sensitive/sensitive-main.png"
+                  src={`${BUNNY_CDN_URL}/sensitive/sensitive-main.png`}
                   style={{ width: '100%', height: 'auto', maxWidth: 'none' }}
                   alt="Sensitive"
                 />
@@ -592,7 +592,7 @@ export const Home = () => {
                   justify="center"
                 >
                   <img
-                    src="/images/onyx/onyx-main.png"
+                    src={`${BUNNY_CDN_URL}/onyx/onyx-main.png`}
                     style={{ width: '100%', height: 'auto', maxWidth: 'none' }}
                     alt="Onyx"
                   />
@@ -733,7 +733,7 @@ export const Home = () => {
                   justify="center"
                 >
                   <img
-                    src="/images/smart/smart-main.png"
+                    src={`${BUNNY_CDN_URL}/smart/smart-main.png`}
                     style={{ width: '100%', height: 'auto', maxWidth: 'none' }}
                     alt="Smart"
                   />
@@ -848,7 +848,7 @@ export const Home = () => {
                   data-aos="fade-up"
                 >
                   <img
-                    src="/images/lisa/lisa-main-desktop.png"
+                    src={`${BUNNY_CDN_URL}/lisa/lisa-main-desktop.png`}
                     style={{ width: '100%', height: 'auto', maxWidth: 'none' }}
                     alt="Lisa"
                   />
@@ -943,7 +943,7 @@ export const Home = () => {
                   data-aos="fade-up"
                 >
                   <img
-                    src="/images/fireplace/fireplace-main-desktop.png"
+                    src={`${BUNNY_CDN_URL}/fireplace/fireplace-main-desktop.png`}
                     style={{ width: '100%', height: 'auto', maxWidth: 'none' }}
                     alt="Fireplace diffuser"
                   />

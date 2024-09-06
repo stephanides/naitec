@@ -28,7 +28,7 @@ import {
 } from '@/src/shared/design';
 import { TechnicalParameters } from '@/src/shared/components/TechnicalParameters';
 import { WhyInfoSwiper } from '@/src/shared/components/WhyInfoSwiper';
-import { INTERNAL_ROUTES } from '@/src/shared/constants';
+import { BUNNY_CDN_URL, INTERNAL_ROUTES } from '@/src/shared/constants';
 import { Element } from 'react-scroll';
 
 export const Onyx = () => {
@@ -132,7 +132,7 @@ export const Onyx = () => {
             overflow="hidden"
           >
             <img
-              src="/images/onyx/onyx-main.png"
+              src={`${BUNNY_CDN_URL}/onyx/onyx-main.png`}
               style={{ width: '100%', height: 'auto', maxWidth: 'none' }}
               alt="Onyx"
             />
@@ -179,27 +179,27 @@ export const Onyx = () => {
               color={LINEAR_GRADIENTS.onyx}
               items={[
                 {
-                  image: '/images/onyx/onyx-why-1.jpg',
+                  image: `${BUNNY_CDN_URL}/onyx/onyx-why-1.jpg`,
                   title: t('why_info_item_1_title'),
                   description: t('why_info_item_1_description'),
                 },
                 {
-                  image: '/images/onyx/onyx-why-2.jpg',
+                  image: `${BUNNY_CDN_URL}/onyx/onyx-why-2.jpg`,
                   title: t('why_info_item_2_title'),
                   description: t('why_info_item_2_description'),
                 },
                 {
-                  image: '/images/onyx/onyx-why-3.jpg',
+                  image: `${BUNNY_CDN_URL}/onyx/onyx-why-3.jpg`,
                   title: t('why_info_item_3_title'),
                   description: t('why_info_item_3_description'),
                 },
                 {
-                  image: '/images/onyx/onyx-why-4.jpg',
+                  image: `${BUNNY_CDN_URL}/onyx/onyx-why-4.jpg`,
                   title: t('why_info_item_4_title'),
                   description: t('why_info_item_4_description'),
                 },
                 {
-                  image: '/images/onyx/onyx-why-5.jpg',
+                  image: `${BUNNY_CDN_URL}/onyx/onyx-why-5.jpg`,
                   title: t('why_info_item_5_title'),
                   description: t('why_info_item_5_description'),
                 },
@@ -217,8 +217,8 @@ export const Onyx = () => {
       >
         <EffectiveHeating
           color={LINEAR_GRADIENTS.onyx}
-          image1="/images/onyx/effective-heating-1.png"
-          image2="/images/onyx/effective-heating-2.png"
+          image1={`${BUNNY_CDN_URL}/onyx/effective-heating-1.png`}
+          image2={`${BUNNY_CDN_URL}/onyx/effective-heating-2.png`}
           label={t('effective_heating_label')}
           title={t('effective_heating_title')}
           description={t('effective_heating_description')}
@@ -242,7 +242,7 @@ export const Onyx = () => {
                   title={t('all_you_need_item_1_title')}
                   description={t('all_you_need_item_1_long_description')}
                   icon={<Virus />}
-                  image="/images/common/self-cleaning.jpg"
+                  image={`${BUNNY_CDN_URL}/common/self-cleaning.jpg`}
                 />
               ),
             },
@@ -263,7 +263,7 @@ export const Onyx = () => {
                   title={t('all_you_need_item_3_title')}
                   description={t('all_you_need_item_3_long_description')}
                   icon={<Virus />}
-                  image="/images/common/warranty.jpg"
+                  image={`${BUNNY_CDN_URL}/common/warranty.jpg`}
                 />
               ),
             },

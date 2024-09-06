@@ -7,7 +7,7 @@ import { NeueHaasGroteskDisplay, NeueHaasGroteskText } from '../Typography';
 import { AppStore, GooglePlay, LINEAR_GRADIENTS } from '../../design';
 import Image from 'next/image';
 import { Glow } from '../Glow';
-import { EXTERNAL_ROUTES } from '../../constants';
+import { BUNNY_CDN_URL, EXTERNAL_ROUTES } from '../../constants';
 
 type NaitecApplicationProps = {
   textColor?: string;
@@ -107,7 +107,7 @@ export const NaitecApplication = ({
               zIndex={3}
             >
               <Image
-                src="/images/common/iphone-mockup.png"
+                src={`${BUNNY_CDN_URL}/common/iphone-mockup.png`}
                 width="0"
                 height="0"
                 sizes="100vw"

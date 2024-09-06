@@ -1,3 +1,5 @@
+export const BUNNY_CDN_URL = 'https://naitec.b-cdn.net';
+
 const LINEAR_GRADIENTS = {
   sensitive:
     'linear-gradient(135deg, rgba(63,52,95,1) 0%, rgba(169,108,197,1) 100%)',
@@ -73,8 +75,8 @@ export const PRODUCTS = [
     id: 'stellair',
     title: 'Stellair',
     type: 'air_conditioners' as PRODUCT_TYPE,
-    mainImage: '/images/stellair/stellair-main.png',
-    supportImage: '/images/support/stellair-support.png',
+    mainImage: `${BUNNY_CDN_URL}/stellair/stellair-main.png`,
+    supportImage: `${BUNNY_CDN_URL}/support/stellair-support.png`,
     href: INTERNAL_ROUTES.STELLAIR_SUPPORT,
     color: LINEAR_GRADIENTS.stellair,
     supportDocuments: [
@@ -115,8 +117,8 @@ export const PRODUCTS = [
     id: 'sensitive',
     title: 'Sensitive',
     type: 'air_conditioners' as PRODUCT_TYPE,
-    mainImage: '/images/sensitive/sensitive-main.png',
-    supportImage: '/images/support/sensitive-support.png',
+    mainImage: `${BUNNY_CDN_URL}/sensitive/sensitive-main.png`,
+    supportImage: `${BUNNY_CDN_URL}/support/sensitive-support.png`,
     href: INTERNAL_ROUTES.SENSITIVE_SUPPORT,
     color: LINEAR_GRADIENTS.sensitive,
     supportDocuments: [
@@ -157,8 +159,8 @@ export const PRODUCTS = [
     id: 'smart',
     title: 'Smart',
     type: 'air_conditioners' as PRODUCT_TYPE,
-    mainImage: '/images/smart/smart-main.png',
-    supportImage: '/images/support/smart-support.png',
+    mainImage: `${BUNNY_CDN_URL}/smart/smart-main.png`,
+    supportImage: `${BUNNY_CDN_URL}/support/smart-support.png`,
     href: INTERNAL_ROUTES.SMART_SUPPORT,
     color: LINEAR_GRADIENTS.smart,
     supportDocuments: [
@@ -199,8 +201,8 @@ export const PRODUCTS = [
     id: 'onyx',
     title: 'Onyx',
     type: 'air_conditioners' as PRODUCT_TYPE,
-    mainImage: '/images/onyx/onyx-main.png',
-    supportImage: '/images/support/onyx-support.png',
+    mainImage: `${BUNNY_CDN_URL}/onyx/onyx-main.png`,
+    supportImage: `${BUNNY_CDN_URL}/support/onyx-support.png`,
     href: INTERNAL_ROUTES.ONYX_SUPPORT,
     color: LINEAR_GRADIENTS.onyx,
     supportDocuments: [
@@ -222,8 +224,8 @@ export const PRODUCTS = [
     id: 'sensitive-pro',
     title: 'Sensitive Pro',
     type: 'air_conditioners' as PRODUCT_TYPE,
-    mainImage: '/images/sensitive-pro/sensitive-pro-main.png',
-    supportImage: '/images/support/sensitive-pro-support.png',
+    mainImage: `${BUNNY_CDN_URL}/sensitive-pro/sensitive-pro-main.png`,
+    supportImage: `${BUNNY_CDN_URL}/support/sensitive-pro-support.png`,
     href: INTERNAL_ROUTES.SENSITIVE_PRO_SUPPORT,
     color: LINEAR_GRADIENTS.sensitive_pro,
     supportDocuments: [
@@ -245,8 +247,8 @@ export const PRODUCTS = [
     id: 'fireplace-diffuser',
     title: 'fireplace',
     type: 'household' as PRODUCT_TYPE,
-    mainImage: '/images/fireplace/fireplace-main.png',
-    supportImage: '/images/support/fireplace-support.png',
+    mainImage: `${BUNNY_CDN_URL}/fireplace/fireplace-main.png`,
+    supportImage: `${BUNNY_CDN_URL}/support/fireplace-support.png`,
     href: INTERNAL_ROUTES.FIREPLACE_DIFFUSER_SUPPORT,
     supportDocuments: [],
   },
@@ -254,8 +256,8 @@ export const PRODUCTS = [
     id: 'lisa',
     title: 'Lisa',
     type: 'accessories' as PRODUCT_TYPE,
-    mainImage: '/images/lisa/lisa-main.png',
-    supportImage: '/images/support/lisa-support.png',
+    mainImage: `${BUNNY_CDN_URL}/lisa/lisa-main.png`,
+    supportImage: `${BUNNY_CDN_URL}/support/lisa-support.png`,
     href: INTERNAL_ROUTES.LISA_SUPPORT,
     supportDocuments: [],
   },

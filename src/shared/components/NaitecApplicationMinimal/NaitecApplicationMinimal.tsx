@@ -5,7 +5,7 @@ import { rem } from 'polished';
 import { NeueHaasGroteskDisplay, NeueHaasGroteskText } from '../Typography';
 import { AppStore, GooglePlay, LINEAR_GRADIENTS } from '../../design';
 import Image from 'next/image';
-import { EXTERNAL_ROUTES } from '../../constants';
+import { BUNNY_CDN_URL, EXTERNAL_ROUTES } from '../../constants';
 
 export const NaitecApplicationMinimal = () => {
   const { t } = useTranslation('common');
@@ -91,7 +91,7 @@ export const NaitecApplicationMinimal = () => {
             zIndex={3}
           >
             <Image
-              src="/images/common/iphone-mockup.png"
+              src={`${BUNNY_CDN_URL}/common/iphone-mockup.png`}
               width="0"
               height="0"
               sizes="100vw"

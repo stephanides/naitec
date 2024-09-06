@@ -28,7 +28,7 @@ import {
 } from '@/src/shared/design';
 import { TechnicalParameters } from '@/src/shared/components/TechnicalParameters';
 import { WhyInfoSwiper } from '@/src/shared/components/WhyInfoSwiper';
-import { INTERNAL_ROUTES } from '@/src/shared/constants';
+import { BUNNY_CDN_URL, INTERNAL_ROUTES } from '@/src/shared/constants';
 import { Element } from 'react-scroll';
 import Image from 'next/image';
 
@@ -133,14 +133,12 @@ export const Smart = () => {
             overflow="hidden"
           >
             <Image
-              src="/images/smart/smart-main.png"
+              src={`${BUNNY_CDN_URL}/smart/smart-main.png`}
               width="0"
               height="0"
               sizes="100vw"
               style={{ width: '100%', height: 'auto', maxWidth: 'none' }}
               alt="Smart"
-              placeholder="blur"
-              blurDataURL="/images/sensitive-pro/sensitive-pro-main-placeholder.png"
             />
           </Flex>
         </Flex>
@@ -185,27 +183,27 @@ export const Smart = () => {
               color={LINEAR_GRADIENTS.smart}
               items={[
                 {
-                  image: '/images/smart/smart-why-1.jpg',
+                  image: `${BUNNY_CDN_URL}/smart/smart-why-1.jpg`,
                   title: t('why_info_item_1_title'),
                   description: t('why_info_item_1_description'),
                 },
                 {
-                  image: '/images/smart/smart-why-2.jpg',
+                  image: `${BUNNY_CDN_URL}/smart/smart-why-2.jpg`,
                   title: t('why_info_item_2_title'),
                   description: t('why_info_item_2_description'),
                 },
                 {
-                  image: '/images/smart/smart-why-3.jpg',
+                  image: `${BUNNY_CDN_URL}/smart/smart-why-3.jpg`,
                   title: t('why_info_item_3_title'),
                   description: t('why_info_item_3_description'),
                 },
                 {
-                  image: '/images/smart/smart-why-4.jpg',
+                  image: `${BUNNY_CDN_URL}/smart/smart-why-4.jpg`,
                   title: t('why_info_item_4_title'),
                   description: t('why_info_item_4_description'),
                 },
                 {
-                  image: '/images/smart/smart-why-5.jpg',
+                  image: `${BUNNY_CDN_URL}/smart/smart-why-5.jpg`,
                   title: t('why_info_item_5_title'),
                   description: t('why_info_item_5_description'),
                 },
@@ -223,8 +221,8 @@ export const Smart = () => {
       >
         <EffectiveHeating
           color={LINEAR_GRADIENTS.smart}
-          image1="/images/smart/effective-heating-1.png"
-          image2="/images/smart/effective-heating-2.png"
+          image1={`${BUNNY_CDN_URL}/smart/effective-heating-1.png`}
+          image2={`${BUNNY_CDN_URL}/smart/effective-heating-2.png`}
           label={t('effective_heating_label')}
           title={t('effective_heating_title')}
           description={t('effective_heating_description')}
@@ -248,7 +246,7 @@ export const Smart = () => {
                   title={t('all_you_need_item_1_title')}
                   description={t('all_you_need_item_1_long_description')}
                   icon={<Virus />}
-                  image="/images/common/self-cleaning.jpg"
+                  image={`${BUNNY_CDN_URL}/common/self-cleaning.jpg`}
                 />
               ),
             },
@@ -269,7 +267,7 @@ export const Smart = () => {
                   title={t('all_you_need_item_3_title')}
                   description={t('all_you_need_item_3_long_description')}
                   icon={<Verified />}
-                  image="/images/common/warranty.jpg"
+                  image={`${BUNNY_CDN_URL}/common/warranty.jpg`}
                 />
               ),
             },

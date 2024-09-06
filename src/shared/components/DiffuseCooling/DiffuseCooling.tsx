@@ -5,6 +5,7 @@ import { Label } from '../Label';
 import { NeueHaasGroteskDisplay, NeueHaasGroteskText } from '../Typography';
 import { Container } from '../Container';
 import Image from 'next/image';
+import { BUNNY_CDN_URL } from '../../constants';
 
 type DiffuseCoolingProps = {
   color: string;
@@ -92,7 +93,7 @@ export const DiffuseCooling = ({
               boxShadow={light ? 'none' : '0px 0px 50px 0px rgba(0,0,0,0.05)'}
             >
               <Image
-                src="/images/common/diffuse-cooling-1.png"
+                src={`${BUNNY_CDN_URL}/common/diffuse-cooling-1.png`}
                 width="0"
                 height="0"
                 sizes="100vw"
@@ -105,7 +106,7 @@ export const DiffuseCooling = ({
               boxShadow={light ? 'none' : '0px 0px 50px 0px rgba(0,0,0,0.05)'}
             >
               <Image
-                src="/images/common/diffuse-cooling-1-mobile.png"
+                src={`${BUNNY_CDN_URL}/common/diffuse-cooling-1-mobile.png`}
                 width="0"
                 height="0"
                 sizes="100vw"
@@ -153,7 +154,7 @@ export const DiffuseCooling = ({
               boxShadow={light ? 'none' : '0px 0px 50px 0px rgba(0,0,0,0.05)'}
             >
               <Image
-                src="/images/common/diffuse-cooling-2.png"
+                src={`${BUNNY_CDN_URL}/common/diffuse-cooling-2.png`}
                 width="0"
                 height="0"
                 sizes="100vw"
@@ -166,7 +167,7 @@ export const DiffuseCooling = ({
               boxShadow={light ? 'none' : '0px 0px 50px 0px rgba(0,0,0,0.05)'}
             >
               <Image
-                src="/images/common/diffuse-cooling-2-mobile.png"
+                src={`${BUNNY_CDN_URL}/common/diffuse-cooling-2-mobile.png`}
                 width="0"
                 height="0"
                 sizes="100vw"

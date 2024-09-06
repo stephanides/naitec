@@ -11,7 +11,7 @@ import {
 } from '../../design';
 import Image from 'next/image';
 import Link from 'next-translate-routes/link';
-import { INTERNAL_ROUTES } from '../../constants';
+import { BUNNY_CDN_URL, INTERNAL_ROUTES } from '../../constants';
 
 const Item = ({
   image,
@@ -179,7 +179,7 @@ export const StellairSensitive = ({
               mx={{ base: 'auto', xl: 0 }}
             >
               <Item
-                image="/images/stellair/stellair_minimal.png"
+                image={`/${BUNNY_CDN_URL}/stellair/stellair-main.png`}
                 title="Naitec Stellair"
                 href={INTERNAL_ROUTES.STELLAIR}
                 originalWidth={533}
@@ -196,7 +196,7 @@ export const StellairSensitive = ({
               mx={{ base: 'auto', xl: 0 }}
             >
               <Item
-                image="/images/sensitive/sensitive_minimal.png"
+                image={`/${BUNNY_CDN_URL}/sensitive/sensitive-main.png`}
                 title="Naitec Sensitive"
                 href={INTERNAL_ROUTES.SENSITIVE}
                 originalWidth={470}
@@ -213,7 +213,7 @@ export const StellairSensitive = ({
               mx={{ base: 'auto', xl: 0 }}
             >
               <Item
-                image="/images/sensitive-pro/sensitive-pro-minimal.png"
+                image={`/${BUNNY_CDN_URL}/sensitive-pro/sensitive-pro-main.png`}
                 title="Naitec Sensitive Pro"
                 href={INTERNAL_ROUTES.SENSITIVE_PRO}
                 originalWidth={656}
@@ -230,7 +230,7 @@ export const StellairSensitive = ({
               mx={{ base: 'auto', xl: 0 }}
             >
               <Item
-                image="/images/onyx/onyx-minimal.png"
+                image={`/${BUNNY_CDN_URL}/onyx/onyx-main.png`}
                 title="Naitec Onyx"
                 href={INTERNAL_ROUTES.ONYX}
                 originalWidth={696}
@@ -247,7 +247,7 @@ export const StellairSensitive = ({
               mx={{ base: 'auto', xl: 0 }}
             >
               <Item
-                image="/images/smart/smart-minimal.png"
+                image={`/${BUNNY_CDN_URL}/smart/smart-main.png`}
                 title="Naitec Smart"
                 href={INTERNAL_ROUTES.SMART}
                 originalWidth={678}

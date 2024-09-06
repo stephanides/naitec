@@ -31,7 +31,7 @@ import {
 } from '@/src/shared/design';
 import { TechnicalParameters } from '@/src/shared/components/TechnicalParameters';
 import { WhyInfoSwiper } from '@/src/shared/components/WhyInfoSwiper';
-import { INTERNAL_ROUTES } from '@/src/shared/constants';
+import { BUNNY_CDN_URL, INTERNAL_ROUTES } from '@/src/shared/constants';
 import { Element } from 'react-scroll';
 
 export const SensitivePro = () => {
@@ -177,14 +177,14 @@ export const SensitivePro = () => {
             overflow="hidden"
           >
             <Image
-              src="/images/sensitive-pro/sensitive-pro-main.png"
+              src={`${BUNNY_CDN_URL}/sensitive-pro/sensitive-pro-main.png`}
               width="0"
               height="0"
               sizes="100vw"
               style={{ width: '100%', height: 'auto', maxWidth: 'none' }}
               alt="Sensitive"
               placeholder="blur"
-              blurDataURL="/images/sensitive-pro/sensitive-pro-main-placeholder.png"
+              blurDataURL={`${BUNNY_CDN_URL}/sensitive-pro/sensitive-pro-main-placeholder.png`}
             />
           </Flex>
         </Flex>
@@ -232,32 +232,32 @@ export const SensitivePro = () => {
               color={LINEAR_GRADIENTS.sensitive_pro}
               items={[
                 {
-                  image: '/images/sensitive-pro/sensitive-pro-why-1.jpg',
+                  image: `${BUNNY_CDN_URL}/sensitive-pro/sensitive-pro-why-1.jpg`,
                   title: t('why_info_item_1_title'),
                   description: t('why_info_item_1_description'),
                 },
                 {
-                  image: '/images/sensitive-pro/sensitive-pro-why-2.jpg',
+                  image: `${BUNNY_CDN_URL}/sensitive-pro/sensitive-pro-why-2.jpg`,
                   title: t('why_info_item_2_title'),
                   description: t('why_info_item_2_description'),
                 },
                 {
-                  image: '/images/sensitive-pro/sensitive-pro-why-3.jpg',
+                  image: `${BUNNY_CDN_URL}/sensitive-pro/sensitive-pro-why-3.jpg`,
                   title: t('why_info_item_3_title'),
                   description: t('why_info_item_3_description'),
                 },
                 {
-                  image: '/images/sensitive-pro/sensitive-pro-why-4.jpg',
+                  image: `${BUNNY_CDN_URL}/sensitive-pro/sensitive-pro-why-4.jpg`,
                   title: t('why_info_item_4_title'),
                   description: t('why_info_item_4_description'),
                 },
                 {
-                  image: '/images/sensitive-pro/sensitive-pro-why-5.jpg',
+                  image: `${BUNNY_CDN_URL}/sensitive-pro/sensitive-pro-why-5.jpg`,
                   title: t('why_info_item_5_title'),
                   description: t('why_info_item_5_description'),
                 },
                 {
-                  image: '/images/sensitive-pro/sensitive-pro-why-6.jpg',
+                  image: `${BUNNY_CDN_URL}/sensitive-pro/sensitive-pro-why-6.jpg`,
                   title: t('why_info_item_6_title'),
                   description: t('why_info_item_6_description'),
                 },
@@ -271,9 +271,9 @@ export const SensitivePro = () => {
         color={LINEAR_GRADIENTS.sensitive_pro}
         buttonColor="background.sensitive_pro_light"
         videos={[
-          { url: '/videos/sensitive-pro/2.mp4', duration: 11 },
-          { url: '/videos/sensitive-pro/1.mp4', duration: 12 },
-          { url: '/videos/sensitive-pro/3.mp4', duration: 12 },
+          { url: `${BUNNY_CDN_URL}/videos/sensitive-pro/2.mp4`, duration: 11 },
+          { url: `${BUNNY_CDN_URL}/videos/sensitive-pro/1.mp4`, duration: 12 },
+          { url: `${BUNNY_CDN_URL}/videos/sensitive-pro/3.mp4`, duration: 12 },
         ]}
       />
 
@@ -295,8 +295,8 @@ export const SensitivePro = () => {
           <Box position={'relative'} zIndex={2}>
             <EffectiveHeating
               color={LINEAR_GRADIENTS.sensitive_pro}
-              image1="/images/sensitive-pro/effective-heating-1.jpg"
-              image2="/images/sensitive-pro/effective-heating-2.jpg"
+              image1={`${BUNNY_CDN_URL}/sensitive-pro/effective-heating-1.jpg`}
+              image2={`${BUNNY_CDN_URL}/sensitive-pro/effective-heating-2.jpg`}
               blurOnBottom={true}
               label={t('effective_heating_label')}
               title={t('effective_heating_title')}
@@ -337,7 +337,7 @@ export const SensitivePro = () => {
                   title={t('all_you_need_item_1_title')}
                   description={t('all_you_need_item_1_long_description')}
                   icon={<Virus />}
-                  image="/images/common/self-cleaning.jpg"
+                  image={`${BUNNY_CDN_URL}/common/self-cleaning.jpg`}
                 />
               ),
             },
@@ -358,7 +358,7 @@ export const SensitivePro = () => {
                   title={t('all_you_need_item_3_title')}
                   description={t('all_you_need_item_3_long_description')}
                   icon={<Verified />}
-                  image="/images/common/warranty.jpg"
+                  image={`${BUNNY_CDN_URL}/common/warranty.jpg`}
                 />
               ),
             },

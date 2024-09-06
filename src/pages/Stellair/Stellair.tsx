@@ -30,7 +30,7 @@ import {
   Verified,
   Virus,
 } from '@/src/shared/design';
-import { INTERNAL_ROUTES } from '@/src/shared/constants';
+import { BUNNY_CDN_URL, INTERNAL_ROUTES } from '@/src/shared/constants';
 import { Element } from 'react-scroll';
 
 export const Stellair = () => {
@@ -135,7 +135,7 @@ export const Stellair = () => {
             overflow="hidden"
           >
             <img
-              src="/images/stellair/stellair-main.png"
+              src={`${BUNNY_CDN_URL}/stellair/stellair-main.png`}
               style={{ width: '100%', height: 'auto', maxWidth: 'none' }}
               alt="Stellair"
             />
@@ -186,32 +186,32 @@ export const Stellair = () => {
               color={LINEAR_GRADIENTS.stellair}
               items={[
                 {
-                  image: '/images/stellair/stellair-why-1.jpg',
+                  image: `${BUNNY_CDN_URL}/stellair/stellair-why-1.jpg`,
                   title: t('why_info_item_1_title'),
                   description: t('why_info_item_1_description'),
                 },
                 {
-                  image: '/images/stellair/stellair-why-2.jpg',
+                  image: `${BUNNY_CDN_URL}/stellair/stellair-why-2.jpg`,
                   title: t('why_info_item_2_title'),
                   description: t('why_info_item_2_description'),
                 },
                 {
-                  image: '/images/stellair/stellair-why-3.jpg',
+                  image: `${BUNNY_CDN_URL}/stellair/stellair-why-3.jpg`,
                   title: t('why_info_item_3_title'),
                   description: t('why_info_item_3_description'),
                 },
                 {
-                  image: '/images/stellair/stellair-why-4.jpg',
+                  image: `${BUNNY_CDN_URL}/stellair/stellair-why-4.jpg`,
                   title: t('why_info_item_4_title'),
                   description: t('why_info_item_4_description'),
                 },
                 {
-                  image: '/images/stellair/stellair-why-5.jpg',
+                  image: `${BUNNY_CDN_URL}/stellair/stellair-why-5.jpg`,
                   title: t('why_info_item_5_title'),
                   description: t('why_info_item_5_description'),
                 },
                 {
-                  image: '/images/stellair/stellair-why-6.jpg',
+                  image: `${BUNNY_CDN_URL}/stellair/stellair-why-6.jpg`,
                   title: t('why_info_item_6_title'),
                   description: t('why_info_item_6_description'),
                 },
@@ -237,9 +237,9 @@ export const Stellair = () => {
           color={LINEAR_GRADIENTS.stellair}
           buttonColor="background.stellair"
           videos={[
-            { url: '/videos/stellair/2.mp4', duration: 14 },
-            { url: '/videos/stellair/1.mp4', duration: 12 },
-            { url: '/videos/stellair/3.mp4', duration: 11 },
+            { url: `${BUNNY_CDN_URL}/videos/stellair/2.mp4`, duration: 14 },
+            { url: `${BUNNY_CDN_URL}/videos/stellair/1.mp4`, duration: 12 },
+            { url: `${BUNNY_CDN_URL}/videos/stellair/3.mp4`, duration: 11 },
           ]}
         />
       </Box>
@@ -251,32 +251,32 @@ export const Stellair = () => {
             label={t('fresh_air_label')}
             items={[
               {
-                image: '/images/stellair/fresh_air_2.jpg',
+                image: `${BUNNY_CDN_URL}/stellair/fresh_air_2.jpg`,
                 title: t('fresh_air_item_2_title'),
                 description: t('fresh_air_item_2_description'),
               },
               {
-                image: '/images/stellair/fresh_air_1.jpg',
+                image: `${BUNNY_CDN_URL}/stellair/fresh_air_1.jpg`,
                 title: t('fresh_air_item_1_title'),
                 description: t('fresh_air_item_1_description'),
               },
               {
-                image: '/images/stellair/fresh_air_3.jpg',
+                image: `${BUNNY_CDN_URL}/stellair/fresh_air_3.jpg`,
                 title: t('fresh_air_item_3_title'),
                 description: t('fresh_air_item_3_description'),
               },
               {
-                image: '/images/stellair/fresh_air_2.jpg',
+                image: `${BUNNY_CDN_URL}/stellair/fresh_air_2.jpg`,
                 title: t('fresh_air_item_2_title'),
                 description: t('fresh_air_item_2_description'),
               },
               {
-                image: '/images/stellair/fresh_air_1.jpg',
+                image: `${BUNNY_CDN_URL}/stellair/fresh_air_1.jpg`,
                 title: t('fresh_air_item_1_title'),
                 description: t('fresh_air_item_1_description'),
               },
               {
-                image: '/images/stellair/fresh_air_3.jpg',
+                image: `${BUNNY_CDN_URL}/stellair/fresh_air_3.jpg`,
                 title: t('fresh_air_item_3_title'),
                 description: t('fresh_air_item_3_description'),
               },
@@ -311,7 +311,7 @@ export const Stellair = () => {
                   title={t('all_you_need_item_1_title')}
                   description={t('all_you_need_item_1_long_description')}
                   icon={<Virus />}
-                  image="/images/common/self-cleaning.jpg"
+                  image={`${BUNNY_CDN_URL}/common/self-cleaning.jpg`}
                 />
               ),
             },
@@ -332,7 +332,7 @@ export const Stellair = () => {
                   title={t('all_you_need_item_3_title')}
                   description={t('all_you_need_item_3_long_description')}
                   icon={<Verified />}
-                  image="/images/common/warranty.jpg"
+                  image={`${BUNNY_CDN_URL}/common/warranty.jpg`}
                 />
               ),
             },

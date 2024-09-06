@@ -29,7 +29,7 @@ import {
 } from '@/src/shared/design';
 import { TechnicalParameters } from '@/src/shared/components/TechnicalParameters';
 import { WhyInfoSwiper } from '@/src/shared/components/WhyInfoSwiper';
-import { INTERNAL_ROUTES } from '@/src/shared/constants';
+import { BUNNY_CDN_URL, INTERNAL_ROUTES } from '@/src/shared/constants';
 import { Element } from 'react-scroll';
 
 export const Sensitive = () => {
@@ -132,7 +132,7 @@ export const Sensitive = () => {
             aspectRatio="75 / 23"
           >
             <img
-              src="/images/sensitive/sensitive-main.png"
+              src={`${BUNNY_CDN_URL}/sensitive/sensitive-main.png`}
               style={{ width: '100%', height: 'auto', maxWidth: 'none' }}
               alt="Sensitive"
             />
@@ -183,27 +183,27 @@ export const Sensitive = () => {
               color={LINEAR_GRADIENTS.sensitive}
               items={[
                 {
-                  image: '/images/sensitive/sensitive-why-1.jpg',
+                  image: `${BUNNY_CDN_URL}/sensitive/sensitive-why-1.jpg`,
                   title: t('why_info_item_1_title'),
                   description: t('why_info_item_1_description'),
                 },
                 {
-                  image: '/images/sensitive/sensitive-why-2.jpg',
+                  image: `${BUNNY_CDN_URL}/sensitive/sensitive-why-2.jpg`,
                   title: t('why_info_item_2_title'),
                   description: t('why_info_item_2_description'),
                 },
                 {
-                  image: '/images/sensitive/sensitive-why-3.jpg',
+                  image: `${BUNNY_CDN_URL}/sensitive/sensitive-why-3.jpg`,
                   title: t('why_info_item_3_title'),
                   description: t('why_info_item_3_description'),
                 },
                 {
-                  image: '/images/sensitive/sensitive-why-4.jpg',
+                  image: `${BUNNY_CDN_URL}/sensitive/sensitive-why-4.jpg`,
                   title: t('why_info_item_4_title'),
                   description: t('why_info_item_4_description'),
                 },
                 {
-                  image: '/images/sensitive/sensitive-why-5.jpg',
+                  image: `${BUNNY_CDN_URL}/sensitive/sensitive-why-5.jpg`,
                   title: t('why_info_item_5_title'),
                   description: t('why_info_item_5_description'),
                 },
@@ -228,9 +228,9 @@ export const Sensitive = () => {
         color={LINEAR_GRADIENTS.sensitive}
         buttonColor="background.sensitive_light"
         videos={[
-          { url: '/videos/sensitive/2.mp4', duration: 14 },
-          { url: '/videos/sensitive/1.mp4', duration: 12 },
-          { url: '/videos/sensitive/3.mp4', duration: 10 },
+          { url: `${BUNNY_CDN_URL}/videos/sensitive/2.mp4`, duration: 14 },
+          { url: `${BUNNY_CDN_URL}/videos/sensitive/1.mp4`, duration: 12 },
+          { url: `${BUNNY_CDN_URL}/videos/sensitive/3.mp4`, duration: 10 },
         ]}
       />
       <DiffuseCooling color={LINEAR_GRADIENTS.sensitive} />
@@ -278,7 +278,7 @@ export const Sensitive = () => {
                   title={t('all_you_need_item_1_title')}
                   description={t('all_you_need_item_1_long_description')}
                   icon={<Virus />}
-                  image="/images/common/self-cleaning.jpg"
+                  image={`${BUNNY_CDN_URL}/common/self-cleaning.jpg`}
                 />
               ),
             },
@@ -299,7 +299,7 @@ export const Sensitive = () => {
                   title={t('all_you_need_item_3_title')}
                   description={t('all_you_need_item_3_long_description')}
                   icon={<Verified />}
-                  image="/images/common/warranty.jpg"
+                  image={`${BUNNY_CDN_URL}/common/warranty.jpg`}
                 />
               ),
             },

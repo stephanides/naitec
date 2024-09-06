@@ -7,6 +7,7 @@ import {
   ProductGallery,
   StellairSensitive,
 } from '@/src/shared/components';
+import { BUNNY_CDN_URL } from '@/src/shared/constants';
 import { Box, Flex } from '@chakra-ui/react';
 import { useTranslation } from 'next-i18next';
 import { rem } from 'polished';
@@ -25,23 +26,23 @@ export const FireplaceDifusser = () => {
             <ProductGallery
               images={[
                 {
-                  src: '/images/fireplace/fireplace-1.png',
+                  src: `${BUNNY_CDN_URL}/fireplace/fireplace-1.jpg`,
                   alt: 'Fireplace diffuser',
                 },
                 {
-                  src: '/images/fireplace/fireplace-2.jpg',
+                  src: `${BUNNY_CDN_URL}/fireplace/fireplace-2.jpg`,
                   alt: 'Fireplace diffuser 2',
                 },
                 {
-                  src: '/images/fireplace/fireplace-3.jpg',
+                  src: `${BUNNY_CDN_URL}/fireplace/fireplace-3.jpg`,
                   alt: 'Fireplace diffuser 3',
                 },
                 {
-                  src: '/images/fireplace/fireplace-4.jpg',
+                  src: `${BUNNY_CDN_URL}/fireplace/fireplace-4.jpg`,
                   alt: 'Fireplace diffuser 4',
                 },
                 {
-                  src: '/images/fireplace/fireplace-5.jpg',
+                  src: `${BUNNY_CDN_URL}/fireplace/fireplace-5.jpg`,
                   alt: 'Fireplace diffuser 5',
                 },
               ]}

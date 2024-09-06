@@ -11,59 +11,7 @@ module.exports = withTranslateRoutes({
     NEXT_PUBLIC_EMAIL_PASS: process.env.EMAIL_PASS,
     NEXT_PUBLIC_CONTACT_EMAIL_RECIPIENT: process.env.CONTACT_EMAIL_RECIPIENT,
   },
-  // async rewrites() {
-  //   return [
-  //     {
-  //       source: '/kontakt',
-  //       destination: '/contact',
-  //     },
-  //     {
-  //       source: '/kapcsolat',
-  //       destination: '/contact',
-  //     },
-  //     {
-  //       source: '/podpora',
-  //       destination: '/support',
-  //     },
-  //     {
-  //       source: '/wsparcie',
-  //       destination: '/support',
-  //     },
-  //     {
-  //       source: '/rolunk',
-  //       destination: '/support',
-  //     },
-  //     {
-  //       source: '/krbovy-difuzor',
-  //       destination: '/fireplace-diffuser',
-  //     },
-  //     {
-  //       source: '/kamin-difuzor',
-  //       destination: '/fireplace-diffuser',
-  //     },
-  //     { source: '/dyfuzor-kominkowy', destination: '/fireplace-diffuser' },
-  //     { source: '/kandallo-difuzor', destination: '/fireplace-diffuser' },
-  //   ];
-  // },
-  // async headers() {
-  //   return [
-  //     {
-  //       source: '/locales/(.*)',
-  //       headers: [
-  //         {
-  //           key: 'Cache-Control',
-  //           value: 'no-cache, no-store, must-revalidate',
-  //         },
-  //         {
-  //           key: 'Pragma',
-  //           value: 'no-cache',
-  //         },
-  //         {
-  //           key: 'Expires',
-  //           value: '0',
-  //         },
-  //       ],
-  //     },
-  //   ];
-  // },
+  images: {
+    domains: ['naitec.b-cdn.net'], // Add the external domain here
+  },
 });

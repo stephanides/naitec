@@ -257,7 +257,7 @@ export const NavMenuContent = ({
           px={rem(16)}
         >
           <Image
-            src="/images/common/iphone-mockup.png"
+            src={`${BUNNY_CDN_URL}/common/iphone-mockup.png`}
             width="0"
             height="0"
             sizes="100vw"

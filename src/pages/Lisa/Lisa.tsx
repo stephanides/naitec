@@ -7,6 +7,7 @@ import {
   ProductGallery,
   StellairSensitive,
 } from '@/src/shared/components';
+import { BUNNY_CDN_URL } from '@/src/shared/constants';
 import { Box, Flex } from '@chakra-ui/react';
 import { useTranslation } from 'next-i18next';
 import { rem } from 'polished';
@@ -25,19 +26,19 @@ export const Lisa = () => {
             <ProductGallery
               images={[
                 {
-                  src: '/images/lisa/lisa-1.jpg',
+                  src: `${BUNNY_CDN_URL}/lisa/lisa-1.jpg`,
                   alt: 'Lisa',
                 },
                 {
-                  src: '/images/lisa/lisa-2.jpg',
+                  src: `${BUNNY_CDN_URL}/lisa/lisa-2.jpg`,
                   alt: 'Lisa',
                 },
                 {
-                  src: '/images/lisa/lisa-3.jpg',
+                  src: `${BUNNY_CDN_URL}/lisa/lisa-3.jpg`,
                   alt: 'Lisa',
                 },
                 {
-                  src: '/images/lisa/lisa-4.jpg',
+                  src: `${BUNNY_CDN_URL}/lisa/lisa-4.jpg`,
                   alt: 'Lisa',
                 },
               ]}

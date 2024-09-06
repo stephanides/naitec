@@ -6,6 +6,7 @@ import { Label } from '../Label';
 import { NeueHaasGroteskDisplay, NeueHaasGroteskText } from '../Typography';
 import { rem } from 'polished';
 import { LINEAR_GRADIENTS } from '../../design';
+import { BUNNY_CDN_URL } from '../../constants';
 
 type CleanAirProps = {
   color: string;
@@ -98,7 +99,7 @@ export const CleanAir = ({
             mt={{ base: rem(30), lg: 0 }}
           >
             <Image
-              src="/images/common/clean-air.jpg"
+              src={`${BUNNY_CDN_URL}/common/clean-air.jpg`}
               width="0"
               height="0"
               sizes="100vw"

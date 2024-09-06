@@ -5,6 +5,7 @@ import Image from 'next/image';
 import { Label } from '../Label';
 import { NeueHaasGroteskDisplay, NeueHaasGroteskText } from '../Typography';
 import { rem } from 'polished';
+import { BUNNY_CDN_URL } from '../../constants';
 
 type CoolantR32Props = {
   color: string;
@@ -18,7 +19,7 @@ export const CoolantR32 = ({ color }: CoolantR32Props) => {
         <Flex alignItems="center" flexDir={{ base: 'column', md: 'row' }}>
           <Box width={{ base: '100%', md: '50%' }}>
             <Image
-              src="/images/common/globe.png"
+              src={`${BUNNY_CDN_URL}/common/globe.png`}
               width="0"
               height="0"
               sizes="100vw"
