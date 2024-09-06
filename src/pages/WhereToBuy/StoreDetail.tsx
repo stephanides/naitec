@@ -23,6 +23,8 @@ export const StoreDetail = ({ store }: { store: Store }) => {
   const [isExpanded, setExpanded] = useState(false);
   const { getCollapseProps, getToggleProps } = useCollapse({ isExpanded });
 
+  console.log(store.attributes.website);
+
   return (
     <Box _notLast={{ borderBottom: '1px solid', borderColor: '#E8E8E8' }}>
       <Flex
@@ -110,16 +112,16 @@ export const StoreDetail = ({ store }: { store: Store }) => {
         </Flex>
         {store?.attributes?.website && (
           <Box mb={rem(20)}>
-            <Link href={store.attributes.website} target="_blank">
+            <a href={store.attributes.website} target="_blank">
               <PrimaryButton
                 width="100%"
                 icon={<Website />}
                 startWithIcon
                 small
               >
-                {t('website')}
+                {store.attributes.website}
               </PrimaryButton>
-            </Link>
+            </a>
           </Box>
         )}
         {store?.attributes?.content && (

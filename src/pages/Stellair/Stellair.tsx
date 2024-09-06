@@ -237,8 +237,8 @@ export const Stellair = () => {
           color={LINEAR_GRADIENTS.stellair}
           buttonColor="background.stellair"
           videos={[
-            { url: '/videos/stellair/1.mp4', duration: 12 },
             { url: '/videos/stellair/2.mp4', duration: 14 },
+            { url: '/videos/stellair/1.mp4', duration: 12 },
             { url: '/videos/stellair/3.mp4', duration: 11 },
           ]}
         />

@@ -233,6 +233,7 @@ export const Home = () => {
           >
             <NeueHaasGroteskDisplay
               background={LINEAR_GRADIENTS.sensitive_pro}
+              data-aos="fade-down"
               backgroundPosition="left center"
               backgroundSize="600% 200%"
               fontSize={{
@@ -375,6 +376,7 @@ export const Home = () => {
           >
             <NeueHaasGroteskDisplay
               background={LINEAR_GRADIENTS.sensitive}
+              data-aos="fade-down"
               backgroundPosition="left center"
               backgroundSize="600% 200%"
               fontSize={{
@@ -524,6 +526,7 @@ export const Home = () => {
             >
               <NeueHaasGroteskDisplay
                 background={LINEAR_GRADIENTS.onyx}
+                data-aos="fade-down"
                 backgroundPosition="left center"
                 backgroundSize="600% 200%"
                 fontSize={{
@@ -664,6 +667,7 @@ export const Home = () => {
             >
               <NeueHaasGroteskDisplay
                 background={LINEAR_GRADIENTS.smart}
+                data-aos="fade-down"
                 backgroundPosition="left center"
                 backgroundSize="600% 200%"
                 fontSize={{

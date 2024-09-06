@@ -30,7 +30,11 @@ export const CleanAir = ({
             lg: imageOnLeft ? 'row-reverse' : 'row',
           }}
         >
-          <Box width={{ base: '100%', lg: '50%' }}>
+          <Box
+            width={{ base: '100%', lg: '50%' }}
+            data-aos="fade-left"
+            data-aos-offset="150"
+          >
             <Label
               text={t('clean_air_label')}
               color={light ? 'text.inverted' : 'text.link'}

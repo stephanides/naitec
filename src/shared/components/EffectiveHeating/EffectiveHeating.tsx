@@ -33,35 +33,44 @@ export const EffectiveHeating = ({
       pt={{ base: rem(40), md: rem(80), lg: rem(100) }}
     >
       <Container>
-        <Label text={label} color="white" borderColor="white" />
-        <NeueHaasGroteskDisplay
-          fontSize={{ base: rem(30), md: rem(64) }}
-          mt={rem(25)}
-          fontWeight={600}
-          color="text.inverted"
-          lineHeight="112%"
-          sx={{
-            strong: {
-              backgroundImage: color,
-              backgroundClip: 'text',
-              color: 'transparent',
-            },
-          }}
-          dangerouslySetInnerHTML={{ __html: title }}
-        />
-        <NeueHaasGroteskText
-          fontWeight={500}
-          fontSize={{ base: rem(16), md: rem(22) }}
-          mt={{ base: rem(20), md: rem(40) }}
-          maxW={rem(930)}
-          letterSpacing="calc(16px * -0.02)"
-          color="text.secondary"
-          sx={{ strong: { color: 'text.inverted', fontWeight: 500 } }}
-          dangerouslySetInnerHTML={{
-            __html: description,
-          }}
-        />
-        <Flex columnGap={rem(20)} mt={{ base: rem(40), md: rem(80) }}>
+        <Box data-aos="fade-left" data-aos-offset="250">
+          <Label text={label} color="white" borderColor="white" />
+        </Box>
+        <Box data-aos="fade-left" data-aos-delay="200" data-aos-offset="250">
+          <NeueHaasGroteskDisplay
+            fontSize={{ base: rem(30), md: rem(64) }}
+            mt={rem(25)}
+            fontWeight={600}
+            color="text.inverted"
+            lineHeight="112%"
+            sx={{
+              strong: {
+                backgroundImage: color,
+                backgroundClip: 'text',
+                color: 'transparent',
+              },
+            }}
+            dangerouslySetInnerHTML={{ __html: title }}
+          />
+          <NeueHaasGroteskText
+            fontWeight={500}
+            fontSize={{ base: rem(16), md: rem(22) }}
+            mt={{ base: rem(20), md: rem(40) }}
+            maxW={rem(930)}
+            letterSpacing="calc(16px * -0.02)"
+            color="text.secondary"
+            sx={{ strong: { color: 'text.inverted', fontWeight: 500 } }}
+            dangerouslySetInnerHTML={{
+              __html: description,
+            }}
+          />
+        </Box>
+        <Flex
+          columnGap={rem(20)}
+          mt={{ base: rem(40), md: rem(80) }}
+          data-aos="fade-up"
+          data-aos-offset="150"
+        >
           <Box width="50%" borderRadius={rem(20)} overflow="hidden">
             <Image
               src={image1}

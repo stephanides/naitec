@@ -228,8 +228,8 @@ export const Sensitive = () => {
         color={LINEAR_GRADIENTS.sensitive}
         buttonColor="background.sensitive_light"
         videos={[
-          { url: '/videos/sensitive/1.mp4', duration: 12 },
           { url: '/videos/sensitive/2.mp4', duration: 14 },
+          { url: '/videos/sensitive/1.mp4', duration: 12 },
           { url: '/videos/sensitive/3.mp4', duration: 10 },
         ]}
       />

@@ -31,6 +31,7 @@ export const CoolantR32 = ({ color }: CoolantR32Props) => {
             flexDir="column"
             justifyContent={{ base: 'center', md: 'flex-start' }}
             alignItems={{ base: 'center', md: 'flex-start' }}
+            data-aos="fade-up-left"
           >
             <Label
               text={t('coolant_r32_label')}

@@ -39,7 +39,23 @@ export const SensitivePro = () => {
   return (
     <Box>
       <Box>
-        <Flex width="100%" justifyContent="center">
+        <Flex
+          width="100%"
+          justifyContent="center"
+          animation={'fadeUp .5s ease-out'}
+          sx={{
+            '@keyframes fadeUp': {
+              '0%': {
+                opacity: 0,
+                transform: 'translateY(60px)',
+              },
+              '100%': {
+                opacity: 1,
+                transform: 'translateY(0)',
+              },
+            },
+          }}
+        >
           <Label
             text={t('heading_label')}
             color="text.sensitive_pro"
@@ -54,49 +70,75 @@ export const SensitivePro = () => {
           flexDir="column"
           overflow="hidden"
         >
-          <NeueHaasGroteskDisplay
-            background={LINEAR_GRADIENTS.sensitive_pro}
-            backgroundPosition="left center"
-            backgroundSize="600% 200%"
-            fontSize={{
-              base: rem(42),
-              xs: rem(60),
-              md: rem(90),
-              lg: rem(110),
-              xl: rem(110),
-              '3xl': rem(134),
-            }}
-            fontWeight={600}
-            textTransform="uppercase"
-            textAlign="center"
-            backgroundClip="text"
-            color="transparent"
-            position="absolute"
-            top={0}
-            transition="all .3s ease-out"
-            animation="backgroundAnimation 4s linear infinite"
+          <Flex
+            width="100%"
+            justifyContent="center"
+            animation={'fadeUp .75s ease-in-out'}
             sx={{
-              '@keyframes backgroundAnimation': {
+              '@keyframes fadeUp': {
                 '0%': {
-                  backgroundPosition: 'left center',
+                  opacity: 0,
+                  transform: 'translateY(60px)',
                 },
-                '50%': {
-                  backgroundPosition: 'right center',
+                '20%': {
+                  opacity: 0,
+                  transform: 'translateY(60px)',
                 },
                 '100%': {
-                  backgroundPosition: 'left center',
+                  opacity: 1,
+                  transform: 'translateY(0)',
                 },
               },
             }}
           >
-            Sensitive Pro
-          </NeueHaasGroteskDisplay>
+            <NeueHaasGroteskDisplay
+              background={LINEAR_GRADIENTS.sensitive_pro}
+              backgroundPosition="left center"
+              backgroundSize="600% 200%"
+              fontSize={{
+                base: rem(42),
+                xs: rem(60),
+                md: rem(90),
+                lg: rem(110),
+                xl: rem(110),
+                '3xl': rem(134),
+              }}
+              fontWeight={600}
+              textTransform="uppercase"
+              textAlign="center"
+              backgroundClip="text"
+              color="transparent"
+              position="absolute"
+              top={0}
+              transition="all .3s ease-out"
+              animation="backgroundAnimation 4s linear infinite"
+              sx={{
+                '@keyframes backgroundAnimation': {
+                  '0%': {
+                    backgroundPosition: 'left center',
+                  },
+                  '50%': {
+                    backgroundPosition: 'right center',
+                  },
+                  '100%': {
+                    backgroundPosition: 'left center',
+                  },
+                },
+              }}
+            >
+              Sensitive Pro
+            </NeueHaasGroteskDisplay>
+          </Flex>
           <Flex
             position="relative"
-            animation={'fadeUp 1s ease-in-out'}
+            animation={'fadeUp 1s ease-out'}
             sx={{
               '@keyframes fadeUp': {
                 '0%': {
+                  opacity: 0,
+                  transform: 'translateY(60px)',
+                },
+                '65%': {
                   opacity: 0,
                   transform: 'translateY(60px)',
                 },
@@ -160,6 +202,7 @@ export const SensitivePro = () => {
         <NeueHaasGroteskDisplay
           fontSize={{ base: rem(20), md: rem(36) }}
           color="text.link"
+          data-aos="fade-up"
           fontWeight={600}
         >
           {t('heading')}
@@ -169,6 +212,7 @@ export const SensitivePro = () => {
           fontSize={{ base: rem(18), md: rem(32) }}
           color="#8F8F8F"
           textAlign="center"
+          data-aos="fade-up"
           fontWeight={600}
           mt={rem(12)}
         >
@@ -227,8 +271,8 @@ export const SensitivePro = () => {
         color={LINEAR_GRADIENTS.sensitive_pro}
         buttonColor="background.sensitive_pro_light"
         videos={[
-          { url: '/videos/sensitive-pro/1.mp4', duration: 12 },
           { url: '/videos/sensitive-pro/2.mp4', duration: 11 },
+          { url: '/videos/sensitive-pro/1.mp4', duration: 12 },
           { url: '/videos/sensitive-pro/3.mp4', duration: 12 },
         ]}
       />

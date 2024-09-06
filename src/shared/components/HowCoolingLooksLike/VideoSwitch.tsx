@@ -9,7 +9,7 @@ type VideoData = {
   duration: number; // Duration in seconds
 };
 
-const BUTTONS = ['fast_cooling', 'diffuse_cooling', 'heating'];
+const BUTTONS = ['diffuse_cooling', 'fast_cooling', 'heating'];
 
 export const VideoSwitcher = ({
   videos,

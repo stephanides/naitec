@@ -158,7 +158,7 @@ export const Footer = () => {
                 {t('navigation_contact')}
               </Item>
             </Box>
-            <Box>
+            {/* <Box>
               <Title>{t('footer_naitec_app')}</Title>
               <Item href={EXTERNAL_ROUTES.IOS} isExternal>
                 {t('footer_naitec_app_ios')}
@@ -166,7 +166,7 @@ export const Footer = () => {
               <Item href={EXTERNAL_ROUTES.ANDROID} isExternal>
                 {t('footer_naitec_app_android')}
               </Item>
-            </Box>
+            </Box> */}
             <Box>
               <Title>{t('footer_contact')}</Title>
               <Item href={`mailto:${EMAILS.CONTACT}`}>{EMAILS.CONTACT}</Item>
@@ -174,7 +174,7 @@ export const Footer = () => {
                 {PHONE_NUMBERS.CONTACT}
               </Item>
             </Box>
-            <Box>
+            {/* <Box>
               <Title>{t('footer_invoice')}</Title>
               <Text
                 color="text.inverted"
@@ -217,7 +217,7 @@ export const Footer = () => {
               >
                 Slovensko
               </Text>
-            </Box>
+            </Box> */}
           </Flex>
           <Flex
             flexWrap="wrap"
@@ -238,7 +238,7 @@ export const Footer = () => {
               <Item href={INTERNAL_ROUTES.CONTACT}>
                 {t('navigation_contact')}
               </Item>
-              <Box mt={rem(40)}>
+              {/* <Box mt={rem(40)}>
                 <Title>{t('footer_invoice')}</Title>
                 <Text
                   color="text.inverted"
@@ -281,7 +281,7 @@ export const Footer = () => {
                 >
                   Slovensko
                 </Text>
-              </Box>
+              </Box> */}
             </Box>
             <Box width="50%">
               <Title>{t('footer_contact')}</Title>
@@ -289,7 +289,7 @@ export const Footer = () => {
               <Item href={`tel:${PHONE_NUMBERS.CONTACT}`}>
                 {PHONE_NUMBERS.CONTACT}
               </Item>
-              <Box mt={rem(40)}>
+              {/* <Box mt={rem(40)}>
                 <Title>{t('footer_naitec_app')}</Title>
                 <Flex mt={rem(20)} rowGap={rem(20)} flexDir="column">
                   <a
@@ -311,7 +311,7 @@ export const Footer = () => {
                     </Box>
                   </a>
                 </Flex>
-              </Box>
+              </Box> */}
             </Box>
           </Flex>
           <Flex

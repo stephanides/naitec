@@ -37,6 +37,7 @@ export const HowCoolingLooksLike = ({
             fontWeight={600}
             color="text.link"
             lineHeight="112%"
+            data-aos="fade-up"
             textAlign="center"
             px={rem(20)}
             maxW={rem(750)}

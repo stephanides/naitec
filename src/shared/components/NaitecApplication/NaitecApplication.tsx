@@ -32,14 +32,17 @@ export const NaitecApplication = ({
       <Container>
         <Flex columnGap={rem(60)} flexDir={{ base: 'column', '2xl': 'row' }}>
           <Box width={{ base: '100%', '2xl': '50%' }}>
-            <Flex justifyContent={{ base: 'center', '2xl': 'flex-start' }}>
+            <Flex
+              justifyContent={{ base: 'center', '2xl': 'flex-start' }}
+              data-aos="fade-right"
+            >
               <Label
                 text={t('naitec_app')}
                 color="text.inverted"
                 borderColor="border.white"
               />
             </Flex>
-            <Box mt={rem(25)}>
+            <Box mt={rem(25)} data-aos="fade-right" data-aos-delay="200">
               <NeueHaasGroteskDisplay
                 fontSize={{ base: rem(30), md: rem(64) }}
                 fontWeight={600}
@@ -67,7 +70,7 @@ export const NaitecApplication = ({
                 }}
               />
             </Box>
-            <Flex
+            {/* <Flex
               mt={rem(60)}
               columnGap={rem(25)}
               display={{ base: 'none', '2xl': 'flex' }}
@@ -86,7 +89,7 @@ export const NaitecApplication = ({
                   <AppStore />
                 </Box>
               </a>
-            </Flex>
+            </Flex> */}
           </Box>
           <Flex
             width={{ base: '100%', '2xl': '50%' }}
@@ -123,7 +126,7 @@ export const NaitecApplication = ({
               filter="blur(100px)"
               pointerEvents="none"
             />
-            <Flex
+            {/* <Flex
               mt={rem(60)}
               columnGap={rem(25)}
               display={{ base: 'flex', '2xl': 'none' }}
@@ -145,7 +148,7 @@ export const NaitecApplication = ({
                   <AppStore />
                 </Box>
               </a>
-            </Flex>
+            </Flex> */}
           </Flex>
         </Flex>
       </Container>

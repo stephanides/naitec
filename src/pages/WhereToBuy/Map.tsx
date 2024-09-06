@@ -38,7 +38,7 @@ const sortStoresByAttributes = (stores: Store[]): Store[] => {
   // Helper function to calculate the points for each store
   const calculatePoints = (store: Store): number => {
     const attributes = store.attributes;
-    let points = 0;
+    let points = store.attributes.title === 'TeploZima' ? -2 : 0;
 
     // Add points based on the attributes
     if (attributes.email) points += 1;

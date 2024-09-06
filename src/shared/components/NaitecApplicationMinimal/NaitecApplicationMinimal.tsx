@@ -60,7 +60,7 @@ export const NaitecApplicationMinimal = () => {
               }}
             />
           </Box>
-          <Flex
+          {/* <Flex
             mt={rem(60)}
             columnGap={rem(25)}
             display={{ base: 'none', '2xl': 'flex' }}
@@ -75,7 +75,7 @@ export const NaitecApplicationMinimal = () => {
                 <AppStore />
               </Box>
             </a>
-          </Flex>
+          </Flex> */}
         </Box>
         <Flex
           width={{ base: '100%', '2xl': '50%' }}
@@ -116,7 +116,7 @@ export const NaitecApplicationMinimal = () => {
             zIndex={2}
           />
 
-          <Flex
+          {/* <Flex
             mt={rem(60)}
             columnGap={rem(25)}
             display={{ base: 'flex', '2xl': 'none' }}
@@ -134,7 +134,7 @@ export const NaitecApplicationMinimal = () => {
                 <AppStore />
               </Box>
             </a>
-          </Flex>
+          </Flex> */}
         </Flex>
       </Flex>
       <Box

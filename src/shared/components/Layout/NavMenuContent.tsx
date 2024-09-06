@@ -229,7 +229,7 @@ export const NavMenuContent = ({
           </NeueHaasGroteskDisplay>
         </Link>
       </Box>
-      <Flex
+      {/* <Flex
         width="100%"
         justifyContent="center"
         height={rem(260)}
@@ -282,7 +282,7 @@ export const NavMenuContent = ({
             </Box>
           </a>
         </Flex>
-      </Flex>
+      </Flex> */}
     </Box>
   );
 };
