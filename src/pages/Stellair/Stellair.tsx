@@ -38,7 +38,23 @@ export const Stellair = () => {
   return (
     <Box>
       <Box>
-        <Flex width="100%" justifyContent="center">
+        <Flex
+          width="100%"
+          justifyContent="center"
+          animation={'fadeUp .5s ease-out'}
+          sx={{
+            '@keyframes fadeUp': {
+              '0%': {
+                opacity: 0,
+                transform: 'translateY(60px)',
+              },
+              '100%': {
+                opacity: 1,
+                transform: 'translateY(0)',
+              },
+            },
+          }}
+        >
           <Label
             text={t('heading_label')}
             color="text.stellair"
@@ -53,50 +69,75 @@ export const Stellair = () => {
           flexDir="column"
           overflow="hidden"
         >
-          <NeueHaasGroteskDisplay
-            background="linear-gradient(to right, #344F5F, #6CA5C5)"
-            backgroundPosition="left center"
-            backgroundSize="600% 200%"
-            fontSize={{
-              base: rem(60),
-              xs: rem(72),
-              md: rem(100),
-              lg: rem(140),
-              xl: rem(150),
-              '3xl': rem(192),
-            }}
-            fontWeight={600}
-            textTransform="uppercase"
-            textAlign="center"
-            backgroundClip="text"
-            color="transparent"
-            position="absolute"
-            top={0}
-            transition="all .3s ease-out"
-            animation="backgroundAnimation 4s linear infinite"
+          <Flex
+            width="100%"
+            justifyContent="center"
+            animation={'fadeUp .75s ease-in-out'}
             sx={{
-              '@keyframes backgroundAnimation': {
+              '@keyframes fadeUp': {
                 '0%': {
-                  backgroundPosition: 'left center',
+                  opacity: 0,
+                  transform: 'translateY(60px)',
                 },
-                '50%': {
-                  backgroundPosition: 'right center',
+                '20%': {
+                  opacity: 0,
+                  transform: 'translateY(60px)',
                 },
                 '100%': {
-                  backgroundPosition: 'left center',
+                  opacity: 1,
+                  transform: 'translateY(0)',
                 },
               },
             }}
           >
-            Stellair
-          </NeueHaasGroteskDisplay>
-
+            <NeueHaasGroteskDisplay
+              background="linear-gradient(to right, #344F5F, #6CA5C5)"
+              backgroundPosition="left center"
+              backgroundSize="600% 200%"
+              fontSize={{
+                base: rem(60),
+                xs: rem(72),
+                md: rem(100),
+                lg: rem(140),
+                xl: rem(150),
+                '3xl': rem(192),
+              }}
+              fontWeight={600}
+              textTransform="uppercase"
+              textAlign="center"
+              backgroundClip="text"
+              color="transparent"
+              position="absolute"
+              top={0}
+              transition="all .3s ease-out"
+              animation="backgroundAnimation 4s linear infinite"
+              sx={{
+                '@keyframes backgroundAnimation': {
+                  '0%': {
+                    backgroundPosition: 'left center',
+                  },
+                  '50%': {
+                    backgroundPosition: 'right center',
+                  },
+                  '100%': {
+                    backgroundPosition: 'left center',
+                  },
+                },
+              }}
+            >
+              Stellair
+            </NeueHaasGroteskDisplay>
+          </Flex>
           <Flex
             position="relative"
             animation={'fadeUp 1s ease-in-out'}
             sx={{
               '@keyframes fadeUp': {
                 '0%': {
+                  opacity: 0,
+                  transform: 'translateY(60px)',
+                },
+                '65%': {
                   opacity: 0,
                   transform: 'translateY(60px)',
                 },

@@ -179,7 +179,7 @@ export const StellairSensitive = ({
               mx={{ base: 'auto', xl: 0 }}
             >
               <Item
-                image={`/${BUNNY_CDN_URL}/stellair/stellair-main.png`}
+                image={`${BUNNY_CDN_URL}/stellair/stellair-minimal.png`}
                 title="Naitec Stellair"
                 href={INTERNAL_ROUTES.STELLAIR}
                 originalWidth={533}
@@ -196,7 +196,7 @@ export const StellairSensitive = ({
               mx={{ base: 'auto', xl: 0 }}
             >
               <Item
-                image={`/${BUNNY_CDN_URL}/sensitive/sensitive-main.png`}
+                image={`${BUNNY_CDN_URL}/sensitive/sensitive_minimal.png`}
                 title="Naitec Sensitive"
                 href={INTERNAL_ROUTES.SENSITIVE}
                 originalWidth={470}
@@ -213,7 +213,7 @@ export const StellairSensitive = ({
               mx={{ base: 'auto', xl: 0 }}
             >
               <Item
-                image={`/${BUNNY_CDN_URL}/sensitive-pro/sensitive-pro-main.png`}
+                image={`${BUNNY_CDN_URL}/sensitive-pro/sensitive-pro-minimal.png`}
                 title="Naitec Sensitive Pro"
                 href={INTERNAL_ROUTES.SENSITIVE_PRO}
                 originalWidth={656}
@@ -230,7 +230,7 @@ export const StellairSensitive = ({
               mx={{ base: 'auto', xl: 0 }}
             >
               <Item
-                image={`/${BUNNY_CDN_URL}/onyx/onyx-main.png`}
+                image={`${BUNNY_CDN_URL}/onyx/onyx-minimal.png`}
                 title="Naitec Onyx"
                 href={INTERNAL_ROUTES.ONYX}
                 originalWidth={696}
@@ -247,7 +247,7 @@ export const StellairSensitive = ({
               mx={{ base: 'auto', xl: 0 }}
             >
               <Item
-                image={`/${BUNNY_CDN_URL}/smart/smart-main.png`}
+                image={`${BUNNY_CDN_URL}/smart/smart-minimal.png`}
                 title="Naitec Smart"
                 href={INTERNAL_ROUTES.SMART}
                 originalWidth={678}
