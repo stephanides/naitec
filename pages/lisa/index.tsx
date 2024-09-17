@@ -7,27 +7,42 @@ import { BASE_URL } from '@/src/shared/constants';
 import { NextSeo } from 'next-seo';
 import { getSeoDescription, getSeoTitle } from '@/src/shared/helpers';
 
+const pathsByLocale = {
+  en: 'lisa',
+  sk: 'lisa',
+  cs: 'lisa',
+  hu: 'lisa',
+  pl: 'lisa',
+  de: 'lisa',
+  ja: 'lisa',
+};
+
 const LisaVoiceControlPage = () => {
   const { locale } = useRouter();
   const title = getSeoTitle('lisa', locale || 'en');
   const description = getSeoDescription('lisa', locale || 'en');
+
+  const localizedPath =
+    pathsByLocale[locale as keyof typeof pathsByLocale] || 'lisa';
+
+  const languageAlternates = Object.keys(pathsByLocale).map((lang) => ({
+    hrefLang: lang,
+    href: `${BASE_URL}${lang !== 'en' ? `/${lang}` : ''}/${
+      pathsByLocale[lang as keyof typeof pathsByLocale]
+    }`,
+  }));
+
   return (
     <>
       <NextSeo
         title={title}
         description={description}
-        canonical={`${BASE_URL}/${locale !== 'en' ? locale : ''}/lisa/`}
-        languageAlternates={[
-          { hrefLang: 'en', href: `${BASE_URL}/lisa` },
-          { hrefLang: 'sk', href: `${BASE_URL}/sk/lisa/` },
-          { hrefLang: 'cs', href: `${BASE_URL}/cs/lisa/` },
-          { hrefLang: 'hu', href: `${BASE_URL}/hu/lisa/` },
-          { hrefLang: 'pl', href: `${BASE_URL}/pl/lisa/` },
-          { hrefLang: 'de', href: `${BASE_URL}/de/lisa/` },
-          { hrefLang: 'ja', href: `${BASE_URL}/ja/lisa/` },
-        ]}
+        canonical={`${BASE_URL}${
+          locale !== 'en' ? `/${locale}` : ''
+        }/${localizedPath}`}
+        languageAlternates={languageAlternates}
         openGraph={{
-          url: `${BASE_URL}/${locale !== 'en' ? locale : ''}/lisa/`,
+          url: `${BASE_URL}/${locale !== 'en' ? locale : ''}/${localizedPath}`,
           title: title,
           description: description,
           images: [

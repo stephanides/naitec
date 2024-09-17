@@ -7,27 +7,42 @@ import { getSeoDescription, getSeoTitle } from '@/src/shared/helpers';
 import { NextSeo } from 'next-seo';
 import { BASE_URL } from '@/src/shared/constants';
 
+const pathsByLocale = {
+  en: 'smart',
+  sk: 'smart',
+  cs: 'smart',
+  hu: 'smart',
+  pl: 'smart',
+  de: 'smart',
+  ja: 'smart',
+};
+
 const SmartPage = () => {
   const { locale } = useRouter();
   const title = getSeoTitle('smart', locale || 'en');
   const description = getSeoDescription('smart', locale || 'en');
+
+  const localizedPath =
+    pathsByLocale[locale as keyof typeof pathsByLocale] || 'smart';
+
+  const languageAlternates = Object.keys(pathsByLocale).map((lang) => ({
+    hrefLang: lang,
+    href: `${BASE_URL}${lang !== 'en' ? `/${lang}` : ''}/${
+      pathsByLocale[lang as keyof typeof pathsByLocale]
+    }`,
+  }));
+
   return (
     <>
       <NextSeo
         title={title}
         description={description}
-        canonical={`${BASE_URL}/${locale !== 'en' ? locale : ''}/smart/`}
-        languageAlternates={[
-          { hrefLang: 'en', href: `${BASE_URL}/smart` },
-          { hrefLang: 'sk', href: `${BASE_URL}/sk/smart/` },
-          { hrefLang: 'cs', href: `${BASE_URL}/cs/smart/` },
-          { hrefLang: 'hu', href: `${BASE_URL}/hu/smart/` },
-          { hrefLang: 'pl', href: `${BASE_URL}/pl/smart/` },
-          { hrefLang: 'de', href: `${BASE_URL}/de/smart/` },
-          { hrefLang: 'ja', href: `${BASE_URL}/ja/smart/` },
-        ]}
+        canonical={`${BASE_URL}${
+          locale !== 'en' ? `/${locale}` : ''
+        }/${localizedPath}`}
+        languageAlternates={languageAlternates}
         openGraph={{
-          url: `${BASE_URL}/${locale !== 'en' ? locale : ''}/smart/`,
+          url: `${BASE_URL}/${locale !== 'en' ? locale : ''}/${localizedPath}`,
           title: title,
           description: description,
           images: [

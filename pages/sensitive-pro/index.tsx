@@ -7,29 +7,42 @@ import { getSeoDescription, getSeoTitle } from '@/src/shared/helpers';
 import { NextSeo } from 'next-seo';
 import { BASE_URL } from '@/src/shared/constants';
 
+const pathsByLocale = {
+  en: 'sensitive-pro',
+  sk: 'sensivity-pro',
+  cs: 'sensivity-pro',
+  hu: 'sensivity-pro',
+  pl: 'sensivity-pro',
+  de: 'sensivity-pro',
+  ja: 'sensivity-pro',
+};
+
 const SensitiveProPage = () => {
   const { locale } = useRouter();
   const title = getSeoTitle('sensitive_pro', locale || 'en');
   const description = getSeoDescription('sensitive_pro', locale || 'en');
+
+  const localizedPath =
+    pathsByLocale[locale as keyof typeof pathsByLocale] || 'sensitive-pro';
+
+  const languageAlternates = Object.keys(pathsByLocale).map((lang) => ({
+    hrefLang: lang,
+    href: `${BASE_URL}${lang !== 'en' ? `/${lang}` : ''}/${
+      pathsByLocale[lang as keyof typeof pathsByLocale]
+    }`,
+  }));
+
   return (
     <>
       <NextSeo
         title={title}
         description={description}
-        canonical={`${BASE_URL}/${
-          locale !== 'en' ? locale : ''
-        }/sensitive-pro/`}
-        languageAlternates={[
-          { hrefLang: 'en', href: `${BASE_URL}/sensitive-pro` },
-          { hrefLang: 'sk', href: `${BASE_URL}/sk/sensivity-pro/` },
-          { hrefLang: 'cs', href: `${BASE_URL}/cs/sensivity-pro/` },
-          { hrefLang: 'hu', href: `${BASE_URL}/hu/sensivity-pro/` },
-          { hrefLang: 'pl', href: `${BASE_URL}/pl/sensivity-pro/` },
-          { hrefLang: 'de', href: `${BASE_URL}/de/sensivity-pro/` },
-          { hrefLang: 'ja', href: `${BASE_URL}/ja/sensivity-pro/` },
-        ]}
+        canonical={`${BASE_URL}${
+          locale !== 'en' ? `/${locale}` : ''
+        }/${localizedPath}`}
+        languageAlternates={languageAlternates}
         openGraph={{
-          url: `${BASE_URL}/${locale !== 'en' ? locale : ''}/sensitive-pro/`,
+          url: `${BASE_URL}/${locale !== 'en' ? locale : ''}/${localizedPath}`,
           title: title,
           description: description,
           images: [

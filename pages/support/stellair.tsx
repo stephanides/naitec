@@ -7,10 +7,29 @@ import { SupportDetail } from '@/src/pages';
 import { getSeoDescription, getSeoTitle } from '@/src/shared/helpers';
 import { NextSeo } from 'next-seo';
 
+const pathsByLocale = {
+  en: 'support/stellair',
+  sk: 'podpora/stellair',
+  cs: 'podpora/stellair',
+  hu: 'tamogatas/stellair',
+  pl: 'wsparcie/stellair',
+  de: 'unterstutzung/stellair',
+  ja: 'support/stellair',
+};
+
 const SupportPage = () => {
   const { pathname, locale } = useRouter();
   const title = getSeoTitle('support', locale || 'en');
   const description = getSeoDescription('support', locale || 'en');
+  const localizedPath =
+    pathsByLocale[locale as keyof typeof pathsByLocale] || 'support/stellair';
+
+  const languageAlternates = Object.keys(pathsByLocale).map((lang) => ({
+    hrefLang: lang,
+    href: `${BASE_URL}${lang !== 'en' ? `/${lang}` : ''}/${
+      pathsByLocale[lang as keyof typeof pathsByLocale]
+    }`,
+  }));
   const path = pathname;
   const parts = path.split('/');
   const productId = parts[2];
@@ -24,20 +43,12 @@ const SupportPage = () => {
       <NextSeo
         title={title}
         description={description}
-        canonical={`${BASE_URL}/${
-          locale !== 'en' ? locale : ''
-        }/support/stellair/`}
-        languageAlternates={[
-          { hrefLang: 'en', href: `${BASE_URL}/support/stellair/` },
-          { hrefLang: 'sk', href: `${BASE_URL}/sk/podpora/stellair/` },
-          { hrefLang: 'cs', href: `${BASE_URL}/cs/podpora/stellair/` },
-          { hrefLang: 'hu', href: `${BASE_URL}/hu/tamogatas/stellair/` },
-          { hrefLang: 'pl', href: `${BASE_URL}/pl/wsparcie/stellair/` },
-          { hrefLang: 'de', href: `${BASE_URL}/de/unterstutzung/stellair/` },
-          { hrefLang: 'ja', href: `${BASE_URL}/ja/support/stellair/` },
-        ]}
+        canonical={`${BASE_URL}${
+          locale !== 'en' ? `/${locale}` : ''
+        }/${localizedPath}`}
+        languageAlternates={languageAlternates}
         openGraph={{
-          url: `${BASE_URL}/${locale !== 'en' ? locale : ''}/support/stellair/`,
+          url: `${BASE_URL}/${locale !== 'en' ? locale : ''}/${localizedPath}`,
           title: title,
           description: description,
           images: [

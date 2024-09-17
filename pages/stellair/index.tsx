@@ -7,27 +7,41 @@ import { BASE_URL } from '@/src/shared/constants';
 import { getSeoDescription, getSeoTitle } from '@/src/shared/helpers';
 import { NextSeo } from 'next-seo';
 
+const pathsByLocale = {
+  en: 'stellair',
+  sk: 'stellair',
+  cs: 'stellair',
+  hu: 'stellair',
+  pl: 'stellair',
+  de: 'stellair',
+  ja: 'stellair',
+};
+
 const StellairPage = () => {
   const { locale } = useRouter();
   const title = getSeoTitle('stellair', locale || 'en');
   const description = getSeoDescription('stellair', locale || 'en');
+
+  const localizedPath =
+    pathsByLocale[locale as keyof typeof pathsByLocale] || 'stellair';
+
+  const languageAlternates = Object.keys(pathsByLocale).map((lang) => ({
+    hrefLang: lang,
+    href: `${BASE_URL}${lang !== 'en' ? `/${lang}` : ''}/${
+      pathsByLocale[lang as keyof typeof pathsByLocale]
+    }`,
+  }));
   return (
     <>
       <NextSeo
         title={title}
         description={description}
-        canonical={`${BASE_URL}/${locale !== 'en' ? locale : ''}/stellair/`}
-        languageAlternates={[
-          { hrefLang: 'en', href: `${BASE_URL}/stellair` },
-          { hrefLang: 'sk', href: `${BASE_URL}/sk/stellair/` },
-          { hrefLang: 'cs', href: `${BASE_URL}/cs/stellair/` },
-          { hrefLang: 'hu', href: `${BASE_URL}/hu/stellair/` },
-          { hrefLang: 'pl', href: `${BASE_URL}/pl/stellair/` },
-          { hrefLang: 'de', href: `${BASE_URL}/de/stellair/` },
-          { hrefLang: 'ja', href: `${BASE_URL}/ja/stellair/` },
-        ]}
+        canonical={`${BASE_URL}${
+          locale !== 'en' ? `/${locale}` : ''
+        }/${localizedPath}`}
+        languageAlternates={languageAlternates}
         openGraph={{
-          url: `${BASE_URL}/${locale !== 'en' ? locale : ''}/stellair/`,
+          url: `${BASE_URL}/${locale !== 'en' ? locale : ''}/${localizedPath}`,
           title: title,
           description: description,
           images: [

@@ -7,6 +7,16 @@ import { SupportDetail } from '@/src/pages';
 import { getSeoDescription, getSeoTitle } from '@/src/shared/helpers';
 import { NextSeo } from 'next-seo';
 
+const pathsByLocale = {
+  en: 'support/fireplace-diffuser',
+  sk: 'podpora/krbovy-difuzor',
+  cs: 'podpora/krbovy-difuzor',
+  hu: 'tamogatas/kandalo-diffuzor',
+  pl: 'wsparcie/difuzor-kominkowy',
+  de: 'unterstutzung/kamin-diffusor',
+  ja: 'support/fireplace-diffuser',
+};
+
 const SupportPage = () => {
   const { pathname, locale } = useRouter();
   const title = getSeoTitle('support', locale || 'en');
@@ -15,6 +25,18 @@ const SupportPage = () => {
   const parts = path.split('/');
   const productId = parts[2];
   const item = PRODUCTS.find((product) => product.id === productId);
+
+  const localizedPath =
+    pathsByLocale[locale as keyof typeof pathsByLocale] ||
+    'support/fireplace-diffuser';
+
+  const languageAlternates = Object.keys(pathsByLocale).map((lang) => ({
+    hrefLang: lang,
+    href: `${BASE_URL}${lang !== 'en' ? `/${lang}` : ''}/${
+      pathsByLocale[lang as keyof typeof pathsByLocale]
+    }`,
+  }));
+
   if (!item) {
     return <Layout>Not found</Layout>;
   }
@@ -23,34 +45,12 @@ const SupportPage = () => {
       <NextSeo
         title={title}
         description={description}
-        canonical={`${BASE_URL}/${
-          locale !== 'en' ? locale : ''
-        }/support/fireplace-diffuser/`}
-        languageAlternates={[
-          { hrefLang: 'en', href: `${BASE_URL}/support/fireplace-diffuser/` },
-          { hrefLang: 'sk', href: `${BASE_URL}/sk/podpora/krbovy-difuzor/` },
-          { hrefLang: 'cs', href: `${BASE_URL}/cs/podpora/krbovy-difuzor/` },
-          {
-            hrefLang: 'hu',
-            href: `${BASE_URL}/hu/tamogatas/kandalo-diffuzor/`,
-          },
-          {
-            hrefLang: 'pl',
-            href: `${BASE_URL}/pl/wsparcie/difuzor-kominkowy/`,
-          },
-          {
-            hrefLang: 'de',
-            href: `${BASE_URL}/de/unterstutzung/kamin-diffusor/`,
-          },
-          {
-            hrefLang: 'ja',
-            href: `${BASE_URL}/ja/support/fireplace-diffuser/`,
-          },
-        ]}
+        canonical={`${BASE_URL}${
+          locale !== 'en' ? `/${locale}` : ''
+        }/${localizedPath}`}
+        languageAlternates={languageAlternates}
         openGraph={{
-          url: `${BASE_URL}/${
-            locale !== 'en' ? locale : ''
-          }/support/fireplace-diffuser/`,
+          url: `${BASE_URL}/${locale !== 'en' ? locale : ''}/${localizedPath}`,
           title: title,
           description: description,
           images: [

@@ -7,31 +7,42 @@ import { NextSeo } from 'next-seo';
 import { getSeoDescription, getSeoTitle } from '@/src/shared/helpers';
 import { useRouter } from 'next-translate-routes';
 
+const pathsByLocale = {
+  en: 'fireplace-diffuser',
+  sk: 'krbovy-difuzor',
+  cs: 'krbovy-difuzor',
+  hu: 'kandalo-diffuzor',
+  pl: 'difuzor-kominkowy',
+  de: 'kamin-diffusor',
+  ja: 'fireplace-diffuser',
+};
+
 const FireplaceDifusserPage = () => {
   const { locale } = useRouter();
   const title = getSeoTitle('fireplace_diffuser', locale || 'en');
   const description = getSeoDescription('fireplace_diffuser', locale || 'en');
+
+  const localizedPath =
+    pathsByLocale[locale as keyof typeof pathsByLocale] || 'fireplace-diffuser';
+
+  const languageAlternates = Object.keys(pathsByLocale).map((lang) => ({
+    hrefLang: lang,
+    href: `${BASE_URL}${lang !== 'en' ? `/${lang}` : ''}/${
+      pathsByLocale[lang as keyof typeof pathsByLocale]
+    }`,
+  }));
+
   return (
     <>
       <NextSeo
         title={title}
         description={description}
-        canonical={`${BASE_URL}/${
-          locale !== 'en' ? locale : ''
-        }/fireplace-diffuser/`}
-        languageAlternates={[
-          { hrefLang: 'en', href: `${BASE_URL}/fireplace-diffuser` },
-          { hrefLang: 'sk', href: `${BASE_URL}/sk/krbovy-difuzor/` },
-          { hrefLang: 'cs', href: `${BASE_URL}/cs/krbovy-difuzor/` },
-          { hrefLang: 'hu', href: `${BASE_URL}/hu/kandalo-diffuzor/` },
-          { hrefLang: 'pl', href: `${BASE_URL}/pl/difuzor-kominkowy/` },
-          { hrefLang: 'de', href: `${BASE_URL}/de/kamin-diffusor/` },
-          { hrefLang: 'ja', href: `${BASE_URL}/ja/fireplace-diffuser/` },
-        ]}
+        canonical={`${BASE_URL}${
+          locale !== 'en' ? `/${locale}` : ''
+        }/${localizedPath}`}
+        languageAlternates={languageAlternates}
         openGraph={{
-          url: `${BASE_URL}/${
-            locale !== 'en' ? locale : ''
-          }fireplace-diffuser/`,
+          url: `${BASE_URL}/${locale !== 'en' ? locale : ''}/${localizedPath}`,
           title: title,
           description: description,
           images: [

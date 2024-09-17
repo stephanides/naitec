@@ -7,6 +7,16 @@ import { SupportDetail } from '@/src/pages';
 import { getSeoDescription, getSeoTitle } from '@/src/shared/helpers';
 import { NextSeo } from 'next-seo';
 
+const pathsByLocale = {
+  en: 'support/smart',
+  sk: 'podpora/smart',
+  cs: 'podpora/smart',
+  hu: 'tamogatas/smart',
+  pl: 'wsparcie/smart',
+  de: 'unterstutzung/smart',
+  ja: 'support/smart',
+};
+
 const SupportPage = () => {
   const { pathname, locale } = useRouter();
   const title = getSeoTitle('support', locale || 'en');
@@ -15,6 +25,15 @@ const SupportPage = () => {
   const parts = path.split('/');
   const productId = parts[2];
   const item = PRODUCTS.find((product) => product.id === productId);
+  const localizedPath =
+    pathsByLocale[locale as keyof typeof pathsByLocale] || 'support/smart';
+
+  const languageAlternates = Object.keys(pathsByLocale).map((lang) => ({
+    hrefLang: lang,
+    href: `${BASE_URL}${lang !== 'en' ? `/${lang}` : ''}/${
+      pathsByLocale[lang as keyof typeof pathsByLocale]
+    }`,
+  }));
 
   if (!item) {
     return <Layout>Not found</Layout>;
@@ -24,20 +43,12 @@ const SupportPage = () => {
       <NextSeo
         title={title}
         description={description}
-        canonical={`${BASE_URL}/${
-          locale !== 'en' ? locale : ''
-        }/support/smart/`}
-        languageAlternates={[
-          { hrefLang: 'en', href: `${BASE_URL}/support/smart/` },
-          { hrefLang: 'sk', href: `${BASE_URL}/sk/podpora/smart/` },
-          { hrefLang: 'cs', href: `${BASE_URL}/cs/podpora/smart/` },
-          { hrefLang: 'hu', href: `${BASE_URL}/hu/tamogatas/smart/` },
-          { hrefLang: 'pl', href: `${BASE_URL}/pl/wsparcie/smart/` },
-          { hrefLang: 'de', href: `${BASE_URL}/de/unterstutzung/smart/` },
-          { hrefLang: 'ja', href: `${BASE_URL}/ja/support/smart/` },
-        ]}
+        canonical={`${BASE_URL}${
+          locale !== 'en' ? `/${locale}` : ''
+        }/${localizedPath}`}
+        languageAlternates={languageAlternates}
         openGraph={{
-          url: `${BASE_URL}/${locale !== 'en' ? locale : ''}/support/smart/`,
+          url: `${BASE_URL}/${locale !== 'en' ? locale : ''}/${localizedPath}`,
           title: title,
           description: description,
           images: [

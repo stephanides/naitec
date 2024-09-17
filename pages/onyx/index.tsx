@@ -7,27 +7,42 @@ import { BASE_URL } from '@/src/shared/constants';
 import { NextSeo } from 'next-seo';
 import { getSeoDescription, getSeoTitle } from '@/src/shared/helpers';
 
+const pathsByLocale = {
+  en: 'onyx',
+  sk: 'onyx',
+  cs: 'onyx',
+  hu: 'onyx',
+  pl: 'onyx',
+  de: 'onyx',
+  ja: 'onyx',
+};
+
 const OnyxPage = () => {
   const { locale } = useRouter();
   const title = getSeoTitle('onyx', locale || 'en');
   const description = getSeoDescription('onyx', locale || 'en');
+
+  const localizedPath =
+    pathsByLocale[locale as keyof typeof pathsByLocale] || 'onyx';
+
+  const languageAlternates = Object.keys(pathsByLocale).map((lang) => ({
+    hrefLang: lang,
+    href: `${BASE_URL}${lang !== 'en' ? `/${lang}` : ''}/${
+      pathsByLocale[lang as keyof typeof pathsByLocale]
+    }`,
+  }));
+
   return (
     <>
       <NextSeo
         title={title}
         description={description}
-        canonical={`${BASE_URL}/${locale !== 'en' ? locale : ''}/onyx/`}
-        languageAlternates={[
-          { hrefLang: 'en', href: `${BASE_URL}/onyx` },
-          { hrefLang: 'sk', href: `${BASE_URL}/sk/onyx/` },
-          { hrefLang: 'cs', href: `${BASE_URL}/cs/onyx/` },
-          { hrefLang: 'hu', href: `${BASE_URL}/hu/onyx/` },
-          { hrefLang: 'pl', href: `${BASE_URL}/pl/onyx/` },
-          { hrefLang: 'de', href: `${BASE_URL}/de/onyx/` },
-          { hrefLang: 'ja', href: `${BASE_URL}/ja/onyx/` },
-        ]}
+        canonical={`${BASE_URL}${
+          locale !== 'en' ? `/${locale}` : ''
+        }/${localizedPath}`}
+        languageAlternates={languageAlternates}
         openGraph={{
-          url: `${BASE_URL}/${locale !== 'en' ? locale : ''}/onyx/`,
+          url: `${BASE_URL}/${locale !== 'en' ? locale : ''}/${localizedPath}`,
           title: title,
           description: description,
           images: [

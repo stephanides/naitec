@@ -7,6 +7,16 @@ import { SupportDetail } from '@/src/pages';
 import { getSeoDescription, getSeoTitle } from '@/src/shared/helpers';
 import { NextSeo } from 'next-seo';
 
+const pathsByLocale = {
+  en: 'support/onyx',
+  sk: 'podpora/onyx',
+  cs: 'podpora/onyx',
+  hu: 'tamogatas/onyx',
+  pl: 'wsparcie/onyx',
+  de: 'unterstutzung/onyx',
+  ja: 'support/onyx',
+};
+
 const SupportPage = () => {
   const { pathname, locale } = useRouter();
   const title = getSeoTitle('support', locale || 'en');
@@ -16,6 +26,16 @@ const SupportPage = () => {
   const productId = parts[2];
   const item = PRODUCTS.find((product) => product.id === productId);
 
+  const localizedPath =
+    pathsByLocale[locale as keyof typeof pathsByLocale] || 'support/onyx';
+
+  const languageAlternates = Object.keys(pathsByLocale).map((lang) => ({
+    hrefLang: lang,
+    href: `${BASE_URL}${lang !== 'en' ? `/${lang}` : ''}/${
+      pathsByLocale[lang as keyof typeof pathsByLocale]
+    }`,
+  }));
+
   if (!item) {
     return <Layout>Not found</Layout>;
   }
@@ -24,18 +44,12 @@ const SupportPage = () => {
       <NextSeo
         title={title}
         description={description}
-        canonical={`${BASE_URL}/${locale !== 'en' ? locale : ''}/support/onyx/`}
-        languageAlternates={[
-          { hrefLang: 'en', href: `${BASE_URL}/support/onyx/` },
-          { hrefLang: 'sk', href: `${BASE_URL}/sk/podpora/onyx/` },
-          { hrefLang: 'cs', href: `${BASE_URL}/cs/podpora/onyx/` },
-          { hrefLang: 'hu', href: `${BASE_URL}/hu/tamogatas/onyx/` },
-          { hrefLang: 'pl', href: `${BASE_URL}/pl/wsparcie/onyx/` },
-          { hrefLang: 'de', href: `${BASE_URL}/de/unterstutzung/onyx/` },
-          { hrefLang: 'ja', href: `${BASE_URL}/ja/support/onyx/` },
-        ]}
+        canonical={`${BASE_URL}${
+          locale !== 'en' ? `/${locale}` : ''
+        }/${localizedPath}`}
+        languageAlternates={languageAlternates}
         openGraph={{
-          url: `${BASE_URL}/${locale !== 'en' ? locale : ''}/support/onyx/`,
+          url: `${BASE_URL}/${locale !== 'en' ? locale : ''}/${localizedPath}`,
           title: title,
           description: description,
           images: [

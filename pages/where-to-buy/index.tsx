@@ -7,27 +7,41 @@ import { getSeoDescription, getSeoTitle } from '@/src/shared/helpers';
 import { NextSeo } from 'next-seo';
 import { BASE_URL } from '@/src/shared/constants';
 
+const pathsByLocale = {
+  en: 'where-to-buy',
+  sk: 'kde-kupit',
+  cs: 'kde-koupit',
+  hu: 'hol-lehet-megvenni',
+  pl: 'gdzie-kupic',
+  de: 'wo-kaufen',
+  ja: 'where-to-buy',
+};
+
 const WhereToBuyPage = () => {
   const { locale } = useRouter();
   const title = getSeoTitle('where_to_buy', locale || 'en');
   const description = getSeoDescription('where_to_buy', locale || 'en');
+
+  const localizedPath =
+    pathsByLocale[locale as keyof typeof pathsByLocale] || 'where-to-buy';
+
+  const languageAlternates = Object.keys(pathsByLocale).map((lang) => ({
+    hrefLang: lang,
+    href: `${BASE_URL}${lang !== 'en' ? `/${lang}` : ''}/${
+      pathsByLocale[lang as keyof typeof pathsByLocale]
+    }`,
+  }));
   return (
     <>
       <NextSeo
         title={title}
         description={description}
-        canonical={`${BASE_URL}/${locale !== 'en' ? locale : ''}/where-to-buy/`}
-        languageAlternates={[
-          { hrefLang: 'en', href: `${BASE_URL}/where-to-buy` },
-          { hrefLang: 'sk', href: `${BASE_URL}/sk/kde-kupit/` },
-          { hrefLang: 'cs', href: `${BASE_URL}/cs/kde-koupit/` },
-          { hrefLang: 'hu', href: `${BASE_URL}/hu/hol-lehet-megvenni/` },
-          { hrefLang: 'pl', href: `${BASE_URL}/pl/gdzie-kupic/` },
-          { hrefLang: 'de', href: `${BASE_URL}/de/wo-kaufen/` },
-          { hrefLang: 'ja', href: `${BASE_URL}/ja/where-to-buy/` },
-        ]}
+        canonical={`${BASE_URL}${
+          locale !== 'en' ? `/${locale}` : ''
+        }/${localizedPath}`}
+        languageAlternates={languageAlternates}
         openGraph={{
-          url: `${BASE_URL}/${locale !== 'en' ? locale : ''}/where-to-buy/`,
+          url: `${BASE_URL}/${locale !== 'en' ? locale : ''}/${localizedPath}`,
           title: title,
           description: description,
           images: [

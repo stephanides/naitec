@@ -7,6 +7,16 @@ import { SupportDetail } from '@/src/pages';
 import { NextSeo } from 'next-seo';
 import { getSeoDescription, getSeoTitle } from '@/src/shared/helpers';
 
+const pathsByLocale = {
+  en: 'support/sensitive-pro',
+  sk: 'podpora/sensitive-pro',
+  cs: 'podpora/sensitive-pro',
+  hu: 'tamogatas/sensitive-pro',
+  pl: 'wsparcie/sensitive-pro',
+  de: 'unterstutzung/sensitive-pro',
+  ja: 'support/sensitive-pro',
+};
+
 const SupportPage = () => {
   const { pathname, locale } = useRouter();
   const title = getSeoTitle('support', locale || 'en');
@@ -15,6 +25,16 @@ const SupportPage = () => {
   const parts = path.split('/');
   const productId = parts[2];
   const item = PRODUCTS.find((product) => product.id === productId);
+  const localizedPath =
+    pathsByLocale[locale as keyof typeof pathsByLocale] ||
+    'support/sensitive-pro';
+
+  const languageAlternates = Object.keys(pathsByLocale).map((lang) => ({
+    hrefLang: lang,
+    href: `${BASE_URL}${lang !== 'en' ? `/${lang}` : ''}/${
+      pathsByLocale[lang as keyof typeof pathsByLocale]
+    }`,
+  }));
 
   if (!item) {
     return <Layout>Not found</Layout>;
@@ -24,25 +44,12 @@ const SupportPage = () => {
       <NextSeo
         title={title}
         description={description}
-        canonical={`${BASE_URL}/${
-          locale !== 'en' ? locale : ''
-        }/support/sensitive-pro/`}
-        languageAlternates={[
-          { hrefLang: 'en', href: `${BASE_URL}/support/sensitive-pro/` },
-          { hrefLang: 'sk', href: `${BASE_URL}/sk/podpora/sensitive-pro/` },
-          { hrefLang: 'cs', href: `${BASE_URL}/cs/podpora/sensitive-pro/` },
-          { hrefLang: 'hu', href: `${BASE_URL}/hu/tamogatas/sensitive-pro/` },
-          { hrefLang: 'pl', href: `${BASE_URL}/pl/wsparcie/sensitive-pro/` },
-          {
-            hrefLang: 'de',
-            href: `${BASE_URL}/de/unterstutzung/sensitive-pro/`,
-          },
-          { hrefLang: 'ja', href: `${BASE_URL}/ja/support/sensitive-pro/` },
-        ]}
+        canonical={`${BASE_URL}${
+          locale !== 'en' ? `/${locale}` : ''
+        }/${localizedPath}`}
+        languageAlternates={languageAlternates}
         openGraph={{
-          url: `${BASE_URL}/${
-            locale !== 'en' ? locale : ''
-          }/support/sensitive-pro/`,
+          url: `${BASE_URL}/${locale !== 'en' ? locale : ''}/${localizedPath}`,
           title: title,
           description: description,
           images: [

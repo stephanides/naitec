@@ -7,27 +7,41 @@ import { getSeoDescription, getSeoTitle } from '@/src/shared/helpers';
 import { NextSeo } from 'next-seo';
 import { BASE_URL } from '@/src/shared/constants';
 
+const pathsByLocale = {
+  en: 'support',
+  sk: 'podpora',
+  cs: 'podpora',
+  hu: 'tamogatas',
+  pl: 'wsparcie',
+  de: 'unterstutzung',
+  ja: 'support',
+};
+
 const SupportPage = () => {
   const { locale } = useRouter();
   const title = getSeoTitle('support', locale || 'en');
   const description = getSeoDescription('support', locale || 'en');
+
+  const localizedPath =
+    pathsByLocale[locale as keyof typeof pathsByLocale] || 'support';
+
+  const languageAlternates = Object.keys(pathsByLocale).map((lang) => ({
+    hrefLang: lang,
+    href: `${BASE_URL}${lang !== 'en' ? `/${lang}` : ''}/${
+      pathsByLocale[lang as keyof typeof pathsByLocale]
+    }`,
+  }));
   return (
     <>
       <NextSeo
         title={title}
         description={description}
-        canonical={`${BASE_URL}/${locale !== 'en' ? locale : ''}/support/`}
-        languageAlternates={[
-          { hrefLang: 'en', href: `${BASE_URL}/support` },
-          { hrefLang: 'sk', href: `${BASE_URL}/sk/podpora/` },
-          { hrefLang: 'cs', href: `${BASE_URL}/cs/podpora/` },
-          { hrefLang: 'hu', href: `${BASE_URL}/hu/tamogatas/` },
-          { hrefLang: 'pl', href: `${BASE_URL}/pl/wsparcie/` },
-          { hrefLang: 'de', href: `${BASE_URL}/de/unterstutzung/` },
-          { hrefLang: 'ja', href: `${BASE_URL}/ja/support/` },
-        ]}
+        canonical={`${BASE_URL}${
+          locale !== 'en' ? `/${locale}` : ''
+        }/${localizedPath}`}
+        languageAlternates={languageAlternates}
         openGraph={{
-          url: `${BASE_URL}/${locale !== 'en' ? locale : ''}support/`,
+          url: `${BASE_URL}/${locale !== 'en' ? locale : ''}/${localizedPath}`,
           title: title,
           description: description,
           images: [

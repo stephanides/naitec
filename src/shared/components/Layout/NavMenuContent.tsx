@@ -1,21 +1,14 @@
 import { rem } from 'polished';
-import { Box, Flex, Text } from '@chakra-ui/react';
+import { Box, Flex } from '@chakra-ui/react';
 import { useRouter } from 'next/router';
 import Link from 'next-translate-routes/link';
 import { useState } from 'react';
 import { useCollapse } from 'react-collapsed';
-import {
-  AppStore,
-  ChevronDown,
-  CloseSmall,
-  GooglePlay,
-  LogoDark,
-} from '../../design';
-import { EXTERNAL_ROUTES, INTERNAL_ROUTES } from '../../constants';
+import { ChevronDown, CloseSmall, LogoDark } from '../../design';
+import { INTERNAL_ROUTES } from '../../constants';
 import { NeueHaasGroteskDisplay, NeueHaasGroteskText } from '../Typography';
 import { useTranslation } from 'next-i18next';
 import { NAV_ITEMS_PRODUCTS } from './Navigation';
-import Image from 'next/image';
 
 type NavMenuContentProps = {
   isOpen: boolean;

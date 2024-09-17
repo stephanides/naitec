@@ -7,27 +7,42 @@ import { BASE_URL } from '@/src/shared/constants';
 import { getSeoDescription, getSeoTitle } from '@/src/shared/helpers';
 import { NextSeo } from 'next-seo';
 
+const pathsByLocale = {
+  en: 'sensitive',
+  sk: 'sensitive',
+  cs: 'sensitive',
+  hu: 'sensitive',
+  pl: 'sensitive',
+  de: 'sensitive',
+  ja: 'sensitive',
+};
+
 const SensitivePage = () => {
   const { locale } = useRouter();
   const title = getSeoTitle('sensitive', locale || 'en');
   const description = getSeoDescription('sensitive', locale || 'en');
+
+  const localizedPath =
+    pathsByLocale[locale as keyof typeof pathsByLocale] || 'sensitive';
+
+  const languageAlternates = Object.keys(pathsByLocale).map((lang) => ({
+    hrefLang: lang,
+    href: `${BASE_URL}${lang !== 'en' ? `/${lang}` : ''}/${
+      pathsByLocale[lang as keyof typeof pathsByLocale]
+    }`,
+  }));
+
   return (
     <>
       <NextSeo
         title={title}
         description={description}
-        canonical={`${BASE_URL}/${locale !== 'en' ? locale : ''}/sensitive/`}
-        languageAlternates={[
-          { hrefLang: 'en', href: `${BASE_URL}/sensitive` },
-          { hrefLang: 'sk', href: `${BASE_URL}/sk/sensitive/` },
-          { hrefLang: 'cs', href: `${BASE_URL}/cs/sensitive/` },
-          { hrefLang: 'hu', href: `${BASE_URL}/hu/sensitive/` },
-          { hrefLang: 'pl', href: `${BASE_URL}/pl/sensitive/` },
-          { hrefLang: 'de', href: `${BASE_URL}/de/sensitive/` },
-          { hrefLang: 'ja', href: `${BASE_URL}/ja/sensitive/` },
-        ]}
+        canonical={`${BASE_URL}${
+          locale !== 'en' ? `/${locale}` : ''
+        }/${localizedPath}`}
+        languageAlternates={languageAlternates}
         openGraph={{
-          url: `${BASE_URL}/${locale !== 'en' ? locale : ''}/sensitive/`,
+          url: `${BASE_URL}/${locale !== 'en' ? locale : ''}/${localizedPath}`,
           title: title,
           description: description,
           images: [

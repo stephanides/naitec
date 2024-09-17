@@ -7,6 +7,16 @@ import { SupportDetail } from '@/src/pages';
 import { getSeoDescription, getSeoTitle } from '@/src/shared/helpers';
 import { NextSeo } from 'next-seo';
 
+const pathsByLocale = {
+  en: 'support/sensitive',
+  sk: 'podpora/sensitive',
+  cs: 'podpora/sensitive',
+  hu: 'tamogatas/sensitive',
+  pl: 'wsparcie/sensitive',
+  de: 'unterstutzung/sensitive',
+  ja: 'support/sensitive',
+};
+
 const SupportPage = () => {
   const { pathname, locale } = useRouter();
   const title = getSeoTitle('support', locale || 'en');
@@ -16,6 +26,16 @@ const SupportPage = () => {
   const productId = parts[2];
   const item = PRODUCTS.find((product) => product.id === productId);
 
+  const localizedPath =
+    pathsByLocale[locale as keyof typeof pathsByLocale] || 'support/sensitive';
+
+  const languageAlternates = Object.keys(pathsByLocale).map((lang) => ({
+    hrefLang: lang,
+    href: `${BASE_URL}${lang !== 'en' ? `/${lang}` : ''}/${
+      pathsByLocale[lang as keyof typeof pathsByLocale]
+    }`,
+  }));
+
   if (!item) {
     return <Layout>Not found</Layout>;
   }
@@ -24,22 +44,12 @@ const SupportPage = () => {
       <NextSeo
         title={title}
         description={description}
-        canonical={`${BASE_URL}/${
-          locale !== 'en' ? locale : ''
-        }/support/sensitive/`}
-        languageAlternates={[
-          { hrefLang: 'en', href: `${BASE_URL}/support/sensitive/` },
-          { hrefLang: 'sk', href: `${BASE_URL}/sk/podpora/sensitive/` },
-          { hrefLang: 'cs', href: `${BASE_URL}/cs/podpora/sensitive/` },
-          { hrefLang: 'hu', href: `${BASE_URL}/hu/tamogatas/sensitive/` },
-          { hrefLang: 'pl', href: `${BASE_URL}/pl/wsparcie/sensitive/` },
-          { hrefLang: 'de', href: `${BASE_URL}/de/unterstutzung/sensitive/` },
-          { hrefLang: 'ja', href: `${BASE_URL}/ja/support/sensitive/` },
-        ]}
+        canonical={`${BASE_URL}${
+          locale !== 'en' ? `/${locale}` : ''
+        }/${localizedPath}`}
+        languageAlternates={languageAlternates}
         openGraph={{
-          url: `${BASE_URL}/${
-            locale !== 'en' ? locale : ''
-          }/support/sensitive/`,
+          url: `${BASE_URL}/${locale !== 'en' ? locale : ''}/${localizedPath}`,
           title: title,
           description: description,
           images: [

@@ -263,7 +263,7 @@ export const PRODUCTS = [
   },
 ];
 
-export const BASE_URL = 'https://naitec.ai';
+export const BASE_URL = 'https://www.naitec.ai';
 
 export const SEO_CONTENT = {
   home: {
