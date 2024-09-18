@@ -5,612 +5,721 @@
     <loc>https://www.naitec.ai</loc>
     <lastmod>2024-09-01T16:57:42.202Z</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-    <xhtml:link
-      rel="alternate"
-      hreflang="en"
-      href="https://www.naitec.ai/en" />
-    <xhtml:link
-      rel="alternate"
-      hreflang="sk"
-      href="https://www.naitec.ai/sk" />
-    <xhtml:link
-      rel="alternate"
-      hreflang="cs"
-      href="https://www.naitec.ai/cs" />
-    <xhtml:link
-      rel="alternate"
-      hreflang="hu"
-      href="https://www.naitec.ai/hu" />
-    <xhtml:link
-      rel="alternate"
-      hreflang="pl"
-      href="https://www.naitec.ai/pl" />
-    <xhtml:link
-      rel="alternate"
-      hreflang="de"
-      href="https://www.naitec.ai/de" />
-    <xhtml:link
-      rel="alternate"
-      hreflang="ja"
-      href="https://www.naitec.ai/ja" />
+    <priority>1</priority>
+  </url>
+  <url>
+    <loc>https://www.naitec.ai/sk</loc>
+    <lastmod>2024-09-01T16:57:42.202Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1</priority>
+  </url>
+  <url>
+    <loc>https://www.naitec.ai/cs</loc>
+    <lastmod>2024-09-01T16:57:42.202Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1</priority>
+  </url>
+  <url>
+    <loc>https://www.naitec.ai/hu</loc>
+    <lastmod>2024-09-01T16:57:42.202Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1</priority>
+  </url>
+  <url>
+    <loc>https://www.naitec.ai/pl</loc>
+    <lastmod>2024-09-01T16:57:42.202Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1</priority>
+  </url>
+  <url>
+    <loc>https://www.naitec.ai/de</loc>
+    <lastmod>2024-09-01T16:57:42.202Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1</priority>
+  </url>
+  <url>
+    <loc>https://www.naitec.ai/ja</loc>
+    <lastmod>2024-09-01T16:57:42.202Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1</priority>
   </url>
   <url>
     <loc>https://www.naitec.ai/where-to-buy</loc>
     <lastmod>2024-09-01T16:57:42.202Z</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-    <xhtml:link
-      rel="alternate"
-      hreflang="en"
-      href="https://www.naitec.ai/en/where-to-buy" />
-    <xhtml:link
-      rel="alternate"
-      hreflang="sk"
-      href="https://www.naitec.ai/sk/kde-kupit" />
-    <xhtml:link
-      rel="alternate"
-      hreflang="cs"
-      href="https://www.naitec.ai/cs/kde-koupit" />
-    <xhtml:link
-      rel="alternate"
-      hreflang="hu"
-      href="https://www.naitec.ai/hu/hol-lehet-megvenni" />
-    <xhtml:link
-      rel="alternate"
-      hreflang="pl"
-      href="https://www.naitec.ai/pl/gdzie-kupic" />
-    <xhtml:link
-      rel="alternate"
-      hreflang="de"
-      href="https://www.naitec.ai/de/wo-kaufen" />
-    <xhtml:link
-      rel="alternate"
-      hreflang="ja"
-      href="https://www.naitec.ai/ja/where-to-buy" />
+    <priority>1</priority>
+  </url>
+  <url>
+    <loc>https://www.naitec.ai/sk/kde-kupit</loc>
+    <lastmod>2024-09-01T16:57:42.202Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1</priority>
+  </url>
+  <url>
+    <loc>https://www.naitec.ai/cs/kde-koupit</loc>
+    <lastmod>2024-09-01T16:57:42.202Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1</priority>
+  </url>
+  <url>
+    <loc>https://www.naitec.ai/hu/hol-lehet-megvenni</loc>
+    <lastmod>2024-09-01T16:57:42.202Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1</priority>
+  </url>
+  <url>
+    <loc>https://www.naitec.ai/pl/gdzie-kupic</loc>
+    <lastmod>2024-09-01T16:57:42.202Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1</priority>
+  </url>
+  <url>
+    <loc>https://www.naitec.ai/de/wo-kaufen</loc>
+    <lastmod>2024-09-01T16:57:42.202Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1</priority>
+  </url>
+  <url>
+    <loc>https://www.naitec.ai/ja/where-to-buy</loc>
+    <lastmod>2024-09-01T16:57:42.202Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1</priority>
   </url>
   <url>
     <loc>https://www.naitec.ai/support</loc>
     <lastmod>2024-09-01T16:57:42.202Z</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-    <xhtml:link
-      rel="alternate"
-      hreflang="en"
-      href="https://www.naitec.ai/en/support" />
-    <xhtml:link
-      rel="alternate"
-      hreflang="sk"
-      href="https://www.naitec.ai/sk/podpora" />
-    <xhtml:link
-      rel="alternate"
-      hreflang="cs"
-      href="https://www.naitec.ai/cs/podpora" />
-    <xhtml:link
-      rel="alternate"
-      hreflang="hu"
-      href="https://www.naitec.ai/hu/tamogatas" />
-    <xhtml:link
-      rel="alternate"
-      hreflang="pl"
-      href="https://www.naitec.ai/pl/wsparcie" />
-    <xhtml:link
-      rel="alternate"
-      hreflang="de"
-      href="https://www.naitec.ai/de/unterstutzung" />
-    <xhtml:link
-      rel="alternate"
-      hreflang="ja"
-      href="https://www.naitec.ai/ja/support" />
+    <priority>1</priority>
+  </url>
+  <url>
+    <loc>https://www.naitec.ai/sk/podpora</loc>
+    <lastmod>2024-09-01T16:57:42.202Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1</priority>
+  </url>
+  <url>
+    <loc>https://www.naitec.ai/cs/podpora</loc>
+    <lastmod>2024-09-01T16:57:42.202Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1</priority>
+  </url>
+  <url>
+    <loc>https://www.naitec.ai/hu/tamogatas</loc>
+    <lastmod>2024-09-01T16:57:42.202Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1</priority>
+  </url>
+  <url>
+    <loc>https://www.naitec.ai/pl/wsparcie</loc>
+    <lastmod>2024-09-01T16:57:42.202Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1</priority>
+  </url>
+  <url>
+    <loc>https://www.naitec.ai/de/unterstutzung</loc>
+    <lastmod>2024-09-01T16:57:42.202Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1</priority>
+  </url>
+  <url>
+    <loc>https://www.naitec.ai/ja/support</loc>
+    <lastmod>2024-09-01T16:57:42.202Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1</priority>
   </url>
   <url>
     <loc>https://www.naitec.ai/support/stellair</loc>
     <lastmod>2024-09-01T16:57:42.202Z</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-    <xhtml:link
-      rel="alternate"
-      hreflang="en"
-      href="https://www.naitec.ai/en/support/stellair" />
-    <xhtml:link
-      rel="alternate"
-      hreflang="sk"
-      href="https://www.naitec.ai/sk/podpora/stellair" />
-    <xhtml:link
-      rel="alternate"
-      hreflang="cs"
-      href="https://www.naitec.ai/cs/podpora/stellair" />
-    <xhtml:link
-      rel="alternate"
-      hreflang="hu"
-      href="https://www.naitec.ai/hu/tamogatas/stellair" />
-    <xhtml:link
-      rel="alternate"
-      hreflang="pl"
-      href="https://www.naitec.ai/pl/wsparcie/stellair" />
-    <xhtml:link
-      rel="alternate"
-      hreflang="de"
-      href="https://www.naitec.ai/de/unterstutzung/stellair" />
-    <xhtml:link
-      rel="alternate"
-      hreflang="ja"
-      href="https://www.naitec.ai/ja/support/stellair" />
+    <priority>1</priority>
+  </url>
+  <url>
+    <loc>https://www.naitec.ai/sk/podpora/stellair</loc>
+    <lastmod>2024-09-01T16:57:42.202Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1</priority>
+  </url>
+  <url>
+    <loc>https://www.naitec.ai/cs/podpora/stellair</loc>
+    <lastmod>2024-09-01T16:57:42.202Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1</priority>
+  </url>
+  <url>
+    <loc>https://www.naitec.ai/hu/tamogatas/stellair</loc>
+    <lastmod>2024-09-01T16:57:42.202Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1</priority>
+  </url>
+  <url>
+    <loc>https://www.naitec.ai/pl/wsparcie/stellair</loc>
+    <lastmod>2024-09-01T16:57:42.202Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1</priority>
+  </url>
+  <url>
+    <loc>https://www.naitec.ai/de/unterstutzung/stellair</loc>
+    <lastmod>2024-09-01T16:57:42.202Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1</priority>
+  </url>
+  <url>
+    <loc>https://www.naitec.ai/ja/support/stellair</loc>
+    <lastmod>2024-09-01T16:57:42.202Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1</priority>
   </url>
   <url>
     <loc>https://www.naitec.ai/support/smart</loc>
     <lastmod>2024-09-01T16:57:42.202Z</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-    <xhtml:link
-      rel="alternate"
-      hreflang="en"
-      href="https://www.naitec.ai/en/support/smart" />
-    <xhtml:link
-      rel="alternate"
-      hreflang="sk"
-      href="https://www.naitec.ai/sk/podpora/smart" />
-    <xhtml:link
-      rel="alternate"
-      hreflang="cs"
-      href="https://www.naitec.ai/cs/podpora/smart" />
-    <xhtml:link
-      rel="alternate"
-      hreflang="hu"
-      href="https://www.naitec.ai/hu/tamogatas/smart" />
-    <xhtml:link
-      rel="alternate"
-      hreflang="pl"
-      href="https://www.naitec.ai/pl/wsparcie/smart" />
-    <xhtml:link
-      rel="alternate"
-      hreflang="de"
-      href="https://www.naitec.ai/de/unterstutzung/smart" />
-    <xhtml:link
-      rel="alternate"
-      hreflang="ja"
-      href="https://www.naitec.ai/ja/support/smart" />
+    <priority>1</priority>
+  </url>
+  <url>
+    <loc>https://www.naitec.ai/sk/podpora/smart</loc>
+    <lastmod>2024-09-01T16:57:42.202Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1</priority>
+  </url>
+  <url>
+    <loc>https://www.naitec.ai/cs/podpora/smart</loc>
+    <lastmod>2024-09-01T16:57:42.202Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1</priority>
+  </url>
+  <url>
+    <loc>https://www.naitec.ai/hu/tamogatas/smart</loc>
+    <lastmod>2024-09-01T16:57:42.202Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1</priority>
+  </url>
+  <url>
+    <loc>https://www.naitec.ai/pl/wsparcie/smart</loc>
+    <lastmod>2024-09-01T16:57:42.202Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1</priority>
+  </url>
+  <url>
+    <loc>https://www.naitec.ai/de/unterstutzung/smart</loc>
+    <lastmod>2024-09-01T16:57:42.202Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1</priority>
+  </url>
+  <url>
+    <loc>https://www.naitec.ai/ja/support/smart</loc>
+    <lastmod>2024-09-01T16:57:42.202Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1</priority>
   </url>
   <url>
     <loc>https://www.naitec.ai/support/sensitive-pro</loc>
     <lastmod>2024-09-01T16:57:42.202Z</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-    <xhtml:link
-      rel="alternate"
-      hreflang="en"
-      href="https://www.naitec.ai/en/support/sensitive-pro" />
-    <xhtml:link
-      rel="alternate"
-      hreflang="sk"
-      href="https://www.naitec.ai/sk/podpora/sensitive-pro" />
-    <xhtml:link
-      rel="alternate"
-      hreflang="cs"
-      href="https://www.naitec.ai/cs/podpora/sensitive-pro" />
-    <xhtml:link
-      rel="alternate"
-      hreflang="hu"
-      href="https://www.naitec.ai/hu/tamogatas/sensitive-pro" />
-    <xhtml:link
-      rel="alternate"
-      hreflang="pl"
-      href="https://www.naitec.ai/pl/wsparcie/sensitive-pro" />
-    <xhtml:link
-      rel="alternate"
-      hreflang="de"
-      href="https://www.naitec.ai/de/unterstutzung/sensitive-pro" />
-    <xhtml:link
-      rel="alternate"
-      hreflang="ja"
-      href="https://www.naitec.ai/ja/support/sensitive-pro" />
+    <priority>1</priority>
+  </url>
+  <url>
+    <loc>https://www.naitec.ai/sk/podpora/sensitive-pro</loc>
+    <lastmod>2024-09-01T16:57:42.202Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1</priority>
+  </url>
+  <url>
+    <loc>https://www.naitec.ai/cs/podpora/sensitive-pro</loc>
+    <lastmod>2024-09-01T16:57:42.202Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1</priority>
+  </url>
+  <url>
+    <loc>https://www.naitec.ai/hu/tamogatas/sensitive-pro</loc>
+    <lastmod>2024-09-01T16:57:42.202Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1</priority>
+  </url>
+  <url>
+    <loc>https://www.naitec.ai/pl/wsparcie/sensitive-pro</loc>
+    <lastmod>2024-09-01T16:57:42.202Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1</priority>
+  </url>
+  <url>
+    <loc>https://www.naitec.ai/de/unterstutzung/sensitive-pro</loc>
+    <lastmod>2024-09-01T16:57:42.202Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1</priority>
+  </url>
+  <url>
+    <loc>https://www.naitec.ai/ja/support/sensitive-pro</loc>
+    <lastmod>2024-09-01T16:57:42.202Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1</priority>
   </url>
   <url>
     <loc>https://www.naitec.ai/support/sensitive</loc>
     <lastmod>2024-09-01T16:57:42.202Z</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-    <xhtml:link
-      rel="alternate"
-      hreflang="en"
-      href="https://www.naitec.ai/en/support/sensitive" />
-    <xhtml:link
-      rel="alternate"
-      hreflang="sk"
-      href="https://www.naitec.ai/sk/podpora/sensitive" />
-    <xhtml:link
-      rel="alternate"
-      hreflang="cs"
-      href="https://www.naitec.ai/cs/podpora/sensitive" />
-    <xhtml:link
-      rel="alternate"
-      hreflang="hu"
-      href="https://www.naitec.ai/hu/tamogatas/sensitive" />
-    <xhtml:link
-      rel="alternate"
-      hreflang="pl"
-      href="https://www.naitec.ai/pl/wsparcie/sensitive" />
-    <xhtml:link
-      rel="alternate"
-      hreflang="de"
-      href="https://www.naitec.ai/de/unterstutzung/sensitive" />
-    <xhtml:link
-      rel="alternate"
-      hreflang="ja"
-      href="https://www.naitec.ai/ja/support/sensitive" />
+    <priority>1</priority>
   </url>
+  <url>
+    <loc>https://www.naitec.ai/sk/podpora/sensitive</loc>
+    <lastmod>2024-09-01T16:57:42.202Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1</priority>
+  </url>
+  <url>
+    <loc>https://www.naitec.ai/cs/podpora/sensitive</loc>
+    <lastmod>2024-09-01T16:57:42.202Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1</priority>
+  </url>
+  <url>
+    <loc>https://www.naitec.ai/hu/tamogatas/sensitive</loc>
+    <lastmod>2024-09-01T16:57:42.202Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1</priority>
+  </url>
+  <url>
+    <loc>https://www.naitec.ai/pl/wsparcie/sensitive</loc>
+    <lastmod>2024-09-01T16:57:42.202Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1</priority>
+  </url>
+  <url>
+    <loc>https://www.naitec.ai/de/unterstutzung/sensitive</loc>
+    <lastmod>2024-09-01T16:57:42.202Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1</priority>
+  </url>
+  <url>
+    <loc>https://www.naitec.ai/ja/support/sensitive</loc>
+    <lastmod>2024-09-01T16:57:42.202Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1</priority>
+  </url>
+
   <url>
     <loc>https://www.naitec.ai/support/onyx</loc>
     <lastmod>2024-09-01T16:57:42.202Z</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-    <xhtml:link
-      rel="alternate"
-      hreflang="en"
-      href="https://www.naitec.ai/en/support/onyx" />
-    <xhtml:link
-      rel="alternate"
-      hreflang="sk"
-      href="https://www.naitec.ai/sk/podpora/onyx" />
-    <xhtml:link
-      rel="alternate"
-      hreflang="cs"
-      href="https://www.naitec.ai/cs/podpora/onyx" />
-    <xhtml:link
-      rel="alternate"
-      hreflang="hu"
-      href="https://www.naitec.ai/hu/tamogatas/onyx" />
-    <xhtml:link
-      rel="alternate"
-      hreflang="pl"
-      href="https://www.naitec.ai/pl/wsparcie/onyx" />
-    <xhtml:link
-      rel="alternate"
-      hreflang="de"
-      href="https://www.naitec.ai/de/unterstutzung/onyx" />
-    <xhtml:link
-      rel="alternate"
-      hreflang="ja"
-      href="https://www.naitec.ai/ja/support/onyx" />
+    <priority>1</priority>
+  </url>
+  <url>
+    <loc>https://www.naitec.ai/sk/podpora/onyx</loc>
+    <lastmod>2024-09-01T16:57:42.202Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1</priority>
+  </url>
+  <url>
+    <loc>https://www.naitec.ai/cs/podpora/onyx</loc>
+    <lastmod>2024-09-01T16:57:42.202Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1</priority>
+  </url>
+  <url>
+    <loc>https://www.naitec.ai/hu/tamogatas/onyx</loc>
+    <lastmod>2024-09-01T16:57:42.202Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1</priority>
+  </url>
+  <url>
+    <loc>https://www.naitec.ai/pl/wsparcie/onyx</loc>
+    <lastmod>2024-09-01T16:57:42.202Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1</priority>
+  </url>
+  <url>
+    <loc>https://www.naitec.ai/de/unterstutzung/onyx</loc>
+    <lastmod>2024-09-01T16:57:42.202Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1</priority>
+  </url>
+  <url>
+    <loc>https://www.naitec.ai/ja/support/onyx</loc>
+    <lastmod>2024-09-01T16:57:42.202Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1</priority>
   </url>
   <url>
     <loc>https://www.naitec.ai/support/lisa</loc>
     <lastmod>2024-09-01T16:57:42.202Z</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-    <xhtml:link
-      rel="alternate"
-      hreflang="en"
-      href="https://www.naitec.ai/en/support/lisa" />
-    <xhtml:link
-      rel="alternate"
-      hreflang="sk"
-      href="https://www.naitec.ai/sk/podpora/lisa" />
-    <xhtml:link
-      rel="alternate"
-      hreflang="cs"
-      href="https://www.naitec.ai/cs/podpora/lisa" />
-    <xhtml:link
-      rel="alternate"
-      hreflang="hu"
-      href="https://www.naitec.ai/hu/tamogatas/lisa" />
-    <xhtml:link
-      rel="alternate"
-      hreflang="pl"
-      href="https://www.naitec.ai/pl/wsparcie/lisa" />
-    <xhtml:link
-      rel="alternate"
-      hreflang="de"
-      href="https://www.naitec.ai/de/unterstutzung/lisa" />
-    <xhtml:link
-      rel="alternate"
-      hreflang="ja"
-      href="https://www.naitec.ai/ja/support/lisa" />
+    <priority>1</priority>
+  </url>
+  <url>
+    <loc>https://www.naitec.ai/sk/podpora/lisa</loc>
+    <lastmod>2024-09-01T16:57:42.202Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1</priority>
+  </url>
+  <url>
+    <loc>https://www.naitec.ai/cs/podpora/lisa</loc>
+    <lastmod>2024-09-01T16:57:42.202Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1</priority>
+  </url>
+  <url>
+    <loc>https://www.naitec.ai/hu/tamogatas/lisa</loc>
+    <lastmod>2024-09-01T16:57:42.202Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1</priority>
+  </url>
+  <url>
+    <loc>https://www.naitec.ai/pl/wsparcie/lisa</loc>
+    <lastmod>2024-09-01T16:57:42.202Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1</priority>
+  </url>
+  <url>
+    <loc>https://www.naitec.ai/de/unterstutzung/lisa</loc>
+    <lastmod>2024-09-01T16:57:42.202Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1</priority>
+  </url>
+  <url>
+    <loc>https://www.naitec.ai/ja/support/lisa</loc>
+    <lastmod>2024-09-01T16:57:42.202Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1</priority>
   </url>
   <url>
     <loc>https://www.naitec.ai/support/fireplace-diffuser</loc>
     <lastmod>2024-09-01T16:57:42.202Z</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-    <xhtml:link
-      rel="alternate"
-      hreflang="en"
-      href="https://www.naitec.ai/en/support/fireplace-diffuser" />
-    <xhtml:link
-      rel="alternate"
-      hreflang="sk"
-      href="https://www.naitec.ai/sk/podpora/krbovy-difuzor" />
-    <xhtml:link
-      rel="alternate"
-      hreflang="cs"
-      href="https://www.naitec.ai/cs/podpora/krbovy-difuzor" />
-    <xhtml:link
-      rel="alternate"
-      hreflang="hu"
-      href="https://www.naitec.ai/hu/tamogatas/kandalo-diffuzor" />
-    <xhtml:link
-      rel="alternate"
-      hreflang="pl"
-      href="https://www.naitec.ai/pl/wsparcie/difuzor-kominkowy" />
-    <xhtml:link
-      rel="alternate"
-      hreflang="de"
-      href="https://www.naitec.ai/de/unterstutzung/kamin-diffusor" />
-    <xhtml:link
-      rel="alternate"
-      hreflang="ja"
-      href="https://www.naitec.ai/ja/support/fireplace-diffuser" />
+    <priority>1</priority>
   </url>
   <url>
-    <loc>https://www.naitec.ai/fireplace-diffuser</loc>
+    <loc>https://www.naitec.ai/sk/podpora/krbovy-difuzor</loc>
     <lastmod>2024-09-01T16:57:42.202Z</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-    <xhtml:link
-      rel="alternate"
-      hreflang="en"
-      href="https://www.naitec.ai/en/fireplace-diffuser" />
-    <xhtml:link
-      rel="alternate"
-      hreflang="sk"
-      href="https://www.naitec.ai/sk/krbovy-difuzor" />
-    <xhtml:link
-      rel="alternate"
-      hreflang="cs"
-      href="https://www.naitec.ai/cs/krbovy-difuzor" />
-    <xhtml:link
-      rel="alternate"
-      hreflang="hu"
-      href="https://www.naitec.ai/hu/kandalo-diffuzor" />
-    <xhtml:link
-      rel="alternate"
-      hreflang="pl"
-      href="https://www.naitec.ai/pl/difuzor-kominkowy" />
-    <xhtml:link
-      rel="alternate"
-      hreflang="de"
-      href="https://www.naitec.ai/de/kamin-diffusor" />
-    <xhtml:link
-      rel="alternate"
-      hreflang="ja"
-      href="https://www.naitec.ai/ja/fireplace-diffuser" />
+    <priority>1</priority>
+  </url>
+  <url>
+    <loc>https://www.naitec.ai/cs/podpora/krbovy-difuzor</loc>
+    <lastmod>2024-09-01T16:57:42.202Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1</priority>
+  </url>
+  <url>
+    <loc>https://www.naitec.ai/hu/tamogatas/kandalo-diffuzor</loc>
+    <lastmod>2024-09-01T16:57:42.202Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1</priority>
+  </url>
+  <url>
+    <loc>https://www.naitec.ai/pl/wsparcie/difuzor-kominkowy</loc>
+    <lastmod>2024-09-01T16:57:42.202Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1</priority>
+  </url>
+  <url>
+    <loc>https://www.naitec.ai/de/unterstutzung/kamin-diffusor</loc>
+    <lastmod>2024-09-01T16:57:42.202Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1</priority>
+  </url>
+  <url>
+    <loc>https://www.naitec.ai/ja/support/fireplace-diffuser</loc>
+    <lastmod>2024-09-01T16:57:42.202Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1</priority>
   </url>
   <url>
     <loc>https://www.naitec.ai/contact</loc>
     <lastmod>2024-09-01T16:57:42.202Z</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-    <xhtml:link
-      rel="alternate"
-      hreflang="en"
-      href="https://www.naitec.ai/en/contact" />
-    <xhtml:link
-      rel="alternate"
-      hreflang="sk"
-      href="https://www.naitec.ai/sk/kontakt" />
-    <xhtml:link
-      rel="alternate"
-      hreflang="cs"
-      href="https://www.naitec.ai/cs/kontakk" />
-    <xhtml:link
-      rel="alternate"
-      hreflang="hu"
-      href="https://www.naitec.ai/hu/kapcsolat" />
-    <xhtml:link
-      rel="alternate"
-      hreflang="pl"
-      href="https://www.naitec.ai/pl/kontakt" />
-    <xhtml:link
-      rel="alternate"
-      hreflang="de"
-      href="https://www.naitec.ai/de/kontakt" />
-    <xhtml:link
-      rel="alternate"
-      hreflang="ja"
-      href="https://www.naitec.ai/ja/contact" />
+    <priority>1</priority>
+  </url>
+  <url>
+    <loc>https://www.naitec.ai/sk/kontakt</loc>
+    <lastmod>2024-09-01T16:57:42.202Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1</priority>
+  </url>
+  <url>
+    <loc>https://www.naitec.ai/cs/kontakk</loc>
+    <lastmod>2024-09-01T16:57:42.202Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1</priority>
+  </url>
+  <url>
+    <loc>https://www.naitec.ai/hu/kapcsolat</loc>
+    <lastmod>2024-09-01T16:57:42.202Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1</priority>
+  </url>
+  <url>
+    <loc>https://www.naitec.ai/pl/kontakt</loc>
+    <lastmod>2024-09-01T16:57:42.202Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1</priority>
+  </url>
+  <url>
+    <loc>https://www.naitec.ai/de/kontakt</loc>
+    <lastmod>2024-09-01T16:57:42.202Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1</priority>
+  </url>
+  <url>
+    <loc>https://www.naitec.ai/ja/contact</loc>
+    <lastmod>2024-09-01T16:57:42.202Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1</priority>
   </url>
   <url>
     <loc>https://www.naitec.ai/stellair</loc>
     <lastmod>2024-09-01T16:57:42.202Z</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-    <xhtml:link
-      rel="alternate"
-      hreflang="en"
-      href="https://www.naitec.ai/en/stellair" />
-    <xhtml:link
-      rel="alternate"
-      hreflang="sk"
-      href="https://www.naitec.ai/sk/stellair" />
-    <xhtml:link
-      rel="alternate"
-      hreflang="cs"
-      href="https://www.naitec.ai/cs/stellair" />
-    <xhtml:link
-      rel="alternate"
-      hreflang="hu"
-      href="https://www.naitec.ai/hu/stellair" />
-    <xhtml:link
-      rel="alternate"
-      hreflang="pl"
-      href="https://www.naitec.ai/pl/stellair" />
-    <xhtml:link
-      rel="alternate"
-      hreflang="de"
-      href="https://www.naitec.ai/de/stellair" />
-    <xhtml:link
-      rel="alternate"
-      hreflang="ja"
-      href="https://www.naitec.ai/ja/stellair" />
+    <priority>1</priority>
   </url>
+  <url>
+    <loc>https://www.naitec.ai/sk/stellair</loc>
+    <lastmod>2024-09-01T16:57:42.202Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1</priority>
+  </url>
+  <url>
+    <loc>https://www.naitec.ai/cs/stellair</loc>
+    <lastmod>2024-09-01T16:57:42.202Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1</priority>
+  </url>
+  <url>
+    <loc>https://www.naitec.ai/hu/stellair</loc>
+    <lastmod>2024-09-01T16:57:42.202Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1</priority>
+  </url>
+  <url>
+    <loc>https://www.naitec.ai/pl/stellair</loc>
+    <lastmod>2024-09-01T16:57:42.202Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1</priority>
+  </url>
+  <url>
+    <loc>https://www.naitec.ai/de/stellair</loc>
+    <lastmod>2024-09-01T16:57:42.202Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1</priority>
+  </url>
+  <url>
+    <loc>https://www.naitec.ai/ja/stellair</loc>
+    <lastmod>2024-09-01T16:57:42.202Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1</priority>
+  </url>
+
   <url>
     <loc>https://www.naitec.ai/smart</loc>
     <lastmod>2024-09-01T16:57:42.202Z</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-    <xhtml:link
-      rel="alternate"
-      hreflang="en"
-      href="https://www.naitec.ai/en/smart" />
-    <xhtml:link
-      rel="alternate"
-      hreflang="sk"
-      href="https://www.naitec.ai/sk/smart" />
-    <xhtml:link
-      rel="alternate"
-      hreflang="cs"
-      href="https://www.naitec.ai/cs/smart" />
-    <xhtml:link
-      rel="alternate"
-      hreflang="hu"
-      href="https://www.naitec.ai/hu/smart" />
-    <xhtml:link
-      rel="alternate"
-      hreflang="pl"
-      href="https://www.naitec.ai/pl/smart" />
-    <xhtml:link
-      rel="alternate"
-      hreflang="de"
-      href="https://www.naitec.ai/de/smart" />
-    <xhtml:link
-      rel="alternate"
-      hreflang="ja"
-      href="https://www.naitec.ai/ja/smart" />
+    <priority>1</priority>
   </url>
+  <url>
+    <loc>https://www.naitec.ai/sk/smart</loc>
+    <lastmod>2024-09-01T16:57:42.202Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1</priority>
+  </url>
+  <url>
+    <loc>https://www.naitec.ai/cs/smart</loc>
+    <lastmod>2024-09-01T16:57:42.202Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1</priority>
+  </url>
+  <url>
+    <loc>https://www.naitec.ai/hu/smart</loc>
+    <lastmod>2024-09-01T16:57:42.202Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1</priority>
+  </url>
+  <url>
+    <loc>https://www.naitec.ai/pl/smart</loc>
+    <lastmod>2024-09-01T16:57:42.202Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1</priority>
+  </url>
+  <url>
+    <loc>https://www.naitec.ai/de/smart</loc>
+    <lastmod>2024-09-01T16:57:42.202Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1</priority>
+  </url>
+  <url>
+    <loc>https://www.naitec.ai/ja/smart</loc>
+    <lastmod>2024-09-01T16:57:42.202Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1</priority>
+  </url>
+
   <url>
     <loc>https://www.naitec.ai/sensitive</loc>
     <lastmod>2024-09-01T16:57:42.202Z</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-    <xhtml:link
-      rel="alternate"
-      hreflang="en"
-      href="https://www.naitec.ai/en/sensitive" />
-    <xhtml:link
-      rel="alternate"
-      hreflang="sk"
-      href="https://www.naitec.ai/sk/sensitive" />
-    <xhtml:link
-      rel="alternate"
-      hreflang="cs"
-      href="https://www.naitec.ai/cs/sensitive" />
-    <xhtml:link
-      rel="alternate"
-      hreflang="hu"
-      href="https://www.naitec.ai/hu/sensitive" />
-    <xhtml:link
-      rel="alternate"
-      hreflang="pl"
-      href="https://www.naitec.ai/pl/sensitive" />
-    <xhtml:link
-      rel="alternate"
-      hreflang="de"
-      href="https://www.naitec.ai/de/sensitive" />
-    <xhtml:link
-      rel="alternate"
-      hreflang="ja"
-      href="https://www.naitec.ai/ja/sensitive" />
+    <priority>1</priority>
   </url>
+  <url>
+    <loc>https://www.naitec.ai/sk/sensitive</loc>
+    <lastmod>2024-09-01T16:57:42.202Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1</priority>
+  </url>
+  <url>
+    <loc>https://www.naitec.ai/cs/sensitive</loc>
+    <lastmod>2024-09-01T16:57:42.202Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1</priority>
+  </url>
+  <url>
+    <loc>https://www.naitec.ai/hu/sensitive</loc>
+    <lastmod>2024-09-01T16:57:42.202Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1</priority>
+  </url>
+  <url>
+    <loc>https://www.naitec.ai/pl/sensitive</loc>
+    <lastmod>2024-09-01T16:57:42.202Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1</priority>
+  </url>
+  <url>
+    <loc>https://www.naitec.ai/de/sensitive</loc>
+    <lastmod>2024-09-01T16:57:42.202Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1</priority>
+  </url>
+  <url>
+    <loc>https://www.naitec.ai/ja/sensitive</loc>
+    <lastmod>2024-09-01T16:57:42.202Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1</priority>
+  </url>
+
   <url>
     <loc>https://www.naitec.ai/sensitive-pro</loc>
     <lastmod>2024-09-01T16:57:42.202Z</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-    <xhtml:link
-      rel="alternate"
-      hreflang="en"
-      href="https://www.naitec.ai/en/sensitive-pro" />
-    <xhtml:link
-      rel="alternate"
-      hreflang="sk"
-      href="https://www.naitec.ai/sk/sensitive-pro" />
-    <xhtml:link
-      rel="alternate"
-      hreflang="cs"
-      href="https://www.naitec.ai/cs/sensitive-pro" />
-    <xhtml:link
-      rel="alternate"
-      hreflang="hu"
-      href="https://www.naitec.ai/hu/sensitive-pro" />
-    <xhtml:link
-      rel="alternate"
-      hreflang="pl"
-      href="https://www.naitec.ai/pl/sensitive-pro" />
-    <xhtml:link
-      rel="alternate"
-      hreflang="de"
-      href="https://www.naitec.ai/de/sensitive-pro" />
-    <xhtml:link
-      rel="alternate"
-      hreflang="ja"
-      href="https://www.naitec.ai/ja/sensitive-pro" />
+    <priority>1</priority>
   </url>
+  <url>
+    <loc>https://www.naitec.ai/sk/sensitive-pro</loc>
+    <lastmod>2024-09-01T16:57:42.202Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1</priority>
+  </url>
+  <url>
+    <loc>https://www.naitec.ai/cs/sensitive-pro</loc>
+    <lastmod>2024-09-01T16:57:42.202Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1</priority>
+  </url>
+  <url>
+    <loc>https://www.naitec.ai/hu/sensitive-pro</loc>
+    <lastmod>2024-09-01T16:57:42.202Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1</priority>
+  </url>
+  <url>
+    <loc>https://www.naitec.ai/pl/sensitive-pro</loc>
+    <lastmod>2024-09-01T16:57:42.202Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1</priority>
+  </url>
+  <url>
+    <loc>https://www.naitec.ai/de/sensitive-pro</loc>
+    <lastmod>2024-09-01T16:57:42.202Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1</priority>
+  </url>
+  <url>
+    <loc>https://www.naitec.ai/ja/sensitive-pro</loc>
+    <lastmod>2024-09-01T16:57:42.202Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1</priority>
+  </url>
+
   <url>
     <loc>https://www.naitec.ai/onyx</loc>
     <lastmod>2024-09-01T16:57:42.202Z</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-    <xhtml:link
-      rel="alternate"
-      hreflang="en"
-      href="https://www.naitec.ai/en/onyx" />
-    <xhtml:link
-      rel="alternate"
-      hreflang="sk"
-      href="https://www.naitec.ai/sk/onyx" />
-    <xhtml:link
-      rel="alternate"
-      hreflang="cs"
-      href="https://www.naitec.ai/cs/onyx" />
-    <xhtml:link
-      rel="alternate"
-      hreflang="hu"
-      href="https://www.naitec.ai/hu/onyx" />
-    <xhtml:link
-      rel="alternate"
-      hreflang="pl"
-      href="https://www.naitec.ai/pl/onyx" />
-    <xhtml:link
-      rel="alternate"
-      hreflang="de"
-      href="https://www.naitec.ai/de/onyx" />
-    <xhtml:link
-      rel="alternate"
-      hreflang="ja"
-      href="https://www.naitec.ai/ja/onyx" />
+    <priority>1</priority>
   </url>
+  <url>
+    <loc>https://www.naitec.ai/sk/onyx</loc>
+    <lastmod>2024-09-01T16:57:42.202Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1</priority>
+  </url>
+  <url>
+    <loc>https://www.naitec.ai/cs/onyx</loc>
+    <lastmod>2024-09-01T16:57:42.202Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1</priority>
+  </url>
+  <url>
+    <loc>https://www.naitec.ai/hu/onyx</loc>
+    <lastmod>2024-09-01T16:57:42.202Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1</priority>
+  </url>
+  <url>
+    <loc>https://www.naitec.ai/pl/onyx</loc>
+    <lastmod>2024-09-01T16:57:42.202Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1</priority>
+  </url>
+  <url>
+    <loc>https://www.naitec.ai/de/onyx</loc>
+    <lastmod>2024-09-01T16:57:42.202Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1</priority>
+  </url>
+  <url>
+    <loc>https://www.naitec.ai/ja/onyx</loc>
+    <lastmod>2024-09-01T16:57:42.202Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1</priority>
+  </url>
+
   <url>
     <loc>https://www.naitec.ai/lisa</loc>
     <lastmod>2024-09-01T16:57:42.202Z</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-    <xhtml:link
-      rel="alternate"
-      hreflang="en"
-      href="https://www.naitec.ai/en/lisa" />
-    <xhtml:link
-      rel="alternate"
-      hreflang="sk"
-      href="https://www.naitec.ai/sk/lisa" />
-    <xhtml:link
-      rel="alternate"
-      hreflang="cs"
-      href="https://www.naitec.ai/cs/lisa" />
-    <xhtml:link
-      rel="alternate"
-      hreflang="hu"
-      href="https://www.naitec.ai/hu/lisa" />
-    <xhtml:link
-      rel="alternate"
-      hreflang="pl"
-      href="https://www.naitec.ai/pl/lisa" />
-    <xhtml:link
-      rel="alternate"
-      hreflang="de"
-      href="https://www.naitec.ai/de/lisa" />
-    <xhtml:link
-      rel="alternate"
-      hreflang="ja"
-      href="https://www.naitec.ai/ja/lisa" />
+    <priority>1</priority>
   </url>
+  <url>
+    <loc>https://www.naitec.ai/sk/lisa</loc>
+    <lastmod>2024-09-01T16:57:42.202Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1</priority>
+  </url>
+  <url>
+    <loc>https://www.naitec.ai/cs/lisa</loc>
+    <lastmod>2024-09-01T16:57:42.202Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1</priority>
+  </url>
+  <url>
+    <loc>https://www.naitec.ai/hu/lisa</loc>
+    <lastmod>2024-09-01T16:57:42.202Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1</priority>
+  </url>
+  <url>
+    <loc>https://www.naitec.ai/pl/lisa</loc>
+    <lastmod>2024-09-01T16:57:42.202Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1</priority>
+  </url>
+  <url>
+    <loc>https://www.naitec.ai/de/lisa</loc>
+    <lastmod>2024-09-01T16:57:42.202Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1</priority>
+  </url>
+  <url>
+    <loc>https://www.naitec.ai/ja/lisa</loc>
+    <lastmod>2024-09-01T16:57:42.202Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1</priority>
+  </url>
+
 </urlset>
