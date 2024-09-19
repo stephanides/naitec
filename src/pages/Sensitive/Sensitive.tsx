@@ -129,7 +129,7 @@ export const Sensitive = () => {
           </Flex>
           <Flex
             position="relative"
-            animation={'fadeUp 1s ease-in-out'}
+            // animation={'fadeUp 1s ease-in-out'}
             sx={{
               '@keyframes fadeUp': {
                 '0%': {
@@ -173,10 +173,28 @@ export const Sensitive = () => {
             justify="center"
             aspectRatio="75 / 23"
           >
-            <img
+            {/* <img
               src={`${BUNNY_CDN_URL}/sensitive/sensitive-main.png`}
               style={{ width: '100%', height: 'auto', maxWidth: 'none' }}
               alt="Sensitive"
+            /> */}
+            <Box
+              as="video"
+              src={`${BUNNY_CDN_URL}/sensitive/sensitive.mp4`}
+              playsInline
+              webkit-playsinline="true"
+              muted
+              autoPlay
+              controls={false}
+              sx={{
+                position: 'absolute',
+                top: 0,
+                maxWidth: 'none',
+                left: 0,
+                width: '100%',
+                height: 'auto',
+                userSelect: 'none',
+              }}
             />
           </Flex>
         </Flex>
