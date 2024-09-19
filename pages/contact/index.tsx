@@ -14,6 +14,7 @@ const pathsByLocale = {
   hu: 'kontakt',
   pl: 'kontakt',
   de: 'kontakt',
+  at: 'kontakt',
   ja: 'contact',
 };
 
@@ -27,9 +28,9 @@ const KontaktPage = () => {
 
   const languageAlternates = Object.keys(pathsByLocale).map((lang) => ({
     hrefLang: lang,
-    href: `${BASE_URL}${lang !== 'en' ? `/${lang}` : ''}/${
-      pathsByLocale[lang as keyof typeof pathsByLocale]
-    }`,
+    href: `${BASE_URL}${
+      lang !== 'en' ? `/${lang === 'at' ? 'de' : lang}` : ''
+    }/${pathsByLocale[lang as keyof typeof pathsByLocale]}`,
   }));
 
   return (

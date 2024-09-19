@@ -14,6 +14,7 @@ const pathsByLocale = {
   hu: 'tamogatas/sensitive-pro',
   pl: 'wsparcie/sensitive-pro',
   de: 'unterstutzung/sensitive-pro',
+  at: 'unterstutzung/sensitive-pro',
   ja: 'support/sensitive-pro',
 };
 
@@ -31,7 +32,7 @@ const SupportPage = () => {
 
   const languageAlternates = Object.keys(pathsByLocale).map((lang) => ({
     hrefLang: lang,
-    href: `${BASE_URL}${lang !== 'en' ? `/${lang}` : ''}/${
+    href: `${BASE_URL}${lang !== 'en' ? `/${lang === 'at' ? 'de' : lang}` : ''}/${
       pathsByLocale[lang as keyof typeof pathsByLocale]
     }`,
   }));

@@ -5,7 +5,7 @@ import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import { WhereToBuy } from '@/src/pages';
 import { getSeoDescription, getSeoTitle } from '@/src/shared/helpers';
 import { NextSeo } from 'next-seo';
-import { BASE_URL } from '@/src/shared/constants';
+import { BASE_URL, HREF_LANGS } from '@/src/shared/constants';
 
 const pathsByLocale = {
   en: 'where-to-buy',
@@ -14,6 +14,7 @@ const pathsByLocale = {
   hu: 'hol-lehet-megvenni',
   pl: 'gdzie-kupic',
   de: 'wo-kaufen',
+  at: 'wo-kaufen',
   ja: 'where-to-buy',
 };
 
@@ -26,10 +27,10 @@ const WhereToBuyPage = () => {
     pathsByLocale[locale as keyof typeof pathsByLocale] || 'where-to-buy';
 
   const languageAlternates = Object.keys(pathsByLocale).map((lang) => ({
-    hrefLang: lang,
-    href: `${BASE_URL}${lang !== 'en' ? `/${lang}` : ''}/${
-      pathsByLocale[lang as keyof typeof pathsByLocale]
-    }`,
+    hrefLang: HREF_LANGS[lang as keyof typeof HREF_LANGS],
+    href: `${BASE_URL}${
+      lang !== 'en' ? `/${lang === 'at' ? 'de' : lang}` : ''
+    }/${pathsByLocale[lang as keyof typeof pathsByLocale]}`,
   }));
   return (
     <>

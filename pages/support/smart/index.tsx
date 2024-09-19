@@ -14,6 +14,7 @@ const pathsByLocale = {
   hu: 'tamogatas/smart',
   pl: 'wsparcie/smart',
   de: 'unterstutzung/smart',
+  at: 'unterstutzung/smart',
   ja: 'support/smart',
 };
 
@@ -30,7 +31,7 @@ const SupportPage = () => {
 
   const languageAlternates = Object.keys(pathsByLocale).map((lang) => ({
     hrefLang: lang,
-    href: `${BASE_URL}${lang !== 'en' ? `/${lang}` : ''}/${
+    href: `${BASE_URL}${lang !== 'en' ? `/${lang === 'at' ? 'de' : lang}` : ''}/${
       pathsByLocale[lang as keyof typeof pathsByLocale]
     }`,
   }));

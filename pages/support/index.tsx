@@ -14,6 +14,7 @@ const pathsByLocale = {
   hu: 'tamogatas',
   pl: 'wsparcie',
   de: 'unterstutzung',
+  at: 'unterstutzung',
   ja: 'support',
 };
 
@@ -27,7 +28,7 @@ const SupportPage = () => {
 
   const languageAlternates = Object.keys(pathsByLocale).map((lang) => ({
     hrefLang: lang,
-    href: `${BASE_URL}${lang !== 'en' ? `/${lang}` : ''}/${
+    href: `${BASE_URL}${lang !== 'en' ? `/${lang === 'at' ? 'de' : lang}` : ''}/${
       pathsByLocale[lang as keyof typeof pathsByLocale]
     }`,
   }));

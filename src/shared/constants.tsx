@@ -487,3 +487,14 @@ export const SEO_CONTENT = {
     },
   },
 };
+
+export const HREF_LANGS = {
+  en: 'en-US',
+  sk: 'sk-SK',
+  cs: 'cs-CZ',
+  hu: 'hu-HU',
+  pl: 'pl-PL',
+  de: 'de-DE',
+  at: 'de-AT',
+  ja: 'ja-JP',
+};

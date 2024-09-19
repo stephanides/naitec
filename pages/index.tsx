@@ -18,13 +18,14 @@ const HomePage = () => {
         description={description}
         canonical={`${BASE_URL}/${locale !== 'en' ? locale : ''}`}
         languageAlternates={[
-          { hrefLang: 'en', href: `${BASE_URL}/` },
-          { hrefLang: 'sk', href: `${BASE_URL}/sk` },
-          { hrefLang: 'cs', href: `${BASE_URL}/cs` },
-          { hrefLang: 'hu', href: `${BASE_URL}/hu` },
-          { hrefLang: 'pl', href: `${BASE_URL}/pl` },
-          { hrefLang: 'de', href: `${BASE_URL}/de` },
-          { hrefLang: 'ja', href: `${BASE_URL}/ja` },
+          { hrefLang: 'en-US', href: `${BASE_URL}/` },
+          { hrefLang: 'sk-SK', href: `${BASE_URL}/sk` },
+          { hrefLang: 'cs-CZ', href: `${BASE_URL}/cs` },
+          { hrefLang: 'hu-HU', href: `${BASE_URL}/hu` },
+          { hrefLang: 'pl-PL', href: `${BASE_URL}/pl` },
+          { hrefLang: 'de-DE', href: `${BASE_URL}/de` },
+          { hrefLang: 'de-AT', href: `${BASE_URL}/de` },
+          { hrefLang: 'ja-JP', href: `${BASE_URL}/ja` },
         ]}
         openGraph={{
           url: `${BASE_URL}/${locale !== 'en' ? locale : ''}`,

@@ -14,6 +14,7 @@ const pathsByLocale = {
   hu: 'tamogatas/kandalo-diffuzor',
   pl: 'wsparcie/difuzor-kominkowy',
   de: 'unterstutzung/kamin-diffusor',
+  at: 'unterstutzung/kamin-diffusor',
   ja: 'support/fireplace-diffuser',
 };
 
@@ -32,7 +33,7 @@ const SupportPage = () => {
 
   const languageAlternates = Object.keys(pathsByLocale).map((lang) => ({
     hrefLang: lang,
-    href: `${BASE_URL}${lang !== 'en' ? `/${lang}` : ''}/${
+    href: `${BASE_URL}${lang !== 'en' ? `/${lang === 'at' ? 'de' : lang}` : ''}/${
       pathsByLocale[lang as keyof typeof pathsByLocale]
     }`,
   }));

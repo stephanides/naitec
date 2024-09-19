@@ -14,6 +14,7 @@ const pathsByLocale = {
   hu: 'kandalo-diffuzor',
   pl: 'difuzor-kominkowy',
   de: 'kamin-diffusor',
+  at: 'kamin-diffusor',
   ja: 'fireplace-diffuser',
 };
 
@@ -27,7 +28,7 @@ const FireplaceDifusserPage = () => {
 
   const languageAlternates = Object.keys(pathsByLocale).map((lang) => ({
     hrefLang: lang,
-    href: `${BASE_URL}${lang !== 'en' ? `/${lang}` : ''}/${
+    href: `${BASE_URL}${lang !== 'en' ? `/${lang === 'at' ? 'de' : lang}` : ''}/${
       pathsByLocale[lang as keyof typeof pathsByLocale]
     }`,
   }));
