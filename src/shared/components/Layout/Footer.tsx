@@ -174,7 +174,7 @@ export const Footer = () => {
                 {PHONE_NUMBERS.CONTACT}
               </Item>
             </Box>
-            {/* <Box>
+            <Box>
               <Title>{t('footer_invoice')}</Title>
               <Text
                 color="text.inverted"
@@ -185,7 +185,7 @@ export const Footer = () => {
                 textAlign={{ base: 'left' }}
                 transition="all .3s ease"
               >
-                ACEA s.r.o.
+                Naitec GmbH
               </Text>
               <Text
                 color="text.inverted"
@@ -195,7 +195,7 @@ export const Footer = () => {
                 textAlign={{ base: 'left' }}
                 transition="all .3s ease"
               >
-                Hany Meličkovej 2991/24
+                Schottengasse 10
               </Text>
               <Text
                 color="text.inverted"
@@ -205,7 +205,7 @@ export const Footer = () => {
                 textAlign={{ base: 'left' }}
                 transition="all .3s ease"
               >
-                Bratislava 841 05
+                1010 Wien
               </Text>
               <Text
                 color="text.inverted"
@@ -215,9 +215,9 @@ export const Footer = () => {
                 textAlign={{ base: 'left' }}
                 transition="all .3s ease"
               >
-                Slovensko
+                Österreich
               </Text>
-            </Box> */}
+            </Box>
           </Flex>
           <Flex
             flexWrap="wrap"
