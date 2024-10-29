@@ -139,7 +139,7 @@ export const Sensitive = () => {
           >
             <Box
               as="video"
-              src={`${BUNNY_CDN_URL}/sensitive/sensitive_3.mp4`}
+              src={`${BUNNY_CDN_URL}/sensitive/sensitive_4.mp4`}
               playsInline
               webkit-playsinline="true"
               muted
