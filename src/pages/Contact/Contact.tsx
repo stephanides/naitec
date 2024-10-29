@@ -11,6 +11,7 @@ import { Envelope, Invoice, Phone } from '@/src/shared/design';
 
 export const Contact = () => {
   const { t } = useTranslation(['contact', 'common']);
+
   return (
     <Box pb={{ base: rem(60), lg: rem(100), '2xl': rem(230) }}>
       <Flex
@@ -85,13 +86,44 @@ export const Contact = () => {
             </Flex>
             <a href="tel:+421 905 554 553">
               <NeueHaasGroteskDisplay
-                fontSize={{ base: rem(16), xs: rem(22) }}
+                fontSize={{ base: rem(16), xs: rem(20) }}
                 color="#999999"
                 mt={rem(15)}
-                textDecor="underline"
+                textAlign={{ base: 'center', lg: 'left' }}
+                sx={{
+                  strong: { textDecoration: 'none' },
+                  span: { textDecoration: 'underline' },
+                }}
+              >
+                <strong>SK:</strong> <span>+421 905 554 553</span>
+              </NeueHaasGroteskDisplay>
+            </a>
+            <a href="tel:+421 918 807 856">
+              <NeueHaasGroteskDisplay
+                fontSize={{ base: rem(16), xs: rem(20) }}
+                color="#999999"
+                mt={rem(15)}
+                sx={{
+                  strong: { textDecoration: 'none' },
+                  span: { textDecoration: 'underline' },
+                }}
                 textAlign={{ base: 'center', lg: 'left' }}
               >
-                +421 905 554 553
+                <strong>HU:</strong> <span>+421 918 807 856</span>
+              </NeueHaasGroteskDisplay>
+            </a>
+            <a href="tel:+43 664 99725039">
+              <NeueHaasGroteskDisplay
+                fontSize={{ base: rem(16), xs: rem(20) }}
+                color="#999999"
+                mt={rem(15)}
+                sx={{
+                  strong: { textDecoration: 'none' },
+                  span: { textDecoration: 'underline' },
+                }}
+                textAlign={{ base: 'center', lg: 'left' }}
+              >
+                <strong>AT:</strong> <span> +43 664 99725039</span>
               </NeueHaasGroteskDisplay>
             </a>
             <Flex
