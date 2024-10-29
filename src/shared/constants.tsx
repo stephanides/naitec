@@ -44,7 +44,9 @@ export const EMAILS = {
 };
 
 export const PHONE_NUMBERS = {
-  CONTACT: '+421 905 554 553',
+  CONTACT_SK: '+421 905 554 553',
+  CONTACT_HU: '+421 918 807 856',
+  CONTACT_AT: '+43 664 99725039',
 };
 
 export type PRODUCT_TYPE = 'air_conditioners' | 'accessories' | 'household';

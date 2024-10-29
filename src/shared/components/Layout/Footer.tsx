@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { ReactNode, useEffect } from 'react';
 import AOS from 'aos';
 import { Box, Flex, Text, TextProps } from '@chakra-ui/react';
 import { rem } from 'polished';
@@ -41,7 +41,11 @@ const Item = ({
   href,
   isExternal = false,
   ...rest
-}: { children: string; href: string; isExternal?: boolean } & TextProps) => (
+}: {
+  children: string | ReactNode;
+  href: string;
+  isExternal?: boolean;
+} & TextProps) => (
   <>
     {isExternal ? (
       <a href={href} target="_blank">
@@ -170,8 +174,14 @@ export const Footer = () => {
             <Box>
               <Title>{t('footer_contact')}</Title>
               <Item href={`mailto:${EMAILS.CONTACT}`}>{EMAILS.CONTACT}</Item>
-              <Item href={`tel:${PHONE_NUMBERS.CONTACT}`}>
-                {PHONE_NUMBERS.CONTACT}
+              <Item href={`tel:${PHONE_NUMBERS.CONTACT_SK}`}>
+                <strong>SK:</strong> {PHONE_NUMBERS.CONTACT_SK}
+              </Item>
+              <Item href={`tel:${PHONE_NUMBERS.CONTACT_HU}`}>
+                <strong>HU:</strong> {PHONE_NUMBERS.CONTACT_HU}
+              </Item>
+              <Item href={`tel:${PHONE_NUMBERS.CONTACT_AT}`}>
+                <strong>AT:</strong> {PHONE_NUMBERS.CONTACT_AT}
               </Item>
             </Box>
             <Box>
@@ -286,8 +296,14 @@ export const Footer = () => {
             <Box width="50%">
               <Title>{t('footer_contact')}</Title>
               <Item href={`mailto:${EMAILS.CONTACT}`}>{EMAILS.CONTACT}</Item>
-              <Item href={`tel:${PHONE_NUMBERS.CONTACT}`}>
-                {PHONE_NUMBERS.CONTACT}
+              <Item href={`tel:${PHONE_NUMBERS.CONTACT_SK}`}>
+                <strong>SK:</strong> {PHONE_NUMBERS.CONTACT_SK}
+              </Item>
+              <Item href={`tel:${PHONE_NUMBERS.CONTACT_HU}`}>
+                <strong>HU:</strong> {PHONE_NUMBERS.CONTACT_HU}
+              </Item>
+              <Item href={`tel:${PHONE_NUMBERS.CONTACT_AT}`}>
+                <strong>AT:</strong> {PHONE_NUMBERS.CONTACT_AT}
               </Item>
               {/* <Box mt={rem(40)}>
                 <Title>{t('footer_naitec_app')}</Title>
