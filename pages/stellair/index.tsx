@@ -57,7 +57,7 @@ const StellairPage = () => {
           siteName: 'Naitec',
         }}
       />
-      <Layout withOrnament>
+      <Layout>
         <Stellair />
       </Layout>
     </>

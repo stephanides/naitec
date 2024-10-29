@@ -68,31 +68,12 @@ export const Sensitive = () => {
           flexDir="column"
           overflow="hidden"
         >
-          <Flex
-            width="100%"
-            justifyContent="center"
-            animation={'fadeUp .75s ease-in-out'}
-            sx={{
-              '@keyframes fadeUp': {
-                '0%': {
-                  opacity: 0,
-                  transform: 'translateY(60px)',
-                },
-                '20%': {
-                  opacity: 0,
-                  transform: 'translateY(60px)',
-                },
-                '100%': {
-                  opacity: 1,
-                  transform: 'translateY(0)',
-                },
-              },
-            }}
-          >
+          <Flex width="100%" justifyContent="center">
             <NeueHaasGroteskDisplay
               background={LINEAR_GRADIENTS.sensitive}
               backgroundPosition="left center"
               backgroundSize="600% 200%"
+              zIndex={1}
               fontSize={{
                 base: rem(52),
                 xs: rem(68),
@@ -129,30 +110,13 @@ export const Sensitive = () => {
           </Flex>
           <Flex
             position="relative"
-            animation={'fadeUp 1s ease-in-out'}
-            sx={{
-              '@keyframes fadeUp': {
-                '0%': {
-                  opacity: 0,
-                  transform: 'translateY(60px)',
-                },
-                '65%': {
-                  opacity: 0,
-                  transform: 'translateY(60px)',
-                },
-                '100%': {
-                  opacity: 1,
-                  transform: 'translateY(0)',
-                },
-              },
-            }}
-            pt={{
-              base: rem(28),
+            mt={{
+              base: rem(20),
               xs: rem(20),
-              md: rem(32),
-              lg: rem(60),
-              xl: rem(54),
-              '3xl': rem(50),
+              md: rem(20),
+              lg: rem(46),
+              xl: rem(40),
+              '3xl': rem(40),
             }}
             maxW={{
               base: rem(546),
@@ -171,16 +135,11 @@ export const Sensitive = () => {
               '3xl': rem(2080),
             }}
             justify="center"
-            aspectRatio="75 / 23"
+            aspectRatio="75 / 25"
           >
-            <img
-              src={`${BUNNY_CDN_URL}/sensitive/sensitive-main.png`}
-              style={{ width: '100%', height: 'auto', maxWidth: 'none' }}
-              alt="Sensitive"
-            />
-            {/* <Box
+            <Box
               as="video"
-              src={`${BUNNY_CDN_URL}/sensitive/sensitive.mp4`}
+              src={`${BUNNY_CDN_URL}/sensitive/sensitive_3.mp4`}
               playsInline
               webkit-playsinline="true"
               muted
@@ -195,7 +154,7 @@ export const Sensitive = () => {
                 height: 'auto',
                 userSelect: 'none',
               }}
-            /> */}
+            />
           </Flex>
         </Flex>
         <ProductHeadingButtons

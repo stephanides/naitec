@@ -73,35 +73,19 @@ export const SensitivePro = () => {
           <Flex
             width="100%"
             justifyContent="center"
-            animation={'fadeUp .75s ease-in-out'}
-            sx={{
-              '@keyframes fadeUp': {
-                '0%': {
-                  opacity: 0,
-                  transform: 'translateY(60px)',
-                },
-                '20%': {
-                  opacity: 0,
-                  transform: 'translateY(60px)',
-                },
-                '100%': {
-                  opacity: 1,
-                  transform: 'translateY(0)',
-                },
-              },
-            }}
           >
             <NeueHaasGroteskDisplay
               background={LINEAR_GRADIENTS.sensitive_pro}
               backgroundPosition="left center"
               backgroundSize="600% 200%"
+              zIndex={1}
               fontSize={{
                 base: rem(42),
                 xs: rem(60),
                 md: rem(90),
-                lg: rem(110),
-                xl: rem(110),
-                '3xl': rem(134),
+                lg: rem(100),
+                xl: rem(124),
+                '3xl': rem(150),
               }}
               fontWeight={600}
               textTransform="uppercase"
@@ -131,30 +115,13 @@ export const SensitivePro = () => {
           </Flex>
           <Flex
             position="relative"
-            animation={'fadeUp 1s ease-out'}
-            sx={{
-              '@keyframes fadeUp': {
-                '0%': {
-                  opacity: 0,
-                  transform: 'translateY(60px)',
-                },
-                '65%': {
-                  opacity: 0,
-                  transform: 'translateY(60px)',
-                },
-                '100%': {
-                  opacity: 1,
-                  transform: 'translateY(0)',
-                },
-              },
-            }}
-            pt={{
-              base: rem(12),
-              xs: rem(20),
-              md: rem(32),
-              lg: rem(32),
+            mt={{
+              base: rem(8),
+              xs: rem(8),
+              md: rem(24),
+              lg: rem(12),
               xl: rem(24),
-              '3xl': rem(10),
+              '3xl': rem(4),
             }}
             maxW={{
               base: rem(546),
@@ -176,15 +143,23 @@ export const SensitivePro = () => {
             aspectRatio="75 / 23"
             overflow="hidden"
           >
-            <Image
-              src={`${BUNNY_CDN_URL}/sensitive-pro/sensitive-pro-main.png`}
-              width="0"
-              height="0"
-              sizes="100vw"
-              style={{ width: '100%', height: 'auto', maxWidth: 'none' }}
-              alt="Sensitive"
-              placeholder="blur"
-              blurDataURL={`${BUNNY_CDN_URL}/sensitive-pro/sensitive-pro-main-placeholder.png`}
+            <Box
+              as="video"
+              src={`${BUNNY_CDN_URL}/sensitive-pro/sensitive_pro_1.mp4`}
+              playsInline
+              webkit-playsinline="true"
+              muted
+              autoPlay
+              controls={false}
+              sx={{
+                position: 'absolute',
+                top: 0,
+                maxWidth: 'none',
+                left: 0,
+                width: '100%',
+                height: 'auto',
+                userSelect: 'none',
+              }}
             />
           </Flex>
         </Flex>

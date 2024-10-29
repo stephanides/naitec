@@ -141,7 +141,7 @@ export const Contact = () => {
               mt={rem(15)}
               textAlign={{ base: 'center', lg: 'left' }}
             >
-              ACEA s.r.o.
+              Naitec GmbH
             </NeueHaasGroteskDisplay>
             <NeueHaasGroteskDisplay
               fontSize={{ base: rem(16), xs: rem(22) }}
@@ -149,7 +149,7 @@ export const Contact = () => {
               mt={rem(4)}
               textAlign={{ base: 'center', lg: 'left' }}
             >
-              Hany Meličkovej 2991/24
+              Schottengasse 10
             </NeueHaasGroteskDisplay>
             <NeueHaasGroteskDisplay
               fontSize={{ base: rem(16), xs: rem(22) }}
@@ -157,7 +157,7 @@ export const Contact = () => {
               mt={rem(4)}
               textAlign={{ base: 'center', lg: 'left' }}
             >
-              Bratislava 841 05
+              1010 Wien
             </NeueHaasGroteskDisplay>
             <NeueHaasGroteskDisplay
               fontSize={{ base: rem(16), xs: rem(22) }}
@@ -165,7 +165,7 @@ export const Contact = () => {
               mt={rem(4)}
               textAlign={{ base: 'center', lg: 'left' }}
             >
-              Slovensko
+              Österreich
             </NeueHaasGroteskDisplay>
           </Box>
           <Box maxW={{ base: '100%', lg: rem(820) }} width="100%">

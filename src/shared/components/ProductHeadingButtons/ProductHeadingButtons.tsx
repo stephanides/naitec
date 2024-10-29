@@ -30,7 +30,7 @@ export const ProductHeadingButtons = ({
 }: ProductHeadingButtonProps) => {
   const { t } = useTranslation('common');
   return (
-    <Flex width="100%" justifyContent="center" position="relative">
+    <Flex width="100%" justifyContent="center" position="relative" mt={rem(8)}>
       <Flex columnGap={rem(20)}>
         <Link href={INTERNAL_ROUTES.WHERE_TO_BUY}>
           <PrimaryButton

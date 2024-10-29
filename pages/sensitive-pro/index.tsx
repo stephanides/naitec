@@ -58,7 +58,7 @@ const SensitiveProPage = () => {
           siteName: 'Naitec',
         }}
       />
-      <Layout withOrnament>
+      <Layout>
         <SensitivePro />
       </Layout>
     </>

@@ -69,31 +69,12 @@ export const Stellair = () => {
           flexDir="column"
           overflow="hidden"
         >
-          <Flex
-            width="100%"
-            justifyContent="center"
-            animation={'fadeUp .75s ease-in-out'}
-            sx={{
-              '@keyframes fadeUp': {
-                '0%': {
-                  opacity: 0,
-                  transform: 'translateY(60px)',
-                },
-                '20%': {
-                  opacity: 0,
-                  transform: 'translateY(60px)',
-                },
-                '100%': {
-                  opacity: 1,
-                  transform: 'translateY(0)',
-                },
-              },
-            }}
-          >
+          <Flex width="100%" justifyContent="center">
             <NeueHaasGroteskDisplay
               background="linear-gradient(to right, #344F5F, #6CA5C5)"
               backgroundPosition="left center"
               backgroundSize="600% 200%"
+              zIndex={1}
               fontSize={{
                 base: rem(60),
                 xs: rem(72),
@@ -130,30 +111,13 @@ export const Stellair = () => {
           </Flex>
           <Flex
             position="relative"
-            animation={'fadeUp 1s ease-in-out'}
-            sx={{
-              '@keyframes fadeUp': {
-                '0%': {
-                  opacity: 0,
-                  transform: 'translateY(60px)',
-                },
-                '65%': {
-                  opacity: 0,
-                  transform: 'translateY(60px)',
-                },
-                '100%': {
-                  opacity: 1,
-                  transform: 'translateY(0)',
-                },
-              },
-            }}
             mt={{
-              base: rem(28),
-              xs: rem(20),
-              md: rem(32),
-              lg: rem(60),
-              xl: rem(54),
-              '3xl': rem(60),
+              base: rem(20),
+              xs: rem(16),
+              md: rem(24),
+              lg: rem(46),
+              xl: rem(40),
+              '3xl': rem(36),
             }}
             maxW={{
               base: rem(546),
@@ -171,14 +135,27 @@ export const Stellair = () => {
               xl: rem(1500),
               '3xl': rem(2080),
             }}
-            aspectRatio="75 / 23"
+            aspectRatio="75 / 25"
             justify="center"
             overflow="hidden"
           >
-            <img
-              src={`${BUNNY_CDN_URL}/stellair/stellair-main.png`}
-              style={{ width: '100%', height: 'auto', maxWidth: 'none' }}
-              alt="Stellair"
+            <Box
+              as="video"
+              src={`${BUNNY_CDN_URL}/stellair/stellair_1.mp4`}
+              playsInline
+              webkit-playsinline="true"
+              muted
+              autoPlay
+              controls={false}
+              sx={{
+                position: 'absolute',
+                top: 0,
+                maxWidth: 'none',
+                left: 0,
+                width: '100%',
+                height: 'auto',
+                userSelect: 'none',
+              }}
             />
           </Flex>
         </Flex>
