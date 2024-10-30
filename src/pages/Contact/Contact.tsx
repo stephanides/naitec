@@ -8,6 +8,7 @@ import { useTranslation } from 'next-i18next';
 import { rem } from 'polished';
 import { ContactForm } from './ContactForm';
 import { Envelope, Invoice, Phone } from '@/src/shared/design';
+import { PHONE_NUMBERS } from '@/src/shared/constants';
 
 export const Contact = () => {
   const { t } = useTranslation(['contact', 'common']);
@@ -84,7 +85,7 @@ export const Contact = () => {
                 {t('banner_phone')}
               </NeueHaasGroteskDisplay>
             </Flex>
-            <a href="tel:+421 905 554 553">
+            <a href={`tel:${PHONE_NUMBERS.CONTACT}`}>
               <NeueHaasGroteskDisplay
                 fontSize={{ base: rem(16), xs: rem(20) }}
                 color="#999999"
@@ -95,35 +96,7 @@ export const Contact = () => {
                   span: { textDecoration: 'underline' },
                 }}
               >
-                <strong>SK:</strong> <span>+421 905 554 553</span>
-              </NeueHaasGroteskDisplay>
-            </a>
-            <a href="tel:+421 918 807 856">
-              <NeueHaasGroteskDisplay
-                fontSize={{ base: rem(16), xs: rem(20) }}
-                color="#999999"
-                mt={rem(15)}
-                sx={{
-                  strong: { textDecoration: 'none' },
-                  span: { textDecoration: 'underline' },
-                }}
-                textAlign={{ base: 'center', lg: 'left' }}
-              >
-                <strong>HU:</strong> <span>+421 918 807 856</span>
-              </NeueHaasGroteskDisplay>
-            </a>
-            <a href="tel:+43 664 99725039">
-              <NeueHaasGroteskDisplay
-                fontSize={{ base: rem(16), xs: rem(20) }}
-                color="#999999"
-                mt={rem(15)}
-                sx={{
-                  strong: { textDecoration: 'none' },
-                  span: { textDecoration: 'underline' },
-                }}
-                textAlign={{ base: 'center', lg: 'left' }}
-              >
-                <strong>AT:</strong> <span> +43 664 99725039</span>
+                <span>{PHONE_NUMBERS.CONTACT}</span>
               </NeueHaasGroteskDisplay>
             </a>
             <Flex

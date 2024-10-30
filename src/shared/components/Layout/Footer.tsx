@@ -174,14 +174,8 @@ export const Footer = () => {
             <Box>
               <Title>{t('footer_contact')}</Title>
               <Item href={`mailto:${EMAILS.CONTACT}`}>{EMAILS.CONTACT}</Item>
-              <Item href={`tel:${PHONE_NUMBERS.CONTACT_SK}`}>
-                <strong>SK:</strong> {PHONE_NUMBERS.CONTACT_SK}
-              </Item>
-              <Item href={`tel:${PHONE_NUMBERS.CONTACT_HU}`}>
-                <strong>HU:</strong> {PHONE_NUMBERS.CONTACT_HU}
-              </Item>
-              <Item href={`tel:${PHONE_NUMBERS.CONTACT_AT}`}>
-                <strong>AT:</strong> {PHONE_NUMBERS.CONTACT_AT}
+              <Item href={`tel:${PHONE_NUMBERS.CONTACT}`}>
+                {PHONE_NUMBERS.CONTACT}
               </Item>
             </Box>
             <Box>
@@ -296,14 +290,8 @@ export const Footer = () => {
             <Box width="50%">
               <Title>{t('footer_contact')}</Title>
               <Item href={`mailto:${EMAILS.CONTACT}`}>{EMAILS.CONTACT}</Item>
-              <Item href={`tel:${PHONE_NUMBERS.CONTACT_SK}`}>
-                <strong>SK:</strong> {PHONE_NUMBERS.CONTACT_SK}
-              </Item>
-              <Item href={`tel:${PHONE_NUMBERS.CONTACT_HU}`}>
-                <strong>HU:</strong> {PHONE_NUMBERS.CONTACT_HU}
-              </Item>
-              <Item href={`tel:${PHONE_NUMBERS.CONTACT_AT}`}>
-                <strong>AT:</strong> {PHONE_NUMBERS.CONTACT_AT}
+              <Item href={`tel:${PHONE_NUMBERS.CONTACT}`}>
+                {PHONE_NUMBERS.CONTACT}
               </Item>
               {/* <Box mt={rem(40)}>
                 <Title>{t('footer_naitec_app')}</Title>
