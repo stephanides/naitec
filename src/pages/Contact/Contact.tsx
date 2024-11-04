@@ -85,7 +85,7 @@ export const Contact = () => {
                 {t('banner_phone')}
               </NeueHaasGroteskDisplay>
             </Flex>
-            <a href={`tel:${PHONE_NUMBERS.CONTACT}`}>
+            <a href={`tel:${PHONE_NUMBERS.CONTACT_AT}`}>
               <NeueHaasGroteskDisplay
                 fontSize={{ base: rem(16), xs: rem(20) }}
                 color="#999999"
@@ -96,7 +96,21 @@ export const Contact = () => {
                   span: { textDecoration: 'underline' },
                 }}
               >
-                <span>{PHONE_NUMBERS.CONTACT}</span>
+                AT: <span>{PHONE_NUMBERS.CONTACT_AT}</span>
+              </NeueHaasGroteskDisplay>
+            </a>
+            <a href={`tel:${PHONE_NUMBERS.CONTACT_HU}`}>
+              <NeueHaasGroteskDisplay
+                fontSize={{ base: rem(16), xs: rem(20) }}
+                color="#999999"
+                mt={rem(15)}
+                textAlign={{ base: 'center', lg: 'left' }}
+                sx={{
+                  strong: { textDecoration: 'none' },
+                  span: { textDecoration: 'underline' },
+                }}
+              >
+                HU: <span>{PHONE_NUMBERS.CONTACT_HU}</span>
               </NeueHaasGroteskDisplay>
             </a>
             <Flex

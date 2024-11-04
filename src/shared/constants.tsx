@@ -44,7 +44,8 @@ export const EMAILS = {
 };
 
 export const PHONE_NUMBERS = {
-  CONTACT: '+43 650 2749692',
+  CONTACT_AT: '+43 650 2749692',
+  CONTACT_HU: '+421 918 807 856'
 };
 
 export type PRODUCT_TYPE = 'air_conditioners' | 'accessories' | 'household';

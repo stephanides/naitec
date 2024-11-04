@@ -174,8 +174,11 @@ export const Footer = () => {
             <Box>
               <Title>{t('footer_contact')}</Title>
               <Item href={`mailto:${EMAILS.CONTACT}`}>{EMAILS.CONTACT}</Item>
-              <Item href={`tel:${PHONE_NUMBERS.CONTACT}`}>
-                {PHONE_NUMBERS.CONTACT}
+              <Item href={`tel:${PHONE_NUMBERS.CONTACT_AT}`}>
+                AT: <span>{PHONE_NUMBERS.CONTACT_AT}</span>
+              </Item>
+              <Item href={`tel:${PHONE_NUMBERS.CONTACT_HU}`}>
+                HU: <span>{PHONE_NUMBERS.CONTACT_HU}</span>
               </Item>
             </Box>
             <Box>
@@ -290,8 +293,11 @@ export const Footer = () => {
             <Box width="50%">
               <Title>{t('footer_contact')}</Title>
               <Item href={`mailto:${EMAILS.CONTACT}`}>{EMAILS.CONTACT}</Item>
-              <Item href={`tel:${PHONE_NUMBERS.CONTACT}`}>
-                {PHONE_NUMBERS.CONTACT}
+              <Item href={`tel:${PHONE_NUMBERS.CONTACT_AT}`}>
+                AT: <span>{PHONE_NUMBERS.CONTACT_AT}</span>
+              </Item>
+              <Item href={`tel:${PHONE_NUMBERS.CONTACT_HU}`}>
+                HU: <span>{PHONE_NUMBERS.CONTACT_HU}</span>
               </Item>
               {/* <Box mt={rem(40)}>
                 <Title>{t('footer_naitec_app')}</Title>
