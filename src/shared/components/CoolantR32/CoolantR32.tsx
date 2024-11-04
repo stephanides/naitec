@@ -14,7 +14,7 @@ type CoolantR32Props = {
 export const CoolantR32 = ({ color }: CoolantR32Props) => {
   const { t } = useTranslation();
   return (
-    <Box mt={rem(40)}>
+    <Box mt={rem(40)} overflow="hidden">
       <Container>
         <Flex alignItems="center" flexDir={{ base: 'column', md: 'row' }}>
           <Box width={{ base: '100%', md: '50%' }}>
