@@ -26,7 +26,7 @@ export const FireplaceDifusser = () => {
             <ProductGallery
               images={[
                 {
-                  src: `${BUNNY_CDN_URL}/fireplace/fireplace-1.jpg`,
+                  src: `${BUNNY_CDN_URL}/fireplace/fireplace-1.png`,
                   alt: 'Fireplace diffuser',
                 },
                 {

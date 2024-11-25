@@ -40,7 +40,7 @@ export const EXTERNAL_ROUTES = {
 };
 
 export const EMAILS = {
-  CONTACT: 'info@naitec.sk',
+  CONTACT: 'info@naitec.ai',
 };
 
 export const PHONE_NUMBERS = {
