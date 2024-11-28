@@ -16,9 +16,11 @@ import { useState } from 'react';
 
 type TechnicalParametersProps = {
   label: string;
-  color: string;
+  color?: string;
   buttonColor?: string;
   hoverColor?: string;
+  selectLabels?: string[];
+  selectVariant?: string;
   params: {
     chladiaciVykon: string;
     vykurovaciVykon: string;
@@ -32,10 +34,12 @@ type TechnicalParametersProps = {
     rozmeryVnutornejJednotky: string;
     rozmeryVonkajsejJednotky: string;
     ionizator: boolean;
-    nasavanieVzduchuZExterieru: boolean;
-    wifiModul: boolean;
+    nasavanieVzduchuZExterieru?: boolean | string;
+    neviditelneUmiestnenie?: boolean;
+    wifiModul: boolean | string;
     sterilizacia: boolean;
-    dierkovanaLamela: boolean;
+    dierkovanaLamela?: boolean | string;
+    preKomercnePriestory?: boolean;
     dlhodobeVykurovanie: string;
     aktivneCistenie: boolean;
     zaruka: string;
@@ -96,6 +100,8 @@ export const TechnicalParameters = ({
   color,
   buttonColor = 'text.naitec_blue',
   hoverColor = 'background.naitec_blue_hover',
+  selectVariant = 'smart',
+  selectLabels = [],
   params,
 }: TechnicalParametersProps) => {
   const { t } = useTranslation();
@@ -120,9 +126,9 @@ export const TechnicalParameters = ({
               mt={rem(25)}
               sx={{
                 strong: {
-                  backgroundImage: color,
+                  backgroundImage: color ? color : '',
                   backgroundClip: 'text',
-                  color: 'transparent',
+                  color: color ? 'transparent' : 'text.naitec_blue',
                 },
               }}
               dangerouslySetInnerHTML={{
@@ -150,15 +156,17 @@ export const TechnicalParameters = ({
                 // }kw)`}
                 width="100%"
                 mt={rem(18)}
-                variant="smart"
+                variant={selectVariant}
                 name="service"
                 onChange={(event) => setActiveParam(Number(event.target.value))}
                 value={activeParam}
               >
                 {params.map((param, index) => (
-                  <option value={index}>{`${t('choose_performance')} (${
-                    param.chladiaciVykon
-                  }kw)`}</option>
+                  <option value={index}>{`${t('choose_performance')} ${
+                    selectLabels && selectLabels[index]
+                      ? selectLabels[index]
+                      : `(${param.chladiaciVykon}kw)`
+                  }`}</option>
                 ))}
               </Select>
             </Box>
@@ -229,11 +237,26 @@ export const TechnicalParameters = ({
                   value={params[activeParam].ionizator}
                   withBorderRight={false}
                 />
-                <Item
-                  label={t('technical_parameters_air_taker_from_the_outside')}
-                  value={params[activeParam].nasavanieVzduchuZExterieru}
-                  withBorderRight={false}
-                />
+                {typeof params[activeParam].nasavanieVzduchuZExterieru ===
+                  'boolean' ||
+                  (typeof params[activeParam].nasavanieVzduchuZExterieru ===
+                    'string' && (
+                    <Item
+                      label={t(
+                        'technical_parameters_air_taker_from_the_outside'
+                      )}
+                      value={params[activeParam].nasavanieVzduchuZExterieru}
+                      withBorderRight={false}
+                    />
+                  ))}
+                {typeof params[activeParam].neviditelneUmiestnenie ===
+                  'boolean' && (
+                  <Item
+                    label={t('technical_parameters_invisible_location')}
+                    value={params[activeParam].neviditelneUmiestnenie}
+                    withBorderRight={false}
+                  />
+                )}
                 <Item
                   label={t('technical_parameters_wifi_module')}
                   value={params[activeParam].wifiModul}
@@ -244,11 +267,22 @@ export const TechnicalParameters = ({
                   value={params[activeParam].sterilizacia}
                   withBorderRight={false}
                 />
-                <Item
-                  label={t('technical_parameters_perforated_lamella')}
-                  value={params[activeParam].dierkovanaLamela}
-                  withBorderRight={false}
-                />
+                {typeof params[activeParam].dierkovanaLamela === 'boolean' ||
+                  (typeof params[activeParam].dierkovanaLamela === 'string' && (
+                    <Item
+                      label={t('technical_parameters_perforated_lamella')}
+                      value={params[activeParam].dierkovanaLamela}
+                      withBorderRight={false}
+                    />
+                  ))}
+                {typeof params[activeParam].preKomercnePriestory ===
+                  'boolean' && (
+                  <Item
+                    label={t('technical_parameters_for_commercial_premises')}
+                    value={params[activeParam].preKomercnePriestory}
+                    withBorderRight={false}
+                  />
+                )}
                 <Item
                   label={t('technical_parameters_long_term_heating')}
                   value={`${t('up_to')} ${
@@ -335,11 +369,26 @@ export const TechnicalParameters = ({
                     value={params[activeParam].ionizator}
                     withBorderRight={false}
                   />
-                  <Item
-                    label={t('technical_parameters_air_taker_from_the_outside')}
-                    value={params[activeParam].nasavanieVzduchuZExterieru}
-                    withBorderRight={false}
-                  />
+                  {typeof params[activeParam].nasavanieVzduchuZExterieru ===
+                    'boolean' ||
+                    (typeof params[activeParam].nasavanieVzduchuZExterieru ===
+                      'string' && (
+                      <Item
+                        label={t(
+                          'technical_parameters_air_taker_from_the_outside'
+                        )}
+                        value={params[activeParam].nasavanieVzduchuZExterieru}
+                        withBorderRight={false}
+                      />
+                    ))}
+                  {typeof params[activeParam].neviditelneUmiestnenie ===
+                    'boolean' && (
+                    <Item
+                      label={t('technical_parameters_invisible_location')}
+                      value={params[activeParam].neviditelneUmiestnenie}
+                      withBorderRight={false}
+                    />
+                  )}
                   <Item
                     label={t('technical_parameters_wifi_module')}
                     value={params[activeParam].wifiModul}
@@ -350,11 +399,23 @@ export const TechnicalParameters = ({
                     value={params[activeParam].sterilizacia}
                     withBorderRight={false}
                   />
-                  <Item
-                    label={t('technical_parameters_perforated_lamella')}
-                    value={params[activeParam].dierkovanaLamela}
-                    withBorderRight={false}
-                  />
+                  {typeof params[activeParam].dierkovanaLamela === 'boolean' ||
+                    (typeof params[activeParam].dierkovanaLamela ===
+                      'string' && (
+                      <Item
+                        label={t('technical_parameters_perforated_lamella')}
+                        value={params[activeParam].dierkovanaLamela}
+                        withBorderRight={false}
+                      />
+                    ))}
+                  {typeof params[activeParam].preKomercnePriestory ===
+                    'boolean' && (
+                    <Item
+                      label={t('technical_parameters_for_commercial_premises')}
+                      value={params[activeParam].preKomercnePriestory}
+                      withBorderRight={false}
+                    />
+                  )}
                   <Item
                     label={t('technical_parameters_long_term_heating')}
                     value={`${t('up_to')} ${

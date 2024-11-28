@@ -992,6 +992,325 @@ export const Home = () => {
           zIndex={1}
         />
       </Flex>
+      <Flex
+        flexDir={{ base: 'column', xl: 'row' }}
+        px={{ base: rem(12), xs: rem(20), xl: 0 }}
+        pb={{ base: rem(20) }}
+        position="relative"
+        top={rem(1)}
+      >
+        <Box
+          mt={rem(20)}
+          mr={{ base: 0, xl: rem(20) }}
+          ml={{ base: 0, xl: rem(10) }}
+          pt={rem(20)}
+          border="5px solid"
+          borderColor="#FFFFFF"
+          backgroundColor="#FAFAFA"
+          borderRadius={rem(20)}
+          position="relative"
+          overflow="hidden"
+          width={{ base: '100%', xl: '50%' }}
+          zIndex={2}
+        >
+          <Box zIndex={2} position="relative">
+            <Flex
+              width="100%"
+              justifyContent="center"
+              alignItems="center"
+              position="relative"
+              flexDir="column"
+            >
+              <Box position="absolute" top={{ base: rem(20), xl: rem(70) }}>
+                <NeueHaasGroteskDisplay
+                  fontSize={{ base: rem(28), xs: rem(32), lg: rem(48) }}
+                  fontWeight={600}
+                  textTransform="uppercase"
+                  textAlign="center"
+                  color="text.link"
+                  position="relative"
+                  top={0}
+                >
+                  {t('common:cassette_air_conditioning')}
+                </NeueHaasGroteskDisplay>
+                <Box mt={rem(20)}>
+                  <ProductHeadingButtonsHome
+                    productHref={INTERNAL_ROUTES.CASSETTE_AIR_CONDITIONING}
+                  />
+                </Box>
+              </Box>
+              <Link
+                href={INTERNAL_ROUTES.CASSETTE_AIR_CONDITIONING}
+                style={{ marginLeft: 'auto' }}
+              >
+                <Flex
+                  position="relative"
+                  maxW={{ base: rem(600), xl: rem(1600) }}
+                  width="100%"
+                  justifyContent="flex-end"
+                  overflow="hidden"
+                  pointerEvents="none"
+                  pt={{ base: rem(20), '2xl': 0 }}
+                  ml={{ base: 'auto', xl: 0 }}
+                  data-aos="fade-up"
+                >
+                  <img
+                    src={`${BUNNY_CDN_URL}/cassette-air-conditioning/cassette-conditioning-main.png`}
+                    style={{ width: '100%', height: 'auto', maxWidth: 'none' }}
+                    alt="Cassete air conditioner"
+                  />
+                </Flex>
+              </Link>
+            </Flex>
+          </Box>
+          <Box
+            position="absolute"
+            zIndex={1}
+            bottom={0}
+            left={0}
+            right={0}
+            display={{ base: 'none', md: 'block', xl: 'none' }}
+          >
+            <HomeShape />
+          </Box>
+          <Box
+            position="absolute"
+            zIndex={1}
+            bottom={{ base: 0, xl: rem(-60) }}
+            left={0}
+            right={0}
+            display={{ base: 'block', md: 'none', xl: 'block', '3xl': 'none' }}
+          >
+            <HomeShapeMobile />
+          </Box>
+          <Box
+            position="absolute"
+            zIndex={1}
+            bottom={0}
+            left={0}
+            right={0}
+            display={{ base: 'none', '3xl': 'block' }}
+          >
+            <HomeShape4k />
+          </Box>
+        </Box>
+        <Box
+          mt={rem(20)}
+          mr={{ base: 0, xl: rem(20) }}
+          ml={{ base: 0, xl: rem(10) }}
+          pt={rem(20)}
+          border="5px solid"
+          borderColor="#FFFFFF"
+          backgroundColor="#FAFAFA"
+          borderRadius={rem(20)}
+          position="relative"
+          overflow="hidden"
+          width={{ base: '100%', xl: '50%' }}
+          zIndex={2}
+        >
+          <Box zIndex={2} position="relative">
+            <Flex
+              width="100%"
+              justifyContent="center"
+              alignItems="center"
+              position="relative"
+              flexDir="column"
+            >
+              <Box position="absolute" top={{ base: rem(20), xl: rem(70) }}>
+                <NeueHaasGroteskDisplay
+                  fontSize={{ base: rem(28), xs: rem(32), lg: rem(48) }}
+                  fontWeight={600}
+                  textTransform="uppercase"
+                  textAlign="center"
+                  color="text.link"
+                  position="relative"
+                  top={0}
+                >
+                  {t('common:ducted_air_conditioning')}
+                </NeueHaasGroteskDisplay>
+                <Box mt={rem(20)}>
+                  <ProductHeadingButtonsHome
+                    productHref={INTERNAL_ROUTES.DUCTED_AIR_CONDITIONING}
+                  />
+                </Box>
+              </Box>
+              <Link
+                href={INTERNAL_ROUTES.DUCTED_AIR_CONDITIONING}
+                style={{ marginLeft: 'auto' }}
+              >
+                <Flex
+                  position="relative"
+                  maxW={{ base: rem(600), xl: rem(1600) }}
+                  width="100%"
+                  justifyContent="flex-end"
+                  overflow="hidden"
+                  pointerEvents="none"
+                  pt={{ base: rem(20), '2xl': 0 }}
+                  ml={{ base: 'auto', xl: 0 }}
+                  data-aos="fade-up"
+                >
+                  <img
+                    src={`${BUNNY_CDN_URL}/ducted-air-conditioning/ducted-conditioning-main.png`}
+                    style={{ width: '100%', height: 'auto', maxWidth: 'none' }}
+                    alt="Ducted air conditioner"
+                  />
+                </Flex>
+              </Link>
+            </Flex>
+          </Box>
+          <Box
+            position="absolute"
+            zIndex={1}
+            bottom={0}
+            left={0}
+            right={0}
+            display={{ base: 'none', md: 'block', xl: 'none' }}
+          >
+            <HomeShape />
+          </Box>
+          <Box
+            position="absolute"
+            zIndex={1}
+            bottom={{ base: 0, xl: rem(-60) }}
+            left={0}
+            right={0}
+            display={{ base: 'block', md: 'none', xl: 'block', '3xl': 'none' }}
+          >
+            <HomeShapeMobile />
+          </Box>
+          <Box
+            position="absolute"
+            zIndex={1}
+            bottom={0}
+            left={0}
+            right={0}
+            display={{ base: 'none', '3xl': 'block' }}
+          >
+            <HomeShape4k />
+          </Box>
+        </Box>
+        <Box
+          position="absolute"
+          left={0}
+          bottom={0}
+          right={0}
+          height={{ base: '25%', xl: '50%' }}
+          backgroundColor="background.primary"
+          zIndex={1}
+        />
+      </Flex>
+      <Flex
+        flexDir={{ base: 'column', xl: 'row' }}
+        px={{ base: rem(12), xs: rem(20), xl: 0 }}
+        pb={{ base: rem(20) }}
+        position="relative"
+        top={rem(1)}
+      >
+        <Box
+          mt={rem(20)}
+          mr={{ base: 0, xl: rem(20) }}
+          ml={{ base: 0, xl: rem(10) }}
+          pt={rem(20)}
+          border="5px solid"
+          borderColor="#FFFFFF"
+          backgroundColor="#FAFAFA"
+          borderRadius={rem(20)}
+          position="relative"
+          overflow="hidden"
+          width={{ base: '100%', xl: '50%' }}
+          zIndex={2}
+        >
+          <Box zIndex={2} position="relative">
+            <Flex
+              width="100%"
+              justifyContent="center"
+              alignItems="center"
+              position="relative"
+              flexDir="column"
+            >
+              <Box position="absolute" top={{ base: rem(20), xl: rem(70) }}>
+                <NeueHaasGroteskDisplay
+                  fontSize={{ base: rem(28), xs: rem(32), lg: rem(48) }}
+                  fontWeight={600}
+                  textTransform="uppercase"
+                  textAlign="center"
+                  color="text.link"
+                  position="relative"
+                  top={0}
+                >
+                  {t('common:multi_split_system')}
+                </NeueHaasGroteskDisplay>
+                <Box mt={rem(20)}>
+                  <ProductHeadingButtonsHome
+                    productHref={INTERNAL_ROUTES.MULTI_SPLIT_SYSTEM}
+                  />
+                </Box>
+              </Box>
+              <Link
+                href={INTERNAL_ROUTES.MULTI_SPLIT_SYSTEM}
+                style={{ marginLeft: 'auto' }}
+              >
+                <Flex
+                  position="relative"
+                  maxW={{ base: rem(600), xl: rem(1600) }}
+                  width="100%"
+                  justifyContent="flex-end"
+                  overflow="hidden"
+                  pointerEvents="none"
+                  pt={{ base: rem(20), '2xl': 0 }}
+                  ml={{ base: 'auto', xl: 0 }}
+                  data-aos="fade-up"
+                >
+                  <img
+                    src={`${BUNNY_CDN_URL}/multi-split-system/multi-split-main.png`}
+                    style={{ width: '100%', height: 'auto', maxWidth: 'none' }}
+                    alt="Multisplit"
+                  />
+                </Flex>
+              </Link>
+            </Flex>
+          </Box>
+          <Box
+            position="absolute"
+            zIndex={1}
+            bottom={0}
+            left={0}
+            right={0}
+            display={{ base: 'none', md: 'block', xl: 'none' }}
+          >
+            <HomeShape />
+          </Box>
+          <Box
+            position="absolute"
+            zIndex={1}
+            bottom={{ base: 0, xl: rem(-60) }}
+            left={0}
+            right={0}
+            display={{ base: 'block', md: 'none', xl: 'block', '3xl': 'none' }}
+          >
+            <HomeShapeMobile />
+          </Box>
+          <Box
+            position="absolute"
+            zIndex={1}
+            bottom={0}
+            left={0}
+            right={0}
+            display={{ base: 'none', '3xl': 'block' }}
+          >
+            <HomeShape4k />
+          </Box>
+        </Box>
+        <Box
+          position="absolute"
+          left={0}
+          bottom={0}
+          right={0}
+          height={{ base: '25%', xl: '50%' }}
+          backgroundColor="background.primary"
+          zIndex={1}
+        />
+      </Flex>
     </Box>
   );
 };

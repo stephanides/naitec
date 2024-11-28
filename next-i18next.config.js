@@ -20,5 +20,8 @@ module.exports = {
     'stellair',
     'support',
     'wheretobuy',
+    'cassette',
+    'ducted',
+    'multisplit',
   ],
 };

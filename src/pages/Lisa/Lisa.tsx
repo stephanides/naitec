@@ -26,7 +26,7 @@ export const Lisa = () => {
             <ProductGallery
               images={[
                 {
-                  src: `${BUNNY_CDN_URL}/lisa/lisa-1.jpg`,
+                  src: `${BUNNY_CDN_URL}/lisa/lisa-1-new.jpg`,
                   alt: 'Lisa',
                 },
                 {

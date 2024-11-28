@@ -6,14 +6,16 @@ import {
   NeueHaasGroteskText,
   ProductGallery,
   StellairSensitive,
+  TechnicalParameters,
 } from '@/src/shared/components';
 import { BUNNY_CDN_URL } from '@/src/shared/constants';
+import { LINEAR_GRADIENTS } from '@/src/shared/design';
 import { Box, Flex } from '@chakra-ui/react';
 import { useTranslation } from 'next-i18next';
 import { rem } from 'polished';
 
-export const FireplaceDifusser = () => {
-  const { t } = useTranslation(['fireplace', 'common']);
+export const CasseteAirConditioning = () => {
+  const { t } = useTranslation('cassette');
 
   return (
     <Box>
@@ -26,24 +28,16 @@ export const FireplaceDifusser = () => {
             <ProductGallery
               images={[
                 {
-                  src: `${BUNNY_CDN_URL}/fireplace/fireplace-1-new.jpg`,
-                  alt: 'Fireplace diffuser',
+                  src: `${BUNNY_CDN_URL}/cassette-air-conditioning/cassette-air-conditioning.jpg`,
+                  alt: 'Cassette air conditioning',
                 },
                 {
-                  src: `${BUNNY_CDN_URL}/fireplace/fireplace-2-new.jpg`,
-                  alt: 'Fireplace diffuser 2',
+                  src: `${BUNNY_CDN_URL}/cassette-air-conditioning/cassette-air-conditioning-2.jpg`,
+                  alt: 'Cassette air conditioning 2',
                 },
                 {
-                  src: `${BUNNY_CDN_URL}/fireplace/fireplace-3.jpg`,
-                  alt: 'Fireplace diffuser 3',
-                },
-                {
-                  src: `${BUNNY_CDN_URL}/fireplace/fireplace-4.jpg`,
-                  alt: 'Fireplace diffuser 4',
-                },
-                {
-                  src: `${BUNNY_CDN_URL}/fireplace/fireplace-5.jpg`,
-                  alt: 'Fireplace diffuser 5',
+                  src: `${BUNNY_CDN_URL}/cassette-air-conditioning/cassette-air-conditioning-3.jpg`,
+                  alt: 'Cassette air conditioning 3',
                 },
               ]}
             />
@@ -84,36 +78,6 @@ export const FireplaceDifusser = () => {
                     >
                       {t('description2')}
                     </NeueHaasGroteskText>
-                    <NeueHaasGroteskText
-                      mb={rem(17)}
-                      fontSize={rem(17)}
-                      color="text.light"
-                    >
-                      {t('description3')}
-                    </NeueHaasGroteskText>
-                    <NeueHaasGroteskText fontSize={rem(17)} color="text.light">
-                      {t('description4')}
-                    </NeueHaasGroteskText>
-                  </Box>
-                }
-              />
-              <CollapsibleItem
-                title={t('common:details')}
-                text={
-                  <Box>
-                    <NeueHaasGroteskText fontSize={rem(17)} color="text.light">
-                      <strong>{t('common:dimensions')}:</strong> 1000x236x215mm
-                    </NeueHaasGroteskText>
-                    <NeueHaasGroteskText fontSize={rem(17)} color="text.light">
-                      <strong>{t('common:tank_volume')}:</strong> 4.04l
-                    </NeueHaasGroteskText>
-                    <NeueHaasGroteskText
-                      fontSize={rem(17)}
-                      color="text.light"
-                      mt={rem(16)}
-                    >
-                      {t('info')}
-                    </NeueHaasGroteskText>
                   </Box>
                 }
               />
@@ -121,7 +85,38 @@ export const FireplaceDifusser = () => {
           </Box>
         </Flex>
       </Container>
-      <Box mt={{ base: rem(60), xs: rem(125) }}>
+      <Box mt={rem(125)}>
+        <TechnicalParameters
+          label={`Naitec ${t('title')}`}
+          hoverColor="background.stellair_hover"
+          buttonColor="text.onyx_grey"
+          params={[
+            {
+              chladiaciVykon: '5',
+              vykurovaciVykon: '5,6',
+              energetickaTrieda: 'A++',
+              hlucnostVnutornejJednotky: '40',
+              hlucnostVonkajsejJednotky: '53',
+              seer: '6,2',
+              scop: '4',
+              hmotnostVnutornejJednotky: '31',
+              hmotnostVonkajsejJednotky: '37',
+              rozmeryVnutornejJednotky: '1000x700x245',
+              rozmeryVonkajsejJednotky: '785x300x555',
+              ionizator: false,
+              neviditelneUmiestnenie: true,
+              wifiModul: t('common:additional_fee'),
+              sterilizacia: false,
+              preKomercnePriestory: true,
+              dlhodobeVykurovanie: '-24°C',
+              aktivneCistenie: true,
+              zaruka: `3 ${t('common:years_roky')}`,
+              chladivo: 'R32',
+            },
+          ]}
+        />
+      </Box>
+      <Box>
         <StellairSensitive stellair sensitivePro />
       </Box>
     </Box>

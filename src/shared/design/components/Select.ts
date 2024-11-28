@@ -31,6 +31,32 @@ const smart = definePartsStyle({
   },
 });
 
+const naitec = definePartsStyle({
+  field: {
+    border: '3px solid',
+    borderColor: 'background.naitec_blue',
+    color: 'text.naitec_blue',
+    borderRadius: rem(60),
+    pl: rem(18),
+    pr: rem(32),
+    fontWeight: 600,
+    background: '#FAFAFA',
+    cursor: 'pointer',
+    height: { base: rem(40), md: rem(60) },
+    _invalid: {
+      borderColor: 'red',
+    },
+    _placeholder: {
+      color: 'text.naitec_blue',
+      opacity: 0.8,
+      fontSize: rem(18),
+    },
+  },
+  icon: {
+    color: 'background.naitec_blue',
+  },
+});
+
 export const selectTheme = defineMultiStyleConfig({
-  variants: { smart },
+  variants: { smart, naitec },
 });

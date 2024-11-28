@@ -6,6 +6,7 @@
   "navigation_air_condition": "エアコン",
   "navigation_accessories": "アクセサリー",
   "navigation_household": "家庭用品",
+  "navigation_commercial_units": "商業ユニット",
   "navigation_all_products": "すべての製品",
   "footer_navigation": "ナビゲーション",
   "footer_navigation_business_partners": "ビジネスパートナー",
@@ -28,6 +29,9 @@
   "smart": "Smart",
   "lisa_voice_control": "Lisa",
   "fireplace_diffuser": "ファイヤープレースディフューザー",
+  "cassette_air_conditioning": "カセットエアコン",
+  "ducted_air_conditioning": "ダクト式エアコン",
+  "multi_split_system": "マルチスプリットシステム",
   "new": "新しい",
   "slovakia": "スロバキア",
   "english": "英語",
@@ -82,6 +86,8 @@
   "technical_parameters_active_cleaning": "アクティブクリーニング",
   "technical_parameters_warranty": "保証",
   "technical_parameters_coolant": "冷媒",
+  "technical_parameters_invisible_location": "見えない配置",
+  "technical_parameters_for_commercial_premises": "商業施設向け",
   "why_info_title": "なぜ",
   "year": "年",
   "years_rokov": "年",
@@ -98,5 +104,9 @@
   "filter_accessories": "アクセサリー",
   "filter_household": "家庭用品",
   "page_not_found": "ページが見つかりません",
-  "page_not_found_cta": "ホーム"
+  "page_not_found_cta": "ホーム",
+  "additional_fee": "追加料金で",
+  "based_on_model": "モデルに基づいて",
+  "units_1": "ユニット",
+  "units_2": "ユニット"
 }

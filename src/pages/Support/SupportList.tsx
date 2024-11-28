@@ -8,6 +8,26 @@ import { rem } from 'polished';
 import { useTranslation } from 'next-i18next';
 import { useState } from 'react';
 
+const getTitle = (title: string, t: any) => {
+  if (title === 'fireplace') {
+    return t('fireplace_diffuser');
+  }
+
+  if (title === 'cassette_air_conditioning') {
+    return t('cassette_air_conditioning');
+  }
+
+  if (title === 'ducted_air_conditioning') {
+    return t('ducted_air_conditioning');
+  }
+
+  if (title === 'multi_split_system') {
+    return t('multi_split_system');
+  }
+
+  return title;
+};
+
 const SupportListItem = ({ title, supportImage, href }: Product) => {
   const { t } = useTranslation(['common', 'support']);
   return (
@@ -49,7 +69,7 @@ const SupportListItem = ({ title, supportImage, href }: Product) => {
           mt={{ base: rem(16), xs: rem(30) }}
           textAlign="center"
         >
-          {title === 'fireplace' ? t('fireplace_diffuser') : title}
+          {getTitle(title, t)}
         </NeueHaasGroteskDisplay>
         <Flex
           columnGap={rem(8)}
@@ -131,6 +151,7 @@ export const SupportList = () => {
     }
     return true;
   });
+
   return (
     <Box>
       <Flex

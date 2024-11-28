@@ -9,3 +9,6 @@ export * from './SensitivePro';
 export * from './Home';
 export * from './Support';
 export * from './WhereToBuy';
+export * from './CassetteAirConditioning';
+export * from './DuctedAirConditioning';
+export * from './MultiSplitSystem';

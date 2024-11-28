@@ -6,6 +6,7 @@
   "navigation_air_condition": "Klimatyzacja",
   "navigation_accessories": "Akcesoria",
   "navigation_household": "Gospodarstwo domowe",
+  "navigation_commercial_units": "Jednostki komercyjne",
   "navigation_all_products": "Wszystkie produkty",
   "footer_navigation": "Nawigacja",
   "footer_navigation_business_partners": "Partnerzy biznesowi",
@@ -28,6 +29,9 @@
   "smart": "Smart",
   "lisa_voice_control": "Lisa",
   "fireplace_diffuser": "Dyfuzor kominkowy",
+  "cassette_air_conditioning": "Klimatyzacja kasetowa",
+  "ducted_air_conditioning": "Klimatyzacja kanałowa",
+  "multi_split_system": "Systemy multi-split",
   "new": "Nowość",
   "slovakia": "Słowacki",
   "english": "Angielski",
@@ -82,6 +86,8 @@
   "technical_parameters_active_cleaning": "Aktywne czyszczenie",
   "technical_parameters_warranty": "Gwarancja",
   "technical_parameters_coolant": "Czynnik chłodniczy",
+  "technical_parameters_invisible_location": "Niewidoczne umiejscowienie",
+  "technical_parameters_for_commercial_premises": "Dla pomieszczeń komercyjnych",
   "why_info_title": "Dlaczego",
   "year": "rok",
   "years_rokov": "lata",
@@ -98,5 +104,9 @@
   "filter_accessories": "Akcesoria",
   "filter_household": "Gospodarstwo domowe",
   "page_not_found": "Strona nie została znaleziona",
-  "page_not_found_cta": "Strona główna"
+  "page_not_found_cta": "Strona główna",
+  "additional_fee": "za dodatkową opłatą",
+  "based_on_model": "w oparciu o model",
+  "units_1": "jednostki",
+  "units_2": "jednostek"
 }

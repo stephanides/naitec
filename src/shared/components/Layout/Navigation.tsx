@@ -43,6 +43,23 @@ export const NAV_ITEMS_PRODUCTS = {
       new: true,
     },
   ],
+  COMMERCIAL_UNITS: [
+    {
+      name: 'cassette_air_conditioning',
+      href: INTERNAL_ROUTES.CASSETTE_AIR_CONDITIONING,
+      new: true,
+    },
+    {
+      name: 'ducted_air_conditioning',
+      href: INTERNAL_ROUTES.DUCTED_AIR_CONDITIONING,
+      new: true,
+    },
+    {
+      name: 'multi_split_system',
+      href: INTERNAL_ROUTES.MULTI_SPLIT_SYSTEM,
+      new: true,
+    },
+  ],
 };
 
 export const Navigation = ({ toggleMobile, dark = false }: NavigationProps) => {
@@ -231,6 +248,42 @@ export const Navigation = ({ toggleMobile, dark = false }: NavigationProps) => {
                         </Box>
                       </Box>
                     </Flex>
+                    <Box mt={rem(20)}>
+                      <NeueHaasGroteskText
+                        color="text.link"
+                        fontWeight={700}
+                        fontSize={rem(18)}
+                        mb={rem(20)}
+                        textTransform="uppercase"
+                      >
+                        {t('navigation_commercial_units')}
+                      </NeueHaasGroteskText>
+                      <Box>
+                        {NAV_ITEMS_PRODUCTS.COMMERCIAL_UNITS.map((child) => (
+                          <Link href={child.href} key={child.name}>
+                            <Flex position="relative" columnGap={rem(3)}>
+                              <NeueHaasGroteskText
+                                color="text.link_light"
+                                fontWeight={400}
+                                mb={rem(10)}
+                              >
+                                {t(child.name)}
+                              </NeueHaasGroteskText>
+                              {child.new && (
+                                <NeueHaasGroteskText
+                                  as="span"
+                                  color="text.naitec_blue"
+                                  fontWeight={600}
+                                  fontSize={rem(12)}
+                                >
+                                  {t('new')}
+                                </NeueHaasGroteskText>
+                              )}
+                            </Flex>
+                          </Link>
+                        ))}
+                      </Box>
+                    </Box>
                   </PopoverContent>
                 </Popover>
               </Box>

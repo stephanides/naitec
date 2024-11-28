@@ -14,13 +14,30 @@ type SupportDetailProps = {
   product: Product;
 };
 
+const getTitle = (title: string, t: any) => {
+  if (title === 'fireplace') {
+    return t('common:fireplace_diffuser');
+  }
+
+  if (title === 'cassette_air_conditioning') {
+    return t('common:cassette_air_conditioning');
+  }
+
+  if (title === 'ducted_air_conditioning') {
+    return t('common:ducted_air_conditioning');
+  }
+
+  if (title === 'multi_split_system') {
+    return t('common:multi_split_system');
+  }
+
+  return title;
+};
+
 export const SupportDetail = ({ product }: SupportDetailProps) => {
   const { t } = useTranslation(['support', 'common']);
 
-  const productTitle =
-    product?.title === 'fireplace'
-      ? t('common:fireplace_diffuser')
-      : product?.title;
+  const productTitle = getTitle(product?.title, t);
   return (
     <Box>
       <Container>

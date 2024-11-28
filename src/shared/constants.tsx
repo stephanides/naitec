@@ -24,6 +24,9 @@ export const INTERNAL_ROUTES = {
   SMART: '/smart',
   LISA: '/lisa',
   FIREPLACE_DIFFUSER: '/fireplace-diffuser',
+  CASSETTE_AIR_CONDITIONING: '/cassette-air-conditioning',
+  DUCTED_AIR_CONDITIONING: '/ducted-air-conditioning',
+  MULTI_SPLIT_SYSTEM: '/multi-split-system',
   STELLAIR_SUPPORT: '/support/stellair',
   SENSITIVE_PRO_SUPPORT: '/support/sensitive-pro',
   SENSITIVE_SUPPORT: '/support/sensitive',
@@ -31,6 +34,9 @@ export const INTERNAL_ROUTES = {
   SMART_SUPPORT: '/support/smart',
   LISA_SUPPORT: '/support/lisa',
   FIREPLACE_DIFFUSER_SUPPORT: '/support/fireplace-diffuser',
+  CASSETTE_AIR_CONDITIONING_SUPPORT: '/support/cassette-air-conditioning',
+  DUCTED_AIR_CONDITIONING_SUPPORT: '/support/ducted-air-conditioning',
+  MULTI_SPLIT_SYSTEM_SUPPORT: '/support/multi-split-system',
 };
 
 export const EXTERNAL_ROUTES = {
@@ -45,7 +51,7 @@ export const EMAILS = {
 
 export const PHONE_NUMBERS = {
   CONTACT_AT: '+43 650 2749692',
-  CONTACT_HU: '+421 918 807 856'
+  CONTACT_HU: '+421 918 807 856',
 };
 
 export type PRODUCT_TYPE = 'air_conditioners' | 'accessories' | 'household';
@@ -260,6 +266,33 @@ export const PRODUCTS = [
     mainImage: `${BUNNY_CDN_URL}/lisa/lisa-main.png`,
     supportImage: `${BUNNY_CDN_URL}/support/lisa-support.png`,
     href: INTERNAL_ROUTES.LISA_SUPPORT,
+    supportDocuments: [],
+  },
+  {
+    id: 'cassette-air-conditioning',
+    title: 'cassette_air_conditioning',
+    type: 'air_conditioners' as PRODUCT_TYPE,
+    mainImage: `${BUNNY_CDN_URL}/support/cassette-air-conditioning-support.png`,
+    supportImage: `${BUNNY_CDN_URL}/support/cassette-air-conditioning-support.png`,
+    href: INTERNAL_ROUTES.CASSETTE_AIR_CONDITIONING_SUPPORT,
+    supportDocuments: [],
+  },
+  {
+    id: 'ducted-air-conditioning',
+    title: 'ducted_air_conditioning',
+    type: 'air_conditioners' as PRODUCT_TYPE,
+    mainImage: `${BUNNY_CDN_URL}/support/ducted-air-conditioner-support.png`,
+    supportImage: `${BUNNY_CDN_URL}/support/ducted-air-conditioner-support.png`,
+    href: INTERNAL_ROUTES.DUCTED_AIR_CONDITIONING_SUPPORT,
+    supportDocuments: [],
+  },
+  {
+    id: 'multi-split-system',
+    title: 'multi_split_system',
+    type: 'air_conditioners' as PRODUCT_TYPE,
+    mainImage: `${BUNNY_CDN_URL}/support/multi-split-support.png`,
+    supportImage: `${BUNNY_CDN_URL}/support/multi-split-support.png`,
+    href: INTERNAL_ROUTES.MULTI_SPLIT_SYSTEM_SUPPORT,
     supportDocuments: [],
   },
 ];
@@ -485,6 +518,66 @@ export const SEO_CONTENT = {
       pl: 'Przeglądaj nasze podręczniki użytkownika, przewodniki i inne materiały wsparcia dla produktów Naitec. Uzyskaj potrzebne informacje na temat używania naszych urządzeń i pobierz wszystkie ważne dokumenty w jednym miejscu.',
       de: 'Durchsuchen Sie unsere Benutzerhandbücher, Anleitungen und andere Unterstützungsunterlagen für Naitec-Produkte. Erhalten Sie die notwendigen Informationen zur Verwendung unserer Geräte und laden Sie alle wichtigen Dokumente an einem Ort herunter.',
       ja: 'Naitec製品のユーザーマニュアル、ガイド、その他のサポート資料をご覧ください。デバイスの使用に関する必要な情報を取得し、すべての重要なドキュメントを一箇所でダウンロードできます。',
+    },
+  },
+  cassette_air_conditioning: {
+    title: {
+      sk: 'Kazetová klimatizácia Naitec | Naitec New AI Technology',
+      cz: 'Kazetová klimatizace Naitec | Naitec Nová AI Technologie',
+      en: 'Cassette Air Conditioning Naitec | Naitec New AI Technology',
+      hu: 'Kazettás Klímaberendezés Naitec | Naitec Új AI Technológia',
+      pl: 'Klimatyzacja Kasetowa Naitec | Naitec Nowa Technologia AI',
+      de: 'Kassettengerät Klimaanlage Naitec | Naitec Neue KI-Technologie',
+      ja: 'カセット型エアコン Naitec | Naitec 新しいAI技術',
+    },
+    description: {
+      sk: 'Kazetová klimatizácia od Naitec je špeciálne navrhnutá pre komerčné prostredie, kde je dôležité zabezpečiť optimálne podmienky pre zamestnancov a zákazníkov.',
+      cz: 'Kazetová klimatizace od Naitec je speciálně navržena pro komerční prostředí, kde je důležité zajistit optimální podmínky pro zaměstnance a zákazníky.',
+      en: 'The cassette air conditioning by Naitec is specifically designed for commercial environments, ensuring optimal conditions for employees and customers.',
+      hu: 'A Naitec kazettás klímaberendezése kifejezetten kereskedelmi környezetekhez lett tervezve, ahol fontos a munkavállalók és ügyfelek optimális feltételeinek biztosítása.',
+      pl: 'Klimatyzacja kasetowa od Naitec została specjalnie zaprojektowana do środowisk komercyjnych, gdzie ważne jest zapewnienie optymalnych warunków dla pracowników i klientów.',
+      de: 'Die Kassettengerät-Klimaanlage von Naitec wurde speziell für gewerbliche Umgebungen entwickelt, um optimale Bedingungen für Mitarbeiter und Kunden zu gewährleisten.',
+      ja: 'Naitecのカセット型エアコンは、従業員と顧客に最適な環境を提供するために、商業環境向けに特別に設計されています。',
+    },
+  },
+  ducted_air_conditioning: {
+    title: {
+      sk: 'Kanálová klimatizácia Naitec | Naitec New AI Technology',
+      cs: 'Kanálová klimatizace Naitec | Naitec Nová AI Technologie',
+      en: 'Ducted Air Conditioning Naitec | Naitec New AI Technology',
+      hu: 'Csatornás Klíma Naitec | Naitec Új AI Technológia',
+      pl: 'Klimatyzacja Kanałowa Naitec | Naitec Nowa Technologia AI',
+      de: 'Kanalklimaanlage Naitec | Naitec Neue KI-Technologie',
+      ja: 'ダクト式空調 Naitec | Naitec 新しいAI技術',
+    },
+    description: {
+      sk: 'Kanálová klimatizácia od Naitec je diskrétne a efektívne riešenie pre Vašu domácnosť alebo kanceláriu.',
+      cs: 'Kanálová klimatizace od Naitec je diskrétní a efektivní řešení pro Váš domov nebo kancelář.',
+      en: 'Ducted air conditioning from Naitec is a discreet and efficient solution for your home or office.',
+      hu: 'A Naitec csatornás klímája diszkrét és hatékony megoldást kínál otthonához vagy irodájához.',
+      pl: 'Klimatyzacja kanałowa od Naitec to dyskretne i efektywne rozwiązanie do Twojego domu lub biura.',
+      de: 'Die Kanalklimaanlage von Naitec ist eine diskrete und effiziente Lösung für Ihr Zuhause oder Büro.',
+      ja: 'Naitecのダクト式空調は、ご自宅やオフィスに最適な控えめで効率的なソリューションです。',
+    },
+  },
+  multi_split_system: {
+    title: {
+      sk: 'Multisplitové riešenie Naitec | Naitec New AI Technology',
+      cs: 'Multisplitové řešení Naitec | Naitec Nová AI Technologie',
+      en: 'Multi-split Solution Naitec | Naitec New AI Technology',
+      hu: 'Multi-split megoldás Naitec | Naitec Új AI Technológia',
+      pl: 'Rozwiązanie Multi-split Naitec | Naitec Nowa Technologia AI',
+      de: 'Multisplit-Lösung Naitec | Naitec Neue KI-Technologie',
+      ja: 'マルチスプリットソリューション Naitec | Naitec 新しいAI技術',
+    },
+    description: {
+      sk: 'Naitec ponúka multisplitové riešenia pre modely Stellair, Sensitive, Smart a Onyx s dvoma až piatimi vnútornými jednotkami.',
+      cs: 'Naitec nabízí multisplitová řešení pro modely Stellair, Sensitive, Smart a Onyx s dvěma až pěti vnitřními jednotkami.',
+      en: 'Naitec offers multi-split solutions for Stellair, Sensitive, Smart, and Onyx models with two to five indoor units.',
+      hu: 'A Naitec multi-split megoldásokat kínál a Stellair, Sensitive, Smart és Onyx modellekhez, két és öt belső egységgel.',
+      pl: 'Naitec oferuje rozwiązania multi-split dla modeli Stellair, Sensitive, Smart i Onyx z dwoma do pięciu jednostkami wewnętrznymi.',
+      de: 'Naitec bietet Multisplit-Lösungen für die Modelle Stellair, Sensitive, Smart und Onyx mit zwei bis fünf Inneneinheiten an.',
+      ja: 'Naitecは、Stellair、Sensitive、Smart、Onyxモデルのために、2〜5台の室内ユニットを備えたマルチスプリットソリューションを提供しています。',
     },
   },
 };

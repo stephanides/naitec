@@ -6,6 +6,7 @@
   "navigation_air_condition": "Air conditioning",
   "navigation_accessories": "Accessories",
   "navigation_household": "Household",
+  "navigation_commercial_units": "Commercial units",
   "navigation_all_products": "All products",
   "footer_navigation": "Navigation",
   "footer_navigation_business_partners": "Business Partners",
@@ -28,6 +29,9 @@
   "smart": "Smart",
   "lisa_voice_control": "Lisa",
   "fireplace_diffuser": "Fireplace Diffuser",
+  "cassette_air_conditioning": "Cassette Air Conditioning",
+  "ducted_air_conditioning": "Ducted Air Conditioning",
+  "multi_split_system": "Multi-split systems",
   "new": "New",
   "slovakia": "Slovak",
   "english": "English",
@@ -82,6 +86,8 @@
   "technical_parameters_active_cleaning": "Active Cleaning",
   "technical_parameters_warranty": "Warranty",
   "technical_parameters_coolant": "Coolant",
+  "technical_parameters_invisible_location": "Invisible Location",
+  "technical_parameters_for_commercial_premises": "For commercial premises",
   "why_info_title": "Why",
   "year": "year",
   "years_rokov": "years",
@@ -98,5 +104,9 @@
   "filter_accessories": "Accessories",
   "filter_household": "Household",
   "page_not_found": "Page not found",
-  "page_not_found_cta": "Home"
+  "page_not_found_cta": "Home",
+  "additional_fee": "for an additional fee",
+  "based_on_model": "based on model",
+  "units_1": "units",
+  "units_2": "units"
 }
