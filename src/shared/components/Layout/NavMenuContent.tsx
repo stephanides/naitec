@@ -190,6 +190,45 @@ export const NavMenuContent = ({
               </Box>
             </Box>
           </Box>
+          <Box mt={rem(20)}>
+            <NeueHaasGroteskText
+              color="text.naitec_blue"
+              fontWeight={700}
+              fontSize={rem(10)}
+              mb={rem(20)}
+              textTransform="uppercase"
+              borderBottom="1px solid"
+              borderColor="text.naitec_blue"
+              lineHeight={rem(20)}
+            >
+              {t('navigation_commercial_units')}
+            </NeueHaasGroteskText>
+            <Box>
+              {NAV_ITEMS_PRODUCTS.COMMERCIAL_UNITS.map((child) => (
+                <Link href={child.href} key={child.name}>
+                  <Flex position="relative" columnGap={rem(3)}>
+                    <NeueHaasGroteskText
+                      color="text.link_light"
+                      fontWeight={400}
+                      mb={rem(10)}
+                    >
+                      {t(child.name)}
+                    </NeueHaasGroteskText>
+                    {child.new && (
+                      <NeueHaasGroteskText
+                        as="span"
+                        color="text.naitec_blue"
+                        fontWeight={600}
+                        fontSize={rem(12)}
+                      >
+                        {t('new')}
+                      </NeueHaasGroteskText>
+                    )}
+                  </Flex>
+                </Link>
+              ))}
+            </Box>
+          </Box>
         </Box>
         <Link href="/where-to-buy">
           <NeueHaasGroteskDisplay
