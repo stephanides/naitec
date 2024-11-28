@@ -981,15 +981,6 @@ export const Home = () => {
             <HomeShape4k />
           </Box>
         </Box>
-        <Box
-          position="absolute"
-          left={0}
-          bottom={0}
-          right={0}
-          height={{ base: '25%', xl: '50%' }}
-          backgroundColor="background.primary"
-          zIndex={1}
-        />
       </Flex>
       <Flex
         flexDir={{ base: 'column', xl: 'row' }}
@@ -1000,8 +991,8 @@ export const Home = () => {
       >
         <Box
           mt={rem(20)}
-          mr={{ base: 0, xl: rem(20) }}
-          ml={{ base: 0, xl: rem(10) }}
+          ml={{ base: 0, xl: rem(20) }}
+          mr={{ base: 0, xl: rem(10) }}
           pt={rem(20)}
           border="5px solid"
           borderColor="#FFFFFF"
@@ -1046,7 +1037,7 @@ export const Home = () => {
                   justifyContent="flex-end"
                   overflow="hidden"
                   pointerEvents="none"
-                  pt={{ base: rem(20), '2xl': 0 }}
+                  pt={{ base: rem(40), md: rem(80), '2xl': 0 }}
                   data-aos="fade-up"
                 >
                   <img
@@ -1071,7 +1062,7 @@ export const Home = () => {
           <Box
             position="absolute"
             zIndex={1}
-            bottom={{ base: 0, xl: rem(-60) }}
+            bottom={{ base: 0, xl: rem(-120) }}
             left={0}
             right={0}
             display={{ base: 'block', md: 'none', xl: 'block', '3xl': 'none' }}
@@ -1137,7 +1128,7 @@ export const Home = () => {
                   justifyContent="flex-end"
                   overflow="hidden"
                   pointerEvents="none"
-                  pt={{ base: rem(20), '2xl': 0 }}
+                  pt={{ base: rem(40), md: rem(80), '2xl': 0 }}
                   ml={{ base: 'auto', xl: 0 }}
                   data-aos="fade-up"
                 >
@@ -1163,7 +1154,7 @@ export const Home = () => {
           <Box
             position="absolute"
             zIndex={1}
-            bottom={{ base: 0, xl: rem(-60) }}
+            bottom={{ base: 0, xl: rem(-120) }}
             left={0}
             right={0}
             display={{ base: 'block', md: 'none', xl: 'block', '3xl': 'none' }}
