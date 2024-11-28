@@ -34,6 +34,11 @@ export const NAV_ITEMS_PRODUCTS = {
     { name: 'sensitive', href: INTERNAL_ROUTES.SENSITIVE },
     { name: 'onyx', href: INTERNAL_ROUTES.ONYX },
     { name: 'smart', href: INTERNAL_ROUTES.SMART },
+    {
+      name: 'multi_split_system',
+      href: INTERNAL_ROUTES.MULTI_SPLIT_SYSTEM,
+      new: true,
+    },
   ],
   ACCESSORIES: [{ name: 'lisa_voice_control', href: INTERNAL_ROUTES.LISA }],
   HOUSEHOLD: [
@@ -52,11 +57,6 @@ export const NAV_ITEMS_PRODUCTS = {
     {
       name: 'ducted_air_conditioning',
       href: INTERNAL_ROUTES.DUCTED_AIR_CONDITIONING,
-      new: true,
-    },
-    {
-      name: 'multi_split_system',
-      href: INTERNAL_ROUTES.MULTI_SPLIT_SYSTEM,
       new: true,
     },
   ],
