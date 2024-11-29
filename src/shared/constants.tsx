@@ -51,7 +51,7 @@ export const EMAILS = {
 
 export const PHONE_NUMBERS = {
   CONTACT_AT: '+43 650 2749692',
-  CONTACT_HU: '+421 918 807 856',
+  CONTACT_HU: '+36 20 777 4477',
 };
 
 export type PRODUCT_TYPE = 'air_conditioners' | 'accessories' | 'household';
