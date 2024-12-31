@@ -8,6 +8,7 @@ import { AppStore, GooglePlay, LINEAR_GRADIENTS } from '../../design';
 import Image from 'next/image';
 import { Glow } from '../Glow';
 import { BUNNY_CDN_URL, EXTERNAL_ROUTES } from '../../constants';
+import { useInView } from 'react-intersection-observer';
 
 type NaitecApplicationProps = {
   textColor?: string;
@@ -21,6 +22,10 @@ export const NaitecApplication = ({
   withoutBlur = false,
 }: NaitecApplicationProps) => {
   const { t } = useTranslation('common');
+  const { ref: headingView, inView: headingInView } = useInView({
+    threshold: 0.5,
+    triggerOnce: true,
+  });
   return (
     <Box
       backgroundColor="background.primary"
@@ -31,10 +36,12 @@ export const NaitecApplication = ({
     >
       <Container>
         <Flex columnGap={rem(60)} flexDir={{ base: 'column', '2xl': 'row' }}>
-          <Box width={{ base: '100%', '2xl': '50%' }}>
+          <Box width={{ base: '100%', '2xl': '50%' }} ref={headingView}>
             <Flex
               justifyContent={{ base: 'center', '2xl': 'flex-start' }}
-              data-aos="fade-right"
+              opacity={headingInView ? 1 : 0}
+              transform={headingInView ? 'translateX(0)' : 'translateX(-100px)'}
+              transition="all 1s ease-out"
             >
               <Label
                 text={t('naitec_app')}
@@ -42,7 +49,12 @@ export const NaitecApplication = ({
                 borderColor="border.white"
               />
             </Flex>
-            <Box mt={rem(25)} data-aos="fade-right" data-aos-delay="200">
+            <Box
+              mt={rem(25)}
+              opacity={headingInView ? 1 : 0}
+              transform={headingInView ? 'translateX(0)' : 'translateX(-100px)'}
+              transition="all 1.1s ease-out"
+            >
               <NeueHaasGroteskDisplay
                 fontSize={{ base: rem(30), md: rem(64) }}
                 fontWeight={600}

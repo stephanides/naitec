@@ -4,6 +4,7 @@ import { NeueHaasGroteskDisplay } from '../Typography';
 import { rem } from 'polished';
 import { useTranslation } from 'next-i18next';
 import { VideoSwitcher } from './VideoSwitch';
+import { useInView } from 'react-intersection-observer';
 
 type HowCoolingLooksLikeProps = {
   color: string;
@@ -17,6 +18,10 @@ export const HowCoolingLooksLike = ({
   videos,
 }: HowCoolingLooksLikeProps) => {
   const { t } = useTranslation('common');
+  const { ref: headingView, inView: headingInView } = useInView({
+    threshold: 0.5,
+    triggerOnce: true,
+  });
   return (
     <Box>
       <Box
@@ -31,13 +36,16 @@ export const HowCoolingLooksLike = ({
           top={{ base: rem(40), '2xl': rem(60), '3xl': rem(120) }}
           left={0}
           right={0}
+          ref={headingView}
         >
           <NeueHaasGroteskDisplay
             fontSize={{ base: rem(30), xs: rem(48), xl: rem(64) }}
             fontWeight={600}
             color="text.link"
             lineHeight="112%"
-            data-aos="fade-up"
+            opacity={headingInView ? 1 : 0}
+            transform={headingInView ? 'translateY(0)' : 'translateY(100px)'}
+            transition="all 1s ease-out"
             textAlign="center"
             px={rem(20)}
             maxW={rem(750)}

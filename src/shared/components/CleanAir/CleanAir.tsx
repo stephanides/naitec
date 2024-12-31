@@ -7,6 +7,7 @@ import { NeueHaasGroteskDisplay, NeueHaasGroteskText } from '../Typography';
 import { rem } from 'polished';
 import { LINEAR_GRADIENTS } from '../../design';
 import { BUNNY_CDN_URL } from '../../constants';
+import { useInView } from 'react-intersection-observer';
 
 type CleanAirProps = {
   color: string;
@@ -20,8 +21,12 @@ export const CleanAir = ({
   light = false,
 }: CleanAirProps) => {
   const { t } = useTranslation();
+  const { ref: headingView, inView: headingInView } = useInView({
+    threshold: 0.25,
+    triggerOnce: true,
+  });
   return (
-    <Box>
+    <Box overflowX="hidden">
       <Container>
         <Flex
           alignItems="center"
@@ -30,11 +35,13 @@ export const CleanAir = ({
             base: 'column',
             lg: imageOnLeft ? 'row-reverse' : 'row',
           }}
+          ref={headingView}
         >
           <Box
             width={{ base: '100%', lg: '50%' }}
-            data-aos="fade-left"
-            data-aos-offset="150"
+            opacity={headingInView ? 1 : 0}
+            transform={headingInView ? 'translateX(0)' : 'translateX(100%)'}
+            transition="all 1s ease-out"
           >
             <Label
               text={t('clean_air_label')}

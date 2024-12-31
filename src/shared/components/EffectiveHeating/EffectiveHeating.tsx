@@ -5,6 +5,7 @@ import { Label } from '../Label';
 import { NeueHaasGroteskDisplay, NeueHaasGroteskText } from '../Typography';
 import { Container } from '../Container';
 import Image from 'next/image';
+import { useInView } from 'react-intersection-observer';
 
 type EffectiveHeatingProps = {
   color: string;
@@ -26,17 +27,35 @@ export const EffectiveHeating = ({
   description,
 }: EffectiveHeatingProps) => {
   const { t } = useTranslation();
+  const { ref: headingView, inView: headingInView } = useInView({
+    threshold: 0.5,
+    triggerOnce: true,
+  });
+  const { ref: contentView, inView: contentInView } = useInView({
+    threshold: 0.5,
+    triggerOnce: true,
+  });
   return (
     <Box
       position="relative"
-      overflow="hidden"
+      overflowX="hidden"
       pt={{ base: rem(40), md: rem(80), lg: rem(100) }}
+      ref={headingView}
     >
       <Container>
-        <Box data-aos="fade-left" data-aos-offset="250">
+        <Box
+          opacity={headingInView ? 1 : 0}
+          transform={headingInView ? 'translateX(0)' : 'translateX(100px)'}
+          transition="all 1s ease-out"
+        >
           <Label text={label} color="white" borderColor="white" />
         </Box>
-        <Box data-aos="fade-left" data-aos-delay="200" data-aos-offset="250">
+        <Box
+          opacity={headingInView ? 1 : 0}
+          transform={headingInView ? 'translateX(0)' : 'translateX(100px)'}
+          transition="all 1s ease-out"
+          transitionDelay=".3s"
+        >
           <NeueHaasGroteskDisplay
             fontSize={{ base: rem(30), md: rem(64) }}
             mt={rem(25)}
@@ -68,10 +87,17 @@ export const EffectiveHeating = ({
         <Flex
           columnGap={rem(20)}
           mt={{ base: rem(40), md: rem(80) }}
-          data-aos="fade-up"
-          data-aos-offset="150"
+          ref={contentView}
         >
-          <Box width="50%" borderRadius={rem(20)} overflow="hidden">
+          <Box
+            width="50%"
+            borderRadius={rem(20)}
+            overflow="hidden"
+            opacity={contentInView ? 1 : 0}
+            transform={contentInView ? 'translateY(0)' : 'translateY(100px)'}
+            transition="all 1s ease-out"
+            transitionDelay=".3s"
+          >
             <Image
               src={image1}
               width="0"
@@ -81,7 +107,15 @@ export const EffectiveHeating = ({
               alt="Effective heating"
             />
           </Box>
-          <Box width="50%" borderRadius={rem(20)} overflow="hidden">
+          <Box
+            width="50%"
+            borderRadius={rem(20)}
+            overflow="hidden"
+            opacity={contentInView ? 1 : 0}
+            transform={contentInView ? 'translateY(0)' : 'translateY(100px)'}
+            transition="all 1s ease-out"
+            transitionDelay=".8s"
+          >
             <Image
               src={image2}
               width="0"

@@ -14,9 +14,42 @@ import { Box, Flex } from '@chakra-ui/react';
 import { useTranslation } from 'next-i18next';
 import Link from 'next-translate-routes/link';
 import { rem } from 'polished';
+import { useInView } from 'react-intersection-observer';
 
 export const Home = () => {
   const { t } = useTranslation(['homepage', 'common']);
+  const { ref: sensitiveProView, inView: sensitiveProInView } = useInView({
+    threshold: 0.5,
+    triggerOnce: true,
+  });
+  const { ref: sensitiveView, inView: sensitiveInView } = useInView({
+    threshold: 0.5,
+    triggerOnce: true,
+  });
+  const { ref: onyxView, inView: onyxInView } = useInView({
+    threshold: 0.5,
+    triggerOnce: true,
+  });
+  const { ref: smartView, inView: smartInView } = useInView({
+    threshold: 0.5,
+    triggerOnce: true,
+  });
+  const { ref: lisaView, inView: lisaInView } = useInView({
+    threshold: 0.5,
+    triggerOnce: true,
+  });
+  const { ref: fireplaceView, inView: fireplaceInView } = useInView({
+    threshold: 0.5,
+    triggerOnce: true,
+  });
+  const { ref: casseteView, inView: casseteInView } = useInView({
+    threshold: 0.5,
+    triggerOnce: true,
+  });
+  const { ref: ductedView, inView: ductedInView } = useInView({
+    threshold: 0.5,
+    triggerOnce: true,
+  });
 
   return (
     <Box>
@@ -230,10 +263,10 @@ export const Home = () => {
             position="relative"
             flexDir="column"
             overflow="hidden"
+            ref={sensitiveProView}
           >
             <NeueHaasGroteskDisplay
               background={LINEAR_GRADIENTS.sensitive_pro}
-              data-aos="fade-down"
               backgroundPosition="left center"
               backgroundSize="600% 200%"
               fontSize={{
@@ -244,6 +277,10 @@ export const Home = () => {
                 xl: rem(110),
                 '3xl': rem(134),
               }}
+              opacity={sensitiveProInView ? 1 : 0}
+              transform={
+                sensitiveProInView ? 'translateY(0)' : 'translateY(-100%)'
+              }
               fontWeight={600}
               textTransform="uppercase"
               textAlign="center"
@@ -251,7 +288,7 @@ export const Home = () => {
               color="transparent"
               position="absolute"
               top={rem(6)}
-              transition="all .3s ease-out"
+              transition="all 1s ease-out"
               animation="backgroundAnimation 4s linear infinite"
               sx={{
                 '@keyframes backgroundAnimation': {
@@ -271,7 +308,11 @@ export const Home = () => {
             </NeueHaasGroteskDisplay>
             <Link href={INTERNAL_ROUTES.SENSITIVE_PRO}>
               <Flex
-                data-aos="fade-up"
+                opacity={sensitiveProInView ? 1 : 0}
+                transform={
+                  sensitiveProInView ? 'translateY(0)' : 'translateY(100%)'
+                }
+                transition="all 1s ease-out"
                 position="relative"
                 pt={{
                   base: rem(12),
@@ -373,10 +414,14 @@ export const Home = () => {
             position="relative"
             flexDir="column"
             overflow="hidden"
+            ref={sensitiveView}
           >
             <NeueHaasGroteskDisplay
               background={LINEAR_GRADIENTS.sensitive}
-              data-aos="fade-down"
+              opacity={sensitiveInView ? 1 : 0}
+              transform={
+                sensitiveInView ? 'translateY(0)' : 'translateY(-100%)'
+              }
               backgroundPosition="left center"
               backgroundSize="600% 200%"
               fontSize={{
@@ -394,7 +439,7 @@ export const Home = () => {
               color="transparent"
               position="absolute"
               top={0}
-              transition="all .3s ease-out"
+              transition="all 1s ease-out"
               animation="backgroundAnimation 4s linear infinite"
               sx={{
                 '@keyframes backgroundAnimation': {
@@ -415,7 +460,11 @@ export const Home = () => {
             <Link href={INTERNAL_ROUTES.SENSITIVE}>
               <Flex
                 position="relative"
-                data-aos="fade-up"
+                opacity={sensitiveInView ? 1 : 0}
+                transform={
+                  sensitiveInView ? 'translateY(0)' : 'translateY(100%)'
+                }
+                transition="all 1s ease-out"
                 pt={{
                   base: rem(28),
                   xs: rem(20),
@@ -523,10 +572,12 @@ export const Home = () => {
               alignItems="center"
               position="relative"
               flexDir="column"
+              ref={onyxView}
             >
               <NeueHaasGroteskDisplay
                 background={LINEAR_GRADIENTS.onyx}
-                data-aos="fade-down"
+                opacity={onyxInView ? 1 : 0}
+                transform={onyxInView ? 'translateY(0)' : 'translateY(-100%)'}
                 backgroundPosition="left center"
                 backgroundSize="600% 200%"
                 fontSize={{
@@ -543,7 +594,7 @@ export const Home = () => {
                 color="transparent"
                 position="absolute"
                 top={0}
-                transition="all .3s ease-out"
+                transition="all 1s ease-out"
                 animation="backgroundAnimation 4s linear infinite"
                 sx={{
                   '@keyframes backgroundAnimation': {
@@ -563,7 +614,9 @@ export const Home = () => {
               </NeueHaasGroteskDisplay>
               <Link href={INTERNAL_ROUTES.ONYX}>
                 <Flex
-                  data-aos="fade-up"
+                  opacity={onyxInView ? 1 : 0}
+                  transform={onyxInView ? 'translateY(0)' : 'translateY(100%)'}
+                  transition="all 1s ease-out"
                   position="relative"
                   pt={{
                     base: rem(22),
@@ -664,10 +717,12 @@ export const Home = () => {
               alignItems="center"
               position="relative"
               flexDir="column"
+              ref={smartView}
             >
               <NeueHaasGroteskDisplay
                 background={LINEAR_GRADIENTS.smart}
-                data-aos="fade-down"
+                opacity={smartInView ? 1 : 0}
+                transform={smartInView ? 'translateY(0)' : 'translateY(-100%)'}
                 backgroundPosition="left center"
                 backgroundSize="600% 200%"
                 fontSize={{
@@ -684,7 +739,7 @@ export const Home = () => {
                 color="transparent"
                 position="absolute"
                 top={0}
-                transition="all .3s ease-out"
+                transition="all 1s ease-out"
                 animation="backgroundAnimation 4s linear infinite"
                 sx={{
                   '@keyframes backgroundAnimation': {
@@ -704,7 +759,9 @@ export const Home = () => {
               </NeueHaasGroteskDisplay>
               <Link href={INTERNAL_ROUTES.SMART}>
                 <Flex
-                  data-aos="fade-up"
+                  opacity={smartInView ? 1 : 0}
+                  transform={smartInView ? 'translateY(0)' : 'translateY(100%)'}
+                  transition="all 1s ease-out"
                   position="relative"
                   pt={{
                     base: rem(22),
@@ -817,6 +874,7 @@ export const Home = () => {
               alignItems="center"
               position="relative"
               flexDir="column"
+              ref={lisaView}
             >
               <Box position="absolute" top={{ base: rem(20), xl: rem(70) }}>
                 <NeueHaasGroteskDisplay
@@ -845,7 +903,9 @@ export const Home = () => {
                   overflow="hidden"
                   pointerEvents="none"
                   pt={{ base: rem(20), '2xl': 0 }}
-                  data-aos="fade-up"
+                  opacity={lisaInView ? 1 : 0}
+                  transform={lisaInView ? 'translateY(0)' : 'translateY(100%)'}
+                  transition="all 1s ease-out"
                 >
                   <img
                     src={`${BUNNY_CDN_URL}/lisa/lisa-main-desktop.png`}
@@ -908,6 +968,7 @@ export const Home = () => {
               alignItems="center"
               position="relative"
               flexDir="column"
+              ref={fireplaceView}
             >
               <Box position="absolute" top={{ base: rem(20), xl: rem(70) }}>
                 <NeueHaasGroteskDisplay
@@ -939,7 +1000,11 @@ export const Home = () => {
                   overflow="hidden"
                   pointerEvents="none"
                   pt={{ base: rem(20), '2xl': 0 }}
-                  data-aos="fade-up"
+                  opacity={fireplaceInView ? 1 : 0}
+                  transform={
+                    fireplaceInView ? 'translateY(0)' : 'translateY(100%)'
+                  }
+                  transition="all 1s ease-out"
                 >
                   <img
                     src={`${BUNNY_CDN_URL}/fireplace/fireplace-main-desktop.png`}
@@ -1010,6 +1075,7 @@ export const Home = () => {
               alignItems="center"
               position="relative"
               flexDir="column"
+              ref={casseteView}
             >
               <Box position="absolute" top={{ base: rem(20), xl: rem(70) }}>
                 <NeueHaasGroteskDisplay
@@ -1038,7 +1104,11 @@ export const Home = () => {
                   overflow="hidden"
                   pointerEvents="none"
                   pt={{ base: rem(40), md: rem(80), '2xl': 0 }}
-                  data-aos="fade-up"
+                  opacity={casseteInView ? 1 : 0}
+                  transform={
+                    casseteInView ? 'translateY(0)' : 'translateY(100%)'
+                  }
+                  transition="all 1s ease-out"
                 >
                   <img
                     src={`${BUNNY_CDN_URL}/cassette-air-conditioning/cassette-conditioning-main.png`}
@@ -1101,6 +1171,7 @@ export const Home = () => {
               alignItems="center"
               position="relative"
               flexDir="column"
+              ref={ductedView}
             >
               <Box position="absolute" top={{ base: rem(20), xl: rem(70) }}>
                 <NeueHaasGroteskDisplay
@@ -1130,7 +1201,11 @@ export const Home = () => {
                   pointerEvents="none"
                   pt={{ base: rem(40), md: rem(80), '2xl': 0 }}
                   ml={{ base: 'auto', xl: 0 }}
-                  data-aos="fade-up"
+                  opacity={ductedInView ? 1 : 0}
+                  transform={
+                    ductedInView ? 'translateY(0)' : 'translateY(100%)'
+                  }
+                  transition="all 1s ease-out"
                 >
                   <img
                     src={`${BUNNY_CDN_URL}/ducted-air-conditioning/ducted-conditioning-main.png`}
