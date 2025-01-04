@@ -377,7 +377,7 @@ export const SensitivePro = () => {
               chladiaciVykon: '3,5',
               vykurovaciVykon: '4,2',
               energetickaTrieda: 'A+++',
-              hlucnostVnutornejJednotky: '19',
+              hlucnostVnutornejJednotky: '18',
               hlucnostVonkajsejJednotky: '52',
               seer: '8,7',
               scop: '4,7',

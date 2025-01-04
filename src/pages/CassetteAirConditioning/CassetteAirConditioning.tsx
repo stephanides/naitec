@@ -101,7 +101,7 @@ export const CasseteAirConditioning = () => {
               scop: '4',
               hmotnostVnutornejJednotky: '31',
               hmotnostVonkajsejJednotky: '37',
-              rozmeryVnutornejJednotky: '1000x700x245',
+              rozmeryVnutornejJednotky: '570x570x260',
               rozmeryVonkajsejJednotky: '785x300x555',
               ionizator: false,
               neviditelneUmiestnenie: true,
