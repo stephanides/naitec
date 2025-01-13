@@ -102,7 +102,7 @@ export const CasseteAirConditioning = () => {
               hmotnostVnutornejJednotky: '31',
               hmotnostVonkajsejJednotky: '37',
               rozmeryVnutornejJednotky: '570x570x260',
-              rozmeryVonkajsejJednotky: '785x300x555',
+              rozmeryVonkajsejJednotky: '785x555x300',
               ionizator: false,
               neviditelneUmiestnenie: true,
               wifiModul: t('common:additional_fee'),

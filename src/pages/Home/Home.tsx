@@ -310,7 +310,7 @@ export const Home = () => {
               <Flex
                 opacity={sensitiveProInView ? 1 : 0}
                 transform={
-                  sensitiveProInView ? 'translateY(0)' : 'translateY(100%)'
+                  sensitiveProInView ? 'translateY(0)' : 'translateY(40px)'
                 }
                 transition="all 1s ease-out"
                 position="relative"
@@ -462,7 +462,7 @@ export const Home = () => {
                 position="relative"
                 opacity={sensitiveInView ? 1 : 0}
                 transform={
-                  sensitiveInView ? 'translateY(0)' : 'translateY(100%)'
+                  sensitiveInView ? 'translateY(0)' : 'translateY(60px)'
                 }
                 transition="all 1s ease-out"
                 pt={{
@@ -615,7 +615,7 @@ export const Home = () => {
               <Link href={INTERNAL_ROUTES.ONYX}>
                 <Flex
                   opacity={onyxInView ? 1 : 0}
-                  transform={onyxInView ? 'translateY(0)' : 'translateY(100%)'}
+                  transform={onyxInView ? 'translateY(0)' : 'translateY(60px)'}
                   transition="all 1s ease-out"
                   position="relative"
                   pt={{
@@ -760,7 +760,7 @@ export const Home = () => {
               <Link href={INTERNAL_ROUTES.SMART}>
                 <Flex
                   opacity={smartInView ? 1 : 0}
-                  transform={smartInView ? 'translateY(0)' : 'translateY(100%)'}
+                  transform={smartInView ? 'translateY(0)' : 'translateY(60px)'}
                   transition="all 1s ease-out"
                   position="relative"
                   pt={{
@@ -904,7 +904,7 @@ export const Home = () => {
                   pointerEvents="none"
                   pt={{ base: rem(20), '2xl': 0 }}
                   opacity={lisaInView ? 1 : 0}
-                  transform={lisaInView ? 'translateY(0)' : 'translateY(100%)'}
+                  transform={lisaInView ? 'translateY(0)' : 'translateY(60px)'}
                   transition="all 1s ease-out"
                 >
                   <img
@@ -1002,7 +1002,7 @@ export const Home = () => {
                   pt={{ base: rem(20), '2xl': 0 }}
                   opacity={fireplaceInView ? 1 : 0}
                   transform={
-                    fireplaceInView ? 'translateY(0)' : 'translateY(100%)'
+                    fireplaceInView ? 'translateY(0)' : 'translateY(60px)'
                   }
                   transition="all 1s ease-out"
                 >
@@ -1106,7 +1106,7 @@ export const Home = () => {
                   pt={{ base: rem(40), md: rem(80), '2xl': 0 }}
                   opacity={casseteInView ? 1 : 0}
                   transform={
-                    casseteInView ? 'translateY(0)' : 'translateY(100%)'
+                    casseteInView ? 'translateY(0)' : 'translateY(60px)'
                   }
                   transition="all 1s ease-out"
                 >
@@ -1203,7 +1203,7 @@ export const Home = () => {
                   ml={{ base: 'auto', xl: 0 }}
                   opacity={ductedInView ? 1 : 0}
                   transform={
-                    ductedInView ? 'translateY(0)' : 'translateY(100%)'
+                    ductedInView ? 'translateY(0)' : 'translateY(60px)'
                   }
                   transition="all 1s ease-out"
                 >

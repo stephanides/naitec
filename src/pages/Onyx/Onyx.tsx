@@ -349,7 +349,7 @@ export const Onyx = () => {
               scop: '4,03',
               hmotnostVnutornejJednotky: '8,5',
               hmotnostVonkajsejJednotky: '22,5',
-              rozmeryVnutornejJednotky: '792x292x201',
+              rozmeryVnutornejJednotky: '806x292x215',
               rozmeryVonkajsejJednotky: '705x530x280',
               ionizator: true,
               nasavanieVzduchuZExterieru: false,
