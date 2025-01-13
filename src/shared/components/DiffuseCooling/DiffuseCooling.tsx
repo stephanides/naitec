@@ -6,6 +6,7 @@ import { NeueHaasGroteskDisplay, NeueHaasGroteskText } from '../Typography';
 import { Container } from '../Container';
 import Image from 'next/image';
 import { BUNNY_CDN_URL } from '../../constants';
+import { useInView } from 'react-intersection-observer';
 
 type DiffuseCoolingProps = {
   color: string;
@@ -17,11 +18,20 @@ export const DiffuseCooling = ({
   light = false,
 }: DiffuseCoolingProps) => {
   const { t } = useTranslation();
+  const { ref: headingView, inView: headingInView } = useInView({
+    threshold: 0.2,
+    triggerOnce: true,
+  });
+  const { ref: imagesView, inView: imagesInView } = useInView({
+    threshold: 0.7,
+    triggerOnce: true,
+  });
   return (
     <Box
       pb={{ base: rem(75), md: rem(150) }}
       position="relative"
       overflow="hidden"
+      ref={headingView}
     >
       <Container>
         <Label
@@ -35,6 +45,9 @@ export const DiffuseCooling = ({
           fontWeight={600}
           color={light ? 'text.inverted' : 'text.link'}
           lineHeight="112%"
+          opacity={headingInView ? 1 : 0}
+          transform={headingInView ? 'translateX(0)' : 'translateX(60px)'}
+          transition="all 1s ease-out"
           sx={{
             strong: {
               backgroundImage: color,
@@ -52,6 +65,10 @@ export const DiffuseCooling = ({
           letterSpacing="calc(16px * -0.02)"
           color={light ? 'text.secondary' : 'text.light'}
           fontWeight={500}
+          opacity={headingInView ? 1 : 0}
+          transform={headingInView ? 'translateX(0)' : 'translateX(60px)'}
+          transition="all 1s ease-out"
+          transitionDelay="0.7s"
           sx={{
             strong: {
               color: light ? 'text.strong' : 'text.link',
@@ -86,12 +103,18 @@ export const DiffuseCooling = ({
         <Flex
           columnGap={{ base: rem(10), md: rem(20) }}
           mt={{ base: rem(40), xl: rem(80) }}
+          ref={imagesView}
         >
-          <Box width="50%" position="relative" height="100%">
-            <Box
-              display={{ base: 'none', md: 'block' }}
-              boxShadow={light ? 'none' : '0px 0px 50px 0px rgba(0,0,0,0.05)'}
-            >
+          <Box
+            width="50%"
+            position="relative"
+            height="100%"
+            boxShadow={light ? 'none' : '0px 0px 50px 0px rgba(0,0,0,0.05)'}
+            opacity={imagesInView ? 1 : 0}
+            transform={imagesInView ? 'translateY(0)' : 'translateY(60px)'}
+            transition="all 1s ease-out"
+          >
+            <Box display={{ base: 'none', md: 'block' }}>
               <Image
                 src={`${BUNNY_CDN_URL}/common/diffuse-cooling-1.png`}
                 width="0"
@@ -148,7 +171,15 @@ export const DiffuseCooling = ({
               </NeueHaasGroteskDisplay>
             </Flex>
           </Box>
-          <Box width="50%" position="relative" height="100%">
+          <Box
+            width="50%"
+            position="relative"
+            height="100%"
+            opacity={imagesInView ? 1 : 0}
+            transform={imagesInView ? 'translateY(0)' : 'translateY(60px)'}
+            transition="all 1s ease-out"
+            transitionDelay="0.7s"
+          >
             <Box
               display={{ base: 'none', md: 'block' }}
               boxShadow={light ? 'none' : '0px 0px 50px 0px rgba(0,0,0,0.05)'}

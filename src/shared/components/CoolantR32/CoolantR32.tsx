@@ -22,7 +22,12 @@ export const CoolantR32 = ({ color }: CoolantR32Props) => {
     <Box mt={rem(40)} overflowX="hidden">
       <Container>
         <Flex alignItems="center" flexDir={{ base: 'column', md: 'row' }}>
-          <Box width={{ base: '100%', md: '50%' }}>
+          <Box
+            width={{ base: '100%', md: '50%' }}
+            opacity={headingInView ? 1 : 0}
+            transform={headingInView ? 'scale(1)' : 'scale(0)'}
+            transition="all 1s ease-out"
+          >
             <Image
               src={`${BUNNY_CDN_URL}/common/globe.png`}
               width="0"

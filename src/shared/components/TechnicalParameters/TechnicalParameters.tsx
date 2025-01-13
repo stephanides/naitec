@@ -108,6 +108,7 @@ export const TechnicalParameters = ({
   const [isExpanded, setExpanded] = useState(false);
   const { getCollapseProps, getToggleProps } = useCollapse({ isExpanded });
   const [activeParam, setActiveParam] = useState(0);
+
   return (
     <Box position="relative" top={rem(1)}>
       <Container>
@@ -237,18 +238,16 @@ export const TechnicalParameters = ({
                   value={params[activeParam].ionizator}
                   withBorderRight={false}
                 />
-                {typeof params[activeParam].nasavanieVzduchuZExterieru ===
+                {(typeof params[activeParam].nasavanieVzduchuZExterieru ===
                   'boolean' ||
-                  (typeof params[activeParam].nasavanieVzduchuZExterieru ===
-                    'string' && (
-                    <Item
-                      label={t(
-                        'technical_parameters_air_taker_from_the_outside'
-                      )}
-                      value={params[activeParam].nasavanieVzduchuZExterieru}
-                      withBorderRight={false}
-                    />
-                  ))}
+                  typeof params[activeParam].nasavanieVzduchuZExterieru ===
+                    'string') && (
+                  <Item
+                    label={t('technical_parameters_air_taker_from_the_outside')}
+                    value={params[activeParam].nasavanieVzduchuZExterieru}
+                    withBorderRight={false}
+                  />
+                )}
                 {typeof params[activeParam].neviditelneUmiestnenie ===
                   'boolean' && (
                   <Item
@@ -267,14 +266,14 @@ export const TechnicalParameters = ({
                   value={params[activeParam].sterilizacia}
                   withBorderRight={false}
                 />
-                {typeof params[activeParam].dierkovanaLamela === 'boolean' ||
-                  (typeof params[activeParam].dierkovanaLamela === 'string' && (
-                    <Item
-                      label={t('technical_parameters_perforated_lamella')}
-                      value={params[activeParam].dierkovanaLamela}
-                      withBorderRight={false}
-                    />
-                  ))}
+                {(typeof params[activeParam].dierkovanaLamela === 'boolean' ||
+                  typeof params[activeParam].dierkovanaLamela === 'string') && (
+                  <Item
+                    label={t('technical_parameters_perforated_lamella')}
+                    value={params[activeParam].dierkovanaLamela}
+                    withBorderRight={false}
+                  />
+                )}
                 {typeof params[activeParam].preKomercnePriestory ===
                   'boolean' && (
                   <Item
@@ -369,18 +368,18 @@ export const TechnicalParameters = ({
                     value={params[activeParam].ionizator}
                     withBorderRight={false}
                   />
-                  {typeof params[activeParam].nasavanieVzduchuZExterieru ===
+                  {(typeof params[activeParam].nasavanieVzduchuZExterieru ===
                     'boolean' ||
-                    (typeof params[activeParam].nasavanieVzduchuZExterieru ===
-                      'string' && (
-                      <Item
-                        label={t(
-                          'technical_parameters_air_taker_from_the_outside'
-                        )}
-                        value={params[activeParam].nasavanieVzduchuZExterieru}
-                        withBorderRight={false}
-                      />
-                    ))}
+                    typeof params[activeParam].nasavanieVzduchuZExterieru ===
+                      'string') && (
+                    <Item
+                      label={t(
+                        'technical_parameters_air_taker_from_the_outside'
+                      )}
+                      value={params[activeParam].nasavanieVzduchuZExterieru}
+                      withBorderRight={false}
+                    />
+                  )}
                   {typeof params[activeParam].neviditelneUmiestnenie ===
                     'boolean' && (
                     <Item
@@ -399,15 +398,15 @@ export const TechnicalParameters = ({
                     value={params[activeParam].sterilizacia}
                     withBorderRight={false}
                   />
-                  {typeof params[activeParam].dierkovanaLamela === 'boolean' ||
-                    (typeof params[activeParam].dierkovanaLamela ===
-                      'string' && (
-                      <Item
-                        label={t('technical_parameters_perforated_lamella')}
-                        value={params[activeParam].dierkovanaLamela}
-                        withBorderRight={false}
-                      />
-                    ))}
+                  {(typeof params[activeParam].dierkovanaLamela === 'boolean' ||
+                    typeof params[activeParam].dierkovanaLamela ===
+                      'string') && (
+                    <Item
+                      label={t('technical_parameters_perforated_lamella')}
+                      value={params[activeParam].dierkovanaLamela}
+                      withBorderRight={false}
+                    />
+                  )}
                   {typeof params[activeParam].preKomercnePriestory ===
                     'boolean' && (
                     <Item

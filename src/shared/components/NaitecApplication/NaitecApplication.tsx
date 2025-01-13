@@ -117,6 +117,10 @@ export const NaitecApplication = ({
               top={{ base: rem(40), '2xl': 0 }}
               maxW={rem(600)}
               zIndex={3}
+              opacity={headingInView ? 1 : 0}
+              transform={headingInView ? 'scale(1)' : 'scale(0)'}
+              transition="all 1s ease-out"
+              transitionDelay="0.7s"
             >
               <Image
                 src={`${BUNNY_CDN_URL}/common/iphone-mockup.png`}
