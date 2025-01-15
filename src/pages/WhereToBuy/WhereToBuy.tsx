@@ -12,6 +12,8 @@ import {
 import { ProductContactForm } from './ProductContactForm';
 import { useRouter } from 'next/router';
 
+const mapFirstCountries = ['sk', 'cs', 'de', 'at', 'hu'];
+
 export const WhereToBuy = () => {
   const { t } = useTranslation(['wheretobuy', 'common', 'contact']);
   const router = useRouter();
@@ -30,7 +32,7 @@ export const WhereToBuy = () => {
   );
 
   const locale = router.locale ?? 'sk';
-  const isMapFirst = locale === 'sk';
+  const isMapFirst = mapFirstCountries.includes(locale);
 
   const stores = data?.data ?? [];
   return (
