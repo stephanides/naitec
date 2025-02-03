@@ -14,7 +14,10 @@ type EffectiveHeatingProps = {
   blurOnBottom?: boolean;
   title: string;
   description: string;
+  description2: string;
   label: string;
+  productName: string;
+  removePadding?: boolean;
 };
 
 export const EffectiveHeating = ({
@@ -25,6 +28,9 @@ export const EffectiveHeating = ({
   label,
   title,
   description,
+  description2,
+  productName,
+  removePadding = false,
 }: EffectiveHeatingProps) => {
   const { t } = useTranslation();
   const { ref: headingView, inView: headingInView } = useInView({
@@ -39,7 +45,7 @@ export const EffectiveHeating = ({
     <Box
       position="relative"
       overflowX="hidden"
-      pt={{ base: rem(40), md: rem(80), lg: rem(100) }}
+      pt={removePadding ? 0 : { base: rem(40), md: rem(80), lg: rem(100) }}
       ref={headingView}
     >
       <Container>
@@ -80,7 +86,7 @@ export const EffectiveHeating = ({
             color="text.secondary"
             sx={{ strong: { color: 'text.inverted', fontWeight: 500 } }}
             dangerouslySetInnerHTML={{
-              __html: description,
+              __html: description + ` ${productName} ` + description2,
             }}
           />
         </Box>

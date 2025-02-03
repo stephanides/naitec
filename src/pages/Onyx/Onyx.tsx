@@ -30,9 +30,14 @@ import { TechnicalParameters } from '@/src/shared/components/TechnicalParameters
 import { WhyInfoSwiper } from '@/src/shared/components/WhyInfoSwiper';
 import { BUNNY_CDN_URL, INTERNAL_ROUTES } from '@/src/shared/constants';
 import { Element } from 'react-scroll';
+import { useInView } from 'react-intersection-observer';
 
 export const Onyx = () => {
   const { t } = useTranslation(['onyx', 'common']);
+  const { ref: headingView, inView: headingInView } = useInView({
+    threshold: 0.5,
+    triggerOnce: true,
+  });
   return (
     <Box>
       <Box>
@@ -70,7 +75,7 @@ export const Onyx = () => {
           <Flex
             width="100%"
             justifyContent="center"
-            animation={'fadeUp .75s ease-in-out'}
+            animation={'fadeUp 1.5s ease-in-out'}
             sx={{
               '@keyframes fadeUp': {
                 '0%': {
@@ -190,11 +195,15 @@ export const Onyx = () => {
         flexDir="column"
         alignItems="center"
         px={{ base: rem(16), xl: 0 }}
+        ref={headingView}
       >
         <NeueHaasGroteskDisplay
           fontSize={{ base: rem(20), md: rem(36) }}
           color="text.link"
           fontWeight={600}
+          opacity={headingInView ? 1 : 0}
+          transform={headingInView ? 'translateY(0)' : 'translateY(60px)'}
+          transition="all 1s ease-out"
         >
           {t('heading')}
         </NeueHaasGroteskDisplay>
@@ -204,6 +213,10 @@ export const Onyx = () => {
           color="#8F8F8F"
           textAlign="center"
           fontWeight={600}
+          opacity={headingInView ? 1 : 0}
+          transform={headingInView ? 'translateY(0)' : 'translateY(60px)'}
+          transition="all 1s ease-out"
+          transitionDelay="300ms"
           mt={rem(12)}
         >
           {t('subheading')}
@@ -263,7 +276,10 @@ export const Onyx = () => {
           image2={`${BUNNY_CDN_URL}/onyx/effective-heating-2.png`}
           label={t('effective_heating_label')}
           title={t('effective_heating_title')}
-          description={t('effective_heating_description')}
+          productName="Onyx"
+          description={t('effective_heating_description_1')}
+          description2={t('effective_heating_description_2')}
+          removePadding
         />
         <Glow />
       </Box>

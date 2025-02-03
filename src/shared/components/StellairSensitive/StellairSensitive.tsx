@@ -12,6 +12,7 @@ import {
 import Image from 'next/image';
 import Link from 'next-translate-routes/link';
 import { BUNNY_CDN_URL, INTERNAL_ROUTES } from '../../constants';
+import { useInView } from 'react-intersection-observer';
 
 const Item = ({
   image,
@@ -122,6 +123,14 @@ export const StellairSensitive = ({
   smart,
 }: StellairSensitiveProps) => {
   const { t } = useTranslation('common');
+  const { ref: headingView, inView: headingInView } = useInView({
+    threshold: 0.7,
+    triggerOnce: true,
+  });
+  const { ref: contentView, inView: contentInView } = useInView({
+    threshold: 0.7,
+    triggerOnce: true,
+  });
   return (
     <Box
       backgroundColor="background.primary"
@@ -134,6 +143,7 @@ export const StellairSensitive = ({
             justifyContent="space-evenly"
             flexWrap="wrap"
             flexDir={{ base: 'column', lg: 'row' }}
+            ref={headingView}
           >
             <NeueHaasGroteskDisplay
               color="text.strong"
@@ -142,6 +152,9 @@ export const StellairSensitive = ({
               fontWeight={600}
               textAlign="center"
               mb={{ base: rem(40), lg: 0 }}
+              opacity={headingInView ? 1 : 0}
+              transform={headingInView ? 'translateX(0)' : 'translateX(-40px)'}
+              transition="all 1s ease-out"
               sx={{
                 strong: {
                   backgroundImage: gradientColor,
@@ -157,6 +170,9 @@ export const StellairSensitive = ({
                 backgroundColor={color}
                 hoverColor={hoverColor}
                 icon={<ArrowRight />}
+                opacity={headingInView ? 1 : 0}
+                transform={headingInView ? 'translateX(0)' : 'translateX(40px)'}
+                transition="all 1s ease-out"
               >
                 {t('button_explore_all')}
               </PrimaryButton>
@@ -170,6 +186,7 @@ export const StellairSensitive = ({
           flexDir={{ base: 'column', xl: 'row' }}
           rowGap={{ base: rem(40), xl: 0 }}
           width="100%"
+          ref={contentView}
         >
           {stellair && (
             <Box
@@ -177,6 +194,9 @@ export const StellairSensitive = ({
               width={{ base: '70%', md: '100%' }}
               maxWidth="533px"
               mx={{ base: 'auto', xl: 0 }}
+              opacity={contentInView ? 1 : 0}
+              transform={contentInView ? 'translateX(0)' : 'translateY(40px)'}
+              transition="all 1s ease-out"
             >
               <Item
                 image={`${BUNNY_CDN_URL}/stellair/stellair-minimal.png`}
@@ -194,6 +214,9 @@ export const StellairSensitive = ({
               width={{ base: '70%', md: '100%' }}
               maxWidth="470px"
               mx={{ base: 'auto', xl: 0 }}
+              opacity={contentInView ? 1 : 0}
+              transform={contentInView ? 'translateX(0)' : 'translateY(40px)'}
+              transition="all 1s ease-out"
             >
               <Item
                 image={`${BUNNY_CDN_URL}/sensitive/sensitive_minimal.png`}
@@ -211,6 +234,9 @@ export const StellairSensitive = ({
               width={{ base: '70%', md: '100%' }}
               maxWidth="470px"
               mx={{ base: 'auto', xl: 0 }}
+              opacity={contentInView ? 1 : 0}
+              transform={contentInView ? 'translateX(0)' : 'translateY(40px)'}
+              transition="all 1s ease-out"
             >
               <Item
                 image={`${BUNNY_CDN_URL}/sensitive-pro/sensitive-pro-minimal.png`}
@@ -228,6 +254,9 @@ export const StellairSensitive = ({
               width={{ base: '70%', md: '100%' }}
               maxWidth="470px"
               mx={{ base: 'auto', xl: 0 }}
+              opacity={contentInView ? 1 : 0}
+              transform={contentInView ? 'translateX(0)' : 'translateY(40px)'}
+              transition="all 1s ease-out"
             >
               <Item
                 image={`${BUNNY_CDN_URL}/onyx/onyx-minimal.png`}
@@ -245,6 +274,9 @@ export const StellairSensitive = ({
               width={{ base: '70%', md: '100%' }}
               maxWidth="470px"
               mx={{ base: 'auto', xl: 0 }}
+              opacity={contentInView ? 1 : 0}
+              transform={contentInView ? 'translateX(0)' : 'translateY(40px)'}
+              transition="all 1s ease-out"
             >
               <Item
                 image={`${BUNNY_CDN_URL}/smart/smart-minimal.png`}

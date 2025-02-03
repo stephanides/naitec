@@ -7,6 +7,7 @@ import { NeueHaasGroteskDisplay } from '../Typography';
 import { rem } from 'polished';
 import { useTranslation } from 'next-i18next';
 import { WhyInfoSwiperItem } from './WhyInfoSwiperItem';
+import { useInView } from 'react-intersection-observer';
 
 export type WhyInfoSwiperItemProps = {
   image: string;
@@ -31,7 +32,12 @@ export const WhyInfoSwiper = ({
 }: WhyInfoSwiperProps) => {
   const { t } = useTranslation('common');
   const [activeIndex, setActiveIndex] = useState(0);
+  const [swiperInstance, setSwiperInstance] = useState<any>(null);
   const [totalItems, setTotalItems] = useState(0);
+  const { ref: swiperView, inView: swiperInView } = useInView({
+    threshold: 0.5,
+    triggerOnce: true,
+  });
 
   return (
     <Box
@@ -40,6 +46,7 @@ export const WhyInfoSwiper = ({
         '.swiper': { overflow: 'visible' },
         '.swiper-slide': { height: 'auto' },
       }}
+      ref={swiperView}
     >
       <Flex justifyContent="space-between" alignItems="center" mb={rem(50)}>
         <NeueHaasGroteskDisplay
@@ -67,45 +74,57 @@ export const WhyInfoSwiper = ({
           light={light}
         />
       </Flex>
-      <Swiper
-        className="similar-swiper"
-        spaceBetween={20}
-        slidesPerView={1.1}
-        onSwiper={(swiperInstance) => {
-          setTotalItems(swiperInstance.slides.length);
-        }}
-        onSlideChange={(swiperInstance) => {
-          setActiveIndex(swiperInstance.snapIndex);
-        }}
-        navigation={{
-          prevEl: `.swiper-button-prev-why-info`,
-          nextEl: `.swiper-button-next-why-info`,
-        }}
-        modules={[Navigation]}
-        breakpoints={{
-          992: {
-            slidesPerView: 1.1,
-          },
-          1200: {
-            slidesPerView: 1.2,
-          },
-          1440: {
-            slidesPerView: 1.3,
-          },
-        }}
+      <Box
+        opacity={swiperInView ? 1 : 0}
+        transform={swiperInView ? 'translateX(0)' : 'translateX(100%)'}
+        transition="all 1s ease-out"
       >
-        {items.map((item, index) => (
-          <SwiperSlide>
-            <WhyInfoSwiperItem
-              image={item.image}
-              title={item.title}
-              description={item.description}
-              light={light}
-              isActive={index === activeIndex}
-            />
-          </SwiperSlide>
-        ))}
-      </Swiper>
+        <Swiper
+          className="similar-swiper"
+          spaceBetween={20}
+          slidesPerView={1.1}
+          onSwiper={(swiperInstance) => {
+            setTotalItems(swiperInstance.slides.length);
+            setSwiperInstance(swiperInstance);
+          }}
+          onSlideChange={(swiperInstance) => {
+            setActiveIndex(swiperInstance.snapIndex);
+          }}
+          navigation={{
+            prevEl: `.swiper-button-prev-why-info`,
+            nextEl: `.swiper-button-next-why-info`,
+          }}
+          modules={[Navigation]}
+          breakpoints={{
+            992: {
+              slidesPerView: 1.1,
+            },
+            1200: {
+              slidesPerView: 1.2,
+            },
+            1440: {
+              slidesPerView: 1.3,
+            },
+          }}
+        >
+          {items.map((item, index) => (
+            <SwiperSlide
+              onClick={() => {
+                setActiveIndex(index);
+                swiperInstance.slideToLoop(index); // Ensure swiper slides to the clicked item
+              }}
+            >
+              <WhyInfoSwiperItem
+                image={item.image}
+                title={item.title}
+                description={item.description}
+                light={light}
+                isActive={index === activeIndex}
+              />
+            </SwiperSlide>
+          ))}
+        </Swiper>
+      </Box>
     </Box>
   );
 };

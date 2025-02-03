@@ -11,11 +11,13 @@ import { useInView } from 'react-intersection-observer';
 type DiffuseCoolingProps = {
   color: string;
   light?: boolean;
+  productName?: string;
 };
 
 export const DiffuseCooling = ({
   color,
   light = false,
+  productName = '',
 }: DiffuseCoolingProps) => {
   const { t } = useTranslation();
   const { ref: headingView, inView: headingInView } = useInView({
@@ -78,7 +80,7 @@ export const DiffuseCooling = ({
           dangerouslySetInnerHTML={{
             __html:
               t('diffuse_cooling_description_1') +
-              ' ' +
+              ` ${productName} ` +
               t('diffuse_cooling_description_2'),
           }}
         />

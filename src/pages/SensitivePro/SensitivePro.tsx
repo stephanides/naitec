@@ -268,7 +268,11 @@ export const SensitivePro = () => {
         overflow="hidden"
       >
         <Glow />
-        <DiffuseCooling light color={LINEAR_GRADIENTS.sensitive_pro} />
+        <DiffuseCooling
+          light
+          color={LINEAR_GRADIENTS.sensitive_pro}
+          productName="Sensitive Pro"
+        />
         <NaitecApplication
           textColor={LINEAR_GRADIENTS.sensitive_pro}
           blurOnBottom={true}
@@ -283,7 +287,9 @@ export const SensitivePro = () => {
               blurOnBottom={true}
               label={t('effective_heating_label')}
               title={t('effective_heating_title')}
-              description={t('effective_heating_description')}
+              productName='Sensitive Pro'
+              description={t('effective_heating_description_1')}
+              description2={t('effective_heating_description_2')}
             />
           </Box>
           <Box

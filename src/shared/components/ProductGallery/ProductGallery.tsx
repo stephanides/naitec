@@ -6,6 +6,7 @@ import { useState } from 'react';
 import { Navigation, Thumbs, FreeMode, EffectCreative } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Swiper as SwiperType } from 'swiper';
+import { useInView } from 'react-intersection-observer';
 
 type ProductGalleryProps = {
   images: {
@@ -17,13 +18,17 @@ type ProductGalleryProps = {
 export const ProductGallery = ({ images }: ProductGalleryProps) => {
   const [thumbsSwiper, setThumbsSwiper] = useState<SwiperType | null>(null);
   const [open, setOpen] = useState(false);
+  const { ref: galleryView, inView: galleryInView } = useInView({
+    threshold: 0.5,
+    triggerOnce: true,
+  });
 
   return (
     <Box>
       <Box display={{ base: 'none', xl: 'block' }}>
         <Flex width="100%" position="relative">
           {images.length > 1 && (
-            <Box width={rem(100)} minW={rem(100)}>
+            <Box width={rem(100)} minW={rem(100)} ref={galleryView}>
               <Swiper
                 onSwiper={setThumbsSwiper}
                 spaceBetween={20}
@@ -37,21 +42,30 @@ export const ProductGallery = ({ images }: ProductGalleryProps) => {
               >
                 {images.map((image, index) => (
                   <SwiperSlide key={index}>
-                    <Image
-                      src={image.src}
-                      width="0"
-                      height="0"
-                      sizes="100vw"
-                      style={{
-                        width: '100%',
-                        height: 'auto',
-                        transition: 'all .3s ease-out',
-                        userSelect: 'none',
-                        borderRadius: rem(20),
-                        cursor: 'pointer',
-                      }}
-                      alt={image.alt}
-                    />
+                    <Box
+                      opacity={galleryInView ? 1 : 0}
+                      transform={
+                        galleryInView ? 'translateY(0)' : 'translateY(20px)'
+                      }
+                      transition="all 1s ease-out"
+                      transitionDelay={`${index * 150}ms`}
+                    >
+                      <Image
+                        src={image.src}
+                        width="0"
+                        height="0"
+                        sizes="100vw"
+                        style={{
+                          width: '100%',
+                          height: 'auto',
+                          transition: 'all .3s ease-out',
+                          userSelect: 'none',
+                          borderRadius: rem(20),
+                          cursor: 'pointer',
+                        }}
+                        alt={image.alt}
+                      />
+                    </Box>
                   </SwiperSlide>
                 ))}
               </Swiper>

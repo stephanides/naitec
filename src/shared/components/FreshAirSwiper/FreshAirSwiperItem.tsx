@@ -16,6 +16,7 @@ export const FreshAirSwiperItem = ({
       height="100%"
       transform={isActive ? 'scale(1.1)' : ''}
       transition="all .3s ease-in-out"
+      cursor="pointer"
     >
       <Image
         src={image}

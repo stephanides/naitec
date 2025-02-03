@@ -12,7 +12,7 @@ export const WhyInfoSwiperItem = ({
   isActive,
 }: WhyInfoSwiperItemProps) => {
   return (
-    <Box position="relative" height="100%">
+    <Box position="relative" height="100%" cursor="pointer">
       <Image
         src={image}
         width="0"

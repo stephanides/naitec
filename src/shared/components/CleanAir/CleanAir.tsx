@@ -40,7 +40,7 @@ export const CleanAir = ({
           <Box
             width={{ base: '100%', lg: '50%' }}
             opacity={headingInView ? 1 : 0}
-            transform={headingInView ? 'translateX(0)' : 'translateX(100%)'}
+            transform={headingInView ? 'translateX(0)' : 'translateX(60px)'}
             transition="all 1s ease-out"
           >
             <Label

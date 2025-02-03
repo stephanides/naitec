@@ -74,7 +74,7 @@ export const SupportDetail = ({ product }: SupportDetailProps) => {
         </Box>
       </Container>
       <Box mt={rem(125)}>
-        <StellairSensitive />
+        <StellairSensitive stellair sensitivePro />
       </Box>
     </Box>
   );

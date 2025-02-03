@@ -7,6 +7,7 @@ import Link from 'next-translate-routes/link';
 import { rem } from 'polished';
 import { useTranslation } from 'next-i18next';
 import { useState } from 'react';
+import { useInView } from 'react-intersection-observer';
 
 const getTitle = (title: string, t: any) => {
   if (title === 'fireplace') {
@@ -28,11 +29,26 @@ const getTitle = (title: string, t: any) => {
   return title;
 };
 
-const SupportListItem = ({ title, supportImage, href }: Product) => {
+const SupportListItem = ({
+  title,
+  supportImage,
+  href,
+  index,
+}: Product & { index: number }) => {
   const { t } = useTranslation(['common', 'support']);
+  const { ref: itemView, inView: itemInView } = useInView({
+    threshold: 0.4,
+    triggerOnce: true,
+  });
   return (
     <Link href={href}>
-      <Box role="group">
+      <Box
+        role="group"
+        ref={itemView}
+        opacity={itemInView ? 1 : 0}
+        transform={itemInView ? 'translateY(0)' : 'translateY(60px)'}
+        transition="all 1s ease-out"
+      >
         <Box
           border="3px solid"
           borderColor="border.light"
@@ -104,37 +120,48 @@ const FilterButton = ({
   title,
   onClick,
   isActive,
+  inView,
+  index,
 }: {
   title: string;
   onClick: () => void;
   isActive: boolean;
+  inView: boolean;
+  index: number;
 }) => {
   return (
     <Box
-      role="group"
-      onClick={onClick}
-      cursor="pointer"
-      borderRadius={rem(60)}
-      bg={isActive ? 'background.naitec_blue' : '#BABABA'}
-      width={{ base: '25%' }}
-      py={rem(14)}
-      minW={{ base: rem(160), lg: rem(220) }}
-      transition="all 0.3s ease-in-out"
-      sx={{
-        '&:hover': {
-          bg: 'background.naitec_blue',
-        },
-      }}
+      opacity={inView ? 1 : 0}
+      transform={inView ? 'translateX(0)' : 'translateX(40px)'}
+      transition="all 1s ease-out"
+      transitionDelay={`${index * 300}ms`}
     >
-      <NeueHaasGroteskDisplay
-        fontSize={{ base: rem(12), lg: rem(18) }}
-        fontWeight={600}
-        color="text.inverted"
-        textAlign="center"
-        lineHeight="112%"
+      <Box
+        role="group"
+        onClick={onClick}
+        cursor="pointer"
+        borderRadius={rem(60)}
+        bg={isActive ? 'background.naitec_blue' : '#BABABA'}
+        width={{ base: '25%' }}
+        py={rem(14)}
+        minW={{ base: rem(160), lg: rem(220) }}
+        transition="all 0.3s ease-in-out"
+        sx={{
+          '&:hover': {
+            bg: 'background.naitec_blue',
+          },
+        }}
       >
-        {title}
-      </NeueHaasGroteskDisplay>
+        <NeueHaasGroteskDisplay
+          fontSize={{ base: rem(12), lg: rem(18) }}
+          fontWeight={600}
+          color="text.inverted"
+          textAlign="center"
+          lineHeight="112%"
+        >
+          {title}
+        </NeueHaasGroteskDisplay>
+      </Box>
     </Box>
   );
 };
@@ -144,6 +171,10 @@ export const SupportList = () => {
   const [activeCategory, setActiveCategory] = useState<PRODUCT_TYPE | null>(
     null
   );
+  const { ref: filterView, inView: filterInView } = useInView({
+    threshold: 0.5,
+    triggerOnce: true,
+  });
 
   const products = PRODUCTS.filter((product) => {
     if (activeCategory) {
@@ -169,26 +200,35 @@ export const SupportList = () => {
           /* For Firefox */
           scrollbarWidth: 'none',
         }}
+        ref={filterView}
       >
         <FilterButton
           title={t('navigation_all_products')}
           onClick={() => setActiveCategory(null)}
           isActive={activeCategory === null}
+          inView={filterInView}
+          index={0}
         />
         <FilterButton
           title={t('navigation_air_condition')}
           onClick={() => setActiveCategory('air_conditioners')}
           isActive={activeCategory === 'air_conditioners'}
+          inView={filterInView}
+          index={1}
         />
         <FilterButton
           title={t('navigation_accessories')}
           onClick={() => setActiveCategory('accessories')}
           isActive={activeCategory === 'accessories'}
+          inView={filterInView}
+          index={2}
         />
         <FilterButton
           title={t('navigation_household')}
           onClick={() => setActiveCategory('household')}
           isActive={activeCategory === 'household'}
+          inView={filterInView}
+          index={3}
         />
       </Flex>
       <Grid
@@ -197,7 +237,7 @@ export const SupportList = () => {
         rowGap={rem(40)}
       >
         {products.map((product, index) => (
-          <SupportListItem key={index} {...product} />
+          <SupportListItem key={index} {...product} index={index} />
         ))}
       </Grid>
     </Box>

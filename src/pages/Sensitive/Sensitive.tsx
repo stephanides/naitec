@@ -15,7 +15,6 @@ import {
 import { Box, Flex } from '@chakra-ui/react';
 import { rem } from 'polished';
 import { useTranslation } from 'next-i18next';
-import Image from 'next/image';
 import {
   Bolt,
   Heating,
@@ -31,9 +30,14 @@ import { TechnicalParameters } from '@/src/shared/components/TechnicalParameters
 import { WhyInfoSwiper } from '@/src/shared/components/WhyInfoSwiper';
 import { BUNNY_CDN_URL, INTERNAL_ROUTES } from '@/src/shared/constants';
 import { Element } from 'react-scroll';
+import { useInView } from 'react-intersection-observer';
 
 export const Sensitive = () => {
   const { t } = useTranslation(['sensitive', 'common']);
+  const { ref: headingView, inView: headingInView } = useInView({
+    threshold: 0.5,
+    triggerOnce: true,
+  });
   return (
     <Box>
       <Box>
@@ -168,11 +172,15 @@ export const Sensitive = () => {
         alignItems="center"
         mb={{ base: rem(55), md: rem(158) }}
         px={{ base: rem(16), xl: 0 }}
+        ref={headingView}
       >
         <NeueHaasGroteskDisplay
           fontSize={{ base: rem(20), md: rem(36) }}
           color="text.link"
           fontWeight={600}
+          opacity={headingInView ? 1 : 0}
+          transform={headingInView ? 'translateY(0)' : 'translateY(100%)'}
+          transition="all 1s ease-out"
         >
           {t('heading')}
         </NeueHaasGroteskDisplay>
@@ -182,6 +190,10 @@ export const Sensitive = () => {
           color="#8F8F8F"
           textAlign="center"
           fontWeight={600}
+          opacity={headingInView ? 1 : 0}
+          transform={headingInView ? 'translateY(0)' : 'translateY(100%)'}
+          transition="all 1s ease-out"
+          transitionDelay="300ms"
           mt={rem(12)}
         >
           {t('subheading')}
@@ -252,7 +264,10 @@ export const Sensitive = () => {
           { url: `${BUNNY_CDN_URL}/videos/sensitive/3.mp4`, duration: 10 },
         ]}
       />
-      <DiffuseCooling color={LINEAR_GRADIENTS.sensitive} />
+      <DiffuseCooling
+        color={LINEAR_GRADIENTS.sensitive}
+        productName="Sensitive"
+      />
       <Box>
         <NaitecApplication blurOnBottom={false} />
       </Box>

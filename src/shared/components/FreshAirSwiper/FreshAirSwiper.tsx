@@ -31,7 +31,7 @@ export const FreshAirSwiper = ({
 }: FreshAirSwiperProps) => {
   const { t } = useTranslation('common');
   const [activeIndex, setActiveIndex] = useState(0);
-  const [totalItems, setTotalItems] = useState(0);
+  const [swiperInstance, setSwiperInstance] = useState<any>(null);
 
   return (
     <Box
@@ -117,7 +117,7 @@ export const FreshAirSwiper = ({
         loop
         centeredSlides
         onSlideChange={(swiper) => setActiveIndex(swiper.realIndex)}
-        onSwiper={(swiper) => console.log(swiper)}
+        onSwiper={(swiper) => setSwiperInstance(swiper)}
         slidesOffsetAfter={0}
         freeMode={true}
         navigation={{
@@ -135,7 +135,12 @@ export const FreshAirSwiper = ({
         }}
       >
         {items.map((item, index) => (
-          <SwiperSlide>
+          <SwiperSlide
+            onClick={() => {
+              setActiveIndex(index);
+              swiperInstance.slideToLoop(index); // Ensure swiper slides to the clicked item
+            }}
+          >
             <FreshAirSwiperItem
               image={item.image}
               title={item.title}
@@ -145,12 +150,12 @@ export const FreshAirSwiper = ({
           </SwiperSlide>
         ))}
       </Swiper>
-      {/* <Flex
+      <Flex
         justify="flex-end"
         my={{ base: rem(25), md: rem(65) }}
         px={rem(25)}
-        position="absolute"
-        bottom={rem(20)}
+        position={{ base: 'relative', lg: 'absolute' }}
+        bottom={{ base: 0, lg: rem(20) }}
         right={0}
         zIndex={4}
       >
@@ -158,7 +163,7 @@ export const FreshAirSwiper = ({
           prevClassName="swiper-button-prev-fresh-air"
           nextClassName="swiper-button-next-fresh-air"
         />
-      </Flex> */}
+      </Flex>
     </Box>
   );
 };

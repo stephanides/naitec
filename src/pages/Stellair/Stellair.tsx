@@ -32,9 +32,14 @@ import {
 } from '@/src/shared/design';
 import { BUNNY_CDN_URL, INTERNAL_ROUTES } from '@/src/shared/constants';
 import { Element } from 'react-scroll';
+import { useInView } from 'react-intersection-observer';
 
 export const Stellair = () => {
   const { t } = useTranslation(['stellair', 'common']);
+  const { ref: headingView, inView: headingInView } = useInView({
+    threshold: 0.5,
+    triggerOnce: true,
+  });
   return (
     <Box>
       <Box>
@@ -170,10 +175,14 @@ export const Stellair = () => {
         alignItems="center"
         mb={{ base: rem(55), md: rem(158) }}
         px={{ base: rem(16), xl: 0 }}
+        ref={headingView}
       >
         <NeueHaasGroteskDisplay
           fontSize={{ base: rem(20), md: rem(36) }}
           color="text.link"
+          opacity={headingInView ? 1 : 0}
+          transform={headingInView ? 'translateY(0)' : 'translateY(100%)'}
+          transition="all 1s ease-out"
           fontWeight={600}
         >
           {t('heading')}
@@ -183,6 +192,9 @@ export const Stellair = () => {
           fontSize={{ base: rem(18), md: rem(32) }}
           color="#8F8F8F"
           textAlign="center"
+          opacity={headingInView ? 1 : 0}
+          transform={headingInView ? 'translateY(0)' : 'translateY(100%)'}
+          transition="all 1.3s ease-out"
           fontWeight={600}
           mt={rem(12)}
         >
@@ -310,7 +322,11 @@ export const Stellair = () => {
         top={rem(1)}
       >
         <Glow />
-        <DiffuseCooling light color={LINEAR_GRADIENTS.stellair} />
+        <DiffuseCooling
+          light
+          color={LINEAR_GRADIENTS.stellair}
+          productName="Stellair"
+        />
       </Box>
       <NaitecApplication />
       <Box mt={{ base: rem(50), md: rem(80), '2xl': rem(167) }}>
@@ -320,7 +336,9 @@ export const Stellair = () => {
             {
               icon: <Virus />,
               title: t('all_you_need_item_1_title'),
-              description: t('all_you_need_item_1_description'),
+              description: `Naitec Stellair ${t(
+                'all_you_need_item_1_description'
+              )}`,
               interactiveIcon: <PlusExpand />,
               iconColor: '#6093AF',
               iconColorHover: 'background.stellair_hover',

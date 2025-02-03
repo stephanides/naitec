@@ -360,7 +360,7 @@ export const Footer = () => {
               opacity={0.7}
               textAlign={{ base: 'center', md: 'left' }}
             >
-              © {currentYear} NAITEC. Všetky práva vyhradené.
+              © {currentYear} NAITEC. {t('all_rights_reserved')}.
             </NeueHaasGroteskText>
           </Box>
         </Flex>
