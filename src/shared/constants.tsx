@@ -153,6 +153,32 @@ export const PRODUCTS = [
           },
         ],
       },
+      {
+        title: 'installation_manual',
+        items: [
+          {
+            title: 'Čestina',
+            href: '/manuals/installation-manual-cz.pdf',
+            type: 'document' as DOCUMENT_TYPE,
+            date: '1/8/2024',
+            size: '4.6 Mb',
+          },
+          {
+            title: 'Magyar',
+            href: '/manuals/installation-manual-hu.pdf',
+            type: 'document' as DOCUMENT_TYPE,
+            date: '1/8/2024',
+            size: '3.5 Mb',
+          },
+          {
+            title: 'Deutsch',
+            href: '/manuals/installation-manual-de.pdf',
+            type: 'document' as DOCUMENT_TYPE,
+            date: '1/8/2024',
+            size: '4 Mb',
+          },
+        ],
+      },
     ],
   },
   {
