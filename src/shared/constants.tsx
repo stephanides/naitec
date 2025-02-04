@@ -157,6 +157,13 @@ export const PRODUCTS = [
         title: 'installation_manual',
         items: [
           {
+            title: 'Slovenčina',
+            href: '/manuals/installation-manual-sk.pdf',
+            type: 'document' as DOCUMENT_TYPE,
+            date: '1/8/2024',
+            size: '4.8 Mb',
+          },
+          {
             title: 'Čestina',
             href: '/manuals/installation-manual-cz.pdf',
             type: 'document' as DOCUMENT_TYPE,
@@ -259,6 +266,13 @@ export const PRODUCTS = [
       {
         title: 'installation_manual',
         items: [
+          {
+            title: 'Slovenčina',
+            href: '/manuals/installation-manual-sk.pdf',
+            type: 'document' as DOCUMENT_TYPE,
+            date: '1/8/2024',
+            size: '4.8 Mb',
+          },
           {
             title: 'Čestina',
             href: '/manuals/installation-manual-cz.pdf',
@@ -363,6 +377,13 @@ export const PRODUCTS = [
         title: 'installation_manual',
         items: [
           {
+            title: 'Slovenčina',
+            href: '/manuals/installation-manual-sk.pdf',
+            type: 'document' as DOCUMENT_TYPE,
+            date: '1/8/2024',
+            size: '4.8 Mb',
+          },
+          {
             title: 'Čestina',
             href: '/manuals/installation-manual-cz.pdf',
             type: 'document' as DOCUMENT_TYPE,
@@ -433,6 +454,13 @@ export const PRODUCTS = [
         title: 'installation_manual',
         items: [
           {
+            title: 'Slovenčina',
+            href: '/manuals/installation-manual-sk.pdf',
+            type: 'document' as DOCUMENT_TYPE,
+            date: '1/8/2024',
+            size: '4.8 Mb',
+          },
+          {
             title: 'Čestina',
             href: '/manuals/installation-manual-cz.pdf',
             type: 'document' as DOCUMENT_TYPE,
@@ -502,6 +530,13 @@ export const PRODUCTS = [
       {
         title: 'installation_manual',
         items: [
+          {
+            title: 'Slovenčina',
+            href: '/manuals/installation-manual-sk.pdf',
+            type: 'document' as DOCUMENT_TYPE,
+            date: '1/8/2024',
+            size: '4.8 Mb',
+          },
           {
             title: 'Čestina',
             href: '/manuals/installation-manual-cz.pdf',
