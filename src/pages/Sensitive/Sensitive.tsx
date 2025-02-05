@@ -195,9 +195,9 @@ export const Sensitive = () => {
           transition="all 1s ease-out"
           transitionDelay="300ms"
           mt={rem(12)}
-        >
-          {t('subheading')}
-        </NeueHaasGroteskDisplay>
+          sx={{ strong: { fontWeight: 700, color: 'text.link' } }}
+          dangerouslySetInnerHTML={{ __html: t('subheading') }}
+        />
       </Flex>
       <Element id="content" name="content">
         <Box

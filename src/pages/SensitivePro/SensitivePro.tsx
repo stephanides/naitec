@@ -198,9 +198,9 @@ export const SensitivePro = () => {
           transition="all 1.3s ease-out"
           fontWeight={600}
           mt={rem(12)}
-        >
-          {t('subheading')}
-        </NeueHaasGroteskDisplay>
+          sx={{ strong: { fontWeight: 700, color: 'text.link' } }}
+          dangerouslySetInnerHTML={{ __html: t('subheading') }}
+        />
       </Flex>
       <Element id="content" name="content">
         <Box
@@ -287,7 +287,7 @@ export const SensitivePro = () => {
               blurOnBottom={true}
               label={t('effective_heating_label')}
               title={t('effective_heating_title')}
-              productName='Sensitive Pro'
+              productName="Sensitive Pro"
               description={t('effective_heating_description_1')}
               description2={t('effective_heating_description_2')}
             />

@@ -197,9 +197,9 @@ export const Stellair = () => {
           transition="all 1.3s ease-out"
           fontWeight={600}
           mt={rem(12)}
-        >
-          {t('subheading')}
-        </NeueHaasGroteskDisplay>
+          sx={{ strong: { fontWeight: 700, color: 'text.link' } }}
+          dangerouslySetInnerHTML={{ __html: t('subheading') }}
+        />
       </Flex>
       <Element id="content" name="content">
         <Box
