@@ -10,6 +10,8 @@ module.exports = withTranslateRoutes({
     NEXT_PUBLIC_EMAIL_LOGIN: process.env.EMAIL_LOGIN,
     NEXT_PUBLIC_EMAIL_PASS: process.env.EMAIL_PASS,
     NEXT_PUBLIC_CONTACT_EMAIL_RECIPIENT: process.env.CONTACT_EMAIL_RECIPIENT,
+    NEXT_PUBLIC_RECAPTCHA_SITE_KEY: process.env.RECAPTCHA_SITE_KEY,
+    NEXT_PUBLIC_RECAPTCHA_SECRET_KEY: process.env.RECAPTCHA_SECRET_KEY,
   },
   images: {
     domains: ['naitec.b-cdn.net'], // Add the external domain here

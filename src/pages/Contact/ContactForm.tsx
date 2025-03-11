@@ -16,6 +16,8 @@ import { ArrowRight, PrimaryButton } from '@/src/shared/design';
 import { CheckMark } from '@/src/shared/design';
 import Link from 'next-translate-routes/link';
 import { useTranslation } from 'next-i18next';
+import { useRef } from 'react';
+import ReCAPTCHA from 'react-google-recaptcha';
 
 export type ContactFormValues = {
   name: string;
@@ -26,7 +28,10 @@ export type ContactFormValues = {
   agreements: boolean;
 };
 
-async function submitContact(orderData: ContactFormValues) {
+async function submitContact({
+  recaptcha,
+  ...orderData
+}: { recaptcha: string | null } & ContactFormValues) {
   try {
     const response = await fetch('/api/submit-contact', {
       method: 'POST',
@@ -50,6 +55,7 @@ async function submitContact(orderData: ContactFormValues) {
 }
 
 export const ContactForm = () => {
+  const recaptchaRef = useRef<ReCAPTCHA>(null);
   const { t } = useTranslation(['contact', 'common']);
   const toast = useToast();
   const formik = useFormik<ContactFormValues>({
@@ -74,8 +80,12 @@ export const ContactForm = () => {
       { setSubmitting }: FormikHelpers<ContactFormValues>
     ) => {
       try {
+        let recaptchaResponse: string | null = '';
+        if (recaptchaRef.current) {
+          recaptchaResponse = await recaptchaRef.current.executeAsync();
+        }
         setSubmitting(true);
-        await submitContact({ ...values });
+        await submitContact({ ...values, recaptcha: recaptchaResponse });
         setSubmitting(false);
         formik.resetForm();
         toast({
@@ -258,6 +268,11 @@ export const ContactForm = () => {
           </PrimaryButton>
         </Flex>
       </form>
+      <ReCAPTCHA
+        ref={recaptchaRef}
+        sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY ?? ''}
+        size="invisible"
+      />
     </Box>
   );
 };

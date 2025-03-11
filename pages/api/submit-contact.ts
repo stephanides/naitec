@@ -16,25 +16,25 @@ export default async function handler(
 
       // Simulate processing the order (replace with actual logic)
 
-      // const recaptchaResponse = await fetch(
-      //   `https://www.google.com/recaptcha/api/siteverify`,
-      //   {
-      //     method: 'POST',
-      //     headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-      //     body: `secret=${process.env.NEXT_PUBLIC_RECAPTCHA_SECRET_KEY}&response=${contactData.recaptcha}`,
-      //   }
-      // );
+      const recaptchaResponse = await fetch(
+        `https://www.google.com/recaptcha/api/siteverify`,
+        {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+          body: `secret=${process.env.NEXT_PUBLIC_RECAPTCHA_SECRET_KEY}&response=${contactData.recaptcha}`,
+        }
+      );
 
-      // const recaptchaData = await recaptchaResponse.json();
-      // if (recaptchaData.success) {
+      const recaptchaData = await recaptchaResponse.json();
+      if (recaptchaData.success) {
       const emailHTML = renderToStaticMarkup(ContactEmail({ ...contactData }));
 
       await sendEmailConfirmation(contactData.email, emailHTML);
       // Respond with success message
       res.status(200).json({ message: 'Contact submitted successfully!' });
-      // } else {
-      //   res.status(500).json({ message: 'Failed to submit contact' });
-      // }
+      } else {
+        res.status(500).json({ message: 'Failed to submit contact' });
+      }
     } catch (error) {
       console.error('Error processing contact:', error);
       res.status(500).json({ message: 'Failed to submit contact' });
