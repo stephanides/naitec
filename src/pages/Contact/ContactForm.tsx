@@ -38,7 +38,7 @@ async function submitContact({
       headers: {
         'Content-Type': 'application/json',
       },
-      body: JSON.stringify(orderData),
+      body: JSON.stringify({ ...orderData, recaptcha }),
     });
 
     if (!response.ok) {
