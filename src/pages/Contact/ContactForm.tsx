@@ -96,6 +96,12 @@ export const ContactForm = () => {
           position: 'top-right',
           variant: 'customSuccess',
         });
+        if (window) {
+          window.dataLayer = window.dataLayer || [];
+          window.dataLayer.push({
+            event: 'form_submit',
+          });
+        }
         // formik.resetForm();
       } catch (err) {
         toast({

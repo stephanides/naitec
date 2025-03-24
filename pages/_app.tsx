@@ -30,25 +30,6 @@ function App({ Component, pageProps }: AppProps) {
         />
       </Head>
 
-      {/* Global Site Tag (gtag.js) - Google Analytics */}
-      {/* TODO: add GTM number */}
-      {/* <Script
-        strategy="afterInteractive"
-        src={`https://www.googletagmanager.com/gtag/js?id=G-F6P7S4YP2P`}
-      />
-      <Script
-        strategy="afterInteractive"
-        dangerouslySetInnerHTML={{
-          __html: `
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'G-F6P7S4YP2P', {
-              page_path: window.location.pathname,
-            });
-          `,
-        }}
-      /> */}
       <main>
         <QueryClientProvider client={queryClient}>
           <Hydrate state={pageProps.dehydratedState}>
