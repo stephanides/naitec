@@ -99,6 +99,7 @@ export const DuctedAirConditioning = () => {
               rozmeryVnutornejJednotky: '1000x700x245',
               rozmeryVonkajsejJednotky: '785x555x300',
               ionizator: false,
+              uvcLampa: false,
               neviditelneUmiestnenie: true,
               wifiModul: t('common:additional_fee'),
               sterilizacia: false,
