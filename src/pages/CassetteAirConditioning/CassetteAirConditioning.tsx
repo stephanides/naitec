@@ -104,6 +104,7 @@ export const CasseteAirConditioning = () => {
               rozmeryVnutornejJednotky: '570x570x260',
               rozmeryVonkajsejJednotky: '785x555x300',
               ionizator: false,
+              uvcLampa: false,
               neviditelneUmiestnenie: true,
               wifiModul: t('common:additional_fee'),
               sterilizacia: false,
