@@ -13,12 +13,14 @@ type CleanAirProps = {
   color: string;
   imageOnLeft?: boolean;
   light?: boolean;
+  v2?: boolean;
 };
 
 export const CleanAir = ({
   color,
   imageOnLeft = false,
   light = false,
+  v2 = false,
 }: CleanAirProps) => {
   const { t } = useTranslation();
   const { ref: headingView, inView: headingInView } = useInView({
@@ -44,7 +46,7 @@ export const CleanAir = ({
             transition="all 1s ease-out"
           >
             <Label
-              text={t('clean_air_label')}
+              text={v2 ? t('clean_air_label_v2') : t('clean_air_label')}
               color={light ? 'text.inverted' : 'text.link'}
               borderColor={light ? 'text.inverted' : 'text.link'}
             />
@@ -77,10 +79,11 @@ export const CleanAir = ({
                 },
               }}
               dangerouslySetInnerHTML={{
-                __html:
-                  t('clean_air_description_1') +
-                  ' ' +
-                  t('clean_air_description_2'),
+                __html: v2
+                  ? t('clean_air_description_3')
+                  : t('clean_air_description_1') +
+                    ' ' +
+                    t('clean_air_description_2'),
               }}
             />
             <NeueHaasGroteskText
@@ -97,7 +100,9 @@ export const CleanAir = ({
                 },
               }}
               dangerouslySetInnerHTML={{
-                __html: t('clean_air_description_1'),
+                __html: v2
+                  ? t('clean_air_description_3')
+                  : t('clean_air_description_1'),
               }}
             />
           </Box>
@@ -115,7 +120,7 @@ export const CleanAir = ({
             />
           </Box>
           <NeueHaasGroteskText
-            display={{ base: 'block', lg: 'none' }}
+            display={{ base: v2 ? 'none' : 'block', lg: 'none' }}
             mt={rem(30)}
             lineHeight="130%"
             fontSize={{ base: rem(16), md: rem(22) }}

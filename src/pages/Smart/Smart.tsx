@@ -349,7 +349,7 @@ export const Smart = () => {
         <CoolantR32 color={LINEAR_GRADIENTS.smart} />
       </Box>
       <Box my={{ base: rem(50), md: rem(80), '2xl': rem(152) }}>
-        <CleanAir color={LINEAR_GRADIENTS.smart} />
+        <CleanAir color={LINEAR_GRADIENTS.smart} v2 />
       </Box>
       <Box>
         <TechnicalParameters
@@ -371,6 +371,7 @@ export const Smart = () => {
               rozmeryVnutornejJednotky: '792x292x201',
               rozmeryVonkajsejJednotky: '705x530x280',
               ionizator: true,
+              uvcLampa: false,
               nasavanieVzduchuZExterieru: false,
               wifiModul: true,
               sterilizacia: true,
@@ -393,6 +394,7 @@ export const Smart = () => {
               rozmeryVnutornejJednotky: '940x316x224mm',
               rozmeryVonkajsejJednotky: '785x300x555mm',
               ionizator: true,
+              uvcLampa: false,
               nasavanieVzduchuZExterieru: false,
               wifiModul: true,
               sterilizacia: true,
@@ -415,6 +417,7 @@ export const Smart = () => {
               rozmeryVnutornejJednotky: '1132x330x232mm',
               rozmeryVonkajsejJednotky: '900x700x350mm',
               ionizator: true,
+              uvcLampa: false,
               nasavanieVzduchuZExterieru: false,
               wifiModul: true,
               sterilizacia: true,

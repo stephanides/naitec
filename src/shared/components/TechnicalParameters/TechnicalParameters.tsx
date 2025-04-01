@@ -44,6 +44,7 @@ type TechnicalParametersProps = {
     aktivneCistenie: boolean;
     zaruka: string;
     chladivo: string;
+    uvcLampa: boolean;
   }[];
 };
 
@@ -222,21 +223,27 @@ export const TechnicalParameters = ({
                   value={params[activeParam].hmotnostVonkajsejJednotky}
                 />
                 <Item
-                  withBorder={false}
                   label={t('technical_parameters_indoor_unit_dimensions')}
                   value={params[activeParam].rozmeryVnutornejJednotky}
+                />
+                <Item
+                  label={t('technical_parameters_outdoor_unit_dimensions')}
+                  value={params[activeParam].rozmeryVonkajsejJednotky}
+                  withBorder={false}
+                  withBorderRight={true}
                 />
               </Box>
               <Box>
                 <Item
-                  label={t('technical_parameters_outdoor_unit_dimensions')}
-                  value={params[activeParam].rozmeryVonkajsejJednotky}
-                  withBorderRight={false}
-                />
-                <Item
                   label={t('technical_parameters_ionizer')}
                   value={params[activeParam].ionizator}
                   withBorderRight={false}
+                />
+                <Item
+                  label={t('technical_parameters_uvc_lamp')}
+                  value={params[activeParam].uvcLampa}
+                  withBorderRight={false}
+                  withBorder={true}
                 />
                 {(typeof params[activeParam].nasavanieVzduchuZExterieru ===
                   'boolean' ||
@@ -300,7 +307,6 @@ export const TechnicalParameters = ({
                   withBorderRight={false}
                 />
                 <Item
-                  withBorder={false}
                   label={t('technical_parameters_coolant')}
                   value={params[activeParam].chladivo}
                   withBorderRight={false}
@@ -366,6 +372,11 @@ export const TechnicalParameters = ({
                   <Item
                     label={t('technical_parameters_ionizer')}
                     value={params[activeParam].ionizator}
+                    withBorderRight={false}
+                  />
+                  <Item
+                    label={t('technical_parameters_uvc_lamp')}
+                    value={params[activeParam].uvcLampa}
                     withBorderRight={false}
                   />
                   {(typeof params[activeParam].nasavanieVzduchuZExterieru ===
