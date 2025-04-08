@@ -26,6 +26,7 @@ import {
   LINEAR_GRADIENTS,
   LisaVoice,
   PlusExpand,
+  PrimaryButton,
   Redirect,
   Verified,
   Virus,
@@ -33,6 +34,7 @@ import {
 import { BUNNY_CDN_URL, INTERNAL_ROUTES } from '@/src/shared/constants';
 import { Element } from 'react-scroll';
 import { useInView } from 'react-intersection-observer';
+import { Link } from 'next-translate-routes';
 
 export const Stellair = () => {
   const { t } = useTranslation(['stellair', 'common']);
@@ -395,6 +397,15 @@ export const Stellair = () => {
       <Box my={{ base: rem(69), md: rem(90), '2xl': rem(152) }}>
         <CleanAir color={LINEAR_GRADIENTS.stellair} />
       </Box>
+      <Flex justifyContent="center" mb={rem(100)}>
+        <Link href={INTERNAL_ROUTES.WHERE_TO_BUY}>
+          <PrimaryButton minH={rem(60)}>
+            <NeueHaasGroteskDisplay fontWeight={600} fontSize={rem(36)}>
+              {t('common:navigation_where_to_buy')}
+            </NeueHaasGroteskDisplay>
+          </PrimaryButton>{' '}
+        </Link>
+      </Flex>
       <Box>
         <TechnicalParameters
           label="Naitec Stellair"

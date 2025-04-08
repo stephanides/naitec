@@ -18,6 +18,7 @@ import Link from 'next-translate-routes/link';
 import { useTranslation } from 'next-i18next';
 import { useRef } from 'react';
 import ReCAPTCHA from 'react-google-recaptcha';
+import { INTERNAL_ROUTES } from '@/src/shared/constants';
 
 export type ContactFormValues = {
   name: string;
@@ -257,7 +258,9 @@ export const ContactForm = () => {
               }}
             >
               *{t('agreements_text')}{' '}
-              <Link href="/ochrana-osobnych-udajov">{t('privacy_policy')}</Link>
+              <Link href={INTERNAL_ROUTES.PRIVACY_POLICY}>
+                {t('privacy_policy')}
+              </Link>
               .
             </Text>
           </Box>

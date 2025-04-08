@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 
 import {
   Box,
+  Button,
   Flex,
   Popover,
   PopoverContent,
@@ -11,7 +12,7 @@ import { rem } from 'polished';
 import { LocaleSwitch } from '../LocaleSwitch';
 import Link from 'next-translate-routes/link';
 import { Container } from '../Container';
-import { ChevronDown, Hamburger, LogoDark } from '../../design';
+import { ChevronDown, Hamburger, LogoDark, PrimaryButton } from '../../design';
 import { useTranslation } from 'next-i18next';
 import { NeueHaasGroteskDisplay, NeueHaasGroteskText } from '../Typography';
 import { INTERNAL_ROUTES } from '../../constants';
@@ -287,11 +288,7 @@ export const Navigation = ({ toggleMobile, dark = false }: NavigationProps) => {
                   </PopoverContent>
                 </Popover>
               </Box>
-              <Link href={INTERNAL_ROUTES.WHERE_TO_BUY}>
-                <NeueHaasGroteskDisplay color="text.link" fontWeight={600}>
-                  {t('navigation_where_to_buy')}
-                </NeueHaasGroteskDisplay>
-              </Link>
+
               <Link href={INTERNAL_ROUTES.SUPPORT}>
                 <NeueHaasGroteskDisplay color="text.link" fontWeight={600}>
                   {t('navigation_support')}
@@ -306,7 +303,23 @@ export const Navigation = ({ toggleMobile, dark = false }: NavigationProps) => {
             <Flex
               width={{ base: rem(140), lg: rem(190) }}
               justifyContent="flex-end"
+              columnGap={rem(12)}
             >
+              <Box>
+                <Link href={INTERNAL_ROUTES.WHERE_TO_BUY}>
+                  <Button
+                    background="background.dark"
+                    color="white"
+                    borderRadius={rem(55)}
+                    transition="all .3s ease-out"
+                    _hover={{ background: 'black' }}
+                  >
+                    <NeueHaasGroteskDisplay fontWeight={600}>
+                      {t('navigation_where_to_buy')}
+                    </NeueHaasGroteskDisplay>
+                  </Button>{' '}
+                </Link>
+              </Box>
               <LocaleSwitch />
             </Flex>
           </Flex>

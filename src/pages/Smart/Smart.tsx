@@ -22,6 +22,7 @@ import {
   LINEAR_GRADIENTS,
   LisaVoice,
   PlusExpand,
+  PrimaryButton,
   Redirect,
   Verified,
   Virus,
@@ -32,6 +33,7 @@ import { BUNNY_CDN_URL, INTERNAL_ROUTES } from '@/src/shared/constants';
 import { Element } from 'react-scroll';
 import Image from 'next/image';
 import { useInView } from 'react-intersection-observer';
+import { Link } from 'next-translate-routes';
 
 export const Smart = () => {
   const { t } = useTranslation(['smart', 'common']);
@@ -351,6 +353,15 @@ export const Smart = () => {
       <Box my={{ base: rem(50), md: rem(80), '2xl': rem(152) }}>
         <CleanAir color={LINEAR_GRADIENTS.smart} v2 />
       </Box>
+      <Flex justifyContent="center" my={rem(100)}>
+        <Link href={INTERNAL_ROUTES.WHERE_TO_BUY}>
+          <PrimaryButton minH={rem(60)}>
+            <NeueHaasGroteskDisplay fontWeight={600} fontSize={rem(36)}>
+              {t('common:navigation_where_to_buy')}
+            </NeueHaasGroteskDisplay>
+          </PrimaryButton>{' '}
+        </Link>
+      </Flex>
       <Box>
         <TechnicalParameters
           label="Naitec Smart"

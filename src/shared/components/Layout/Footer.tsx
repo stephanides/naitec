@@ -161,6 +161,12 @@ export const Footer = () => {
               <Item href={INTERNAL_ROUTES.CONTACT}>
                 {t('navigation_contact')}
               </Item>
+              <Item href={INTERNAL_ROUTES.PRIVACY_POLICY}>
+                {t('navigation_privacy_policy')}
+              </Item>
+              <Item href={INTERNAL_ROUTES.LEGAL_NOTICE}>
+                {t('navigation_legal_notice')}
+              </Item>
             </Box>
             {/* <Box>
               <Title>{t('footer_naitec_app')}</Title>
@@ -259,7 +265,7 @@ export const Footer = () => {
                   textAlign={{ base: 'left' }}
                   transition="all .3s ease"
                 >
-                  ACEA s.r.o.
+                  Naitec GmbH.
                 </Text>
                 <Text
                   color="text.inverted"

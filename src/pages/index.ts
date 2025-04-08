@@ -12,3 +12,5 @@ export * from './WhereToBuy';
 export * from './CassetteAirConditioning';
 export * from './DuctedAirConditioning';
 export * from './MultiSplitSystem';
+export * from './PrivacyPolicy';
+export * from './LegalNotice';

@@ -37,6 +37,8 @@ export const INTERNAL_ROUTES = {
   CASSETTE_AIR_CONDITIONING_SUPPORT: '/support/cassette-air-conditioning',
   DUCTED_AIR_CONDITIONING_SUPPORT: '/support/ducted-air-conditioning',
   MULTI_SPLIT_SYSTEM_SUPPORT: '/support/multi-split-system',
+  PRIVACY_POLICY: '/privacy-policy',
+  LEGAL_NOTICE: '/legal-notice',
 };
 
 export const EXTERNAL_ROUTES = {
@@ -891,6 +893,46 @@ export const SEO_CONTENT = {
       pl: 'Naitec oferuje rozwiązania multi-split dla modeli Stellair, Sensitive, Smart i Onyx z dwoma do pięciu jednostkami wewnętrznymi.',
       de: 'Naitec bietet Multisplit-Lösungen für die Modelle Stellair, Sensitive, Smart und Onyx mit zwei bis fünf Inneneinheiten an.',
       ja: 'Naitecは、Stellair、Sensitive、Smart、Onyxモデルのために、2〜5台の室内ユニットを備えたマルチスプリットソリューションを提供しています。',
+    },
+  },
+  privacy_policy: {
+    title: {
+      sk: 'Naitec - Zásady ochrany osobných údajov',
+      cs: 'Naitec - Zásady ochrany osobních údajů',
+      en: 'Naitec - Privacy policy',
+      hu: 'Naitec - Adatvédelmi irányelvek',
+      pl: 'Naitec - Polityka prywatności',
+      de: 'Naitec - Datenschutzerklärung',
+      ja: 'Naitec - プライバシーポリシー',
+    },
+    description: {
+      sk: 'Objavte svet inovatívnych klimatizácií a pokročilých technológií Naitec, ktoré prinášajú komfort a efektivitu do vášho domova.',
+      cz: 'Objevte svět inovativních klimatizací a pokročilých technologií Naitec, které přinášejí komfort a efektivitu do vašeho domova.',
+      en: 'Discover the world of innovative air conditioning and advanced Naitec technologies that bring comfort and efficiency to your home.',
+      hu: 'Fedezze fel az innovatív Naitec klímaberendezések és fejlett technológiák világát, amelyek kényelmet és hatékonyságot hoznak otthonába.',
+      pl: 'Odkryj świat innowacyjnych klimatyzatorów i zaawansowanych technologii Naitec, które zapewniają komfort i efektywność w Twoim domu.',
+      de: 'Entdecken Sie die Welt der innovativen Klimaanlagen und fortschrittlichen Naitec-Technologien, die Komfort und Effizienz in Ihr Zuhause bringen.',
+      ja: '革新的な空調システムと高度なNaitec技術の世界を発見し、快適さと効率性をあなたの家に届けます。',
+    },
+  },
+  legal_notice: {
+    title: {
+      sk: 'Naitec - Právne informácie',
+      cs: 'Naitec - Právní informace',
+      en: 'Naitec - Legal Notice',
+      hu: 'Naitec - Jogi nyilatkozat',
+      pl: 'Naitec - Informacje prawne',
+      de: 'Naitec - Impressum',
+      ja: 'Naitec - 法的通知',
+    },
+    description: {
+      sk: 'Objavte svet inovatívnych klimatizácií a pokročilých technológií Naitec, ktoré prinášajú komfort a efektivitu do vášho domova.',
+      cz: 'Objevte svět inovativních klimatizací a pokročilých technologií Naitec, které přinášejí komfort a efektivitu do vašeho domova.',
+      en: 'Discover the world of innovative air conditioning and advanced Naitec technologies that bring comfort and efficiency to your home.',
+      hu: 'Fedezze fel az innovatív Naitec klímaberendezések és fejlett technológiák világát, amelyek kényelmet és hatékonyságot hoznak otthonába.',
+      pl: 'Odkryj świat innowacyjnych klimatyzatorów i zaawansowanych technologii Naitec, które zapewniają komfort i efektywność w Twoim domu.',
+      de: 'Entdecken Sie die Welt der innovativen Klimaanlagen und fortschrittlichen Naitec-Technologien, die Komfort und Effizienz in Ihr Zuhause bringen.',
+      ja: '革新的な空調システムと高度なNaitec技術の世界を発見し、快適さと効率性をあなたの家に届けます。',
     },
   },
 };

@@ -23,5 +23,7 @@ module.exports = {
     'cassette',
     'ducted',
     'multisplit',
+    'privacypolicy',
+    'legalnotice',
   ],
 };

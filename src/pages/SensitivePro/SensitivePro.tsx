@@ -25,6 +25,7 @@ import {
   LINEAR_GRADIENTS,
   LisaVoice,
   PlusExpand,
+  PrimaryButton,
   Redirect,
   Verified,
   Virus,
@@ -34,6 +35,7 @@ import { WhyInfoSwiper } from '@/src/shared/components/WhyInfoSwiper';
 import { BUNNY_CDN_URL, INTERNAL_ROUTES } from '@/src/shared/constants';
 import { Element } from 'react-scroll';
 import { useInView } from 'react-intersection-observer';
+import { Link } from 'next-translate-routes';
 
 export const SensitivePro = () => {
   const { t } = useTranslation(['sensitivepro', 'common']);
@@ -371,7 +373,15 @@ export const SensitivePro = () => {
       <Box>
         <CoolantR32 color={LINEAR_GRADIENTS.sensitive_pro} />
       </Box>
-
+      <Flex justifyContent="center" my={rem(100)}>
+        <Link href={INTERNAL_ROUTES.WHERE_TO_BUY}>
+          <PrimaryButton minH={rem(60)}>
+            <NeueHaasGroteskDisplay fontWeight={600} fontSize={rem(36)}>
+              {t('common:navigation_where_to_buy')}
+            </NeueHaasGroteskDisplay>
+          </PrimaryButton>{' '}
+        </Link>
+      </Flex>
       <Box mt={{ base: rem(60), md: rem(80), lg: rem(100) }}>
         <TechnicalParameters
           label="Naitec Sensitive Pro"
