@@ -308,11 +308,11 @@ export const Navigation = ({ toggleMobile, dark = false }: NavigationProps) => {
               <Box>
                 <Link href={INTERNAL_ROUTES.WHERE_TO_BUY}>
                   <Button
-                    background="background.dark"
+                    background="background.naitec_blue"
                     color="white"
                     borderRadius={rem(55)}
                     transition="all .3s ease-out"
-                    _hover={{ background: 'black' }}
+                    _hover={{ background: 'background.naitec_blue_hover' }}
                   >
                     <NeueHaasGroteskDisplay fontWeight={600}>
                       {t('navigation_where_to_buy')}
