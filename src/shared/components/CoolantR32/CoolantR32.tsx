@@ -21,7 +21,12 @@ export const CoolantR32 = ({ color }: CoolantR32Props) => {
   return (
     <Box mt={rem(40)} overflowX="hidden">
       <Container>
-        <Flex alignItems="center" flexDir={{ base: 'column', md: 'row' }}>
+        <Flex
+          alignItems="center"
+          flexDir={{ base: 'column', md: 'row' }}
+          columnGap={rem(40)}
+          rowGap={rem(60)}
+        >
           <Box
             width={{ base: '100%', md: '50%' }}
             opacity={headingInView ? 1 : 0}
@@ -29,7 +34,7 @@ export const CoolantR32 = ({ color }: CoolantR32Props) => {
             transition="all 1s ease-out"
           >
             <Image
-              src={`${BUNNY_CDN_URL}/common/globe.png`}
+              src={`${BUNNY_CDN_URL}/coolant.png`}
               width="0"
               height="0"
               sizes="100vw"
