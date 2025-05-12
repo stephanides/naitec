@@ -233,6 +233,9 @@ export const Footer = () => {
               <Item href={`tel:${PHONE_NUMBERS.CONTACT_SK}`}>
                 SK: <span>{PHONE_NUMBERS.CONTACT_SK}</span>
               </Item>
+              <Item href={`tel:${PHONE_NUMBERS.CONTACT_CZ}`}>
+                CZ: <span>{PHONE_NUMBERS.CONTACT_CZ}</span>
+              </Item>
             </Box>
           </Flex>
           <Flex
