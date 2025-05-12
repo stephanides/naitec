@@ -127,6 +127,20 @@ export const Contact = () => {
                 SK: <span>{PHONE_NUMBERS.CONTACT_SK}</span>
               </NeueHaasGroteskDisplay>
             </a>
+            <a href={`tel:${PHONE_NUMBERS.CONTACT_CZ}`}>
+              <NeueHaasGroteskDisplay
+                fontSize={{ base: rem(16), xs: rem(20) }}
+                color="#999999"
+                mt={rem(15)}
+                textAlign={{ base: 'center', lg: 'left' }}
+                sx={{
+                  strong: { textDecoration: 'none' },
+                  span: { textDecoration: 'underline' },
+                }}
+              >
+                CZ: <span>{PHONE_NUMBERS.CONTACT_CZ}</span>
+              </NeueHaasGroteskDisplay>
+            </a>
             <Flex
               columnGap={rem(8)}
               alignItems="center"

@@ -311,6 +311,9 @@ export const Footer = () => {
               <Item href={`tel:${PHONE_NUMBERS.CONTACT_SK}`}>
                 SK: <span>{PHONE_NUMBERS.CONTACT_SK}</span>
               </Item>
+              <Item href={`tel:${PHONE_NUMBERS.CONTACT_CZ}`}>
+                CZ: <span>{PHONE_NUMBERS.CONTACT_CZ}</span>
+              </Item>
               {/* <Box mt={rem(40)}>
                 <Title>{t('footer_naitec_app')}</Title>
                 <Flex mt={rem(20)} rowGap={rem(20)} flexDir="column">
