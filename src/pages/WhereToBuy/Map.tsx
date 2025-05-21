@@ -62,6 +62,27 @@ const sortStoresByAttributes = (stores: Store[]): Store[] => {
   });
 };
 
+const sortStoresByDistance = (
+  stores: Store[],
+  userLocation: { lat: number; lng: number }
+): Store[] => {
+  const userLatLng = new google.maps.LatLng(userLocation.lat, userLocation.lng);
+
+  return [...stores]
+    .map((store) => {
+      const storeLatLng = new google.maps.LatLng(
+        parseFloat(store.attributes.lat),
+        parseFloat(store.attributes.lng)
+      );
+      const distance = google.maps.geometry.spherical.computeDistanceBetween(
+        userLatLng,
+        storeLatLng
+      );
+      return { ...store, distance };
+    })
+    .sort((a, b) => a.distance - b.distance);
+};
+
 // const customMarkerIcon = {
 //   url: 'https://naitec.b-cdn.net/marker.png', // Replace with your image URL
 //   scaledSize: new google.maps.Size(100, 100), // Specify the size of the icon
@@ -100,7 +121,7 @@ export const StoreLocator = ({ stores }: { stores: Store[] }) => {
   const { t } = useTranslation(['wheretobuy', 'common']);
   const { isLoaded, loadError } = useLoadScript({
     googleMapsApiKey: process.env.NEXT_PUBLIC_MAP_API_KEY as string,
-    libraries: ['places'], // Load the places library for Autocomplete
+    libraries: ['places', 'geometry'], // Load the places library for Autocomplete
   });
   const [selectedFilter, setSelectedFilter] = useState<string[]>([]);
   const [center, setCenter] = useState(defaultCenter);
@@ -108,6 +129,11 @@ export const StoreLocator = ({ stores }: { stores: Store[] }) => {
   const [visibleStores, setVisibleStores] = useState<any[]>(stores); // Stores visible in the current map view
   const [autocomplete, setAutocomplete] =
     useState<google.maps.places.Autocomplete | null>(null);
+  const [userLocation, setUserLocation] = useState<{
+    lat: number;
+    lng: number;
+  } | null>(null);
+  const clustererRef = useRef<any | null>(null);
 
   const mapRef = useRef<google.maps.Map | null>(null); // Ref to store the map instance
 
@@ -139,11 +165,13 @@ export const StoreLocator = ({ stores }: { stores: Store[] }) => {
           // Check if the store is within the map bounds and matches the filters
           return bounds.contains(storeLocation) && matchesFilter;
         });
-        const sortedStores = sortStoresByAttributes(filteredStores);
+        const sortedStores = userLocation
+          ? sortStoresByDistance(filteredStores, userLocation)
+          : sortStoresByAttributes(filteredStores);
         setVisibleStores(sortedStores); // Update visible stores
       }
     }
-  }, [stores, selectedFilter]);
+  }, [stores, selectedFilter, userLocation]);
 
   // Handle checkbox changes
   const handleFilterChange = (value: string) => {
@@ -167,25 +195,41 @@ export const StoreLocator = ({ stores }: { stores: Store[] }) => {
     }
   }, [stores, updateVisibleStores]);
 
-  useEffect(() => {
-    if (navigator.geolocation) {
-      navigator.geolocation.getCurrentPosition(
-        (position) => {
-          setCenter({
-            lat: position.coords.latitude,
-            lng: position.coords.longitude,
-          });
-        },
-        () => {
-          console.warn('Geolocation failed or was denied by the user');
-        }
-      );
-    }
-  }, []);
+  const onLoad = useCallback(
+    (map: google.maps.Map) => {
+      mapRef.current = map; // Save map instance to the ref
 
-  const onLoad = useCallback((map: google.maps.Map) => {
-    mapRef.current = map; // Save map instance to the ref
-  }, []);
+      if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(
+          (position) => {
+            const userLocation = {
+              lat: position.coords.latitude,
+              lng: position.coords.longitude,
+            };
+            setUserLocation(userLocation);
+            setCenter(userLocation);
+
+            if (mapRef.current) {
+              mapRef.current.panTo(userLocation);
+              mapRef.current.setZoom(9); // Optional: zoom in a bit
+
+              // Force re-evaluation after map settles
+              setTimeout(() => {
+                // Force triggering onIdle logic
+                if (clustererRef) {
+                  clustererRef?.current?.repaint();
+                }
+              }, 1000); // Delay long enough for map move/zoom to take effect
+            }
+          },
+          () => {
+            console.error('Geolocation error:');
+          }
+        );
+      }
+    },
+    [updateVisibleStores]
+  );
 
   const onPlaceChanged = useCallback(() => {
     if (autocomplete !== null) {
@@ -297,76 +341,80 @@ export const StoreLocator = ({ stores }: { stores: Store[] }) => {
           onIdle={onIdle} // Update visible stores when map stops moving
         >
           <MarkerClusterer
+            key={visibleStores.length}
             options={{
               styles: clusterStyles, // Apply custom styles
               gridSize: 60, // Adjust grid size to control when markers cluster
               maxZoom: 15, // Adjust zoom level for clusters
             }}
           >
-            {(clusterer) => (
-              <>
-                {visibleStores.map((store: Store) => (
-                  <Marker
-                    key={store.id}
-                    position={{
-                      lat: Number(store.attributes.lat),
-                      lng: Number(store.attributes.lng),
-                    }}
-                    onClick={() => handleMarkerClick(store)} // Handle marker click
-                    icon={{
-                      url: 'https://naitec.b-cdn.net/marker.png', // Replace with your image URL
-                      scaledSize: new google.maps.Size(60, 60), // Specify the size of the icon
-                      origin: new google.maps.Point(0, 0), // Origin of the image
-                      anchor: new google.maps.Point(50, 50),
-                    }} // Anchor of the image (adjusted for a larger icon)}
-                    clusterer={clusterer} // Use MarkerClusterer to cluster markers
-                  >
-                    {selectedStore?.id === store.id && (
-                      <InfoWindow
-                        onCloseClick={() => setSelectedStore(null)} // Close InfoWindow
-                        position={{
-                          lat: Number(store.attributes.lat),
-                          lng: Number(store.attributes.lng),
-                        }}
-                      >
-                        <div>
-                          <NeueHaasGroteskDisplay
-                            fontSize={rem(16)}
-                            fontWeight={600}
-                          >
-                            {store.attributes.title}
-                          </NeueHaasGroteskDisplay>
-                          <NeueHaasGroteskText fontSize={rem(12)}>
-                            {store.attributes.street}
-                          </NeueHaasGroteskText>
-                          <a href={`mailto:${store.attributes.email}`}>
-                            <NeueHaasGroteskText
-                              color="text.naitec_blue"
-                              textDecor="underline"
-                              fontSize={rem(12)}
-                              mt={rem(8)}
+            {(clusterer) => {
+              clustererRef.current = clusterer;
+              return (
+                <>
+                  {visibleStores.map((store: Store) => (
+                    <Marker
+                      key={store.id}
+                      position={{
+                        lat: Number(store.attributes.lat),
+                        lng: Number(store.attributes.lng),
+                      }}
+                      onClick={() => handleMarkerClick(store)} // Handle marker click
+                      icon={{
+                        url: 'https://naitec.b-cdn.net/marker.png', // Replace with your image URL
+                        scaledSize: new google.maps.Size(60, 60), // Specify the size of the icon
+                        origin: new google.maps.Point(0, 0), // Origin of the image
+                        anchor: new google.maps.Point(50, 50),
+                      }} // Anchor of the image (adjusted for a larger icon)}
+                      clusterer={clusterer} // Use MarkerClusterer to cluster markers
+                    >
+                      {selectedStore?.id === store.id && (
+                        <InfoWindow
+                          onCloseClick={() => setSelectedStore(null)} // Close InfoWindow
+                          position={{
+                            lat: Number(store.attributes.lat),
+                            lng: Number(store.attributes.lng),
+                          }}
+                        >
+                          <div>
+                            <NeueHaasGroteskDisplay
+                              fontSize={rem(16)}
+                              fontWeight={600}
                             >
-                              {store.attributes.email}
+                              {store.attributes.title}
+                            </NeueHaasGroteskDisplay>
+                            <NeueHaasGroteskText fontSize={rem(12)}>
+                              {store.attributes.street}
                             </NeueHaasGroteskText>
-                          </a>
-                          <a href={`tel:${store.attributes.phone}`}>
-                            <NeueHaasGroteskText
-                              color="text.naitec_blue"
-                              textDecor="underline"
-                              fontSize={rem(12)}
-                              mt={rem(8)}
-                            >
-                              {store.attributes.phone}
-                            </NeueHaasGroteskText>
-                          </a>
-                          {/* Display additional store details */}
-                        </div>
-                      </InfoWindow>
-                    )}
-                  </Marker>
-                ))}
-              </>
-            )}
+                            <a href={`mailto:${store.attributes.email}`}>
+                              <NeueHaasGroteskText
+                                color="text.naitec_blue"
+                                textDecor="underline"
+                                fontSize={rem(12)}
+                                mt={rem(8)}
+                              >
+                                {store.attributes.email}
+                              </NeueHaasGroteskText>
+                            </a>
+                            <a href={`tel:${store.attributes.phone}`}>
+                              <NeueHaasGroteskText
+                                color="text.naitec_blue"
+                                textDecor="underline"
+                                fontSize={rem(12)}
+                                mt={rem(8)}
+                              >
+                                {store.attributes.phone}
+                              </NeueHaasGroteskText>
+                            </a>
+                            {/* Display additional store details */}
+                          </div>
+                        </InfoWindow>
+                      )}
+                    </Marker>
+                  ))}
+                </>
+              );
+            }}
           </MarkerClusterer>
         </GoogleMap>
       </Box>

@@ -23,8 +23,6 @@ export const StoreDetail = ({ store }: { store: Store }) => {
   const [isExpanded, setExpanded] = useState(false);
   const { getCollapseProps, getToggleProps } = useCollapse({ isExpanded });
 
-  console.log(store.attributes.website);
-
   return (
     <Box _notLast={{ borderBottom: '1px solid', borderColor: '#E8E8E8' }}>
       <Flex
