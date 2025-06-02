@@ -56,7 +56,7 @@ export const Contact = () => {
             border="1px solid"
             borderColor="background.naitec_blue"
             py={{ base: rem(50), lg: rem(60) }}
-            px={{ base: rem(30), lg: rem(60) }}
+            px={{ base: rem(30), lg: rem(50) }}
             mt={{ base: rem(60), lg: rem(18) }}
             background="#F7FAFB"
             borderRadius={rem(10)}
