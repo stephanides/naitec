@@ -11,6 +11,7 @@ import {
   LocaleSwitchChevron,
   Poland,
   Slovak,
+  Italy,
 } from '../../design';
 import {
   Box,
@@ -33,6 +34,7 @@ const languages = [
   { name: 'poland', code: 'pl', flag: <Poland /> },
   { name: 'hungary', code: 'hu', flag: <Hungary /> },
   { name: 'czechia', code: 'cs', flag: <Czech /> },
+  { name: 'italy', code: 'it', flag: <Italy /> },
   { name: 'japan', code: 'ja', flag: <Japan /> },
 ];
 

@@ -16,6 +16,7 @@ const pathsByLocale = {
   de: 'kassettenklimaanlag',
   at: 'kassettenklimaanlag',
   ja: 'cassette-air-conditioning',
+  it: 'aria-condizionata-a-cassette',
 };
 
 const CassetteAirConditioningPage = () => {

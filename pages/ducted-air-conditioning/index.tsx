@@ -16,6 +16,7 @@ const pathsByLocale = {
   de: 'kanalklimaanlage',
   at: 'kanalklimaanlage',
   ja: 'ducted-air-conditioning',
+  it: 'aria-condizionata-canallizzata',
 };
 
 const DuctedAirConditioningPage = () => {

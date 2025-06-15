@@ -16,6 +16,7 @@ const pathsByLocale = {
   de: 'kamin-diffusor',
   at: 'kamin-diffusor',
   ja: 'fireplace-diffuser',
+  it: 'diffusore-per-camino',
 };
 
 const FireplaceDifusserPage = () => {
@@ -28,9 +29,9 @@ const FireplaceDifusserPage = () => {
 
   const languageAlternates = Object.keys(pathsByLocale).map((lang) => ({
     hrefLang: lang,
-    href: `${BASE_URL}${lang !== 'en' ? `/${lang === 'at' ? 'de' : lang}` : ''}/${
-      pathsByLocale[lang as keyof typeof pathsByLocale]
-    }`,
+    href: `${BASE_URL}${
+      lang !== 'en' ? `/${lang === 'at' ? 'de' : lang}` : ''
+    }/${pathsByLocale[lang as keyof typeof pathsByLocale]}`,
   }));
 
   return (

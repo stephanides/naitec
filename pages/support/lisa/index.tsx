@@ -16,6 +16,7 @@ const pathsByLocale = {
   de: 'unterstutzung/lisa',
   at: 'unterstutzung/lisa',
   ja: 'support/lisa',
+  it: 'supporto/lisa',
 };
 
 const SupportPage = () => {
@@ -32,9 +33,9 @@ const SupportPage = () => {
 
   const languageAlternates = Object.keys(pathsByLocale).map((lang) => ({
     hrefLang: lang,
-    href: `${BASE_URL}${lang !== 'en' ? `/${lang === 'at' ? 'de' : lang}` : ''}/${
-      pathsByLocale[lang as keyof typeof pathsByLocale]
-    }`,
+    href: `${BASE_URL}${
+      lang !== 'en' ? `/${lang === 'at' ? 'de' : lang}` : ''
+    }/${pathsByLocale[lang as keyof typeof pathsByLocale]}`,
   }));
 
   if (!item) {

@@ -16,6 +16,7 @@ const pathsByLocale = {
   de: 'impressum',
   at: 'impressum',
   ja: 'legal-notice',
+  it: 'avviso-legale',
 };
 
 const LegalNoticePage = () => {

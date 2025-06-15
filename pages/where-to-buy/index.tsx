@@ -16,6 +16,7 @@ const pathsByLocale = {
   de: 'wo-kaufen',
   at: 'wo-kaufen',
   ja: 'where-to-buy',
+  it: 'dove-comprare',
 };
 
 const WhereToBuyPage = () => {

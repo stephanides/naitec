@@ -16,6 +16,7 @@ const pathsByLocale = {
   de: 'unterstutzung/kanalklimaanlage',
   at: 'unterstutzung/kanalklimaanlage',
   ja: 'support/ducted-air-conditioning',
+  it: 'supporto/aria-condizionata-canallizzata',
 };
 
 const SupportPage = () => {

@@ -16,6 +16,7 @@ const pathsByLocale = {
   de: 'smart',
   at: 'smart',
   ja: 'smart',
+  it: 'smart',
 };
 
 const SmartPage = () => {
@@ -28,9 +29,9 @@ const SmartPage = () => {
 
   const languageAlternates = Object.keys(pathsByLocale).map((lang) => ({
     hrefLang: lang,
-    href: `${BASE_URL}${lang !== 'en' ? `/${lang === 'at' ? 'de' : lang}` : ''}/${
-      pathsByLocale[lang as keyof typeof pathsByLocale]
-    }`,
+    href: `${BASE_URL}${
+      lang !== 'en' ? `/${lang === 'at' ? 'de' : lang}` : ''
+    }/${pathsByLocale[lang as keyof typeof pathsByLocale]}`,
   }));
 
   return (

@@ -16,6 +16,7 @@ const pathsByLocale = {
   de: 'unterstutzung/kassettenklimaanlag',
   at: 'unterstutzung/kassettenklimaanlag',
   ja: 'support/cassette-air-conditioning',
+  it: 'supporto/aria-condizionata-a-cassette',
 };
 
 const SupportPage = () => {
@@ -33,9 +34,9 @@ const SupportPage = () => {
 
   const languageAlternates = Object.keys(pathsByLocale).map((lang) => ({
     hrefLang: lang,
-    href: `${BASE_URL}${lang !== 'en' ? `/${lang === 'at' ? 'de' : lang}` : ''}/${
-      pathsByLocale[lang as keyof typeof pathsByLocale]
-    }`,
+    href: `${BASE_URL}${
+      lang !== 'en' ? `/${lang === 'at' ? 'de' : lang}` : ''
+    }/${pathsByLocale[lang as keyof typeof pathsByLocale]}`,
   }));
 
   if (!item) {

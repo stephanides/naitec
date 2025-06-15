@@ -16,6 +16,7 @@ const pathsByLocale = {
   de: 'unterstutzung/smart',
   at: 'unterstutzung/smart',
   ja: 'support/smart',
+  it: 'supporto/smart',
 };
 
 const SupportPage = () => {
@@ -31,9 +32,9 @@ const SupportPage = () => {
 
   const languageAlternates = Object.keys(pathsByLocale).map((lang) => ({
     hrefLang: lang,
-    href: `${BASE_URL}${lang !== 'en' ? `/${lang === 'at' ? 'de' : lang}` : ''}/${
-      pathsByLocale[lang as keyof typeof pathsByLocale]
-    }`,
+    href: `${BASE_URL}${
+      lang !== 'en' ? `/${lang === 'at' ? 'de' : lang}` : ''
+    }/${pathsByLocale[lang as keyof typeof pathsByLocale]}`,
   }));
 
   if (!item) {

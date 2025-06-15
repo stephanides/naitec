@@ -16,6 +16,7 @@ const pathsByLocale = {
   de: 'lisa',
   at: 'lisa',
   ja: 'lisa',
+  it: 'lisa',
 };
 
 const LisaVoiceControlPage = () => {
@@ -28,9 +29,9 @@ const LisaVoiceControlPage = () => {
 
   const languageAlternates = Object.keys(pathsByLocale).map((lang) => ({
     hrefLang: lang,
-    href: `${BASE_URL}${lang !== 'en' ? `/${lang === 'at' ? 'de' : lang}` : ''}/${
-      pathsByLocale[lang as keyof typeof pathsByLocale]
-    }`,
+    href: `${BASE_URL}${
+      lang !== 'en' ? `/${lang === 'at' ? 'de' : lang}` : ''
+    }/${pathsByLocale[lang as keyof typeof pathsByLocale]}`,
   }));
 
   return (

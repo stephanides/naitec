@@ -16,6 +16,7 @@ const pathsByLocale = {
   de: 'sensivity-pro',
   at: 'sensivity-pro',
   ja: 'sensivity-pro',
+  it: 'sensivity-pro',
 };
 
 const SensitiveProPage = () => {
@@ -28,9 +29,9 @@ const SensitiveProPage = () => {
 
   const languageAlternates = Object.keys(pathsByLocale).map((lang) => ({
     hrefLang: lang,
-    href: `${BASE_URL}${lang !== 'en' ? `/${lang === 'at' ? 'de' : lang}` : ''}/${
-      pathsByLocale[lang as keyof typeof pathsByLocale]
-    }`,
+    href: `${BASE_URL}${
+      lang !== 'en' ? `/${lang === 'at' ? 'de' : lang}` : ''
+    }/${pathsByLocale[lang as keyof typeof pathsByLocale]}`,
   }));
 
   return (

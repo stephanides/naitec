@@ -26,6 +26,7 @@ const HomePage = () => {
           { hrefLang: 'de-DE', href: `${BASE_URL}/de` },
           { hrefLang: 'de-AT', href: `${BASE_URL}/de` },
           { hrefLang: 'ja-JP', href: `${BASE_URL}/ja` },
+          { hrefLang: 'it-IT', href: `${BASE_URL}/it` },
         ]}
         openGraph={{
           url: `${BASE_URL}/${locale !== 'en' ? locale : ''}`,

@@ -16,6 +16,7 @@ const pathsByLocale = {
   de: 'unterstutzung/sensitive-pro',
   at: 'unterstutzung/sensitive-pro',
   ja: 'support/sensitive-pro',
+  it: 'supporto/sensitive-pro',
 };
 
 const SupportPage = () => {
@@ -32,9 +33,9 @@ const SupportPage = () => {
 
   const languageAlternates = Object.keys(pathsByLocale).map((lang) => ({
     hrefLang: lang,
-    href: `${BASE_URL}${lang !== 'en' ? `/${lang === 'at' ? 'de' : lang}` : ''}/${
-      pathsByLocale[lang as keyof typeof pathsByLocale]
-    }`,
+    href: `${BASE_URL}${
+      lang !== 'en' ? `/${lang === 'at' ? 'de' : lang}` : ''
+    }/${pathsByLocale[lang as keyof typeof pathsByLocale]}`,
   }));
 
   if (!item) {

@@ -16,6 +16,7 @@ const pathsByLocale = {
   de: 'sensitive',
   at: 'sensitive',
   ja: 'sensitive',
+  it: 'sensitive',
 };
 
 const SensitivePage = () => {

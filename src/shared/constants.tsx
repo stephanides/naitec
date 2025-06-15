@@ -625,6 +625,7 @@ export const SEO_CONTENT = {
       pl: 'Naitec - Stworzony na przyszłość, dostępny już dziś | Naitec',
       de: 'Naitec - Für die Zukunft geschaffen, schon heute verfügbar | Naitec',
       ja: 'Naitec - 未来のために作られた、今日利用可能 | Naitec',
+      it: 'Naitec - Creato per il futuro, disponibile oggi | Naitec',
     },
     description: {
       sk: 'Objavte svet inovatívnych klimatizácií a pokročilých technológií Naitec, ktoré prinášajú komfort a efektivitu do vášho domova.',
@@ -634,6 +635,7 @@ export const SEO_CONTENT = {
       pl: 'Odkryj świat innowacyjnych klimatyzatorów i zaawansowanych technologii Naitec, które zapewniają komfort i efektywność w Twoim domu.',
       de: 'Entdecken Sie die Welt der innovativen Klimaanlagen und fortschrittlichen Naitec-Technologien, die Komfort und Effizienz in Ihr Zuhause bringen.',
       ja: '革新的な空調システムと高度なNaitec技術の世界を発見し、快適さと効率性をあなたの家に届けます。',
+      it: 'Scopri il mondo della climatizzazione innovativa e delle tecnologie avanzate di Naitec che portano comfort ed efficienza nella tua casa.',
     },
   },
   stellair: {
@@ -645,6 +647,7 @@ export const SEO_CONTENT = {
       pl: 'Klimatyzacja Naitec Stellair | Naitec Nowa Technologia AI',
       de: 'Naitec Stellair Klimaanlage | Naitec Neue KI-Technologie',
       ja: 'Naitec Stellair 空調 | Naitec 新しいAI技術',
+      it: 'Naitec Stellair Climatizzazione | Nuova Tecnologia AI di Naitec',
     },
     description: {
       sk: 'Vstupte do ríše dokonalej klímy. Hviezdny zážitok čerstvého vzduchu z vonku, očisteného od mikronečistôt a alergénov, príjemne vychladeného na mieru vašim túžbam.',
@@ -654,6 +657,7 @@ export const SEO_CONTENT = {
       pl: 'Wejdź do królestwa idealnego klimatu. Gwiazdorskie doświadczenie świeżego powietrza z zewnątrz, oczyszczonego z mikro zanieczyszczeń i alergenów, przyjemnie schłodzonego do Twoich pragnień.',
       de: 'Treten Sie in das Reich des perfekten Klimas ein. Ein himmlisches Erlebnis von frischer Außenluft, gereinigt von Mikroverunreinigungen und Allergenen, angenehm nach Ihren Wünschen gekühlt.',
       ja: '完璧な気候の領域へようこそ。微細な不純物やアレルゲンが取り除かれた新鮮な外気を、あなたの望みに応じて心地よく冷却します。',
+      it: "Entra nel regno del clima perfetto. Un'esperienza stellare di aria fresca esterna, purificata da micro-impurità e allergeni, piacevolmente raffrescata secondo i tuoi desideri.",
     },
   },
   sensitive: {
@@ -665,6 +669,7 @@ export const SEO_CONTENT = {
       pl: 'Klimatyzacja Naitec Sensitive | Naitec Nowa Technologia AI',
       de: 'Naitec Sensitive Klimaanlage | Naitec Neue KI-Technologie',
       ja: 'Naitec Sensitive 空調 | Naitec 新しいAI技術',
+      it: 'Naitec Sensitive Climatizzazione | Nuova Tecnologia AI di Naitec',
     },
     description: {
       sk: 'Zažite dokonalý komfort s čistým vzduchom bez prievanu. Rovnomerné chladenie a očistenie od alergénov pre maximálny komfort vo vašom domove.',
@@ -674,6 +679,7 @@ export const SEO_CONTENT = {
       pl: 'Doświadcz doskonałego komfortu dzięki czystemu, bezprzewodowemu powietrzu. Równomierne chłodzenie i usuwanie alergenów dla maksymalnego komfortu w Twoim domu.',
       de: 'Erleben Sie perfekten Komfort mit sauberer, zugluftfreier Luft. Gleichmäßige Kühlung und Allergenenentfernung für maximalen Komfort in Ihrem Zuhause.',
       ja: '完璧な快適さを清潔でドラフトのない空気で体験してください。均一な冷却とアレルゲンの除去で、あなたの家での最大の快適さを実現します。',
+      it: 'Vivi il comfort perfetto con aria pulita e senza correnti. Raffrescamento uniforme e rimozione degli allergeni per il massimo comfort nella tua casa.',
     },
   },
   smart: {
@@ -685,6 +691,7 @@ export const SEO_CONTENT = {
       pl: 'Klimatyzacja Naitec Smart | Naitec Nowa Technologia AI',
       de: 'Naitec Smart Klimaanlage | Naitec Neue KI-Technologie',
       ja: 'Naitec Smart 空調 | Naitec 新しいAI技術',
+      it: 'Naitec Smart Climatizzazione | Nuova Tecnologia AI di Naitec',
     },
     description: {
       sk: 'Moderný dizajn, vysoká účinnosť a vykurovanie až do -25 °C. Wi-Fi ovládanie pre komfort a pohodlie po celý rok.',
@@ -694,6 +701,7 @@ export const SEO_CONTENT = {
       pl: 'Nowoczesny design, wysoka wydajność i ogrzewanie do -25 °C. Sterowanie Wi-Fi dla komfortu i wygody przez cały rok.',
       de: 'Modernes Design, hohe Effizienz und Heizung bis -25 °C. WLAN-Steuerung für Komfort und Bequemlichkeit das ganze Jahr über.',
       ja: 'モダンなデザイン、高効率、-25 °Cまでの暖房。年間を通して快適さと便利さを提供するWi-Fiコントロール。',
+      it: 'Design moderno, alta efficienza e riscaldamento fino a -25 °C. Controllo Wi-Fi per comfort e praticità tutto l’anno.',
     },
   },
   onyx: {
@@ -705,6 +713,7 @@ export const SEO_CONTENT = {
       pl: 'Klimatyzacja Naitec Onyx | Naitec Nowa Technologia AI',
       de: 'Naitec Onyx Klimaanlage | Naitec Neue KI-Technologie',
       ja: 'Naitec Onyx 空調 | Naitec 新しいAI技術',
+      it: 'Naitec Onyx Climatizzazione | Nuova Tecnologia AI di Naitec',
     },
     description: {
       sk: 'Štýlový čierny dizajn a špičkový výkon. Tiché chladenie a vykurovanie do -25 °C pre elegantný komfort v každom ročnom období.',
@@ -714,6 +723,7 @@ export const SEO_CONTENT = {
       pl: 'Stylowy czarny design i najwyższa wydajność. Ciche chłodzenie i ogrzewanie do -25 °C dla eleganckiego komfortu o każdej porze roku.',
       de: 'Stilvolles schwarzes Design und Spitzenleistung. Leises Kühlen und Heizen bis -25 °C für eleganten Komfort in jeder Jahreszeit.',
       ja: 'スタイリッシュなブラックデザインと卓越したパフォーマンス。静かな冷却と-25 °Cまでの暖房で、どの季節でもエレガントな快適さを提供します。',
+      it: 'Design nero elegante e prestazioni al top. Raffrescamento silenzioso e riscaldamento fino a -25 °C per un comfort raffinato in ogni stagione.',
     },
   },
   lisa: {
@@ -725,6 +735,7 @@ export const SEO_CONTENT = {
       pl: 'Lisa Kontroler Głosowy | Naitec Nowa Technologia AI',
       de: 'Lisa Sprachsteuerung | Naitec Neue KI-Technologie',
       ja: 'Lisa 音声コントローラー | Naitec 新しいAI技術',
+      it: 'Controller Vocale Lisa | Nuova Tecnologia AI di Naitec',
     },
     description: {
       sk: 'Užite si luxus bezdotykového ovládania klimatizácie s našou inovatívnou technológiou hlasového ovládania. Naitec Lisa.',
@@ -734,6 +745,7 @@ export const SEO_CONTENT = {
       pl: 'Ciesz się luksusem bezdotykowego sterowania klimatyzacją dzięki naszej innowacyjnej technologii sterowania głosowego. Naitec Lisa.',
       de: 'Genießen Sie den Luxus der berührungslosen Steuerung Ihrer Klimaanlage mit unserer innovativen Sprachsteuerungstechnologie. Naitec Lisa.',
       ja: '私たちの革新的な音声コントロール技術で、タッチレスでエアコンを操作する贅沢を体験してください。Naitec Lisa.',
+      it: 'Vivi il lusso del controllo della climatizzazione senza contatto con la nostra innovativa tecnologia di controllo vocale. Naitec Lisa.',
     },
   },
   fireplace_diffuser: {
@@ -745,6 +757,7 @@ export const SEO_CONTENT = {
       pl: 'Dyfuzor Kominkowy | Naitec Nowa Technologia AI',
       de: 'Kamin-Diffusor | Naitec Neue KI-Technologie',
       ja: '暖炉ディフューザー | Naitec 新しいAI技術',
+      it: 'Diffusore per Camino | Nuova Tecnologia AI di Naitec',
     },
     description: {
       sk: 'Vytvára útulnú atmosféru, rozptyľuje príjemné vône a dodáva vášmu domovu pocit pohody. Krbový difúzor Naitec',
@@ -754,6 +767,7 @@ export const SEO_CONTENT = {
       pl: 'Tworzy przytulną atmosferę, rozprasza przyjemne zapachy i dodaje Twojemu domowi poczucie komfortu. Dyfuzor Kominkowy Naitec.',
       de: 'Schafft eine gemütliche Atmosphäre, verteilt angenehme Düfte und verleiht Ihrem Zuhause ein Gefühl der Behaglichkeit. Kamin-Diffusor Naitec.',
       ja: '心地よい雰囲気を作り、快適な香りを広げ、家にくつろぎの感覚を加えます。暖炉ディフューザー Naitec.',
+      it: 'Crea un’atmosfera accogliente, diffonde profumi piacevoli e aggiunge una sensazione di comfort alla tua casa. Diffusore per Camino Naitec.',
     },
   },
   where_to_buy: {
@@ -765,6 +779,7 @@ export const SEO_CONTENT = {
       pl: 'Gdzie kupić produkty Naitec? | Naitec Nowa Technologia AI',
       de: 'Wo kann man Naitec-Produkte kaufen? | Naitec Neue KI-Technologie',
       ja: 'Naitec製品の購入場所 | Naitec 新しいAI技術',
+      it: 'Dove Acquistare i Prodotti Naitec | Nuova Tecnologia AI di Naitec',
     },
     description: {
       sk: 'Nájdite najbližšieho autorizovaného predajcu produktov Naitec alebo sa obráťte s vašimi otázkami priamo na nás.',
@@ -774,6 +789,7 @@ export const SEO_CONTENT = {
       pl: 'Znajdź najbliższego autoryzowanego sprzedawcę produktów Naitec lub skontaktuj się z nami bezpośrednio w przypadku pytań.',
       de: 'Finden Sie den nächsten autorisierten Händler für Naitec-Produkte oder kontaktieren Sie uns direkt bei Fragen.',
       ja: 'Naitec製品の最寄りの認定販売店を見つけるか、ご質問がある場合は直接お問い合わせください。',
+      it: 'Trova il rivenditore autorizzato Naitec più vicino o contattaci direttamente per qualsiasi domanda.',
     },
   },
   contact: {
@@ -785,6 +801,7 @@ export const SEO_CONTENT = {
       pl: 'Skontaktuj się z nami | Naitec Nowa Technologia AI',
       de: 'Kontaktieren Sie uns | Naitec Neue KI-Technologie',
       ja: 'お問い合わせ | Naitec 新しいAI技術',
+      it: 'Contattaci | Nuova Tecnologia AI di Naitec',
     },
     description: {
       sk: 'Sme tu pre vás! Kontaktujte nás s otázkami o produktoch, službách alebo technickej podpore.',
@@ -794,6 +811,7 @@ export const SEO_CONTENT = {
       pl: 'Jesteśmy tu dla Ciebie! Skontaktuj się z nami w sprawie pytań dotyczących produktów, usług lub wsparcia technicznego.',
       de: 'Wir sind für Sie da! Kontaktieren Sie uns bei Fragen zu Produkten, Dienstleistungen oder technischer Unterstützung.',
       ja: '私たちはあなたのためにここにいます！製品、サービス、または技術サポートに関する質問がある場合は、お問い合わせください。',
+      it: 'Siamo qui per te! Contattaci per qualsiasi domanda su prodotti, servizi o assistenza tecnica.',
     },
   },
   sensitive_pro: {
@@ -805,6 +823,7 @@ export const SEO_CONTENT = {
       pl: 'Klimatyzacja Naitec Sensitive Pro | Naitec Nowa Technologia AI',
       de: 'Naitec Sensitive Pro Klimaanlage | Naitec Neue KI-Technologie',
       ja: 'Naitec Sensitive Pro 空調 | Naitec 新しいAI技術',
+      it: 'Naitec Sensitive Pro Climatizzazione | Nuova Tecnologia AI di Naitec',
     },
     description: {
       sk: 'Nový štandard komfortu s bezprievanovým chladením a vykurovaním až do -35 °C. Čistý vzduch a moderný dizajn pre zdravé prostredie.',
@@ -814,6 +833,7 @@ export const SEO_CONTENT = {
       pl: 'Nowy standard komfortu z chłodzeniem i ogrzewaniem bez przeciągów do -35 °C. Czyste powietrze i nowoczesny design dla zdrowego środowiska.',
       de: 'Ein neuer Standard für Komfort mit zugluftfreier Kühlung und Heizung bis -35 °C. Saubere Luft und modernes Design für ein gesundes Umfeld.',
       ja: '新しい快適さの基準、-35°Cまでのドラフトフリー冷却と暖房。清潔な空気とモダンなデザインで健康的な環境を提供します。',
+      it: 'Un nuovo standard di comfort con raffrescamento e riscaldamento senza correnti d’aria fino a -35 °C. Aria pulita e design moderno per un ambiente sano.',
     },
   },
   support: {
@@ -825,6 +845,7 @@ export const SEO_CONTENT = {
       pl: 'Wsparcie | Naitec Nowa Technologia AI',
       de: 'Support | Naitec Neue KI-Technologie',
       ja: 'サポート | Naitec 新しいAI技術',
+      it: 'Supporto | Nuova Tecnologia AI di Naitec',
     },
     description: {
       sk: 'Prejdite si naše užívateľské príručky, návody a ďalšie podporné materiály pre produkty Naitec. Získajte potrebné informácie o používaní našich zariadení a stiahnite si všetky dôležité dokumenty na jednom mieste.',
@@ -834,6 +855,7 @@ export const SEO_CONTENT = {
       pl: 'Przeglądaj nasze podręczniki użytkownika, przewodniki i inne materiały wsparcia dla produktów Naitec. Uzyskaj potrzebne informacje na temat używania naszych urządzeń i pobierz wszystkie ważne dokumenty w jednym miejscu.',
       de: 'Durchsuchen Sie unsere Benutzerhandbücher, Anleitungen und andere Unterstützungsunterlagen für Naitec-Produkte. Erhalten Sie die notwendigen Informationen zur Verwendung unserer Geräte und laden Sie alle wichtigen Dokumente an einem Ort herunter.',
       ja: 'Naitec製品のユーザーマニュアル、ガイド、その他のサポート資料をご覧ください。デバイスの使用に関する必要な情報を取得し、すべての重要なドキュメントを一箇所でダウンロードできます。',
+      it: 'Consulta i nostri manuali utente, guide e altri materiali di supporto per i prodotti Naitec. Trova tutte le informazioni necessarie per utilizzare i nostri dispositivi e scarica tutti i documenti importanti in un unico posto.',
     },
   },
   cassette_air_conditioning: {
@@ -845,6 +867,7 @@ export const SEO_CONTENT = {
       pl: 'Klimatyzacja Kasetowa Naitec | Naitec Nowa Technologia AI',
       de: 'Kassettengerät Klimaanlage Naitec | Naitec Neue KI-Technologie',
       ja: 'カセット型エアコン Naitec | Naitec 新しいAI技術',
+      it: 'Climatizzazione a Cassetta Naitec | Nuova Tecnologia AI di Naitec',
     },
     description: {
       sk: 'Kazetová klimatizácia od Naitec je špeciálne navrhnutá pre komerčné prostredie, kde je dôležité zabezpečiť optimálne podmienky pre zamestnancov a zákazníkov.',
@@ -854,6 +877,7 @@ export const SEO_CONTENT = {
       pl: 'Klimatyzacja kasetowa od Naitec została specjalnie zaprojektowana do środowisk komercyjnych, gdzie ważne jest zapewnienie optymalnych warunków dla pracowników i klientów.',
       de: 'Die Kassettengerät-Klimaanlage von Naitec wurde speziell für gewerbliche Umgebungen entwickelt, um optimale Bedingungen für Mitarbeiter und Kunden zu gewährleisten.',
       ja: 'Naitecのカセット型エアコンは、従業員と顧客に最適な環境を提供するために、商業環境向けに特別に設計されています。',
+      it: 'La climatizzazione a cassetta di Naitec è progettata specificamente per ambienti commerciali, garantendo condizioni ottimali per dipendenti e clienti.',
     },
   },
   ducted_air_conditioning: {
@@ -865,6 +889,7 @@ export const SEO_CONTENT = {
       pl: 'Klimatyzacja Kanałowa Naitec | Naitec Nowa Technologia AI',
       de: 'Kanalklimaanlage Naitec | Naitec Neue KI-Technologie',
       ja: 'ダクト式空調 Naitec | Naitec 新しいAI技術',
+      it: 'Climatizzazione Canalizzata Naitec | Nuova Tecnologia AI di Naitec',
     },
     description: {
       sk: 'Kanálová klimatizácia od Naitec je diskrétne a efektívne riešenie pre Vašu domácnosť alebo kanceláriu.',
@@ -874,6 +899,7 @@ export const SEO_CONTENT = {
       pl: 'Klimatyzacja kanałowa od Naitec to dyskretne i efektywne rozwiązanie do Twojego domu lub biura.',
       de: 'Die Kanalklimaanlage von Naitec ist eine diskrete und effiziente Lösung für Ihr Zuhause oder Büro.',
       ja: 'Naitecのダクト式空調は、ご自宅やオフィスに最適な控えめで効率的なソリューションです。',
+      it: 'La climatizzazione canalizzata di Naitec è una soluzione discreta ed efficiente per la tua casa o il tuo ufficio.',
     },
   },
   multi_split_system: {
@@ -885,6 +911,7 @@ export const SEO_CONTENT = {
       pl: 'Rozwiązanie Multi-split Naitec | Naitec Nowa Technologia AI',
       de: 'Multisplit-Lösung Naitec | Naitec Neue KI-Technologie',
       ja: 'マルチスプリットソリューション Naitec | Naitec 新しいAI技術',
+      it: 'Soluzione Multi-split Naitec | Nuova Tecnologia AI di Naitec',
     },
     description: {
       sk: 'Naitec ponúka multisplitové riešenia pre modely Stellair, Sensitive, Smart a Onyx s dvoma až piatimi vnútornými jednotkami.',
@@ -894,6 +921,7 @@ export const SEO_CONTENT = {
       pl: 'Naitec oferuje rozwiązania multi-split dla modeli Stellair, Sensitive, Smart i Onyx z dwoma do pięciu jednostkami wewnętrznymi.',
       de: 'Naitec bietet Multisplit-Lösungen für die Modelle Stellair, Sensitive, Smart und Onyx mit zwei bis fünf Inneneinheiten an.',
       ja: 'Naitecは、Stellair、Sensitive、Smart、Onyxモデルのために、2〜5台の室内ユニットを備えたマルチスプリットソリューションを提供しています。',
+      it: 'Naitec offre soluzioni multi-split per i modelli Stellair, Sensitive, Smart e Onyx con da due a cinque unità interne.',
     },
   },
   privacy_policy: {
@@ -905,6 +933,7 @@ export const SEO_CONTENT = {
       pl: 'Naitec - Polityka prywatności',
       de: 'Naitec - Datenschutzerklärung',
       ja: 'Naitec - プライバシーポリシー',
+      it: 'Naitec - Informativa sulla privacy',
     },
     description: {
       sk: 'Objavte svet inovatívnych klimatizácií a pokročilých technológií Naitec, ktoré prinášajú komfort a efektivitu do vášho domova.',
@@ -914,6 +943,7 @@ export const SEO_CONTENT = {
       pl: 'Odkryj świat innowacyjnych klimatyzatorów i zaawansowanych technologii Naitec, które zapewniają komfort i efektywność w Twoim domu.',
       de: 'Entdecken Sie die Welt der innovativen Klimaanlagen und fortschrittlichen Naitec-Technologien, die Komfort und Effizienz in Ihr Zuhause bringen.',
       ja: '革新的な空調システムと高度なNaitec技術の世界を発見し、快適さと効率性をあなたの家に届けます。',
+      it: 'Scopri il mondo della climatizzazione innovativa e delle tecnologie avanzate di Naitec che portano comfort ed efficienza nella tua casa.',
     },
   },
   legal_notice: {
@@ -925,6 +955,7 @@ export const SEO_CONTENT = {
       pl: 'Naitec - Informacje prawne',
       de: 'Naitec - Impressum',
       ja: 'Naitec - 法的通知',
+      it: 'Naitec - Avviso Legale',
     },
     description: {
       sk: 'Objavte svet inovatívnych klimatizácií a pokročilých technológií Naitec, ktoré prinášajú komfort a efektivitu do vášho domova.',
@@ -934,6 +965,7 @@ export const SEO_CONTENT = {
       pl: 'Odkryj świat innowacyjnych klimatyzatorów i zaawansowanych technologii Naitec, które zapewniają komfort i efektywność w Twoim domu.',
       de: 'Entdecken Sie die Welt der innovativen Klimaanlagen und fortschrittlichen Naitec-Technologien, die Komfort und Effizienz in Ihr Zuhause bringen.',
       ja: '革新的な空調システムと高度なNaitec技術の世界を発見し、快適さと効率性をあなたの家に届けます。',
+      it: 'Scopri il mondo della climatizzazione innovativa e delle tecnologie avanzate di Naitec che portano comfort ed efficienza nella tua casa.',
     },
   },
 };
@@ -947,4 +979,5 @@ export const HREF_LANGS = {
   de: 'de-DE',
   at: 'de-AT',
   ja: 'ja-JP',
+  it: 'it-IT',
 };

@@ -16,6 +16,7 @@ const pathsByLocale = {
   de: 'unterstutzung/multi-split-klimaanlage',
   at: 'unterstutzung/multi-split-klimaanlage',
   ja: 'support/multi-split-system',
+  it: 'supporto/sistema-multi-split',
 };
 
 const SupportPage = () => {

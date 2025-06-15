@@ -1,0 +1,18 @@
+{
+  "heading_label": "Contatto",
+  "heading": "Hai delle <strong>domande</strong> o hai bisogno di aiuto?",
+  "contact_sent": "Il messaggio è stato inviato. Ti contatteremo al più presto.",
+  "name": "Nome",
+  "surname": "Cognome",
+  "email": "E-mail",
+  "phone": "Numero di telefono*",
+  "message": "Come possiamo aiutarti?",
+  "message_2": "A quale prodotto sei interessato?",
+  "send_error": "Si è verificato un errore durante l'invio del messaggio. Riprova più tardi.",
+  "agreements": "Acconsento al trattamento dei dati personali*",
+  "agreements_text": "accettando quanto sopra, acconsenti che Naitec GmbH. tratti i dati personali esclusivamente per gestire la tua richiesta. Maggiori informazioni nella <a>politica sulla privacy</a>.",
+  "privacy_policy": "politica sulla privacy",
+  "banner_phone": "Numero di telefono",
+  "banner_email": "Indirizzo e-mail",
+  "banner_invoice": "Sede aziendale"
+}

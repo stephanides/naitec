@@ -16,6 +16,7 @@ const pathsByLocale = {
   de: 'kontakt',
   at: 'kontakt',
   ja: 'contact',
+  it: 'contatto',
 };
 
 const KontaktPage = () => {

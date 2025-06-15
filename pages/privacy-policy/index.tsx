@@ -16,6 +16,7 @@ const pathsByLocale = {
   de: 'datenschutzerklaerung',
   at: 'datenschutzerklaerung',
   ja: 'privacy-policy',
+  it: 'politica-sulla-privacy',
 };
 
 const PrivacyPolicyPage = () => {
