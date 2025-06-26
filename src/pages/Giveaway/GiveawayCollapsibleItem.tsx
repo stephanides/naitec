@@ -1,16 +1,19 @@
+import { NeueHaasGroteskDisplay } from '@/src/shared/components';
 import { Minus, Plus } from '@/src/shared/design';
 import { Box, Flex } from '@chakra-ui/react';
 import { rem } from 'polished';
 import { ReactNode, useState } from 'react';
 import { useCollapse } from 'react-collapsed';
-import { NeueHaasGroteskDisplay } from '../Typography';
 
 type CollapsibleItemProps = {
   title: string;
   text: ReactNode;
 };
 
-export const CollapsibleItem = ({ title, text }: CollapsibleItemProps) => {
+export const GiveawayCollapsibleItem = ({
+  title,
+  text,
+}: CollapsibleItemProps) => {
   const [isExpanded, setExpanded] = useState(false);
   const { getCollapseProps, getToggleProps } = useCollapse({ isExpanded });
   return (
@@ -25,21 +28,21 @@ export const CollapsibleItem = ({ title, text }: CollapsibleItemProps) => {
         })}
       >
         <NeueHaasGroteskDisplay
-          fontSize={rem(20)}
+          fontSize={{ base: rem(20), md: rem(30) }}
           lineHeight={rem(36)}
           fontWeight={600}
-          color="text.naitec_blue"
+          color="#393939"
           userSelect="none"
         >
           {title}
         </NeueHaasGroteskDisplay>
         <Box p={rem(2)} transition="all .3s ease-out">
           {isExpanded ? (
-            <Box width={rem(11)}>
+            <Box width={rem(22)}>
               <Minus />
             </Box>
           ) : (
-            <Box width={rem(11)}>
+            <Box width={rem(22)}>
               <Plus />
             </Box>
           )}

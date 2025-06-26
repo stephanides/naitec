@@ -465,9 +465,13 @@ export const TechnicalParameters = ({
                   borderColor={buttonColor}
                   icon={
                     isExpanded ? (
-                      <Minus color="white" />
+                      <Box width={rem(11)}>
+                        <Minus color="white" />
+                      </Box>
                     ) : (
-                      <Plus color="white" />
+                      <Box width={rem(11)}>
+                        <Plus color="white" />
+                      </Box>
                     )
                   }
                 >

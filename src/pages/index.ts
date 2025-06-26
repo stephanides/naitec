@@ -14,3 +14,4 @@ export * from './DuctedAirConditioning';
 export * from './MultiSplitSystem';
 export * from './PrivacyPolicy';
 export * from './LegalNotice';
+export * from './Giveaway';

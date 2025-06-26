@@ -12,4 +12,6 @@ export const LINEAR_GRADIENTS = {
     'linear-gradient(135deg, rgba(52,79,95,1) 0%, rgba(108,165,197,1) 100%)',
   sensitive_pro:
     'linear-gradient(135deg, rgba(117,29,29,1) 0%, rgba(220,79,79,1) 100%)',
+  insta:
+    'linear-gradient(135deg, rgba(197,31,149,1) 0%, rgba(240,57,67,1) 100%)',
 };

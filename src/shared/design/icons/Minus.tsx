@@ -1,7 +1,6 @@
 export const Minus = ({ color = '#4F9CC2' }: { color?: string }) => (
   <svg
-    width="11"
-    height="3"
+    width="100%"
     viewBox="0 0 11 3"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"

@@ -57,6 +57,27 @@ const naitec = definePartsStyle({
   },
 });
 
+const normal = definePartsStyle({
+  field: {
+    border: '1px solid',
+    borderColor: 'background.naitec_blue',
+    background: 'background.naitec_blue',
+    borderRadius: '10px',
+
+    height: { base: '42px', lg: '65px' },
+    fontSize: { base: '10px', xs: '12px', lg: '16px' },
+    px: { base: rem(18), lg: rem(24) },
+    fontFamily: '"neue-haas-grotesk-text",sans-serif',
+    _invalid: {
+      borderColor: 'red',
+    },
+    _placeholder: {
+      color: '#C1C1C1',
+      fontSize: { base: '10px', xs: '12px', lg: '16px' },
+    },
+  },
+});
+
 export const selectTheme = defineMultiStyleConfig({
-  variants: { smart, naitec },
+  variants: { smart, naitec, normal },
 });

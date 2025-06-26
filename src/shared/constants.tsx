@@ -58,6 +58,42 @@ export const PHONE_NUMBERS = {
   CONTACT_CZ: '+420 608 732 222',
 };
 
+export const SOCIAL_NETWORKS = {
+  sk: {
+    instagram: 'https://www.instagram.com/naitecsk/',
+    facebook:
+      'https://www.facebook.com/people/Naitec-Slovensko/61553003033343/',
+  },
+  cs: {
+    instagram: 'https://www.instagram.com/naitecsk/',
+    facebook: 'https://www.facebook.com/naitec.sk/',
+  },
+  en: {
+    instagram: 'https://www.instagram.com/naitecsk/',
+    facebook: 'https://www.facebook.com/naitec.sk/',
+  },
+  hu: {
+    instagram: 'https://www.instagram.com/naitecsk/',
+    facebook: 'https://www.facebook.com/naitec.sk/',
+  },
+  pl: {
+    instagram: 'https://www.instagram.com/naitecsk/',
+    facebook: 'https://www.facebook.com/naitec.sk/',
+  },
+  de: {
+    instagram: 'https://www.instagram.com/naitecsk/',
+    facebook: 'https://www.facebook.com/naitec.sk/',
+  },
+  ja: {
+    instagram: 'https://www.instagram.com/naitecsk/',
+    facebook: 'https://www.facebook.com/naitec.sk/',
+  },
+  it: {
+    instagram: 'https://www.instagram.com/naitecsk/',
+    facebook: 'https://www.facebook.com/naitec.sk/',
+  },
+};
+
 export type PRODUCT_TYPE = 'air_conditioners' | 'accessories' | 'household';
 
 export type DOCUMENT_TYPE = 'document' | 'video';
@@ -966,6 +1002,28 @@ export const SEO_CONTENT = {
       de: 'Entdecken Sie die Welt der innovativen Klimaanlagen und fortschrittlichen Naitec-Technologien, die Komfort und Effizienz in Ihr Zuhause bringen.',
       ja: '革新的な空調システムと高度なNaitec技術の世界を発見し、快適さと効率性をあなたの家に届けます。',
       it: 'Scopri il mondo della climatizzazione innovativa e delle tecnologie avanzate di Naitec che portano comfort ed efficienza nella tua casa.',
+    },
+  },
+  giveaway: {
+    title: {
+      sk: 'Naitec - Súťaž',
+      cs: 'Naitec - Soutěž',
+      en: 'Naitec - Giveaway',
+      hu: 'Naitec - Nyereményjáték',
+      pl: 'Naitec - Konkurs',
+      de: 'Naitec - Gewinnspiel',
+      ja: 'Naitec - プレゼントキャンペーン',
+      it: 'Naitec - Concorso',
+    },
+    description: {
+      sk: 'Zapojte sa do súťaže a vyhrajte skvelé ceny! Čaká na vás prémiová klimatizácia Naitec Stellair, nový iPhone 16 alebo AirPody 4. generácie.',
+      cs: 'Zapojte se do soutěže a vyhrajte skvělé ceny! Můžete získat prémiovou klimatizaci Naitec Stellair, nový iPhone 16 nebo AirPody 4. generace.',
+      en: 'Join the giveaway and win amazing prizes! You could win a premium Naitec Stellair air conditioner, the new iPhone 16, or 4th-generation AirPods.',
+      hu: 'Vegyen részt a nyereményjátékban, és nyerjen fantasztikus díjakat! Nyerhet egy prémium Naitec Stellair klímát, egy új iPhone 16-ot vagy 4. generációs AirPods-ot.',
+      pl: 'Weź udział w konkursie i wygraj wspaniałe nagrody! Do wygrania jest klimatyzator Naitec Stellair, nowy iPhone 16 lub AirPods 4. generacji.',
+      de: 'Machen Sie beim Gewinnspiel mit und gewinnen Sie tolle Preise! Zu gewinnen gibt es eine Premium-Klimaanlage Naitec Stellair, das neue iPhone 16 oder AirPods der 4. Generation.',
+      ja: 'プレゼントキャンペーンに参加して豪華賞品を手に入れよう！Naitec Stellairの高性能エアコン、新型iPhone 16、または第4世代のAirPodsが当たるチャンス！',
+      it: 'Partecipa al concorso e vinci fantastici premi! In palio un climatizzatore Naitec Stellair, il nuovo iPhone 16 o gli AirPods di quarta generazione.',
     },
   },
 };

@@ -48,3 +48,5 @@ export * from './Website';
 export * from './Search';
 export * from './HomeShape4k';
 export * from './Italy';
+export * from './Facebook';
+export * from './Instagram';
