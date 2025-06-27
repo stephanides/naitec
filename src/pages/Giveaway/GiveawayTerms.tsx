@@ -1,9 +1,18 @@
 import { Box, Flex } from '@chakra-ui/react';
-import { useTranslation } from 'next-i18next';
+import { Trans, useTranslation } from 'next-i18next';
 import { GiveawayCollapsibleItem } from './GiveawayCollapsibleItem';
 import { NeueHaasGroteskText } from '@/src/shared/components';
 import { rem } from 'polished';
 import { getSocials } from './FollowPanel';
+import { scroller } from 'react-scroll';
+
+const scrollToForm = () => {
+  scroller.scrollTo('giveaway-form', {
+    smooth: true,
+    offset: -100, // adjust based on your header height
+    duration: 500,
+  });
+};
 
 export const GiveawayTerms = ({ country }: { country: string }) => {
   const { t } = useTranslation('sutazsk');
@@ -54,11 +63,20 @@ export const GiveawayTerms = ({ country }: { country: string }) => {
                       }),
                     }}
                   />
-                  <li
-                    dangerouslySetInnerHTML={{
-                      __html: t('terms_item_1_text_4'),
-                    }}
-                  />
+                  <li>
+                    <Trans
+                      i18nKey="terms_item_1_text_4"
+                      t={t}
+                      components={{
+                        scroll: (
+                          <strong
+                            style={{ cursor: 'pointer' }}
+                            onClick={scrollToForm}
+                          />
+                        ),
+                      }}
+                    />
+                  </li>
                 </ol>
               </Box>
               <NeueHaasGroteskText
@@ -170,11 +188,21 @@ export const GiveawayTerms = ({ country }: { country: string }) => {
                       }),
                     }}
                   />
-                  <li
-                    dangerouslySetInnerHTML={{
-                      __html: t('terms_item_3_text_6'),
-                    }}
-                  />
+                  <li>
+                    {' '}
+                    <Trans
+                      i18nKey="terms_item_3_text_6"
+                      t={t}
+                      components={{
+                        scroll: (
+                          <strong
+                            style={{ cursor: 'pointer' }}
+                            onClick={scrollToForm}
+                          />
+                        ),
+                      }}
+                    />
+                  </li>
                 </ul>
               </Box>
               <NeueHaasGroteskText

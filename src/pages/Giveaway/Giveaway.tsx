@@ -82,6 +82,7 @@ export const Giveaway = ({ country }: { country: string }) => {
           <Flex>
             <FollowPanel country={country} />
           </Flex>
+          <GiveawayContactForm country={country} />
           <Flex mt={rem(120)} flexDir="column" alignItems="center">
             <NeueHaasGroteskDisplay
               fontSize={{ base: rem(24), md: rem(36) }}
@@ -136,6 +137,7 @@ export const Giveaway = ({ country }: { country: string }) => {
               />
             </Flex>
           </Flex>
+
           <GiveawayTerms country={country} />
           <Flex mt={rem(60)} justifyContent="center">
             <Link
@@ -154,7 +156,6 @@ export const Giveaway = ({ country }: { country: string }) => {
               </PrimaryButton>
             </Link>
           </Flex>
-          <GiveawayContactForm country={country} />
         </Container>
       </Box>
       <Box mt={rem(120)}>
