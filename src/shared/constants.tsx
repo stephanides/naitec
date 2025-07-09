@@ -226,6 +226,18 @@ export const PRODUCTS = [
           },
         ],
       },
+      {
+        title: 'error_codes',
+        items: [
+          {
+            title: 'Slovenčina',
+            href: '/manuals/error-codes-sk.pdf',
+            type: 'document' as DOCUMENT_TYPE,
+            date: '9/7/2025',
+            size: '500 Kb',
+          },
+        ],
+      },
     ],
   },
   {
@@ -333,6 +345,18 @@ export const PRODUCTS = [
             type: 'document' as DOCUMENT_TYPE,
             date: '1/8/2024',
             size: '4 Mb',
+          },
+        ],
+      },
+      {
+        title: 'error_codes',
+        items: [
+          {
+            title: 'Slovenčina',
+            href: '/manuals/error-codes-sk.pdf',
+            type: 'document' as DOCUMENT_TYPE,
+            date: '9/7/2025',
+            size: '500 Kb',
           },
         ],
       },
@@ -446,6 +470,18 @@ export const PRODUCTS = [
           },
         ],
       },
+      {
+        title: 'error_codes',
+        items: [
+          {
+            title: 'Slovenčina',
+            href: '/manuals/error-codes-sk.pdf',
+            type: 'document' as DOCUMENT_TYPE,
+            date: '9/7/2025',
+            size: '500 Kb',
+          },
+        ],
+      },
     ],
   },
   {
@@ -520,6 +556,18 @@ export const PRODUCTS = [
             type: 'document' as DOCUMENT_TYPE,
             date: '1/8/2024',
             size: '4 Mb',
+          },
+        ],
+      },
+      {
+        title: 'error_codes',
+        items: [
+          {
+            title: 'Slovenčina',
+            href: '/manuals/error-codes-sk.pdf',
+            type: 'document' as DOCUMENT_TYPE,
+            date: '9/7/2025',
+            size: '500 Kb',
           },
         ],
       },
@@ -600,6 +648,18 @@ export const PRODUCTS = [
           },
         ],
       },
+      {
+        title: 'error_codes',
+        items: [
+          {
+            title: 'Slovenčina',
+            href: '/manuals/error-codes-sk.pdf',
+            type: 'document' as DOCUMENT_TYPE,
+            date: '9/7/2025',
+            size: '500 Kb',
+          },
+        ],
+      },
     ],
   },
   {
@@ -627,7 +687,20 @@ export const PRODUCTS = [
     mainImage: `${BUNNY_CDN_URL}/support/cassette-air-conditioning-support.png`,
     supportImage: `${BUNNY_CDN_URL}/support/cassette-air-conditioning-support.png`,
     href: INTERNAL_ROUTES.CASSETTE_AIR_CONDITIONING_SUPPORT,
-    supportDocuments: [],
+    supportDocuments: [
+      {
+        title: 'error_codes',
+        items: [
+          {
+            title: 'Slovenčina',
+            href: '/manuals/error-codes-sk.pdf',
+            type: 'document' as DOCUMENT_TYPE,
+            date: '9/7/2025',
+            size: '500 Kb',
+          },
+        ],
+      },
+    ],
   },
   {
     id: 'ducted-air-conditioning',
@@ -636,7 +709,20 @@ export const PRODUCTS = [
     mainImage: `${BUNNY_CDN_URL}/support/ducted-air-conditioner-support.png`,
     supportImage: `${BUNNY_CDN_URL}/support/ducted-air-conditioner-support.png`,
     href: INTERNAL_ROUTES.DUCTED_AIR_CONDITIONING_SUPPORT,
-    supportDocuments: [],
+    supportDocuments: [
+      {
+        title: 'error_codes',
+        items: [
+          {
+            title: 'Slovenčina',
+            href: '/manuals/error-codes-sk.pdf',
+            type: 'document' as DOCUMENT_TYPE,
+            date: '9/7/2025',
+            size: '500 Kb',
+          },
+        ],
+      },
+    ],
   },
   {
     id: 'multi-split-system',
@@ -645,7 +731,20 @@ export const PRODUCTS = [
     mainImage: `${BUNNY_CDN_URL}/support/multi-split-support.png`,
     supportImage: `${BUNNY_CDN_URL}/support/multi-split-support.png`,
     href: INTERNAL_ROUTES.MULTI_SPLIT_SYSTEM_SUPPORT,
-    supportDocuments: [],
+    supportDocuments: [
+      {
+        title: 'error_codes',
+        items: [
+          {
+            title: 'Slovenčina',
+            href: '/manuals/error-codes-sk.pdf',
+            type: 'document' as DOCUMENT_TYPE,
+            date: '9/7/2025',
+            size: '500 Kb',
+          },
+        ],
+      },
+    ],
   },
 ];
 

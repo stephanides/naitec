@@ -106,7 +106,7 @@ export const CasseteAirConditioning = () => {
               ionizator: false,
               uvcLampa: false,
               neviditelneUmiestnenie: true,
-              wifiModul: t('common:additional_fee'),
+              wifiModul: true,
               sterilizacia: false,
               preKomercnePriestory: true,
               dlhodobeVykurovanie: '-24°C',
