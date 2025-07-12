@@ -65,24 +65,24 @@ export const SOCIAL_NETWORKS = {
       'https://www.facebook.com/people/Naitec-Slovensko/61553003033343/',
   },
   cs: {
-    instagram: 'https://www.instagram.com/naitecsk/',
-    facebook: 'https://www.facebook.com/naitec.sk/',
+    instagram: 'https://www.instagram.com/naiteccz/',
+    facebook: 'https://www.facebook.com/people/Naitec-Česká-Republika/61573764282391/',
   },
   en: {
     instagram: 'https://www.instagram.com/naitecsk/',
     facebook: 'https://www.facebook.com/naitec.sk/',
   },
   hu: {
-    instagram: 'https://www.instagram.com/naitecsk/',
-    facebook: 'https://www.facebook.com/naitec.sk/',
+    instagram: 'https://www.instagram.com/naitechungary/',
+    facebook: 'https://www.facebook.com/people/Naitec-Magyarország/61573733194290/',
   },
   pl: {
     instagram: 'https://www.instagram.com/naitecsk/',
     facebook: 'https://www.facebook.com/naitec.sk/',
   },
   de: {
-    instagram: 'https://www.instagram.com/naitecsk/',
-    facebook: 'https://www.facebook.com/naitec.sk/',
+    instagram: 'https://www.instagram.com/naitecde/',
+    facebook: 'https://www.facebook.com/people/Naitec-Deutschland/61577282007494/',
   },
   ja: {
     instagram: 'https://www.instagram.com/naitecsk/',
@@ -91,6 +91,10 @@ export const SOCIAL_NETWORKS = {
   it: {
     instagram: 'https://www.instagram.com/naitecsk/',
     facebook: 'https://www.facebook.com/naitec.sk/',
+  },
+  at: {
+    instagram: 'https://www.instagram.com/naitecat/',
+    facebook: 'https://www.facebook.com/people/Naitec-Österreich/61573446946475/',
   },
 };
 

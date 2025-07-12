@@ -3,7 +3,7 @@ import { Trans, useTranslation } from 'next-i18next';
 import { GiveawayCollapsibleItem } from './GiveawayCollapsibleItem';
 import { NeueHaasGroteskText } from '@/src/shared/components';
 import { rem } from 'polished';
-import { getSocials } from './FollowPanel';
+import { getSocials, getTranslationForGiveawayByCountry } from './FollowPanel';
 import { scroller } from 'react-scroll';
 
 const scrollToForm = () => {
@@ -15,7 +15,7 @@ const scrollToForm = () => {
 };
 
 export const GiveawayTerms = ({ country }: { country: string }) => {
-  const { t } = useTranslation('sutazsk');
+  const { t } = useTranslation(getTranslationForGiveawayByCountry(country));
   const socials = getSocials(country);
   return (
     <Flex justifyContent="center">
@@ -169,11 +169,13 @@ export const GiveawayTerms = ({ country }: { country: string }) => {
                       __html: t('terms_item_3_text_2'),
                     }}
                   />
-                  <li
-                    dangerouslySetInnerHTML={{
-                      __html: t('terms_item_3_text_3'),
-                    }}
-                  />
+                  {country === 'sk' && (
+                    <li
+                      dangerouslySetInnerHTML={{
+                        __html: t('terms_item_3_text_3'),
+                      }}
+                    />
+                  )}
                   <li
                     dangerouslySetInnerHTML={{
                       __html: t('terms_item_3_text_4', {

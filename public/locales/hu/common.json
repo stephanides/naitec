@@ -115,5 +115,7 @@
   "based_on_model": "modell alapján",
   "units_1": "egységek",
   "units_2": "egységekből",
-  "all_rights_reserved": "Minden jog fenntartva"
+  "all_rights_reserved": "Minden jog fenntartva",
+  "required_field": "Kötelező mező",
+  "must_be_checked": "Ki kell jelölni"
 }

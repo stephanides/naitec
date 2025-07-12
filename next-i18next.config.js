@@ -26,5 +26,9 @@ module.exports = {
     'privacypolicy',
     'legalnotice',
     'sutazsk',
+    'sutazcz',
+    'sutazhu',
+    'sutazde',
+    'sutazat',
   ],
 };

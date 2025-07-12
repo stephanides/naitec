@@ -20,8 +20,38 @@ import { GiveawayTerms } from './GiveawayTerms';
 import { GiveawayContactForm } from './GiveawayContactForm';
 import Link from 'next/link';
 
+export const getTranslationgiveawayFullByCountry = (country: string) => {
+  if (country === 'sk') {
+    return ['sutazsk', 'common', 'contact'];
+  } else if (country === 'cz') {
+    return ['sutazcz', 'common', 'contact'];
+  } else if (country === 'hu') {
+    return ['sutazhu', 'common', 'contact'];
+  } else if (country === 'de') {
+    return ['sutazde', 'common', 'contact'];
+  } else if (country === 'at') {
+    return ['sutazat', 'common', 'contact'];
+  }
+  return ['sutazsk', 'common', 'contact'];
+};
+
+const getDocumentUrlByCountry = (country: string) => {
+  if (country === 'sk') {
+    return '/documents/sk/naitec-status-sutaze.pdf';
+  } else if (country === 'cz') {
+    return '/documents/cz/naitec-status-souteze.pdf';
+  } else if (country === 'hu') {
+    return '/documents/hu/naitec-versenyhelyzet.pdf';
+  } else if (country === 'de') {
+    return '/documents/de/satzung-des-gewinnspiels.pdf';
+  } else if (country === 'at') {
+    return '/documents/at/satzung-des-gewinnspiels.pdf';
+  }
+  return '/documents/sk/naitec-status-sutaze.pdf';
+};
+
 export const Giveaway = ({ country }: { country: string }) => {
-  const { t } = useTranslation(['sutazsk', 'common', 'contact']);
+  const { t } = useTranslation(getTranslationgiveawayFullByCountry(country));
 
   return (
     <Box>
@@ -141,7 +171,7 @@ export const Giveaway = ({ country }: { country: string }) => {
           <GiveawayTerms country={country} />
           <Flex mt={rem(60)} justifyContent="center">
             <Link
-              href={`/documents/${country}/naitec-status-sutaze.pdf`}
+              href={getDocumentUrlByCountry(country)}
               locale={false}
               target="_blank"
             >

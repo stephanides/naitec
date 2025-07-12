@@ -115,5 +115,7 @@
   "based_on_model": "in base al modello",
   "units_1": "unità",
   "units_2": "unità",
-  "all_rights_reserved": "Tutti i diritti riservati"
+  "all_rights_reserved": "Tutti i diritti riservati",
+  "required_field": "Campo obbligatorio",
+  "must_be_checked": "Deve essere selezionato"
 }

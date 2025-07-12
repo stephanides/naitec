@@ -32,6 +32,7 @@ import {
 } from '@/src/shared/components';
 import { getSocials } from './FollowPanel';
 import { Element } from 'react-scroll';
+import { getTranslationgiveawayFullByCountry } from './Giveaway';
 
 export type GiveawayContactFormValues = {
   name: string;
@@ -86,7 +87,7 @@ async function submitContact({
 
 export const GiveawayContactForm = ({ country }: { country: string }) => {
   const recaptchaRef = useRef<ReCAPTCHA>(null);
-  const { t } = useTranslation(['sutazsk', 'common']);
+  const { t } = useTranslation(getTranslationgiveawayFullByCountry(country));
   const toast = useToast();
   const socials = getSocials(country);
   const formik = useFormik<GiveawayContactFormValues>({
@@ -101,23 +102,26 @@ export const GiveawayContactForm = ({ country }: { country: string }) => {
       agreements: false,
     },
     validationSchema: yup.object().shape({
-      name: yup.string().required('Povinné pole'),
-      surname: yup.string().required('Povinné pole'),
+      name: yup.string().required(t('common:required_field')),
+      surname: yup.string().required(t('common:required_field')),
       phone: yup.string(),
-      email: yup.string().required('Povinné pole'),
-      country: yup
-        .boolean()
-        .oneOf([true], 'Musí byť zaškrtnuté')
-        .required('Povinné pole'),
+      email: yup.string().required(t('common:required_field')),
+      country:
+        country === 'sk'
+          ? yup
+              .boolean()
+              .oneOf([true], t('common:must_be_checked'))
+              .required(t('common:required_field'))
+          : yup.boolean(),
       instagram: yup
         .boolean()
-        .oneOf([true], 'Musí byť zaškrtnuté')
-        .required('Povinné pole'),
+        .oneOf([true], t('common:must_be_checked'))
+        .required(t('common:required_field')),
 
       facebook: yup
         .boolean()
-        .oneOf([true], 'Musí byť zaškrtnuté')
-        .required('Povinné pole'),
+        .oneOf([true], t('common:must_be_checked'))
+        .required(t('common:required_field')),
     }),
 
     onSubmit: async (
@@ -374,37 +378,41 @@ export const GiveawayContactForm = ({ country }: { country: string }) => {
               </FormErrorMessage>
             </FormControl>
           </Flex>
-          <FormControl
-            mt={rem(18)}
-            isInvalid={formik.touched.country && !!formik.errors.country}
-          >
-            <Box position="relative">
-              <Box
-                position="relative"
-                width="100%"
-                borderRadius="10px"
-                background="white"
-                border="1px solid #C1C1C1"
-                bg={!formik.values.country ? 'white' : 'background.naitec_blue'}
-              >
-                <Checkbox
-                  variant="social"
-                  isChecked={formik.values.country}
-                  onChange={formik.handleChange}
-                  name="country"
-                  w="100%"
+          {country === 'sk' && (
+            <FormControl
+              mt={rem(18)}
+              isInvalid={formik.touched.country && !!formik.errors.country}
+            >
+              <Box position="relative">
+                <Box
+                  position="relative"
+                  width="100%"
+                  borderRadius="10px"
+                  background="white"
+                  border="1px solid #C1C1C1"
+                  bg={
+                    !formik.values.country ? 'white' : 'background.naitec_blue'
+                  }
                 >
-                  <NeueHaasGroteskText
-                    color={formik.values.country ? 'white' : 'black'}
-                    dangerouslySetInnerHTML={{ __html: t('country') }}
-                  />
-                </Checkbox>
+                  <Checkbox
+                    variant="social"
+                    isChecked={formik.values.country}
+                    onChange={formik.handleChange}
+                    name="country"
+                    w="100%"
+                  >
+                    <NeueHaasGroteskText
+                      color={formik.values.country ? 'white' : 'black'}
+                      dangerouslySetInnerHTML={{ __html: t('country') }}
+                    />
+                  </Checkbox>
+                </Box>
               </Box>
-            </Box>
-            <FormErrorMessage>
-              {formik.touched.country && formik.errors.country}
-            </FormErrorMessage>
-          </FormControl>
+              <FormErrorMessage>
+                {formik.touched.country && formik.errors.country}
+              </FormErrorMessage>
+            </FormControl>
+          )}
           <Grid
             gridTemplateColumns={{ base: '1fr', lg: '1fr 1fr' }}
             mt={rem(20)}

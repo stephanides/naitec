@@ -10,12 +10,40 @@ export const getSocials = (country: string) => {
   if (country === 'sk') {
     return SOCIAL_NETWORKS.sk;
   }
+  if (country === 'cz') {
+    return SOCIAL_NETWORKS.cs;
+  }
+  if (country === 'hu') {
+    return SOCIAL_NETWORKS.hu;
+  }
+  if (country === 'de') {
+    return SOCIAL_NETWORKS.de;
+  }
+  if (country === 'at') {
+    return SOCIAL_NETWORKS.at;
+  }
   return SOCIAL_NETWORKS.sk;
 };
 
+export const getTranslationForGiveawayByCountry = (country: string) => {
+  if (country === 'sk') {
+    return 'sutazsk';
+  } else if (country === 'cz') {
+    return 'sutazcz';
+  } else if (country === 'hu') {
+    return 'sutazhu';
+  } else if (country === 'de') {
+    return 'sutazde';
+  } else if (country === 'at') {
+    return 'sutazat';
+  }
+  return 'sutazsk';
+};
+
 export const FollowPanel = ({ country }: { country: string }) => {
-  const { t } = useTranslation('sutazsk');
+  const { t } = useTranslation(getTranslationForGiveawayByCountry(country));
   const socials = getSocials(country);
+
   return (
     <Flex
       width="100%"

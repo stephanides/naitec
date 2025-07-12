@@ -115,5 +115,7 @@
   "based_on_model": "モデルに基づいて",
   "units_1": "ユニット",
   "units_2": "ユニット",
-  "all_rights_reserved": "すべての権利を保有"
+  "all_rights_reserved": "すべての権利を保有",
+  "required_field": "必須フィールド",
+  "must_be_checked": "チェックする必要があります"
 }

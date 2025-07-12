@@ -115,5 +115,7 @@
   "based_on_model": "podle modelu",
   "units_1": "jednotky",
   "units_2": "jednotek",
-  "all_rights_reserved": "Všechna práva vyhrazena"
+  "all_rights_reserved": "Všechna práva vyhrazena",
+  "required_field": "Povinné pole",
+  "must_be_checked": "Musí být zaškrtnuté"
 }
