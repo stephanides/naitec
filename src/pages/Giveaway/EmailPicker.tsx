@@ -4,7 +4,13 @@ import { rem } from 'polished';
 import { useEffect, useState, useRef } from 'react';
 import Confetti from 'react-confetti';
 
-const EmailPicker = ({ emails, forcedWinner }) => {
+const EmailPicker = ({
+  emails,
+  forcedWinner,
+}: {
+  emails: string[];
+  forcedWinner: string | undefined;
+}) => {
   const [currentEmail, setCurrentEmail] = useState('');
   const [isRunning, setIsRunning] = useState(false);
   const [showConfetti, setShowConfetti] = useState(false);
@@ -16,12 +22,14 @@ const EmailPicker = ({ emails, forcedWinner }) => {
 
     setIsRunning(true);
 
+    //@ts-ignore
     intervalRef.current = setInterval(() => {
       const randomIndex = Math.floor(Math.random() * emails.length);
       setCurrentEmail(emails[randomIndex]);
     }, 100);
-
+    //@ts-ignore
     timeoutRef.current = setTimeout(() => {
+      //@ts-ignore
       clearInterval(intervalRef.current);
       if (forcedWinner && emails.includes(forcedWinner)) {
         setCurrentEmail(forcedWinner); // Force the winner
@@ -34,7 +42,9 @@ const EmailPicker = ({ emails, forcedWinner }) => {
 
   useEffect(() => {
     return () => {
+      //@ts-ignore
       clearInterval(intervalRef.current);
+      //@ts-ignore
       clearTimeout(timeoutRef.current);
     };
   }, []);

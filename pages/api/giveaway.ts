@@ -26,9 +26,11 @@ export default async function handler(
       const json = await response.json();
 
       // Append this page's data
+      //@ts-ignore
       allData = [...allData, ...json.data];
 
       // Set total pages from metadata
+      //@ts-ignore
       const pagination = json.meta?.pagination;
       totalPages = pagination?.pageCount || 1;
       page++;
