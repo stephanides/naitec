@@ -1,4 +1,4 @@
-import { Box, Flex, Grid } from '@chakra-ui/react';
+import { Box, Button, Flex, Grid } from '@chakra-ui/react';
 import { useTranslation } from 'next-i18next';
 import { rem } from 'polished';
 import {
@@ -19,6 +19,8 @@ import {
 import { GiveawayTerms } from './GiveawayTerms';
 import { GiveawayContactForm } from './GiveawayContactForm';
 import Link from 'next/link';
+import { useQuery } from 'react-query';
+import EmailPicker from './EmailPicker';
 
 export const getTranslationgiveawayFullByCountry = (country: string) => {
   if (country === 'sk') {
@@ -53,8 +55,42 @@ const getDocumentUrlByCountry = (country: string) => {
 export const Giveaway = ({ country }: { country: string }) => {
   const { t } = useTranslation(getTranslationgiveawayFullByCountry(country));
 
+  const fetchData = async () => {
+    const response = await fetch(`/api/giveaway`);
+
+    if (!response.ok) {
+      throw new Error('Failed to fetch data');
+    }
+    return response.json();
+  };
+
+  const { data, isLoading, isError } = useQuery<any>(['giveaway'], () =>
+    fetchData()
+  );
+
+  if (isLoading) return <div>Loading...</div>;
+
+  const emails = data.data.map((item: any) => item.attributes.email);
+
+  // function downloadEmails() {
+  //   const emails = data.data.map((item) => item.attributes.email);
+  //   const content = emails.join('\n');
+  //   const blob = new Blob([content], { type: 'text/plain' });
+  //   const url = URL.createObjectURL(blob);
+
+  //   const link = document.createElement('a');
+  //   link.href = url;
+  //   link.download = 'emails.txt';
+  //   document.body.appendChild(link);
+  //   link.click();
+  //   document.body.removeChild(link);
+  //   URL.revokeObjectURL(url);
+  // }
+
   return (
     <Box>
+      {/* <Button onClick={downloadEmails}>Download</Button> */}
+      <EmailPicker emails={emails} forcedWinner={undefined} />
       <Box mt={{ base: rem(40), lg: rem(32) }}>
         <Flex
           width="100%"

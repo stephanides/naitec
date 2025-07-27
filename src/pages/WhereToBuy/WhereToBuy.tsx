@@ -35,6 +35,7 @@ export const WhereToBuy = () => {
   const isMapFirst = mapFirstCountries.includes(locale);
 
   const stores = data?.data ?? [];
+
   return (
     <Box pb={{ base: rem(60), lg: rem(100), '2xl': rem(230) }}>
       <Flex flexDir={isMapFirst ? 'column' : 'column-reverse'} width="100%">
