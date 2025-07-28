@@ -55,22 +55,22 @@ const getDocumentUrlByCountry = (country: string) => {
 export const Giveaway = ({ country }: { country: string }) => {
   const { t } = useTranslation(getTranslationgiveawayFullByCountry(country));
 
-  const fetchData = async () => {
-    const response = await fetch(`/api/giveaway`);
+  // const fetchData = async () => {
+  //   const response = await fetch(`/api/giveaway`);
 
-    if (!response.ok) {
-      throw new Error('Failed to fetch data');
-    }
-    return response.json();
-  };
+  //   if (!response.ok) {
+  //     throw new Error('Failed to fetch data');
+  //   }
+  //   return response.json();
+  // };
 
-  const { data, isLoading, isError } = useQuery<any>(['giveaway'], () =>
-    fetchData()
-  );
+  // const { data, isLoading, isError } = useQuery<any>(['giveaway'], () =>
+  //   fetchData()
+  // );
 
-  if (isLoading) return <div>Loading...</div>;
+  // if (isLoading) return <div>Loading...</div>;
 
-  const emails = data.data.map((item: any) => item.attributes.email);
+  // const emails = data.data.map((item: any) => item.attributes.email);
 
   // function downloadEmails() {
   //   const emails = data.data.map((item) => item.attributes.email);
@@ -90,7 +90,7 @@ export const Giveaway = ({ country }: { country: string }) => {
   return (
     <Box>
       {/* <Button onClick={downloadEmails}>Download</Button> */}
-      <EmailPicker emails={emails} forcedWinner={undefined} />
+      {/* <EmailPicker emails={emails} forcedWinner={undefined} /> */}
       <Box mt={{ base: rem(40), lg: rem(32) }}>
         <Flex
           width="100%"
