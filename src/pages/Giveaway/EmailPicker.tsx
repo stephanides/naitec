@@ -1,5 +1,5 @@
 import { LogoDark } from '@/src/shared/design';
-import { Box, Flex } from '@chakra-ui/react';
+import { Box, Flex, Text } from '@chakra-ui/react';
 import { rem } from 'polished';
 import { useEffect, useState, useRef } from 'react';
 import Confetti from 'react-confetti';
@@ -56,22 +56,61 @@ const EmailPicker = ({
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
+        position: 'relative',
       }}
     >
+      <Box
+        position="absolute"
+        backgroundImage='url("/images/photo.jpeg")'
+        backgroundSize="cover"
+        backgroundPosition="center"
+        height="100%"
+        width="100%"
+        zIndex={1}
+        opacity={0.5}
+      />
       <div
         style={{
           textAlign: 'center',
           marginTop: '40px',
           paddingBottom: '100px',
+          position: 'relative',
+          zIndex: 2,
         }}
       >
-        <Flex justifyContent="center" my={rem(40)}>
+        {/* <Flex justifyContent="center" my={rem(40)}>
           <Box width={rem(240)}>
             <LogoDark />
           </Box>
-        </Flex>
+        </Flex> */}
+        <Box mb={rem(40)}>
+          <Text
+            textAlign="center"
+            fontSize={rem(64)}
+            fontWeight={700}
+            color="purple"
+          >
+            Súťaž
+          </Text>
+          <Text fontSize={rem(26)} textAlign="center" fontWeight={700}>
+            alexandra_han_photo
+          </Text>
+          <Text fontSize={rem(26)} textAlign="center" fontWeight={700}>
+            make.up.by.maisha
+          </Text>
+          <Text fontSize={rem(26)} textAlign="center" fontWeight={700}>
+            copiky_klaudia
+          </Text>
+        </Box>
         <div
-          style={{ fontSize: '24px', fontWeight: 'bold', marginBottom: '20px' }}
+          style={{
+            fontSize: '26px',
+            fontWeight: 'bold',
+            marginBottom: '20px',
+            height: '80px',
+            padding: '10px 20px',
+            color: 'purple',
+          }}
         >
           {currentEmail
             ? isRunning
@@ -80,18 +119,23 @@ const EmailPicker = ({
             : 'Stlačte tlačidlo na žrebovanie'}
         </div>
 
-        <button
-          onClick={startPicking}
-          disabled={isRunning}
-          style={{
-            fontSize: '16px',
-            padding: '10px 20px',
-            border: '1px solid #ccc',
-            borderRadius: '5px',
-          }}
-        >
-          {isRunning ? 'Žrebujem...' : 'Žrebovať víťaza'}
-        </button>
+        {!showConfetti && (
+          <button
+            onClick={startPicking}
+            disabled={isRunning}
+            style={{
+              fontSize: '20px',
+              padding: '10px 20px',
+              border: '1px solid #ccc',
+              borderRadius: '5px',
+              color: 'white',
+              background: 'purple',
+              marginTop: '20px',
+            }}
+          >
+            {isRunning ? 'Žrebujem...' : 'Žrebovať víťaza'}
+          </button>
+        )}
         {/* <h2
         style={{
           paddingTop: '40px',
@@ -106,8 +150,8 @@ const EmailPicker = ({
       {emails.slice(0, 100).map((email) => (
         <p key={email}>{email}</p>
       ))} */}
-        {showConfetti && <Confetti width={400} height={800} />}
       </div>
+      {showConfetti && <Confetti width={400} height={800} />}
     </div>
   );
 };

@@ -60,40 +60,40 @@ export const PHONE_NUMBERS = {
 
 export const SOCIAL_NETWORKS = {
   sk: {
-    instagram: 'https://www.instagram.com/naitecsk/',
+    instagram: 'https://www.instagram.com/naitec.slovakia/',
     facebook:
       'https://www.facebook.com/people/Naitec-Slovensko/61553003033343/',
   },
   cs: {
-    instagram: 'https://www.instagram.com/naiteccz/',
+    instagram: 'https://www.instagram.com/naitec.czechia/',
     facebook: 'https://www.facebook.com/people/Naitec-Česká-Republika/61573764282391/',
   },
   en: {
-    instagram: 'https://www.instagram.com/naitecsk/',
+    instagram: 'https://www.instagram.com/naitec.slovakia/',
     facebook: 'https://www.facebook.com/naitec.sk/',
   },
   hu: {
-    instagram: 'https://www.instagram.com/naitechungary/',
+    instagram: 'https://www.instagram.com/naitec.hungary/',
     facebook: 'https://www.facebook.com/people/Naitec-Magyarország/61573733194290/',
   },
   pl: {
-    instagram: 'https://www.instagram.com/naitecsk/',
+    instagram: 'https://www.instagram.com/naitec.slovakia/',
     facebook: 'https://www.facebook.com/naitec.sk/',
   },
   de: {
-    instagram: 'https://www.instagram.com/naitecde/',
+    instagram: 'https://www.instagram.com/naitec.germany/',
     facebook: 'https://www.facebook.com/people/Naitec-Deutschland/61577282007494/',
   },
   ja: {
-    instagram: 'https://www.instagram.com/naitecsk/',
+    instagram: 'https://www.instagram.com/naitec.slovakia/',
     facebook: 'https://www.facebook.com/naitec.sk/',
   },
   it: {
-    instagram: 'https://www.instagram.com/naitecsk/',
+    instagram: 'https://www.instagram.com/naitec.slovakia/',
     facebook: 'https://www.facebook.com/naitec.sk/',
   },
   at: {
-    instagram: 'https://www.instagram.com/naitecat/',
+    instagram: 'https://www.instagram.com/naitec.austria/',
     facebook: 'https://www.facebook.com/people/Naitec-Österreich/61573446946475/',
   },
 };
